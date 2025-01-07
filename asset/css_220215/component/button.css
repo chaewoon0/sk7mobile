@@ -1,0 +1,80 @@
+@charset 'UTF-8';
+
+/* Button */
+.btn {display: inline-block;position: relative;padding: .666rem .833rem;border: 1px solid transparent;border-width: 1px;border-radius: 2rem;font-size: 1.2rem;font-weight: 400;text-align: center;letter-spacing: -.5px;line-height: 1.5;background-color: transparent;cursor: pointer;}
+.btn + .btn {margin-left: .4rem;}
+.btn [class^=icon-] {vertical-align: middle;margin-right: .416rem;}
+.btn.focus,.btn:focus {outline: 1px dotted #000;}
+.btn-square {border-radius: 0 !important;}
+.btn-radius-sm {border-radius: .416rem !important;}
+.btn-radius-md {border-radius: .5rem !important;}
+
+.btn-radio {padding: .666rem .833rem .833rem 0 !important;}
+
+/* btn shadow*/
+.btn:not(.btn-shadow) {box-shadow: none !important;}
+.btn-shadow,.btn-shadow:hover,.btn-shadow:focus {background: #fff;box-shadow: .28rem .28rem .4rem 0 rgba(190, 190, 190, .22);}
+
+/* btn color */
+.btn-default {border-color: #ccc !important;color: #000 !important;background: #fff !important;}
+.btn-primary {border-color: #5857d8 !important;color: #fff !important;background: #5857d8 !important;}
+.btn-secondary {border-color: #a2a2a2 !important;color: #fff !important;background: #a2a2a2 !important;}
+.btn-danger {border-color: #EA002C !important;color: #fff !important;background: #EA002C !important;}
+.btn-outline-primary {border: 1px solid #5857d8!important;color: #5857d8 !important;background: #fff !important;}
+.btn-disabled,.btn:disabled {border-color: #a2a2a2 !important;color: #fff !important;background: #a2a2a2 !important;box-shadow: none !important;opacity: 1;}
+.btn-dark {border-color: #999 !important;color: #fff !important;background: #999 !important;}
+.btn-black {border-color: #000 !important;color: #fff !important;background: #000 !important;}
+
+/* btn size */
+.btn-base {padding: 0 .83rem;border: 1px solid #dadada;border-radius: .3rem;color: #666;font-size: 1.16rem;line-height: 2.33;background: #fff;}
+.btn-xsm {padding: .2rem 1.43rem .166rem;font-size: 1.166rem;}
+.btn-sm {min-width: 6rem;padding: .65rem 1.43rem .65rem;font-size: 1.166rem;}
+.btn-md {padding: .91rem 1.666rem .83rem;font-size: 1.25rem;font-weight: 500;}
+.btn-lg {padding: .666rem 1.666rem;font-size: 1.5rem;font-weight: 500;}
+.btn-xl {padding: .7em 5em;font-size: 1.333em;font-weight: 500;}
+.btn-block {display: block;width: 100%;padding-right: 0 !important;padding-left: 0 !important;}
+
+/* btn-wrap */
+.btn-wrap {margin: 1.916rem -.5rem 0;}
+.btn-wrap:after {content: '';display: block;clear: both;}
+.btn-wrap > span {display: inline-block;float: left;width: 100%;padding: 0 .5rem;}
+.btn-wrap > span > .btn {display: block;width: 100%;padding-right: 0;padding-left: 0;}
+.btn-wrap.item1 {text-align: center;}
+.btn-wrap.item1 > span {float: none;width: 50%;}
+.btn-wrap.item2 > span {width: 50%;}
+.btn-wrap.item2-1 > span {width: 50%;}
+.btn-wrap.item2-1 > span:last-child {width: 100%;margin-top: .83rem;}
+.btn-wrap.item3 > span {width: 33.333%;}
+
+.more-bottom {margin-top: 1rem;text-align: right;}
+.more-bottom .btn {min-width: 7.6rem;}
+
+.btn-badge {border-radius: 0;font-weight: 300;}
+.badge {position: relative;padding: .666rem .833rem;border-width: 1px;border-radius: 2rem;font-size: 1.2rem;font-weight: 400;letter-spacing: -.5px;line-height: 1.4;}
+
+@media (min-width:1080px) {
+	/* btn-wrap */
+	.btn-wrap {margin-right: -5px;margin-left: -5px;text-align: center;}
+	.btn-wrap > span {float: none;width: auto !important;min-width: 360px;padding: 0 5px;}
+	.btn-wrap > span .btn {letter-spacing: -.1rem;}
+	.btn-wrap.item2 > span,.btn-wrap.item2-1 > span,.btn-wrap.item3 > span {min-width: 290px;}
+	.btn-w-block{display: block;width: 45.5%; }
+
+
+	/* btn size */
+	.btn-base {min-width: 114px;padding: 0 10px;font-size: 15px;line-height: 30px;}
+	.btn-xsm {padding-top: 4px;padding-bottom: 5px;font-size: 18px;}
+	.btn-sm {min-width: 120px;padding-top: 8px;padding-bottom: 7px;font-size: 18px;}
+	.btn-md {padding-top: 16px;padding-bottom: 15px;font-size: 20px;}
+	.btn-lg {padding-top: 15px;padding-bottom: 14px;font-size: 22px;}
+	.btn-l-lg {padding-top: 14px;padding-bottom: 13px;font-size: 24px;}}
+	.bt_bottom{width:1090px;}
+
+@media (max-width: 1079.98px) {
+	.btn-sm {letter-spacing: -.09rem;}
+	.btn-wrap:not([class*=item]) > span + span {margin-top: .5rem;}
+	.btn-m-block {display: block;width: 100%;padding-right: 0 !important;padding-left: 0 !important;}
+	.bt_bottom{padding-right: 20px;width:auto;}
+	.btn-wrap.item2 > span.type2{float:none;display:block;margin:0 auto;}
+}
+@media (max-width:359.98px) {.btn-lg {font-size: 1.33rem;}}

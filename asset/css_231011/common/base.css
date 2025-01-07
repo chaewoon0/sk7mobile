@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* Common */
+@import url(../common/reset.css);
+@import url(../common/common.css);
+
+/* Component */
+@import url(../component/typography.css);
+@import url(../component/form.css);
+@import url(../component/button.css);
+@import url(../component/table.css);
+@import url(../component/pagination.css);
+@import url(../component/tab.css);
+@import url(../component/accordion.css);
+@import url(../component/modal.css);
+
+/* Content */
+@import url(../common/board.css);
+@import url(../common/content.css);
+@import url(../common/responsive.css);
+
+/* Main */
+@import url(../common/main.css);

@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/*
+Version: 1.0
+Author: jintae-kim
+Contents: layout, contents, TOAST grid ui, font stylesheet
+*/
+
+
+/*** Default ***/
+html, body {
+  font-family: '맑은 고딕', 'Malgun Gothic', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', 'AppleGothic', "돋움", Dotum, sans-serif, serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  background: #fff;
+  letter-spacing: -0.15em;
+}
+
+
+
+/* page */
+.page {width: 1060px; margin: 0 auto; padding: 0 0;}
+h1 {font-size: 40px; line-height: 62px;}
+h1 img {margin-right: 30px; vertical-align: top;}
+
+.next-page {page-break-before:always;}
+
+.box {border: 2px solid #ed7700;}
+.box h2 {background: #ed7700; height: 32px; margin: 0 0; padding: 0 15px; font-size: 16px; line-height: 32px; color: #fff;}
+.box h3 {margin: 0 0; padding: 0 0; font-size: 16px; color: #ed7700;}
+.foot-box h2 {background: #ed7700; height: 32px; margin: 0 0; padding: 0 15px; font-size: 16px; line-height: 32px; color: #fff;}
+.box h2 small {float: right;}
+.box .inner {overflow: hidden; padding: 15px 10px;}
+
+.foot-box {overflow: hidden;}
+
+table {border: 2px solid #ed7700;}
+table tr th {vertical-align: middle; border: 1px solid #ed7700; padding: 8px 8px; color: #ed7700; line-height: 1;}
+table tr td {vertical-align: middle; border: 1px solid #ed7700; padding: 8px 7px; line-height: 1;}
+table tr th.heading {background: #ed7700; color: #fff; font-size: 14px; text-align: left;}
+table.brd-1 {border: 4px solid #e20b24;}
+table.pd-tb1 th {padding: 8px 8px;}
+table.pd-tb1 td {padding: 7px 8px;}
+
+table.pd-tb2 th {padding: 8px 8px; font-size: 16px; font-weight: 700; color: #000; background: #dddddd;}
+table.pd-tb2 td {padding: 7px 8px; font-size: 16px; font-weight: 700; color: #000; text-align: right;}
+
+.table-board {overflow: hidden;}
+.fl {float: left;}
+.fr {float: right;}
+
+.color-1 {color: #ed7700;}
+.color-2 {color: #000; letter-spacing: 0;}
+.color-3 {color: #999; letter-spacing: -1px;}
+.color-4 {color: #ff06b2;}
+
+.txt-l {text-align: left !important;}
+.txt-c {text-align: center !important;}
+tr.txt-c th,
+tr.txt-c td {text-align: center !important;}
+.txt-r {text-align: right !important;}
+.txt-big1 {width: 20px; margin: 33px 14px 0 14px; border-top: 3px solid #ed7700; height: 67px; font-size: 0;}
+.txt-big2 {width: 20px; margin: 30px 10px 0 10px; border-top: 3px solid #ed7700; border-bottom: 3px solid #ed7700; height: 10px; font-size: 0;}
+
+.txt-11 {font-size: 11px !important;}
+.txt-12 {font-size: 12px !important;}
+.txt-14 {font-size: 14px !important;}
+.txt-16 {font-size: 16px !important;}
+
+.no {display: inline-block; height: 14px; width: 14px; border: 1px solid #ed7700; background: #ed7700; color: #fff; font-style: normal; line-height: 14px; text-align: center; font-size: 12px; font-weight: 400; border-radius: 100%; letter-spacing: 0;}
+
+.bg1 {background: #fffadb;}
+
+
+.mt5 {margin-top: 5px !important;}
+.mt10 {margin-top: 10px !important;}
+.mt20 {margin-top: 20px !important;}
+.mt30 {margin-top: 30px !important;}
+
+.mb5 {margin-bottom: 5px !important;}
+.mb10 {margin-bottom: 10px !important;}
+.mb20 {margin-bottom: 20px !important;}
+.mb30 {margin-bottom: 30px !important;}
+
+.ml10 {margin-left: 10px !important;}
+.ml20 {margin-left: 20px !important;}
+.ml30 {margin-left: 30px !important;}
+.ml40 {margin-left: 40px !important;}
+
+.mr10 {margin-right: 10px !important;}
+.mr20 {margin-right: 20px !important;}
+.mr30 {margin-right: 30px !important;}
+.mr40 {margin-right: 40px !important;}
+
+.bl-w {border-left: 1px solid #fff !important;}
+.br-w {border-right: 1px solid #fff !important;}
+.bb-w {border-bottom: 1px solid #fff !important;}
+
+.value1 {letter-spacing: 0; font-weight: 400; color: #000;}
+.value2 {font-size: 16px; letter-spacing: 0; font-weight: 400; color: #000;}
+
+.uncheck {vertical-align: middle; display: inline-block; width: 14px; height: 14px; margin-top: -3px; border: 1px solid #777; background: #fff; border-radius: 100%;}
+.checked {vertical-align: middle; display: inline-block; width: 14px; height: 14px; margin-top: -3px; border: 6px solid #000; background: #000; border-radius: 100%;}
+
+.month-input {display: inline-block; width: 50px; padding: 0 4px; text-align: right; background: #fff; color: #999; border-radius: 4px;}
+
+.div-img1 {position: relative; float: left; width: 510px; height: 94px;}
+.div-img1 ul {position: absolute; top: 8px; left: 10px;}
+.div-img1 .strong-txt1 {position: absolute; top: 24px; left: 343px; font-size: 16px; font-weight: 700;}
+.div-img1 .strong-txt2 {position: absolute; top: 24px; left: 426px; font-size: 16px; font-weight: 700;}
+
+.oder-list1 {padding: 8px 12px; font-size: 14px; font-weight: 700; background: #efefef;}
+.unorder-list1 {margin-left: 16px; padding-left: 18px; font-size: 14px; font-weight: 700;}
+.unorder-list1 li {margin-top: 8px; list-style-type: disc; letter-spacing: 0;}
+.unorder-list1 li:first-child {margin-top: 0;}
+
+.sign-area {margin: 60px 0 40px 0; text-align: right; font-size: 26px;}
+.sign-area img {vertical-align: middle; margin-left: 20px;}

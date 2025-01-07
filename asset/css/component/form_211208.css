@@ -1,0 +1,381 @@
+@charset 'UTF-8';
+
+/* form */
+label {margin-bottom: 0;}
+.form-control {height: 3.3rem;padding: .8rem 1.333rem;border-color: #ccc;border-radius: .333rem;font-size: 1.166rem;}
+.form-control:disabled,.form-control.disabled {color: rgba(0, 0, 0, .4);background: #f1f1f1;}
+.form-control[readonly] {color: rgba(0, 0, 0, .8);background: #f1f1f1;}
+select.form-control {-webkit-appearance: none;-moz-appearance: none;appearance: none;position: relative;padding-right: 2rem;background: #fff url(https://www.sk7mobile.com/html/images/icon/icon_select.png) no-repeat 100% center;background-size: auto .333rem;}
+select.form-control::-ms-expand {display: none;}
+.inline {display: inline-block;margin-right: 15px;}
+[class*=form-].inline {padding-top: .3rem !important;padding-bottom: .3rem !important;}
+.form-primary {border-color: #35baaa;}
+.form-primary::placeholder {color: #35baaa;}
+
+/* radio */
+.form-radio {display: inline-block;overflow: hidden;position: relative;vertical-align: middle;min-height: 1.5rem;padding: 1px; margin-right:0.5rem;} /* 211208 수정 */
+.form-radio:last-child {margin-right:0;} /* 211208 추가 */
+.form-radio input[type='radio'] {position: absolute;top: -10px;left: -999rem;width: 100%;height: 100%;}
+html.is_pc .form-radio input[type='radio']:focus + label {outline: 1px dotted #000;}
+.form-radio label {position: relative;min-width: 4.5rem;min-height: 1.5rem;padding-left: 1.666rem;color: #000;font-size: 1.166rem;line-height: 1.5rem;cursor: pointer;}
+.form-radio label:before {content: '';display: block;display: inline-block;position: absolute;top: .1rem;left: 0;width: 1.3rem;height: 1.3rem;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_radio_off.png);background-repeat: no-repeat;background-size: 100% 100%;}
+.form-radio input[type='radio']:checked + label:before {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_radio_on.png);}
+.form-radio input[type='radio']:disabled + label:before {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_radio_disabled_uncheck.png) !important;} /* 211208 수정 */
+.form-radio input[type='radio']:checked:disabled + label:before {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_radio_disabled_check.png) !important;} /* 211208 수정 */
+.form-radio input[type='radio']:disabled + label {color:#808080;} /* 211208 추가 */
+.form-radio.no-txt {min-width:1.4rem;}
+.form-radio.no-txt.pad-3 {padding:.3rem;}
+.form-radio.no-txt label {padding-left:0; min-width:1.4rem; min-height:1.4rem; line-height:1.4rem;}
+
+
+/* checkbox */
+.form-checkbox {display: inline-block;overflow: hidden;position: relative;vertical-align: middle;min-height: 1.5rem;padding: 1px;}
+.form-checkbox input[type='checkbox'] {position: absolute;top: -10px;left: -999rem;width: 100%;height: 100%;}
+html.is_pc .form-checkbox input[type='checkbox']:focus + label {outline: 1px dotted #000;}
+.form-checkbox label {position: relative;min-width: 1.5rem;min-height: 1.5rem;padding-left: 1.666rem;color: #000;font-size: 1.166rem;line-height: 1.2;cursor: pointer;}
+.form-checkbox label:before {content: '';display: block;display: inline-block;position: absolute;top: .1rem;left: 0;width: 1.3rem;height: 1.3rem;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_off.png);background-repeat: no-repeat;background-size: 100% 100%;}
+.form-checkbox input[type='checkbox']:checked + label:before {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_on.png);}
+
+.form-checkbox.checkbox-type1 {padding: 0;color: #333;font-size: 1.16rem;}
+.form-checkbox.checkbox-type1 label {padding: 0 0 0 1.83rem;line-height: 1.2;}
+.form-checkbox.checkbox-type1 label:before {top: .2rem;left: .1rem;width: 1rem;height: 1.2rem;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_1_off.png);}
+.form-checkbox.checkbox-type1 input[type='checkbox']:checked + label:before {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_1_on.png);}
+
+/* form-btn-group */
+.form-btn-toggle.btn-wrap {margin-top: 0;}
+.form-btn-toggle label {position: relative;margin-bottom: 0;}
+.form-btn-toggle input[type=checkbox],.form-btn-toggle input[type=radio] {position: absolute;clip: rect(0,0,0,0);pointer-events: none;}
+.form-btn-toggle .btn {border-width: 1px;border-color: #eaeaea;color: #b1b1b1;background: #eaeaea;}
+.form-btn-toggle .btn.active {position: relative;z-index: 10;border: 1px solid #35baaa;color: #35baaa;background: #fff;}
+.form-btn-toggle .btn.btn-effect.active:after {content: '';display: block;position: absolute;bottom: -1.66rem;left: 50%;width: 90%;max-width: 180px;height: 1.66rem;background: url(https://www.sk7mobile.com/html/images/common/bg_toggle_shadow.png) no-repeat;background-size: 100% 100%;transform: translateX(-50%);}
+.form-btn-toggle:not(.btn-wrap) > span {display: inline-block;}
+.form-btn-toggle:not(.btn-wrap) > span + span {margin-left: .8rem;}
+
+.form-btn-toggle .btn.btn-color {border: 0;color: #fff;background: #999;}
+.form-btn-toggle .btn.btn-color.active {background: #35baaa;}
+
+.datePicker .form-btn-toggle .btn {min-width: 6rem;}
+
+.search-wp {position: relative;margin: 0 auto;padding-right: 5.5rem;}
+.search-wp:after {content: '';display: block;clear: both;}
+.search-wp > div {float: left;}
+.search-wp .form-control {padding: .8rem .833rem;border-color: #35baaa;border-radius: .583rem;font-size: 1.18rem;}
+.search-wp .sel-wp {width: 35%;}
+.search-wp .inp-wp {position: relative;width: 100%;}
+.search-wp .sel-wp + .inp-wp {width: 63%;margin-left: 2%;}
+.search-wp .inp-wp:before {content: '';display: block;position: absolute;top: 50%;left: .833rem;width: 1.666rem;height: 1.666rem;background: url(https://www.sk7mobile.com/html/images/icon/icon_search1.png) no-repeat center;background-size: 1.083rem auto;transform: translateY(-50%);}
+.search-wp .inp-wp:after {content: '';display: block;position: absolute;top: 50%;left: 2.916rem;width: 1px;height: .833rem;background: #bcbcbc;transform: translateY(-50%);}
+.search-wp .inp-wp .form-control {padding-left: 3.583rem;}
+.search-wp .btn-wp {float: none;position: absolute;top: 0;right: 0;}
+.search-wp .btn-search {width: 5rem;padding: 0;border-radius: 1.666rem;color: #fff;line-height: 3.2rem;background: #35baaa;}
+.search-wp.v1 .form-control {padding-left: 1.5rem;border-radius: 2rem;font-size: 1.15rem;}
+.search-wp.v1 .sel-wp {width: 100%;max-width: none;}
+
+/* ui datepicker */
+.ui-datepicker {display: none;z-index: 3000 !important;padding: .83rem;border: 1px solid #35baaa;background-color: #fff;}
+.ui-datepicker thead th {padding: .5rem 0;color: #999;font-size: 1.3rem;font-weight: 400;text-align: center;}
+.ui-datepicker tbody td {width: 3rem;height: 3rem;padding: .16rem 0;font-size: 1.2rem;text-align: center;}
+.ui-datepicker tbody td > a {display: block;width: 3rem;height: 3rem;margin: 0 auto;color: #666;font-size: 1.2rem;line-height: 3rem;}
+.ui-datepicker tbody td.ui-datepicker-week-end > a {color: #ff3710;}
+.ui-datepicker-header {position: relative;padding: 0 .83rem .6rem;}
+.ui-datepicker-header a {display: inline-block;overflow: hidden;position: absolute;top: .5rem;width: 2rem;height: 2rem;color: transparent;text-indent: 100%;white-space: nowrap;background-repeat: no-repeat;background-position: center;background-size: auto 1.5rem;cursor: pointer;}
+.ui-datepicker-header .ui-datepicker-prev {left: 0;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_prev.png);}
+.ui-datepicker-header .ui-datepicker-next {right: 0;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_next.png);}
+.ui-datepicker-title {padding: .3rem 0;text-align: center;}
+.ui-datepicker-title span {color: #070915;font-size: 1.6rem;font-weight: 700;}
+.ui-datepicker tbody td > a.ui-state-active {border-radius: 50%;color: #fff;font-weight: 700;background-color: #35baaa;}
+.ui-state-disabled,.ui-datepicker-other-month {color: #aaa;}
+.ui-monthpicker .ui-datepicker-calendar td {padding: 0;border: 1px solid #ddd;}
+.ui-datepicker tbody td > a.ui-state-highlight {color: #000;font-weight: 700;}
+.ui-datepicker tbody td > a.ui-state-highlight.ui-state-active {color: #fff;}
+select.ui-datepicker-year,select.ui-datepicker-month {vertical-align: top;margin: 0 3px;padding: 5px 7px;border: 0;border: 1px solid #ccc;color: #333;font-size: 14px;background-color: transparent;}
+
+/* form-wrap */
+.form-wrap {position: relative;}
+.inp-form-wp + .inp-form-wp {margin-top: 1.66rem;}
+.inp-tit p {color: #000;font-size: 1.25rem;font-weight: 500;letter-spacing: -.3px;line-height: 1;}
+.inp-tit p .sm {font-size: 1rem;}
+.inp-cont {margin-top: .83rem;}
+.form-wrap .desc {color: #000;font-size: 1.18rem;}
+.form-wrap .btn-sm {min-width: 9.16rem;}
+.form-wrap .btn-375 {min-width: 100%;}
+
+.text-info {margin-top: .8rem;color: #000 !important;font-size: 1.1rem;}
+.text-info.text-danger {color: #d0112b !important;}
+.text-info.text-mint {color: #35baaa !important;}
+.text-info.text-grey {color: #666 !important;}
+.text-info.inline {margin-right: 0;}
+.inp-form-wp {display: table;width: 100%;}
+.form-inner-wp {overflow: hidden;}
+.form-inner-wp div {float: left;}
+.form-inner-wp.col3 div {float: left;width: 33.333333%;padding-right: 1%;}
+.form-inner-wp.col4 div {float: left;width: 25%;padding-right: 1%;}
+.form-inner-wp.col5 div {float: left;width: 20%;padding-right: 1%;}
+.form-inner-wp div:last-child {padding-right: 0;}
+.txtarea-wp textarea {height: 18.333rem;}
+.txtarea-wp.txtarea-sm textarea {height: 15rem;}
+.text-wp {height: 3.3rem;padding: .8rem 1.333rem;border: 1px solid #ccc;border-color: #ccc;border-radius: .333rem;color: #000;font-size: 1.166rem;background: #f5f5f5;}
+.form-wrap .text {font-size: 1.8rem;}
+
+/* date */
+.inp-date {display: inline-block;position: relative;vertical-align: top;width: 100%;}
+.inp-date .form-control {padding-right: 3.16rem; background:#fff !important;}
+.inp-date .ui-datepicker-trigger {position: absolute;top: 50%;right: .83rem;width: 1.66rem;width: auto;height: 1.333rem;transform: translateY(-50%);}
+.date-wp {overflow: hidden;}
+.date-wp div {float: left;width: 47.5%;}
+.date-wp em {display: inline-block;float: left;width: 5%;text-align: center;line-height: 33px;}
+.form-btn-toggle + .form-date-toFrom {margin-top: .83rem;}
+.form-date-toFrom {position: relative;padding-right: 6.5rem;}
+.form-date-toFrom .inp-wp {display: flex;}
+.form-date-toFrom .inp-date {flex: 1;}
+.form-date-toFrom .desc {padding: 0 .5rem;line-height: 3.3rem;}
+.form-date-toFrom .btn-wp {position: absolute;top: 0;right: 0;width: 6rem;}
+.form-date-toFrom .btn-wp .btn {width: 100%;min-width: auto; padding-left:0; padding-right:0;}
+
+.form-flex {display: -webkit-box;display: -ms-flexbox;display: flex;align-items: center;-webkit-box-align: center;-ms-flex-align: center;}
+.form-flexible {flex: 1;width: 100%;-webkit-box-flex: 1;-ms-flex: 1;}
+.form-flexible.v2 {flex: 1;}
+.form-flex > * + * {margin: 0 0 0 .83rem !important;}
+
+.form-flex.w-375 select {width: 10rem;}
+.form-flex.w-375 input {flex: 1}
+
+/* secure-wp */
+.secure-wp {position: relative;padding: 0 9.166rem;}
+.secure-wp .secure-area {display: flex;position: absolute;top: 0;left: 0;justify-content: center;flex-direction: column;width: 8.75rem;padding: 0;text-align: center;}
+.secure-wp .btn-wp {position: absolute;top: 0;right: 0;}
+.secure-wp.v2 .btn-wp {position: absolute;top: 0;right: auto;}
+.secure-wp .btn {overflow: hidden;width: 3.4rem;min-width: auto !important;height: 3.4rem;}
+.secure-wp .btn:before {content: '';display: block;position: absolute;top: 50%;left: 50%;width: 2.66rem;height: 2.66rem;transform: translate(-50%,-50%);}
+.secure-wp .btn + .btn {margin-left: .4rem;}
+.secure-wp .btn.btn-new:before {background: url(https://www.sk7mobile.com/html/images/icon/icon_new.png) no-repeat center;background-size: 1.33rem auto;}
+.secure-wp .btn.btn-audio:before {background: url(https://www.sk7mobile.com/html/images/icon/icon_audio.png) no-repeat center;background-size: 1.33rem auto;}
+.secure-input {display: flex;padding-top: 4.056em;}
+
+/* address-wp */
+.address-wp .address-code {display: -webkit-box;display: -ms-flexbox;display: flex;align-items: center;-webkit-box-align: center;-ms-flex-align: center;}
+.address-wp .address-code .form-control {flex: 1;width: 100%;-webkit-box-flex: 1;-ms-flex: 1;}
+.address-wp .address-code > * + * {margin: 0 0 0 .83rem !important;}
+.address-wp .address-code .btn {margin-left: .8rem;}
+.address-wp .address-inner .inp-wp {margin-top: .4rem;}
+
+/* form-payMthd */
+.payMthd-wp {border-top: 1px solid #35baaa;border-bottom: 1px solid #35baaa;}
+.payMthd-wp .inp-head {display: table-cell;padding: .8rem 1.333rem;text-align: center;background: #f5fbfb;}
+.payMthd-wp .form-radio-inner {display: inline-block;text-align: left;}
+.payMthd-wp .inp-head .inline {display: block;}
+.payMthd-wp .inp-head .inline + .inline {margin-top: .6rem;}
+.form-wrap.payMthd-wp .inp-form-wp.payMthd-cont {display: none;margin-bottom: 1.66rem;}
+
+/* email-wp */
+.email-wp .sel-wp {margin-top: .4rem;}
+
+/* form-size */
+.form-xxs {width: 4rem;padding-right: .8rem !important;padding-left: .8rem !important;text-align: center;}
+
+/* upload-file */
+.upload-file {position: relative;padding-right: 9.66rem;}
+.upload-file + .upload-file {margin-top: .4rem;}
+.upload-file input[type='file'] {overflow: hidden;position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;border: 0;clip: rect(0,0,0,0);}
+.upload-file label {position: absolute;top: 0;right: 0;width: 5.5rem;padding-right: 0;padding-left: 0;}
+
+/* sel-group */
+.sel-group .form-control {width: 11.25rem;height: 2.33rem;padding-top: .2rem;padding-bottom: .2rem;padding-left: .83rem;font-size: 1rem;}
+.sel-group > * + * {margin: 0 0 0 .4rem !important;}
+.sel-group .btn {height: 2.33rem;padding-top: .2rem;padding-right: 1.25rem;padding-bottom: .2rem;padding-left: 1.25rem;font-size: 1rem;}
+
+/* inp-timer */
+.inp-timer {position: relative;}
+.inp-timer input {padding-right: 3.5rem;}
+.inp-timer .time {position: absolute;top: 50%;right: 1rem;color: #35baaa;font-family: 'Lato','NotoSans';font-size: 1.16rem;transform: translateY(-50%);}
+
+/* chk-box */
+.chk-box {overflow-y: auto;max-height: 9rem;margin-top: 1rem;padding: 1rem 1.16rem;border: 1px solid #d4d4d4;border-radius: .5rem;background: #f8f8f8;}
+.chk-box li + li {margin-top: 1rem;}
+
+.etc-text {display: none;}
+
+@media (min-width:1080px) {
+	.form-control {height: 45px;padding: 9px 20px 10px;border-radius: 4px;font-size: 16px;}
+	select.form-control {background-size: auto 6px;}
+	.desc {margin: 0 7px;line-height: 45px !important;}
+	.inline {margin-right: 24px;}
+	.inline:last-child {margin-right: 0;}
+	.form-radio.type {margin-top: -5px;}
+
+	/* radio */
+	.form-radio label {min-height: 20px;padding-left: 28px;font-size: 17px;line-height: 20px;}
+	.form-radio label:before {top: 0;width: 20px;height: 20px;}
+
+	/* checkbox */
+	.form-checkbox label {padding-top: 3px;padding-left: 38px;font-size: 17px;line-height: 22px;}
+	.form-checkbox label:before {top: 0;width: 28px;height: 28px;}
+
+	.form-checkbox.checkbox-type1 label {padding-left: 38px;font-size: 16px;}
+	.form-checkbox.checkbox-type1 label:before {top: 5px;left: 8px;width: 12px;height: 13px;}
+	.form-checkbox.checkbox-type1 input[type='checkbox']:checked + label:before {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_1_on.png);}
+
+	/* search-wp */
+	.search-wp {max-width: 865px;padding-right: 140px;}
+	.search-wp .form-control {height: 64px;padding: 15px 25px;border-color: #35baaa;font-size: 18px;}
+	.search-wp .sel-wp {max-width: 193px;}
+	.search-wp .sel-wp + .inp-wp {width: 516px;}
+	.search-wp .inp-wp:before {left: 20px;width: 30px;height: 30px;background-size: 24px;}
+	.search-wp .inp-wp:after {left: 60px;height: 20px;}
+	.search-wp .inp-wp .form-control {padding-left: 75px;}
+	.search-wp .btn-wp {float: none;position: absolute;top: 0;right: 0;}
+	.search-wp .btn-search {width: 120px;height: 64px;}
+	.search-wp.v1 {max-width: 680px;}
+
+	/* ui datepicker */
+	.ui-datepicker {width: 283px;font-size: 15px;}
+	.ui-datepicker thead th {font-size: 15px;}
+	.ui-datepicker tbody td {width: 2rem;height: 2rem;font-size: 15px;}
+	.ui-datepicker tbody td > a {width: 2rem;height: 2rem;font-size: 15px;line-height: 2rem;}
+	.ui-datepicker-title {padding: 5px 0;}
+	.ui-datepicker-title span {font-size: 18px;}
+	.ui-datepicker-header a {width: 20px;height: 20px;background-size: auto 100%;}
+
+	/* form-wrap */
+	.form-wrap:not(.vertical) {border-top: 2px solid #35baaa;border-bottom: 2px solid #35baaa;}
+	.form-wrap:not(.vertical):after {display: none;}
+	.form-wrap:not(.vertical) .form-control {max-width: 375px;}
+	.form-wrap:not(.vertical) .inp-form-wp {display: table;width: 100%;}
+	.form-wrap:not(.vertical) .inp-form-wp + .inp-form-wp {margin-top: 0;margin-bottom: 0;}
+	.form-wrap:not(.vertical) .inp-tit,.form-wrap:not(.vertical) .inp-cont {display: table-cell;vertical-align: middle;height: 70px;padding: 12px 15px 12px 30px;border-bottom: 1px solid #ededed;}
+	.form-wrap:not(.vertical) .inp-tit {width: 21%;min-width: 150px;background: #f5fbfb;}
+	.form-wrap:not(.vertical) .inp-tit p {font-size: 18px;font-weight: 400;line-height: 1.3;}
+	.form-wrap:not(.vertical) .inp-tit p .sm {font-size: 14px;}
+	.form-wrap:not(.vertical) .inp-cont {width: 79%;margin-top: 0;}
+	.form-wrap .desc {font-size: 18px;}
+
+	.inp-cont .form-control + .form-control {margin-top: 15px;}
+	.text-info {margin-top: 10px;font-size: 15px;}
+	.text-info.inline {display: inline-block;margin-top: 0;margin-left: 40px;}
+	.text-wp {display: inline-block;height: auto;padding: 0;border: 0;color: #000;font-size: 18px;font-weight: 500;line-height: normal;background: none;}
+	.text-wp + .btn-wp {margin-left: 20px !important;}
+	.txtarea-wp.txtarea-sm textarea {height: 150px;}
+	.form-wrap .btn-sm {min-width: 157px;}
+	.form-wrap .text {font-size: 20px;}
+	/*.inp-cont {display:block;width:100%;padding:15px 0;}*/
+	.form-wrap.v1 .inp-tit {width: 300px;}
+	.form-wrap.v1 .inp-cont {width: 790px;}
+	.form-wrap .btn-375 {min-width: 375px;}
+
+	/* secure-wp */
+	.secure-wp {width: 375px;padding: 0 106px 0 122px;}
+	.secure-wp .secure-area {width: 112px;}
+	.secure-wp input.form-control {width: 144px;}
+	.secure-wp .btn-wp {right: -5px;width: 100px;}
+	.secure-wp .btn {width: 42px;height: 42px;}
+	.secure-wp .btn.btn-new:before {background-size: 17px auto;}
+	.secure-wp .btn.btn-audio:before {background-size: 16px auto;}
+	.secure-wp.vertical {width: auto;padding: 54px 0 0 0;}
+	.secure-wp.vertical .btn-wp {left: 127px;width: 100px;}
+	.secure-wp.vertical input.form-control {width: 375px;}
+	.modal .secure-wp.vertical input.form-control {width: 100%;}
+	.secure-input {padding-top: 3.056em;}
+
+	/* form-date-toFrom */
+	.form-date-toFrom {vertical-align: top;padding: 0;}
+	.form-date-toFrom:after {content: '';display: block;clear: both;}
+	.form-date-toFrom .inp-wp {display: block;float: left;width: auto;}
+	.inp-date {width: 283px !important;}
+	.form-date-toFrom .desc {position: static;padding: 0;}
+	.form-date-toFrom .desc + .inp-date {margin-top: 0;}
+	.form-date-toFrom .btn-wp {float: left;position: relative;width: auto;margin-left: 10px;}
+	.form-date-toFrom .btn-wp .btn {width: 110px;}
+	.datePicker .form-btn-toggle .btn-sm {min-width: 110px;}
+
+	.form-flex > * + * {margin: 0 0 0 8px !important;}
+	.form-flexible {flex: 0 1 auto;width: auto;}
+
+    .form-flex.w-375 {width: 375px;}
+    .form-flex.w-375 select {width: 145px;}
+
+	/* card-wp */
+	.card-wp .inp-wp {width: 145px;}
+
+	/* period-wp */
+	.period-wp .sel-wp {width: 155px;}
+	.period-wp .desc1 {margin-right: 5px !important;}
+
+	/* form-size */
+	.form-xxs {width: 50px;}
+	.form-s {width: 180px;}
+	.form-sm {width: 211px;}
+	.form-md {width: 375px !important;}
+	.form-lg {height: 64px;padding-left: 38px;}
+
+	/* address-wp */
+	.address-wp .address-code > * {flex: 0 1 auto;width: auto;}
+	.address-wp .address-code > * + * {margin: 0 0 0 8px !important;}
+	.address-wp .address-code .form-control {max-width: 211px;}
+	.address-wp .address-code .btn {margin-left: 8px;}
+	.address-wp .address-inner {margin-top: .4rem;}
+	.address-wp .address-inner .form-control {max-width: none;}
+
+	/* payMthd-wp */
+	.payMthd-wp {padding-bottom: 0;}
+	.payMthd-wp .inp-head {padding: 24px 0;border-bottom: 1px solid #cbdbd9;}
+	.payMthd-wp .inp-head .inline {display: inline-block;margin-top: 0 !important;}
+	.payMthd-wp .payMthd-cont {margin: 0;}
+	.payMthd-wp .payMthd-cont.show {display: table !important;}
+
+	/* email-wp */
+	.email-wp .form-flex {display: inline-flex;}
+	.email-wp .form-control {width: 235px;}
+	.email-wp.v1 .form-control {width: 183px;}
+	.email-wp .sel-wp {display: inline-block;vertical-align: top;margin: 0 0 0 4px;}
+
+	/* upload-file */
+	.upload-file {padding-right: 165px;}
+	.form-wrap .upload-file {width: 540px;}
+	.upload-name.form-control[readonly] {background: #fff;}
+
+	/* sel-group */
+	.sel-group .form-control {width: 170px;height: 42px;font-size: 16px;}
+	.sel-group .btn {width: 83px;height: 42px;font-size: 16px;}
+
+	.modal .form-wrap:not(.vertical) .inp-tit,.modal .form-wrap:not(.vertical) .inp-cont {padding: 10px 10px 10px 18px;}
+	.modal .form-wrap:not(.vertical) .inp-tit {width: 140px;}
+
+	.form-btn-toggle:not(.btn-wrap) > span + span {margin-left: 8px;}
+	.form-btn-toggle.v1 .btn {min-width: 182px;padding-right: 10px;padding-left: 10px;font-weight: 500;}
+	.form-btn-toggle.v1 .btn.n1{min-width:375px !important;}
+	.form-btn-toggle .btn.btn-effect.active:after {bottom: -13px;height: 12px;}
+	.form-btn-toggle.v1.sm .btn {min-width: 118px;}
+
+	/* inp-timer */
+	.inp-timer .time {font-size: 16px;}
+
+	/* phoneNum-wp */
+	.phoneNum-wp {width: 375px;}
+
+	/* dateTime-wp */
+	.dateTime-wp .inp-date {width: 173px !important;}
+
+	/* chk-box */
+	.chk-box {width: 375px;max-height: 126px;margin-top: 10px;padding: 10px 20px 15px;}
+	.chk-box li + li {margin-top: 8px;}}
+
+@media (max-width:1079.98px) {
+	.form-inner-wrap:after {content: '';display: block;clear: both;}
+	.form-inner-wrap .inline {float: left;width: 50%;margin: 0;}
+
+	.form-checkbox.checkbox-lg label,.label-box .form-checkbox label,.acc-group .acc-head .form-checkbox label {padding-left: 2.33rem;font-size: 1.25rem;line-height: 1.83rem;}
+	.form-checkbox.checkbox-lg label:before,.label-box .form-checkbox label:before,.acc-group .acc-head .form-checkbox label:before {top: 0;width: 1.83rem;height: 1.83rem;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_lg_off.png);}
+	.form-checkbox.checkbox-lg input[type='checkbox']:checked + label:before,.label-box .form-checkbox input[type='checkbox']:checked + label:before,.acc-group .acc-head .form-checkbox input[type='checkbox']:checked + label:before {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_lg_on.png);}
+
+	.modal-open .ui-datepicker {top: 50% !important;left: 50% !important;transform: translate(-50%, -50%);}
+
+	.form-btn-toggle.v1 {display: flex;}
+	.form-btn-toggle.v1 > * {flex: 1;width: 100%;-webkit-box-flex: 1;-ms-flex: 1;}
+	.form-btn-toggle.v1 .btn {width: 100%;min-width: auto;}
+	.form-btn-toggle.v1.item4:after {content: '';display: block;clear: both;}
+	.form-btn-toggle.v1.item4 {display: block;margin: -.3rem;}
+	.form-btn-toggle.v1.item4 > span {float: left;flex: none;width: 50%;padding: .3rem;}
+	.form-btn-toggle.v1.item4 > span + span {margin-left: 0;}
+
+	.form-wrap.round {padding: 1.5rem 1.15rem;border: 1px solid #35baaa ;border-radius: .5rem;}
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+
+<!-- s: 240726 CM -->
+
+<!-- css -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/vendor/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/common/base.css">
+</head>
+
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+
+<!-- wrap -->
+<div id="wrap" class="main">
+	<!-- Header -->
+
+    <header id="hd" class="mpc-gnb v2">
+        <div class="container">
+            <h1 class="hd-logo">
+                <a href="/main.do">
+                    <img src="../asset/img/logo.png" alt="SK 7mobile"><span class="sr-only">SK 7mobile</span>
+                </a>
+            </h1>
+            <div class="gnb-wrap">
+                <div class="hd-top">
+                    <p class="gnb-logo d-lg-none"><a href="/main.do"><img src="../asset/img/logo.png"
+                                alt="SK 7mobile"><span class="sr-only">SK 7mobile</span></a></p>
+                </div>
+                <div class="gnb">
+                    <h2 class="sr-only">주메뉴</h2>
+                    <ul class="gnb-list">
+                        <li class="gnb-item bar current">
+                            <a href="/main.do" class="gnb-link"><span>Plan</span></a>
+                        </li>
+                        <li class="gnb-item">
+                            <a href="/register.do" class="gnb-link"><span>Register</span></a>
+                        </li>
+                        <li class="gnb-item">
+                            <a href="/faqs.do" class="gnb-link"><span>FAQs</span></a>
+                        </li>
+                    </ul>
+                    <span class="gnb-bar"></span>
+                </div>
+                <div class="header-side-v2">
+                    <a class="header-side-link" href="">1CMN</a>
+                    <div class="partner-ci">
+                        <img src="images/_temp/logo_cmlink.png" alt="네이버페이">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+
+<section class="sect">
+	<div class="container type2">
+        <div class="partner-main lang-ko">
+            <div class="toggle-wrap">
+                <div class="toggle-btn-box">
+                    <button id="tab-1" data-lang="lang-ch" class="toggle-btn">中國語</button>
+                    <button id="tab-2" data-lang="lang-ko" class="toggle-btn active">한국어</button>
+                    <span class="glider"></span>
+                </div>
+            </div>
+            <img src="images/event/240808_CMLink_ko.jpg" alt="" usemap="#CMLink_ko" class="CMLink_ko">
+            <img src="images/event/240808_CMLink_ch.jpg" alt="" usemap="#CMLink_ch" class="CMLink_ch">
+            <map name="CMLink_ko">
+                <area shape="rect" coords="113,7682,1007,7809" href="" alt="">
+                <area shape="rect" coords="113,9797,1007,9927" href="" alt="">
+            </map>
+            <map name="CMLink_ch">
+                <area shape="rect" coords="112,7956,1007,8084" href="" alt="">
+                <area shape="rect" coords="113,10122,1006,10250" href="" alt="">
+            </map>
+        </div>
+    </div>
+
+
+
+</section>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+
+	<!-- Footer -->
+	<footer id="ft">
+        <div class="container">
+            <div class="ft-top">
+                <p class="ft-text">나를 아끼는 모바일 <img src="/html/images/logo.png" alt="sk7mobile"></p><dl class="font-weight-normal">
+                    <dt class="font-weight-normal">가입/개통문의 :</dt>
+                    <dd>1599-3508(유료), 평일 10:00 ~ 18:00 (점심시간 12:30 ~ 13:30) </dd>
+                    <dt class="font-weight-normal">고객센터 :</dt>
+                    <dd>114(무료)/1599-0999(유료), 평일 09:00 ~ 18:00(점심시간 12:00 ~ 13:00)</dd>
+                    <dd>* 업무시간 외, 토/일 및 공휴일은 분실, 습득, 통화품질, 로밍, 선불 충전에 한해 24시간 365일 상담 가능</dd>
+                </dl></div>
+            <hr>
+            <div class="ft-bottom">
+                <div>(04212) 서울시 마포구 마포대로 144 마포T타운. 대표이사 하성호 <br class="d-lg-none">사업자번호 : 104-81-43391 <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048143391" target="_blank" alt="새창열림" title="새청열림">통신 판매번호:2010-서울마포-3953</a></div>
+                <p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+
+<!-- js -->
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+
+<script>
+    $('.toggle-btn-box .toggle-btn').click(function () {
+        var tabLanguage = $(this).attr('data-lang');
+
+        $('.partner-main').attr('class', 'partner-main');
+        $('.partner-main').addClass(tabLanguage);
+
+        $('.toggle-btn-box .toggle-btn').removeClass('active');
+        $(this).addClass('active');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../asset/css/vendor/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../asset/css/common/base.css">
+<!-- <link rel="stylesheet" type="text/css" href="../asset/css_220215/common/responsive_app.css"> -->
+<!-- js -->
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+</head>
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+<!-- top banner -->
+<div class="top-banner" style="background: #273749">
+	<a href="">
+		<img src="../asset/img/1.jpg" class="d-lg-none" alt="음성 데이터 무제한 월 33,000원">
+		<img src="../asset/img/1_pc.jpg" class="d-none d-lg-block" alt="음성 데이터 무제한 월 33,000원">
+	</a>
+	<span class="form-checkbox todayChk d-none d-lg-block">
+		<input type="checkbox" id="todayBnr">
+		<label for="todayBnr">오늘하루보지않기</label>
+	</span>
+	<button type="button" class="icon-close">배너 닫기</button>
+</div>
+<!-- //top banner -->
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- Header -->
+	<header id="hd">
+		<div class="container">
+			<h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+
+<section class="sect page-ab-option">
+	<div class="container">
+		<div class="heading-depth1">
+			<h2 class="title">앱설정</h2>
+		</div>
+		<div class="option-bx d-flex">
+			<div>
+				<h3>자동로그인</h3>
+				<p>※ 앱 실행 시 다시 로그인할 필요 없도록 <br>설정하는 기능입니다.</p>
+			</div>
+			<div>
+				<div class="form-switch">
+					<label class="form-check-label" for="chkAccess">
+						<input class="form-check-input" type="checkbox" name="chkAccess" id="chkAccess">
+						<span id="sp_onOff" style="display: none;"><i class="sr-only">on/off</i></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<h3>보유한 휴대폰번호</h3>
+		<div class="option-bx" id="hpListArea">
+		</div>
+
+		<!-- 221204 -->
+		<h3>위젯 사용량 조회 항목</h3>
+		<div class="option-bx" id="hpListArea">
+			<ul class="op-lst-use">
+				<li>
+					<div><b>데이터</b><p>MVNO Data 500MB 공제 (LTE)</p></div>
+					<div><button class="btn btn-xsm btn-primary" onclick="mbsOpen('dataChg');">변경</button></div>
+				</li>
+				<li>
+					<div><b>통화</b><p>MVNO 음성/영상 100분 공제</p></div>
+					<div><button class="btn btn-xsm btn-primary" onclick="mbsOpen('callChg');">변경</button></div>
+				</li>
+				<li>
+					<div><b>문자</b><p>SMS/MMS 2000원</p></div>
+					<div><button class="btn btn-xsm btn-primary" onclick="mbsOpen('smsChg');">변경</button></div>
+				</li>
+			</ul>
+		</div>
+		<!-- //221204 -->
+
+
+		<h3>설치 된 버전</h3>
+		<div class="option-bx">
+			<ul class="op-lst-ver">
+				<li><p>현재 버전</p><b></b></li>
+				<li><p>최신 버전</p><b></b></li>
+			</ul></div>
+		<h3>고객센터</h3>
+		<div class="option-bx v2">
+			<ul class="op-lst-align">
+				<li class="op-lst-01"><p>고객센터 유선 상담</p><b>1599-0999</b></li>
+				<li class="op-lst-02">고객센터 운영시간<br>평일&nbsp;&nbsp;09:00~18:00(토, 일요일, 공휴일 휴무)</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+
+<!-- s: 221204 ----------------------------------------------->
+
+<!-- 데이터변경 팝업 -->
+<div class="app_bottom_slide" id="dataChg">
+	<ul class="absWrap">
+		<li>
+			<span class="form-radio">
+				<input type="radio" name="r-1" id="r-1-1">
+				<label for="r-1-1">MVNO Data 500MB 공제 (LTE)</label>
+			</span>
+		</li>
+		<li>
+			<span class="form-radio">
+				<input type="radio" name="r-1" id="r-1-2">
+				<label for="r-1-2">미설정</label>
+			</span>
+		</li>
+	</ul>
+</div>
+<!-- //데이터변경 팝업 -->
+
+<!-- 통화변경 팝업 -->
+<div class="app_bottom_slide" id="callChg">
+	<ul class="absWrap">
+		<li>
+			<span class="form-radio">
+				<input type="radio" name="r-2" id="r-2-1">
+				<label for="r-2-1">MVNO 음성/영상 100분 공제</label>
+			</span>
+		</li>
+		<li>
+			<span class="form-radio">
+				<input type="radio" name="r-2" id="r-2-2">
+				<label for="r-2-2">미설정</label>
+			</span>
+		</li>
+	</ul>
+</div>
+<!-- //통화변경 팝업 -->
+
+<!-- 문자변경 팝업 -->
+<div class="app_bottom_slide" id="smsChg">
+	<ul class="absWrap">
+		<li>
+			<span class="form-radio">
+				<input type="radio" name="r-3" id="r-3-1">
+				<label for="r-3-1">SMS/MMS 2000원</label>
+			</span>
+		</li>
+		<li>
+			<span class="form-radio">
+				<input type="radio" name="r-3" id="r-3-2">
+				<label for="r-3-2">미설정</label>
+			</span>
+		</li>
+	</ul>
+</div>
+<!-- //문자변경 팝업 -->
+
+<style>
+.app_bottom_slide{visibility:hidden;position:fixed;bottom:-100vh;left:0;width:100vw;height:100vh;z-index:1039;background:transparent;}
+.app_bottom_slide.show{visibility:visible;bottom:0;background:rgba(0,0,0,.65);transition:background .4s;}
+.app_bottom_slide .absWrap{position:fixed;left:0;bottom:-100%;width:100%;background-color:#fff;}
+.app_bottom_slide .absWrap li{border-bottom:1px solid #d9d9d9;}
+.app_bottom_slide .absWrap .form-radio{width:100%;}
+.app_bottom_slide .absWrap .form-radio label{width:100%;font-size:18px;padding:20px 50px 20px 22px;}
+.app_bottom_slide .absWrap .form-radio label:before{top:50%;transform:translateY(-50%);left:initial;right:20px;width:21px;height:21px;}
+</style>
+<script>
+ 	//위젯 사용량 조회 항목 : 변경벼튼 클릭시 레이어 출력
+	function mbsOpen(id){
+		$("body").addClass("modal-open");
+		$("#"+id).addClass('show');
+		let conH = $("#"+id).find('.absWrap').height();
+		$("#"+id).children('.absWrap').css('bottom', -conH).stop().animate({bottom: 0});
+	};
+
+	//위젯 사용량 조회 항목 : 라디오버튼 클릭시 레이어 숨김
+	$(".app_bottom_slide").find('input:radio').click(function(){
+		let id = $(this).parents('.app_bottom_slide').attr("id");
+		let conH = $("#"+id).find('.absWrap').height();
+		$("#"+id).children('.absWrap').stop().animate({bottom: -conH}, 700, function(){
+			$("#"+id).removeClass('show');
+		});
+		$("body").removeClass("modal-open");
+	});
+</script>
+
+<!-- //e: 221204 ----------------------------------------------->
+
+
+
+<script type="text/javascript">
+	//<![CDATA[
+	var accessLoginKey = localStorage.getItem("__$$EcustCookieKey$$__");
+	var accessTypeKey = localStorage.getItem("__$$EcustAccessTypeKey$$__");
+	var accessTokenKey = localStorage.getItem("__$$EcustAccessTokenKey$$__");
+	$(document).ready(function() {
+		if(accessLoginKey != null && accessTypeKey != null && accessTokenKey != null && accessTypeKey == "appMain") {
+			$('input:checkbox[id="chkAccess"]').attr("checked", true);
+		} else {
+			$('input:checkbox[id="chkAccess"]').attr("checked", false);
+		}
+		$("#sp_onOff").show();
+		$("#chkAccess").click(function(event) {
+			if($(this).is(":checked")) {
+				$("input:checkbox[id='chkAccess']").prop("checked", true);
+				fn_appSetSubmit(true);
+			} else {
+				$("input:checkbox[id='chkAccess']").prop("checked", false);
+				fn_appSetSubmit(false);
+			}
+		});
+		fnPhoneNumList();
+	});
+	function fn_appSetSubmit(bSelect) {
+		var accessType = bSelect ? "appMain" : "";
+		var url = "/mmbr/mmbr/appSettingProc.do";
+		var type = "post";
+		var data = { "accessType": accessType };
+		var dataType = "json";
+		fnAjaxSubmit(url, type, data, dataType, function(data) {
+			if(data.ERROR != undefined) {
+				eval(data.ERROR);
+				return false;
+			} else {
+				try {
+					if(data.result != undefined && data.result != null) {
+						if(data.result == "save") {
+							setCookie("__$$EcustCookieKey$$__", data.muid);
+							setCookie("__$$EcustAccessTypeKey$$__", data.accessType);
+							setCookie("__$$EcustAccessTokenKey$$__", data.accessToken);
+							localStorage.setItem("__$$EcustCookieKey$$__",data.muid);
+							localStorage.setItem("__$$EcustAccessTypeKey$$__",data.accessType);
+							localStorage.setItem("__$$EcustAccessTokenKey$$__",data.accessToken);
+							fn_appSetProperty("app-auto-login-id-key",data.encMuid);
+							fn_appSetProperty("app-auto-login-access-type-key",data.accessType);
+							fn_appSetProperty("app-auto-login-access-token-key",data.accessToken);
+							location.href = "/mmbr/mmbr/appSetting.do";
+						} else {
+							setCookie("__$$EcustCookieKey$$__", "");
+							setCookie("__$$EcustAccessTypeKey$$__", "");
+							setCookie("__$$EcustAccessTokenKey$$__", "");
+							localStorage.removeItem("__$$EcustCookieKey$$__");
+							localStorage.removeItem("__$$EcustAccessTypeKey$$__");
+							localStorage.removeItem("__$$EcustAccessTokenKey$$__");
+							fn_appClearAllProperties();
+							location.href = "/mmbr/mmbr/appSetting.do";
+						}
+					}
+				} catch(exception) {
+					var output = '';
+					for(var i in exception) {
+						output += i + ' : ' + exception[i] + '\n';
+					}
+				}
+			}
+		});
+	}
+	var selecteedPhoneNum = '';
+	function fnSelectPhoneNumber(obj) {
+		if(selecteedPhoneNum == obj.value) {
+			$(".btn-phonenumber-change")
+				.removeClass("btn-primary")
+				.addClass("btn-disabled")
+				.unbind("click")
+			;
+		} else {
+			$(".btn-phonenumber-change")
+				.removeClass("btn-disabled")
+				.addClass("btn-primary")
+				.click(function() {
+					customConfirm("대표 휴대폰번호로 변경하시겠습니까?", "안내", function() {
+						fnPhoneNumList($("input[name='phnumber']:checked").val());
+					});
+				});
+			;
+		}
+	}
+	function fnPhoneNumList(u) {
+		var html = '';
+		$("#hpListArea").html(html);
+		var url = "/mmbr/mmbr/phoneNumList.do";
+		var type = "post";
+		var data = u == undefined ? { } : { "p": u };
+		var dataType = "json";
+		fnAjaxSubmit(url, type, data, dataType, function(data) {
+			if(data.resultInfo.isError != undefined && data.resultInfo.isError == "Y") {
+				customAlert(data.resultInfo.errorMessage, "안내", function() { location.replace(data.resultInfo.redirectURL); } );
+			} else {
+				var idx = 1;
+				var attr1 = '';
+				var attr2 = '';
+				var text1 = '';
+				var text2 = '';
+				for(var i = 0; data.resultInfo.hpList != undefined && i < data.resultInfo.hpList.length; i++) {
+					if(i == 0) {
+						selecteedPhoneNum = data.resultInfo.hpList[i].ctrtId;
+						attr1 = ' checked="checked"';
+						attr2 = ' class="checked"';
+						text1 = '(대표)';
+						text2 = '<p class="text-info">※ 나의서비스 및 위젯 이용 시, 대표번호로 조회됩니다.</p>';
+					} else {
+						attr1 = '';
+						attr2 = '';
+						text1 = '';
+						text2 = '';
+					}
+					html += '<div class="inp-form-wp">\n';
+					html += '	<div class="inp-tit">\n';
+					html += '		<p>휴대폰번호'+idx+text1+'</p>\n';
+					html += '	</div>\n';
+					html += '	<div class="inp-cont">\n';
+					html += '		<span class="form-radio inline">\n';
+					html += '			<input type="radio" name="phnumber" id="phnumber_'+idx+'" value="'+data.resultInfo.hpList[i].ctrtId+'"'+attr1+' onclick="fnSelectPhoneNumber(this);">\n';
+					html += '			<label for="phnumber_'+idx+'"'+attr2+'>'+data.resultInfo.hpList[i].svcTelNoMask+'</label>\n';
+					html += '		</span>'+text2+'\n';
+					html += '	</div>\n';
+					html += '</div>\n';
+					idx++;
+				}
+				if(data.resultInfo.hpList.length > 1) {
+					html += '<div class="inp-form-wp">\n';
+					html += '	<a href="javascript:void(0);" class="btn btn-block btn-disabled btn-phonenumber-change">대표 휴대폰번호로 변경</a>\n';
+					html += '</div>\n';
+				}
+				$("#hpListArea").html(html);
+			}
+		});
+	}
+	//]]>
+	</script></div><aside id="quick"></aside>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+	$('.sidebar-reg-button').on('click', function () {
+		var $sidebarRegWrap = $('.sidebar-reg-wrap');
+		var $sidebarRegButton = $(this);
+		$sidebarRegWrap.toggleClass('on');
+		if ($sidebarRegWrap.hasClass('on')) {
+			$sidebarRegButton.text('닫기');
+		} else {
+			$sidebarRegButton.text('펼쳐보기');
+		}
+	});
+});
+//]]>
+</script>
+
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+
+
+	<!-- Footer -->
+	<footer id="ft">
+		<div class="container">
+			<div class="ft-top">
+				<p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+				<dl class="font-weight-normal">
+					<dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+					<dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+					<dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+					<dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+				</dl>
+			</div>
+			<hr>
+			<ul class="fnb">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+				<li><a href="">개인정보이용내역조회</a></li>
+				<li><a href="">통신자료제공사실 열람신청</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">분쟁처리절차</a></li>
+				<li><a href="">책임의 한계와 법적고지</a></li>
+				<li><a href="">불법스팸대응센터</a></li>
+				<li><a href="">명의도용방지서비스</a></li>
+				<li><a href="">해지미환급금 조회/환불</a></li>
+				<li><a href="">법인회선개통문의</a></li>
+			</ul>
+			<div class="ft-bottom">
+				<div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장  최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신 판매번호:2010-서울중구-0518</div>
+				<p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+
+</div>
+<!-- //wrap -->
+
+
+</body>
+</html>

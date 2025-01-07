@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko" class="ui-d">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/common/base.css">
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+</head>
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- Header -->
+	<header id="hd">
+		<div class="container">
+			<h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+
+<section class="sect">
+	<div class="container">
+		<div class="heading-depth1">
+			<h2 class="title">명의변경 신청</h2>
+		</div>
+
+        <ul class="step chg-name-type2">
+            <li><span class="ball">1</span></li>
+            <li><span class="ball">2</span></li>
+            <li><span class="ball">3</span></li>
+			<li class="active"><i class="icon-step step4"></i><span class="title">4. 명의 받는 분(양수인) 본인확인</span></li>
+			<li><span class="ball">5</span></li>
+			<li><span class="ball">6</span></li>
+		</ul>
+
+		<div class="article-area" data-identify="before">
+            <div class="heading-depth2">
+                <h3 class="title">명의 받는 고객님(양수인)의 정보를 입력해주세요.</h3>
+            </div>
+            <div class="form-wrap">
+				<div class="inp-form-wp">
+                    <div class="inp-tit"><p>구분</p></div>
+                    <div class="inp-cont">
+                        <span class="form-radio inline">
+                            <input type="radio" name="radio1" checked="checked" id="radio1-1">
+                            <label for="radio1-1" class="checked">개인</label>
+                        </span>
+                        <span class="form-radio inline">
+                            <input type="radio" name="radio1" id="radio1-2">
+                            <label for="radio1-2" class="">외국인</label>
+                        </span>
+                    </div>
+                </div>
+				<div class="inp-form-wp">
+                    <div class="inp-tit"><p>새 명의자 이름</p></div>
+                    <div class="inp-cont">
+                        <div class="inp-wp">
+                            <input class="form-control" type="text" maxlength="50" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="inp-form-wp">
+                    <div class="inp-tit"><p>새 명의자 주민등록번호</p></div>
+                    <div class="inp-cont">
+                        <div class="inp-wp">
+                            <input type="text" class="form-control" maxlength="11" placeholder="'-' 를 제외하고 입력해주세요.">
+                        </div>
+                    </div>
+                </div>
+                <div class="inp-form-wp">
+					<div class="inp-tit"><p>기존 명의자와의 관계</p></div>
+					<div class="inp-cont">
+						<div class="sel-wp">
+							<select class="form-control" title="수량">
+								<option>선택</option>
+								<option value="1">부모</option>
+								<option value="2">자녀</option>
+								<option value="3">형제/자매</option>
+								<option value="4">사위</option>
+								<option value="5">며느리</option>
+								<option value="6">조부모</option>
+								<option value="7">대표자</option>
+								<option value="8">직원</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="inp-form-wp">
+                    <div class="inp-tit"><p>새 명의자 연락처</p></div>
+                    <div class="inp-cont">
+                        <div class="inp-wp">
+                            <input type="text" class="form-control" maxlength="11" placeholder="'-' 없이 숫자만 입력해주세요.">
+							<div class="text-info text-grey">
+                                * 해당 휴대폰 번호로 명의변경 신청내용 확인 전화를 드립니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="inp-form-wp local">
+					<div class="inp-tit">
+						<p>새 명의자 신분증 정보</p>
+					</div>
+					<div class="inp-cont">
+						<div class="form-btn-toggle v1" data-toggle="buttons">
+							<span>
+								<label class="btn btn-sm btn-radius-md btn-effect checked active" for="identity1" id="lb_identity1">
+									<input type="radio" name="idntTcd" id="identity1" checked="checked" value="R">주민등록증
+								</label>
+							</span>
+							<span>
+								<label class="btn btn-sm btn-radius-md btn-effect" for="identity2" id="lb_identity2">
+									<input type="radio" name="idntTcd" id="identity2" title="운전면허증 선택" value="D">운전면허증
+								</label>
+							</span>
+						</div>
+						<div id="identityGroup1" class="mt-2 identity-type1" style="display: block;">
+							<p class="table-label">발급일자</p>
+							<span class="inp-date form-md">
+								<input type="text" class="form-control input-date" title="달력보기" placeholder="YYYY-MM-DD">
+							</span>
+							<p class="text-info text-grey">* 신분증 확인 후 정확한 발급일자를 넣어주세요.</p>
+						</div>
+						<div id="identityGroup2" class="mt-2 identity-type2" style="display: none;">
+							<p class="table-label">면허번호</p>
+							<div class="form-flex w-375">
+								<select class="form-control" title="발급지역 선택" name="drvLicNo1" id="drvLicNo1">
+									<option value="" selected="selected">선택</option>
+									<option value="11">서울(11)</option>
+									<option value="12">부산(12)</option>
+									<option value="13">경기(13)</option>
+									<option value="13">경기남부(13)</option>
+									<option value="28">경기북부(28)</option>
+									<option value="14">강원(14)</option>
+									<option value="15">충북(15)</option>
+									<option value="16">충남(16)</option>
+									<option value="17">전북(17)</option>
+									<option value="18">전남(18)</option>
+									<option value="19">경북(19)</option>
+									<option value="20">경남(20)</option>
+									<option value="21">제주(21)</option>
+									<option value="22">대구(22)</option>
+									<option value="23">인천(23)</option>
+									<option value="24">광주(24)</option>
+									<option value="25">대전(25)</option>
+									<option value="26">울산(26)</option>
+								</select>
+								<input class="form-control" type="number" pattern="[0-9]*" inputmode="numeric" oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);" name="drvLicNo2" id="drvLicNo2" maxlength="10" title="면허번호 입력" placeholder="숫자만 입력해주세요." autocomplete="new-password">
+							</div>
+							<p class="table-label table-label-v2">발급일자</p>
+							<span class="inp-date form-md">
+								<input type="text" class="form-control input-date" title="달력보기" placeholder="YYYY-MM-DD">
+							</span>
+							<p class="text-info text-grey">* 신분증 확인 후 정확한 발급일자를 넣어주세요.</p>
+						</div>
+					</div>
+				</div>
+                <div class="inp-form-wp">
+                    <div class="inp-tit"><p>새 명의자 본인인증</p></div>
+                    <div class="inp-cont">
+                        <span class="form-radio inline">
+                            <input type="radio" name="authOn2" checked="checked" id="authOn2-1">
+                            <label for="authOn2-1" class="">네이버 인증</label>
+                        </span>
+                        <span class="form-radio inline">
+                            <input type="radio" name="authOn2" id="authOn2-2">
+                            <label for="authOn2-2" class="">신용카드 인증</label>
+                        </span>
+                        <span class="form-radio inline">
+                            <input type="radio" name="authOn2" id="authOn2-3">
+                            <label for="authOn2-3" class="">범용 공동인증서</label>
+                        </span>
+                        <div class="text-info text-grey" style="display: block;">
+                            * 본인 명의의 인증수단으로 본인인증을 진행해주세요.<br>
+                            * 신용카드 인증은 본인인증기관(KCB)에서 제공하는 카드에 한해 가능합니다.<br>
+                            * 범용(유료)공동인증서는 PC버전에서만 가능합니다.
+							<div class="inp-row2">
+								<span class="form-checkbox">
+									<input type="checkbox" id="authAgreNaver">
+									<label for="authAgreNaver"> [필수] 본인은 진정한 가입 의사에 따라 가입신청서를 작성하며, 허위정보가 아님을 확인합니다.<br>본인여부 확인을 위해 이용약관 14조 1항 및 전기통신사업법 제 32조 4항에 따라 당사의 전화 확인 절차 진행에 동의하며 미응답시 부정가입의도가 있음으로 간주하여 이용정지 될 수 있음에 동의 합니다.</label>
+								</span>
+							</div>
+                            <div class="btn-wp mt-10">
+                                <button type="button" class="btn btn-sm btn-primary btn-375">네이버 인증</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-wrap item1">
+            <span><button type="button" class="btn btn-primary btn-lg">다음</button></span>
+        </div>
+
+		<div class="acc-group acc-type1" data-accordion="true">
+			<dl class="acc-item active">
+				<dt class="acc-head">
+					<button class="btn btn-toggle" type="button">유의사항</button>
+				</dt>
+				<dd class="acc-body">
+					<div class="acc-content">
+						<ul class="lst-bullet">
+							<li class="text-danger">명의변경 신청접수 완료 후 3일이내(영업일기준)고객센터 상담사가 연락 드립니다.</li>
+							<li class="text-danger">명의변경 신청서류 접수 후 3일 이내(영업일 기준) 동의 통화 및 기타사유(타사미납)로 인해 업무 처리가 되지 않을 경우, 개인정보 보호를 위해 해당 접수 건은 취소되며 서류는 폐기됩니다.</li>
+							<li>개명 후 당사 개명 신청을 하지 않은 경우, 변경 이력이 확인되는 주민등록초본 첨부 필요합니다.</li>
+							<li>명의를 받는 분의 신분증 진위확인이 진행됩니다.</li>
+						</ul>
+					</div>
+				</dd>
+			</dl>
+		</div>
+
+	</div>
+</section>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+	<!-- Footer -->
+	<footer id="ft">
+		<div class="container">
+			<div class="ft-top">
+				<p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+				<dl class="font-weight-normal">
+					<dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+					<dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+					<dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+					<dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+				</dl>
+			</div>
+			<hr>
+			<ul class="fnb">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+				<li><a href="">개인정보이용내역조회</a></li>
+				<li><a href="">통신자료제공사실 열람신청</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">분쟁처리절차</a></li>
+				<li><a href="">책임의 한계와 법적고지</a></li>
+				<li><a href="">불법스팸대응센터</a></li>
+				<li><a href="">명의도용방지서비스</a></li>
+				<li><a href="">해지미환급금 조회/환불</a></li>
+				<li><a href="">법인회선개통문의</a></li>
+			</ul>
+			<div class="ft-bottom">
+				<div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장  최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신 판매번호:2010-서울중구-0518</div>
+				<p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		$('input[name="radio1"]').on('change reChange', function(){
+			if ($('#radio1-1').is(':checked')) {
+				$('.local').show();
+				$('.foreigner').hide();
+			}
+			else {
+				$('.local').hide();
+				$('.foreigner').show();
+			}
+		}).trigger('reChange');
+
+		$("input[name='idntTcd']:radio").on('click',function() {
+			if($(this).attr("id") == 'identity1') {
+				$('#identityGroup2').hide();
+				$('#identityGroup1').show();
+				$('#identityGroup2').find("input, select").val("");
+			} else if($(this).attr("id") == 'identity2') {
+				$('#identityGroup1').hide();
+				$('#identityGroup2').show();
+				$('#identityGroup1').find("input, select").val("");
+			}
+		});
+		
+
+	});
+</script>
+</body>
+</html>

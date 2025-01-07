@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../asset/css/vendor/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../asset/css/common/base.css">
+</head>
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+<!-- top banner -->
+<div class="top-banner" style="background: #273749">
+	<a href="">
+		<img src="../asset/img/1.jpg" class="d-lg-none" alt="음성 데이터 무제한 월 33,000원">
+		<img src="../asset/img/1_pc.jpg" class="d-none d-lg-block" alt="음성 데이터 무제한 월 33,000원">
+	</a>
+	<span class="form-checkbox todayChk d-none d-lg-block">
+		<input type="checkbox" id="todayBnr">
+		<label for="todayBnr">오늘하루보지않기</label>
+	</span>
+	<button type="button" class="icon-close">배너 닫기</button>
+</div>
+<!-- //top banner -->
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- Header -->
+	<header id="hd">
+		<div class="container">
+			<h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+<section class="sect">
+	<div class="container">
+		<div class="heading-depth1">
+			<h2 class="title">셀프개통</h2>
+		</div>
+		<ul class="step">
+			<li><span class="ball">1</span></li>
+			<li class="active"><i class="icon-step step2"></i><span class="title">02 셀프개통 정보확인</span></li>
+			<li><span class="ball">3</span></li>
+		</ul>
+
+		<h3 class="sr-only">셀프개통 정보확인</h3>
+		
+		<div class="article-area">
+			<div class="heading-depth2">
+				<h3 class="title">가입정보확인</h3>
+			</div>
+			<div class="form-wrap">
+				<div class="inp-form-wp">
+					<div class="inp-tit">
+						<p>유심일련번호 
+							<span class="tooltip-wp">
+								<button type="button" class="tooltip"><span class="sr-only">툴팁 레이어 보기</span></button>
+								<span class="tooltip-content">
+									<i>모델코드 일련번호 확인 방법<br>유심카드 후면에서 모델코드,<br>일련번호를 확인하실 수 있습니다.</i>
+								</span>								
+							</span>
+						</p>
+					</div>
+					<div class="inp-cont">
+						<div class="inp-wp">
+							<input class="form-control" type="text" title="유심일련번호 입력" value="%유심일련번호 14자리%" readonly="">
+						</div>
+						<p class="text-info text-danger">* 수령하신 유심번호와 다를 경우 1599-3508(유료)로 연락 바랍니다.</p>
+					</div>
+				</div>
+				<!-- 단말(휴대폰) 시 노출 -->
+				<div class="inp-form-wp">
+					<div class="inp-tit"><p>휴대폰 모델/일련번호</p></div>
+					<div class="inp-cont">
+						<div class="form-flex form-md">
+							<div class="inp-wp form-flexible col-5 p-0">
+								<input class="form-control" type="text" title="휴대폰모델 입력" value="%휴대폰모델%" readonly="">
+							</div>
+							<div class="inp-wp col-7 p-0">
+								<input class="form-control" type="text" title="일련번호 입력" value="%일련번호%" readonly="">
+							</div>
+						</div>
+						<p class="text-info text-danger">* 수령하신 휴대폰 모델/일련번호와 다를 경우 1599-3508(유료)로 연락 바랍니다.</p>
+					</div>
+				</div>
+				<!-- //단말(휴대폰) 시 노출 -->
+				<!-- 신규 시 노출 -->
+				<div class="inp-form-wp">
+					<div class="inp-tit"><p>신규희망 휴대폰번호</p></div>
+					<div class="inp-cont">
+						<div class="form-flex form-md">
+							<div class="inp-wp form-flexible">
+								<input class="form-control" type="text" title="신규희망 휴대폰번호 입력" value="010-0000-0000">
+							</div>
+							<div class="btn-wp">
+								<!-- 수정 : 20201015 -->
+								<button type="button" class="btn btn-sm btn-primary">번호조회</button>
+								<!-- //수정 : 20201015 -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //신규 시 노출 -->
+				<!-- 번호이동 시 노출 -->
+				<div class="inp-form-wp">
+					<div class="inp-tit"><p>번호이동할 휴대폰번호</p></div>
+					<div class="inp-cont">
+						<div class="form-btn-toggle v1" data-toggle="buttons">
+							<span>
+								<label class="btn btn-sm btn-radius-md btn-effect active" for="costMdth-1">
+									<input type="radio" name="costMdth" id="costMdth-1" checked>후불
+								</label>
+							</span>
+							<span>
+								<label class="btn btn-sm btn-radius-md btn-effect" for="costMdth-2">
+									<input type="radio" name="costMdth" id="costMdth-2">선불
+								</label>
+							</span>
+						</div>
+						<div class="sel-wp mt-2">
+							<select title="통신사 구분" class="form-control">
+								<option value="">선택</option>
+							</select>
+						</div>
+						<div class="inp-wp mt-2">
+							<input class="form-control" type="text" title="휴대폰 번호 입력" value="%기존 휴대폰 번호 노출%">
+						</div>
+						<p class="text-info text-grey">* 선불폰에서 번호 이동하시는 경우, 선불 잔액은 승계되지 않습니다.</p>
+					</div>
+				</div>
+				<div class="inp-form-wp">
+					<div class="inp-tit"><p>번호이동 인증방법</p></div>
+					<div class="inp-cont">
+						<div class="sel-wp">
+							<select class="form-control" title="번호이동인증방법 선택" id="nomvmAuthNo">
+								<option value="0">선택</option>
+								<option value="1" selected>신용카드</option>
+								<option value="2">은행계좌</option>
+								<option value="3">지로</option>
+								<option value="4">휴대폰 일련번호</option>
+							</select>
+						</div>
+						<div class="nomvmAuthNo-type1">
+							<input type="text" class="form-control mt-2" placeholder="뒤 4자리" title="뒤 4자리 입력">
+							<p class="text-info text-grey">* 현 통신사 자동이체 납부정보로 입력해야 합니다.</p>
+						</div>
+						<div class="nomvmAuthNo-type2">
+							<input type="text" class="form-control mt-2" placeholder="휴대폰 일련번호 뒤 4자리 숫자" title="휴대폰 일련번호 입력">
+							<p class="text-info text-grey">* 휴대폰 일련번호 확인하기 <br>- 안드로이드(삼성, LG 휴대폰) <br>1. 설정 > 디바이스 정보 > 상태 > 일련번호 확인 <br>2. 설정 > 휴대전화 정보 > 규제정보 > 일련번호 확인</p>
+							<p class="text-info text-grey">- 아이폰 : 설정 > 일반 > 정보 > 일련번호</p>
+							<p class="text-info text-grey">* 현재 이용중인 통신사에 등록된 휴대폰일련번호와 사용중인 휴대폰의 일련번호가 상이할 경우 인증이 불가할 수 있습니다.</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="inp-form-wp">
+					<div class="inp-tit"><p>번호이동 동의확인</p></div>
+					<div class="inp-cont">
+						<div class="inp-row stepAgree">
+							<p class="table-label">STEP 1. 번호이동 동의 요청<button type="button" class="btn btn-sm btn-primary">동의요청</button></p>
+							<p class="text-info text-grey">‘동의요청’ 선택 후 사용중인 통신사에서 안내된 인증방법 (문자 또는 ARS 인증)으로 진행해 주세요. <a href="/" class="text-link ml-2">통신사ARS번호 보기</a></p>
+						</div>
+						<div class="inp-row stepAgree">
+							<p class="table-label">STEP 2. 번호이동 인증확인<button type="button" class="btn btn-sm btn-primary" disabled="">인증확인</button></p>
+							<p class="text-info text-grey">번호이동 인증은 1일 7회 가능합니다. 실패 시 익일  재시도 해주세요.</p>
+						</div>
+					</div>
+				</div>
+				<!-- //번호이동 시 노출 -->
+			</div>
+		</div>
+
+		<div class="article-area pre-price">
+			<div class="heading-depth2">
+				<h3 class="title">이전 통신사 사용 요금</h3>
+			</div>
+			<div class="pre-total">
+				<em>납부하실 금액(A+B)</em>
+				<p>850,960원</p>
+			</div>
+			<p class="text-info text-grey">* 사용하신 요금 및 기타 사용료는 SK 7mobile 첫 달 사용요금에 합산 청구됩니다.</p>
+			
+			<div class="pre-bill-wp">
+				<strong class="title">이용기간<span class="date">2020-08-01 ~ 2020-08-10</span></strong>
+				<div class="pre-bill">
+					<div class="item1">
+						<div class="tit">
+							<em>납부금액 (A)</em>
+							<p>260,190원</p>
+						</div>
+						<ul>
+							<li>
+								<em>- 기본료</em>
+								<p>32,988원</p>
+							</li>
+							<li>
+								<em>- 국내통화료</em>
+								<p>0원</p>
+							</li>
+							<li>
+								<em>- 국제통화료</em>
+								<p>0원</p>
+							</li>
+							<li>
+								<em>- 부가서비스</em>
+								<p>10,000원</p>
+							</li>
+							<li>
+								<em>- 기타사용료</em>
+								<p>10,000원</p>
+							</li>
+							<li>
+								<em>- 부가세</em>
+								<p>10,000원</p>
+							</li>
+						</ul>
+					</div>
+					<div class="line-bill">
+						<span></span>
+					</div>
+					<div class="item2">
+						<div class="tit">
+							<em>위약금 (B)</em>
+							<p>260,190원</p>
+						</div>
+					</div>
+				</div>
+				<div class="pre-bill1">
+					<em>잔여 할부금</em>
+					<p class="text-danger">%휴대폰 잔여 할부금액% 원</p>
+				</div>
+			</div>
+			<p class="text-info text-grey">* 휴대폰 잔여 할부금이 있는 경우 변경 전 통신사에서 청구됩니다</p>
+			<!-- 수정 : 20201015 -->
+			<span class="form-checkbox mt-3 checkbox-lg">
+			<!-- //수정 : 20201015 -->
+				<input type="checkbox" id="agreePre">
+				<label for="agreePre">이전 통신사 사용 요금에 관한 모든 내용을 확인하였으며, 납부에 동의합니다.</label>
+			</span>
+		</div>
+
+
+		<div class="label-box">
+			<span class="form-checkbox">
+				<input type="checkbox" id="agreeTerm1">
+				<label for="agreeTerm1">[필수] 무선표준계약서 확인</label>
+			</span>
+			<a href="/" class="link-arrow"><span class="sr-only">무선표준계약서 확인 상세보기</span></a>
+		</div>
+
+		<div class="btn-wrap">
+			<span class="w-lg">
+				<button type="button" class="btn btn-primary btn-lg">셀프개통 시작하기</button>
+			</span>
+		</div>
+
+		<div class="acc-group acc-type1 mt-5" data-accordion="true">
+			<dl class="acc-item active">
+				<dt class="acc-head">
+					<button class="btn btn-toggle" type="button">셀프개통 시작 전 유의사항</button>
+				</dt>
+				<dd class="acc-body">
+					<div class="acc-content">
+						<ul class="lst-dot">
+							<!-- 번호이동 시 노출 -->
+							<li>번호이동으로 셀프개통 진행 시, 반드시 모바일 데이터는 차단하고 Wi-Fi 환경에서 진행해주세요.</li>
+							<li> 번호이동으로 셀프개통 중 오류가 발생할 경우, 번호이동이 취소되어 기존 통신사를 동일하게 이용하실 수 있습니다.<br>(단, 번호이동 개통 실패 시, 기존폰을 꼭 껐다 켜주셔야 정상적으로 사용이 가능합니다.)</li>
+							<!-- //번호이동 시 노출 -->
+							<li>셀프개통 시작 후 개통완료까지 3분 정도 소요되며, 경우에 따라 몇 분 더 소요될 수 있습니다.</li>
+							<li>개통 처리 중에 페이지를 닫거나 결과 화면을 보지 않은 채 종료할 경우, 개통이 정상적으로 완료되지 않아 휴대폰 사용이 불가할 수 있습니다.</li>
+							<li>처리 결과가 나올 때까지 잠시만 기다려 주세요.</li>
+						</ul>
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</section>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+	<!-- Quick -->
+	<aside id="quick">
+		<ul class="quick-banner">
+			<li><a href=""><img src="../asset/img/banner/quick1.png" alt="선불 서비스 PREPAID SERVICE"></a></li>
+			<li><a href=""><img src="../asset/img/banner/quick2.png" alt="번개유심 무제한 요금제 데이터통화 무제한 번개포인트 추가 제공 33,000원"></a></li>
+			<li><a href=""><img src="../asset/img/banner/quick3.png" alt="갤럭시 Z플립을 신청하시면 혜택이!! Z Flip"></a></li>
+			<li><a href=""><img src="../asset/img/banner/quick4.png" alt="세븐 모바일 한눈에 보기"></a></li>
+		</ul>
+	</aside>
+	<!-- //Quick -->
+
+	<!-- Footer -->
+	<footer id="ft">
+		<div class="container">
+			<div class="ft-top">
+				<p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+				<dl class="font-weight-normal">
+					<dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+					<dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+					<dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+					<dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+				</dl>
+			</div>
+			<hr>
+			<ul class="fnb">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+				<li><a href="">개인정보이용내역조회</a></li>
+				<li><a href="">통신자료제공사실 열람신청</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">분쟁처리절차</a></li>
+				<li><a href="">책임의 한계와 법적고지</a></li>
+				<li><a href="">불법스팸대응센터</a></li>
+				<li><a href="">명의도용방지서비스</a></li>
+				<li><a href="">해지미환급금 조회/환불</a></li>
+				<li><a href="">법인회선개통문의</a></li>
+			</ul>
+			<div class="ft-bottom">
+				<div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장  최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신 판매번호:2010-서울중구-0518</div>
+				<p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+<script>
+	$(document).ready(function(){
+		// 구분 : 개인 / 미성년자
+		$('input[name="ctfctName"]').on('change reChange', function(){
+			if ($('#ctfctName-1').is(':checked')) {
+				$('.ctfctName-type1').show();
+				$('.ctfctName-type2').hide();
+			}
+			else {
+				$('.ctfctName-type1').hide();
+				$('.ctfctName-type2').show();
+			} 
+		}).trigger('reChange');
+
+		// 신분증 정보 : 주민등록증 / 운전면허증
+		$('input[name="identity"]').on('change reChange', function(){
+			if ($('#identity-1').is(':checked')) {
+				$('.identity-type1').show();
+				$('.identity-type2').hide();
+			}
+			else {
+				$('.identity-type1').hide();
+				$('.identity-type2').show();
+			} 
+		}).trigger('reChange');
+
+		// 법정 신분증 정보 : 주민등록증 / 운전면허증
+		$('input[name="lb_identity2"]').on('change reChange', function(){
+			if ($('#lb_identity2-1').is(':checked')) {
+				$('.lb_identity2-type1').show();
+				$('.lb_identity2-type2').hide();
+			}
+			else {
+				$('.lb_identity2-type1').hide();
+				$('.lb_identity2-type2').show();
+			} 
+		}).trigger('reChange');
+
+		// 요금안내서 : 문자안내서 / 이메일안내서 
+		$('input[name="pymBill"]').on('change reChange', function(){
+			if ($('#pymBill-1').is(':checked')) {
+				$('.pymBill-type1').show();
+				$('.pymBill-type2').hide();
+			}
+			else {
+				$('.pymBill-type1').hide();
+				$('.pymBill-type2').show();
+			} 
+		}).trigger('reChange');
+
+		// 요금 자동이체 방법 : 신용카드 / 계좌이체
+		$('input[name="pymMthdCd"]').on('change reChange', function(){
+			if ($('#pymMthdCd-1').is(':checked')) {
+				$('.pymMthdCd-type1').show();
+				$('.pymMthdCd-type2').hide();
+			}
+			else {
+				$('.pymMthdCd-type1').hide();
+				$('.pymMthdCd-type2').show();
+			} 
+		}).trigger('reChange');
+
+		// 본인인증방법 : 신용카드 인증 / 휴대폰 인증
+		$('input[name="authOn"]').on('change reChange', function(){
+			if ($('#authOn-1').is(':checked')) {
+				$('.authOn-type1').show();
+				$('.authOn-type2').hide();
+			}
+			else {
+				$('.authOn-type1').hide();
+				$('.authOn-type2').show();
+			} 
+		}).trigger('reChange');
+
+		
+
+		// 유심형태 : 일반유심 / NFC유심
+		$('input[name="usimTp"]').on('change reChange', function(){
+			if ($('#usimTp-1').is(':checked')) {
+				$('.usimTp-type1').show();
+				$('.usimTp-type2').hide();
+			}
+			else {
+				$('.usimTp-type1').hide();
+				$('.usimTp-type2').show();
+			} 
+		}).trigger('reChange');
+
+		// 유심형태 : 번호이동 인증방법 지로
+		// $('input[name="nomvmAuthMthdCd"]').on('change reChange', function(){
+		// 	if ($('#nomvmAuthMthdCd-3').is(':checked')) {
+		// 		$('.nomvmAuthNo-type').hide();
+		// 	}
+		// 	else {
+		// 		$('.nomvmAuthNo-type').show();
+		// 	} 
+		// }).trigger('reChange');
+
+		// 번호이동 인증방법
+		$('#nomvmAuthNo').on('change reChange', function(){
+			var val = $('#nomvmAuthNo option:selected').val();
+			if ( val == '1' || val == '2' ) {
+				$('.nomvmAuthNo-type1').show();
+			} else {
+				$('.nomvmAuthNo-type1').hide();
+			}
+			if ( val == '4' ) {
+				$('.nomvmAuthNo-type2').show();
+			} else {
+				$('.nomvmAuthNo-type2').hide();
+			}
+		}).trigger('reChange');
+
+
+	})
+</script>
+
+</body>
+</html>

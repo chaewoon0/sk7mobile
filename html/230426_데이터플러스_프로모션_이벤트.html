@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/common/base.css">
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+</head>
+<body>
+
+
+<!-- 230426 -->
+<button type="button" class="accorTtl">
+    <img src="../asset/img/sample/230426_dataplus_btn.jpg" alt="대상 요금제 자세히 보기">
+</button>
+<div class="accorCont">
+    <img src="../asset/img/sample/230426_dataplus_all_price.jpg" alt="대상 요금제">
+	<table class="d-none">
+		<caption>대상 요금제 및 데이터 상세 내용</caption>
+		<tr>
+		  <td>구분</td>
+		  <td>대상 요금제</td>
+		  <td>추가 데이터</td>
+		</tr>
+		<tr>
+		  <td rowspan="10">15GB+3Mbps</td>
+		  <td>LTE 유심 (15GB+/100분)</td>
+		  <td rowspan="10">50GB</td>
+		</tr>
+		<tr>
+		  <td>번개 유심15GB+</td>
+		</tr>
+		<tr>
+		  <td>중나유심 15GB+</td>
+		</tr>
+		<tr>
+		  <td>10% 포인트(15GB+/100분)</td>
+		</tr>
+		<tr>
+		  <td>취향저격편의생활 (15GB+/100분)</td>
+		</tr>
+		<tr>
+		  <td>취향저격카페타임 (15GB+/100분)</td>
+		</tr>
+		<tr>
+		  <td>취향저격 베이커리 (15GB+/100분)</td>
+		</tr>
+		<tr>
+		  <td>취향저격딜리버리 (15GB+/100분)</td>
+		</tr>
+		<tr>
+		  <td>취향저격아슈크림 (15GB+/100분)</td>
+		</tr>
+		<tr>
+		  <td>취향저격올리브영 (15GB+/100분)</td>
+		</tr>
+		<tr>
+		  <td rowspan="12">11GB+<br/>일 2GB+3Mbps</td>
+		  <td>LTE 유심 (11GB+/통화맘껏)</td>
+		  <td rowspan="12">150GB</td>
+		</tr>
+		<tr>
+		  <td>번개 유심(11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>중나유심 (11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>10% 포인트(11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>취향저격편의생활 (11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>취향저격카페타임 (11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>취향저격 베이커리 (11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>취향저격딜리버리 (11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>취향저격아슈크림 (11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>취향저격올리브영 (11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>FLO 유심(11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>교보 eBook (11GB+/통화맘껏)</td>
+		</tr>
+		<tr>
+		  <td>100GB+5Mbps</td>
+		  <td>LTE 유심 (100GB+/통화맘껏)</td>
+		  <td>150GB</td>
+		</tr>
+	</table>
+</div>
+<style>
+.accorTtl {background:url(../asset/img/sample/230426_dataplus_btn_on.jpg) no-repeat 0 0; background-size:100% auto;}
+.accorTtl.on img {opacity:0;}
+.accorCont {display:none;}
+</style>
+<script>
+$(".accorTtl").click(function(){
+	if ( $(this).hasClass("on") ) {
+		$(this).removeClass("on");
+		$(".accorCont").slideUp(250);
+	} else {
+		$(this).addClass("on");
+		$(".accorCont").slideDown(250);
+	}
+});
+</script>
+<!-- //230426 -->
+
+
+
+</body>
+</html>

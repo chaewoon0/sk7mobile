@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>납부내역서</title>
+<style>
+@font-face {font-family:'Montserrat'; font-weight:300; font-style:normal; src:url(../asset/fonts/Montserrat-Light.woff) format('woff');}
+@font-face {font-family:'Montserrat'; font-weight:400; font-style:normal; src:url(../asset/fonts/Montserrat-Regular.woff) format('woff');}
+@font-face {font-family:'Montserrat'; font-weight:500; font-style:normal; src:url(../asset/fonts/Montserrat-Medium.woff) format('woff');}
+@font-face {font-family:'Montserrat'; font-weight:600; font-style:normal; src:url(../asset/fonts/Montserrat-SemiBold.woff) format('woff');}
+@font-face {font-family:'Montserrat'; font-weight:700; font-style:normal; src:url(../asset/fonts/Montserrat-Bold.woff) format('woff');}
+@font-face {font-family:'NotoSans'; font-weight:300; font-style:normal; src:url(../asset/fonts/NotoSansCJKkr-Light.woff) format('woff');}
+@font-face {font-family:'NotoSans'; font-weight:400; font-style:normal; src:url(../asset/fonts/NotoSansCJKkr-Regular.woff) format('woff');}
+@font-face {font-family:'NotoSans'; font-weight:500; font-style:normal; src:url(../asset/fonts/NotoSansCJKkr-Medium.woff) format('woff');}
+@font-face {font-family:'NotoSans'; font-weight:700; font-style:normal; src:url(../asset/fonts/NotoSansCJKkr-Bold.woff) format('woff');}
+/*
+@font-face {font-family: 'Montserrat'; font-weight: 300; font-style: normal; src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-Light.woff) format('woff');}
+@font-face {font-family: 'Montserrat'; font-weight: 400; font-style: normal; src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-Regular.woff) format('woff');}
+@font-face {font-family: 'Montserrat'; font-weight: 500; font-style: normal; src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-Medium.woff) format('woff');}
+@font-face {font-family: 'Montserrat'; font-weight: 600; font-style: normal; src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-SemiBold.woff) format('woff');}
+@font-face {font-family: 'Montserrat'; font-weight: 700; font-style: normal; src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-Bold.woff) format('woff');}
+@font-face {font-family: 'NotoSans'; font-weight: 300; font-style: normal; src: url(https://www.sk7mobile.com/html/cmmn/fonts/NotoSansCJKkr-Light.woff) format('woff');}
+@font-face {font-family: 'NotoSans'; font-weight: 400; font-style: normal; src: url(https://www.sk7mobile.com/html/cmmn/fonts/NotoSansCJKkr-Regular.woff) format('woff');}
+@font-face {font-family: 'NotoSans'; font-weight: 500; font-style: normal; src: url(https://www.sk7mobile.com/html/cmmn/fonts/NotoSansCJKkr-Medium.woff) format('woff');}
+@font-face {font-family: 'NotoSans'; font-weight: 700; font-style: normal; src: url(https://www.sk7mobile.com/html/cmmn/fonts/NotoSansCJKkr-Bold.woff) format('woff');}
+*/
+* {margin:0; padding:0; border:0; vertical-align:top; font-family:'Montserrat', 'NotoSans', 'Malgun Gothic', sans-serif; box-sizing:border-box; -moz-box-sizing:border-box;}
+body{letter-spacing:-0.4px; color:#111; font-size:16px;}
+img {border:0; vertical-align:top;}
+em{font-style:normal; font-weight:normal}
+ul {list-style:none;}
+page[size="A4"] {position:relative; break-inside:avoid; display:block; margin:0 auto; width:21cm; background:white;}
+.off {display:none !important;}
+.header {position:relative; top:0; left:50%; transform:translateX(-50%); width:210mm;}
+.header .title{position:relative; margin:21px 0; padding:12px 0; border-top:2px solid #111; border-bottom:2px solid #111;}
+.header .title h1 {line-height:27px; font-size:27px; font-weight:bold; text-align:center;}
+.header .title .btn-print{position:absolute; top:50%; right:0; transform:translateY(-50%); width:40px; height:35px; border:2px solid #b8b8b8; text-indent:-9999px; background:#fff url('https://www.sk7mobile.com/IMG/os/etc/icon01_sktelink.jpg') no-repeat 50% 50%; background-size:24px auto; border-radius:5px; cursor:pointer;} /* 210810 */
+.header .title .pageNumer {visibility:hidden; position:absolute; top:50%; right:0; transform:translateY(-50%);}
+.table {width:100%; border-spacing:0; font-size:14px;}
+.table dl, .table ul {border-left:2px solid #111; border-right:2px solid #111;}
+.table dt, .table li {text-align:center; font-weight:bold; word-break:keep-all; background-color:#ddf0ff;}
+.tblCol {margin-top:30px; border-top:2px solid #111; border-bottom:2px solid #111;}
+.tblCol dl {display:table; width:100%;}
+.tblCol dt {display:table-cell; padding:5px 0; width:20%; border-right:1px solid #bbb; border-bottom:1px solid #bbb;}
+.tblCol dd {display:table-cell; padding:5px 20px; width:80%; border-bottom:1px solid #bbb;}
+.tblCol dl:last-child dt, .tblCol dl:last-child dd {border-bottom:none;}
+.tblRow {margin-top:20px; border-bottom:2px solid #111;}
+.tblRow ul {border-top:2px solid #111;}
+.tblRow dl, .tblRow ul {display:table; width:100%; text-align:center;}
+.tblRow li, .tblRow dd {display:table-cell; width:20%; border-right:1px solid #bbb; border-bottom:1px solid #bbb;}
+.tblRow li {padding:5px 0;}
+.tblRow dd {padding:7px 0;}
+.tblRow ul li:last-child, .tblRow dl dd:last-child {border-right:none;}
+.tblRow ul:last-child li, .tblRow dl:last-child dd {border-bottom:none;}
+.footer{position:relative; width:210mm; margin-top:40px; page-break-inside:avoid; page-break-after:auto;}
+.footer .note {font-size:18px; font-weight:bold; text-align:center;}
+.footer .noteSub {padding:10px 0 0; font-size:15px; text-align:center;}
+.footer .date {padding:30px 0 0; font-size:18px; font-weight:bold; text-align:center;}
+.footer .sign {position:relative; padding-top:20px; text-align:right;}
+.memo {display:none; text-align:right; margin-top:50px;}
+.page-break {page-break-before:always !important;}
+.page-break .header{display:none}
+.page-break .tblRow {margin-top:0}
+.page-break .tblRow ul {display:none}
+
+@page {margin:10mm 15mm 10mm; width:210mm; height:297mm;}
+@media print {
+	page {width:210mm; height:297mm;}
+	.page-break .header{display:block}
+	.header .title .btn-print{display:none;}
+	.header .title .pageNumer {visibility:visible;}
+	.footer {position:absolute; bottom:-20px;}
+	.memo {display:block}
+	.page-break .header{display:block}
+	.page-break .tblRow {margin-top:20px}
+	.page-break .tblRow ul {display:table}
+
+}
+</style>
+</head>
+<body>
+
+	<!-- <script type="text/javascript" src="/html/cmmn/js/jquery.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+	<script>
+
+		var totCol =  40;	//출력될 총 행 (최대 40개행)
+		var limitCol = 20;	//페이지당 출력될 행
+		var page = "<page size='A4'><div class='header'><div class='title'><h1>납부내역서</h1><button type='button' class='btn-print' onclick='window.print()' title='프린트하기'>프린트하기</button><span class='pageNumer'>Page : 1/1</span></div><div class='table tblCol'><dl><dt>이동전화번호</dt><dd>010-1234-5678</dd></dl><dl><dt>고객명</dt><dd>홍길동</dd></dl></div></div><div class='table tblRow'><ul><li>납부일자</li><li>청구년월</li><li>청구금액(원)</li><li>납부금액(원)</li><li>납부방법</li></ul></div><p class='off memo'>다음 페이지에 계속...</p><div class='footer'><div class='note'>위의 금액이 납부 되었음을 확인합니다.</div><div class='noteSub'>※ 본 확인서는 영수증으로 사용하실 수 없습니다.</div><div class='date'>2021년 &nbsp; 11월 &nbsp; 03일</div><div class='sign'><img src='https://www.sk7mobile.com/IMG/os/etc/img_sktelink_stamp.jpg'/></div></div></page>";
+
+
+		if ( totCol <= limitCol ) { //출력될 데이터가 20개 이하 일 경우 ========================================
+
+			$("body").append(page); //첫번째 페이지 출력
+			$("page").eq(0).find(".pageNumer").text("Page : 1/1");  //페이지 번호 부여
+			$("page").eq(0).find(".memo").addClass("off"); // 첫번째 페이지 내 memo 보임
+
+			for (let i=1; i<=totCol; i++){
+				$("page").eq(0).find(".tblRow").append("<dl><dd>2021/11/04</dd><dd>2021/11</dd><dd>123,456</dd><dd>123,456</dd><dd>자동이체</dd></dl>");
+			};
+
+		} else {  //출력될 데이터가 20개 이상 일 경우 ===========================================================
+
+			let pageNo = Math.ceil(totCol/limitCol)	//출력될 총 페이지 수
+
+			for (let k=1; k<=pageNo; k++) {
+				$("body").append(page); //모든 페이지 출력
+			};
+
+			$("page").eq(0).find(".pageNumer").text("Page : 1/2"); //첫번째 페이지 번호 부여
+			$("page").eq(0).find(".footer").addClass("off"); // 첫번째 페이지 내 footer 숨김
+			$("page").eq(0).find(".memo").removeClass("off"); // 첫번째 페이지 내 memo 보임
+			$("page").eq(0).find(".tblRow").css("border-bottom","1px solid #bbb")
+
+			$("page").eq(1).addClass("page-break");	// 두번째 페이지는 다음페이지에서 인쇄
+			$("page").eq(1).find(".pageNumer").text("Page : 2/2"); //두번째 페이지 번호 부여
+
+			//첫페이지에 데이타 추가
+			for (let i=1; i<=limitCol; i++){
+				$("page").eq(0).find(".tblRow").append("<dl><dd>2021/11/04</dd><dd>2021/11</dd><dd>123,456</dd><dd>123,456</dd><dd>자동이체</dd></dl>");
+			};
+
+			//두번째 페이지에 데이타 추가
+			for (let i=limitCol+1; i<=totCol; i++){
+				$("page").eq(1).find(".tblRow").append("<dl><dd>2021/11/04</dd><dd>2021/11</dd><dd>123,456</dd><dd>123,456</dd><dd>자동이체</dd></dl>");
+			};
+		}
+
+	</script>
+
+
+
+
+</body>
+</html>

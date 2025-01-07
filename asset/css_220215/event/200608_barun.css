@@ -1,0 +1,167 @@
+.eqtSaleCont {font-size:0}
+.eqtSaleCont img { vertical-align: top; display:block; }
+.event-list {position:relative; border:1px solid #eee;}
+.event-list .button.button-link { display: block; position: absolute; background: transparent; text-indent: 100%; white-space: nowrap; overflow: hidden; }
+.event-list .youtube-area {margin: 0px 0 120px;}
+.event-form {position:relative;background-color:#e9e7fc;padding: 0 66px;}
+.event-form .table {background-color:#fff;border-radius: 6px; padding: 60px 50px 0; letter-spacing: -1px;}
+.event-form .table > li:first-child {border-bottom:1px solid #ddd; margin-bottom: 60px;}
+.event-form .table dl {display:table; padding:10px 0;width:100%;box-sizing: border-box;}
+.event-form .table dl:last-child {padding-bottom: 60px;}
+.event-form .table dl dt {display:table-cell;width:210px;font-size:30px; font-weight: 500; color:#111; line-height: 80px;} /* 200611 수정 */
+.event-form .table dl dt.type {line-height: 1.6;}
+.event-form .table dl dd {display:table-cell; position: relative; color:#555;line-height:80px;vertical-align:top;font-size:0;}
+.event-form .table .price {font-size: 50px; color: #111;}
+.event-form .table .price strong {font-weight: 600;font-size: 60px;}
+.event-form .table dl dd > p {position: relative; color:#555;line-height:1.5; vertical-align:top;font-size:30px;padding-bottom:10px;}
+.event-form .table dl dd > span {display:inline-block;vertical-align:middle;margin-left:65px;}
+.event-form .table dl dd > span:nth-child(odd) {margin-left:0;}
+.event-form .table dl dd > span:nth-child(3) { display: block;}
+.event-form .table dl dd .btn {width:220px;height:80px;box-sizing: border-box; font-size:28px;font-weight: 500; color:#fff;background-color:#111;text-align:center;line-height:80px;padding:0 15px;margin:0 5px;border:0; letter-spacing: -1px;
+  -webkit-box-shadow: 3px 5px 0px rgba(0,0,0,0.3); -moz-box-shadow: 3px 5px 0px rgba(0,0,0,0.3); box-shadow: 3px 5px 0px rgba(0,0,0,0.3); -webkit-transition: all 0.15s linear; -moz-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear; -o-transition: all 0.15s linear; transition: all 0.15s linear;}
+.event-form .adr-search {display: flex;}
+.event-form .table dl dd .btn.selected {background-color: #4c34a5;}
+.event-form .table dl dd .btn.w-type {width:auto; margin-left: 10px;}
+.event-form .table dl dd div + div input {margin-top:16px} /* 200611 수정 */
+.event-form  input[type="text"] {width:100%;height:80px;padding:0 20px;background-color:#eee;border:1px solid #e4e4e4;box-sizing:border-box;font-size:26px;vertical-align:middle;border-radius:5px;}
+.event-form  input[type="radio"] {z-index:0;width:40px;height:40px;box-sizing:border-box;opacity:1;vertical-align:middle;filter: alpha(opacity=100);-ms-filter: 'alpha(opacity=100)';-webkit-appearance: radio;-moz-appearance: radio;appearance: radio;}
+.event-form .table ::-webkit-input-placeholder {color: #999}
+.event-form .table ::-moz-placeholder {color: #999}
+.event-form .table :-ms-input-placeholder {color: #999}
+.event-form .table :-moz-placeholder {color:#999}
+.event-form  label {font-size:34px;vertical-align:middle; color: #333; font-weight: 500; letter-spacing: -2px;}
+.event-form .radio-box label {margin:0;}
+.event-form .tit {font-size:40px; text-align: center; padding: 150px 0 70px;}
+.event-form .tit img {display: inline;}
+.event-form .stit {font-size: 24px; margin-bottom: 40px;}
+.terms-agree { margin: 60px 0; }
+.terms-agree-title { font-size: 34px; color: #111; margin: 80px 0 40px; }
+.terms-agree-box { background: #cfcdeb; padding: 40px; border-radius: 6px;}
+.terms-agree-summary,.terms-agree-desc { font-size: 26px; color: #555; line-height: 1.3; }
+.terms-agree-desc {padding:0 0 20px;}
+.terms-agree-checkbox { text-align: center; margin: 40px 0 60px;}
+.event-form .lb-check:before {content: ""; display: inline-block; width: 52px; height: 52px; margin: -4px 10px 0 0; background: url(https://www.sk7mobile.com/html/images/event/200608_barun/barun_img.png) no-repeat; background-size: 120px 200px; vertical-align: middle;
+  z-index: 0; background-position: 0 0;}
+.event-form .lb-check.checked::before { background-position: -60px 0; }
+.event-form .button-group { text-align: center; padding: 0 0 150px;}
+.event-form .button-group .button { display: inline-block; width: 585px; height: 130px; padding: 35px 0; text-align: center; box-sizing: border-box; font-size: 42px; font-weight: 500; letter-spacing: -1px;
+  background: #4c34a5; color: #fff; line-height: 1; -webkit-box-shadow:5px 8px 0px rgba(0,0,0,0.3); -moz-box-shadow: 5px 8px 0px rgba(0,0,0,0.3);box-shadow: 5px 8px 0px rgba(0,0,0,0.3);-webkit-transition: all 0.15s linear;
+ -moz-transition: all 0.15s linear; -ms-transition: all 0.15s linear; -o-transition: all 0.15s linear; transition: all 0.15s linear;} /* 200611 수정 */
+.ui-m .contents-wrap {padding:0;}
+.ui-m .event-list img {width:100%;}
+.ui-m .event-list .youtube-area {margin: 0 0 30px;}
+.ui-m .event-form {padding: 0 15px;}
+.ui-m .event-form .table > li:first-child {border-bottom:1px solid #ddd; margin-bottom: 30px;}
+.ui-m .event-form .table dl {display:block; padding: 0 0 10px;}
+.ui-m .event-form .table dl:last-child {padding-bottom: 30px;}
+.ui-m .event-form .table dl dt {display:block;font-size:15px;line-height:40px}
+.ui-m .event-form .table dl dd {display:block;line-height:40px}
+.ui-m .event-form .table .price {font-size: 25px; color: #111;}
+.ui-m .event-form .table .price strong {font-weight: 600;font-size: 30px;}
+.ui-m .event-form .table dl dd > p {position: relative; color:#555;line-height:1.5; vertical-align:top;font-size:15px;padding-bottom:5px;}
+.ui-m .event-form .table dl dd span {display:inline-block;margin:0 7px 0 0;line-height:1.3;}
+.ui-m .event-form .table dl dd > span:nth-child(odd) {margin-left:0;}
+.ui-m .event-form .table dl dd > span:nth-child(3) { display: block;}
+.ui-m .event-form input[type="text"] {width:100%; padding:0 10px;font-size:13px;height:40px}
+.ui-m .event-form input[type="radio"] {width:12px;height:12px;margin:0}
+.ui-m .event-form label {font-size:13px}
+.ui-m .event-form .radio-box label {margin-left:5px;}
+.ui-m .event-form .table {border-radius: 3px; padding: 20px 15px 0; letter-spacing: -1px;}
+.ui-m .event-form .table dl dd .btn {width:calc(50% - 10px); height:40px;margin:0 5px; font-size:13px; line-height:40px; padding: 0 8px;
+-webkit-box-shadow:3px 3px 0px rgba(0,0,0,0.3); -moz-box-shadow: 3px 3px 0px rgba(0,0,0,0.3);box-shadow: 3px 3px 0px rgba(0,0,0,0.3);-webkit-transition: all 0.15s linear;
+-moz-transition: all 0.15s linear; -ms-transition: all 0.15s linear; -o-transition: all 0.15s linear; transition: all 0.15s linear;}
+.ui-m .event-form .table dl dd .btn.w-type {width:100px; margin-left: 5px;}
+.ui-m .event-form .table dl dd .text_at {width:100%;margin:0;font-size:13px;text-align:center;line-height:40px}
+.ui-m .event-form .table dl dd div + div {margin-top:8px}
+.ui-m .event-form .tit {font-size:20px; text-align: center; padding: 50px 0 30px;}
+.ui-m .event-form .tit img {display: inline; width:50%;}
+.ui-m .event-form .stit {font-size: 18px; margin-bottom: 10px;}
+.ui-m .event-form .stit img {width:auto; height:20px;} /* 200609ìˆ˜ì • */
+.ui-m .terms-agree { margin: 25px 0 15px; }
+.ui-m .terms-agree-title {font-size: 15px; font-weight: 500; color: #333; margin: 15px 0; line-height: 1.4;}
+.ui-m .terms-agree-box {padding: 15px;}
+.ui-m .terms-agree-summary,
+.ui-m .terms-agree-desc { font-size: 12px; color: #555; line-height: 1.32; }
+.ui-m .terms-agree-checkbox { text-align: center; margin: 20px 0;}
+.ui-m .event-form .lb-check { margin:0;}
+.ui-m .event-form .lb-check:before { width: 26px; height: 26px; background-size: 60px 100px; background-position: 0 0;}
+.ui-m .event-form .lb-check.checked::before { background-size: 60px 100px; background-position: -30px 0;}
+.ui-m .event-form .button-group { text-align: center; padding: 0 0 35px;}
+.ui-m .event-form .button-group .button { display: inline-block; width: 70%; height: 54px; padding: 11px 0; text-align: center; box-sizing: border-box; font-size: 15px; line-height: 1;
+-webkit-box-shadow:3px 3px 0px rgba(0,0,0,0.3); -moz-box-shadow: 3px 3px 0px rgba(0,0,0,0.3);box-shadow: 3px 3px 0px rgba(0,0,0,0.3);-webkit-transition: all 0.15s linear;
+-moz-transition: all 0.15s linear; -ms-transition: all 0.15s linear; -o-transition: all 0.15s linear; transition: all 0.15s linear;}
+/* select-box */
+.select-box {	display: block;	position: relative; width: 100%; height:80px; padding :0 20px;	background: #fff;	font-size: 30px; color: #555 !important; font-weight: normal; border:1px solid #ddd;
+border-radius: 6px; cursor: pointer;}
+.select-box::after {content: ""; position: absolute; top: 40%; right: 20px; width: 29px; height: 17px; background: url(https://www.sk7mobile.com/html/images/event/200608_barun/barun_img.png) no-repeat 0 -66px;}
+.select-box:hover {color: #333;}
+.select-box.open { background: #fff; color: #555; font-size: 30px; }
+.select-box span {color: #555; font-size: 30px;}
+.select-box ul {display: none; position: absolute;	width: 100%; top: 100%; left: 0; font-size: 26px; background: #fff; color: #555; border:1px solid #e4e4e4; border-radius: 6px; z-index: 9999;}
+.select-box ul li { font-size: 26px; color: #555; height:60px; line-height: 60px;}
+.select-box ul li a {	display: block; text-decoration: none;	color: #555; padding: 0 15px;}
+.select-box ul li a:hover {	color: #333;	background: #F7F7F7;}
+.ui-m .select-box {	display: block;	position: relative; width: 100%; height:40px; padding :0 10px;	background: #fff;	font-size: 15px; color: #555 !important; font-weight: normal; border:1px solid #ddd;
+border-radius: 3px; cursor: pointer;}
+.ui-m .select-box::after {content: ""; position: absolute; top: 13px; right: 10px; width: 15px; height: 9px; background: url(https://www.sk7mobile.com/html/images/event/200608_barun/barun_img.png) no-repeat 0 -33px; background-size: 60px 100px;}
+.ui-m .select-box.open {background: #fff; font-size: 15px; }
+.ui-m .select-box span {font-size: 15px;}
+.ui-m .select-box ul {width: 100%; top: 100%; left: 0; font-size: 14px; background: #fff; color: #555; border:1px solid #e4e4e4; border-radius: 3px;}
+.ui-m .select-box ul li { font-size:14px; color: #555; height:30px; line-height: 30px;}
+.ui-m .select-box ul li a {	display: block; text-decoration: none;	color: #555; padding: 0 8px;}
+/* color-checkbox */
+.color-area {width: 510px; line-height: 60px; margin-top: 10px;} /*200611 수정 */
+.color-checkbox {display: inline-block;line-height: 1.4;}
+.color-checkbox label {font-size:0;}
+.color-checkbox .lb-radio, .lb-check {margin:0;}
+.color-checkbox .lb-check:before {content: ""; display: inline-block; position: relative; width: 40px; height: 40px; margin: 0; background: transparent; border-radius: 24px; z-index: 0; }
+.color-checkbox .lb-check.checked::before,.color-checkbox.m-black .lb-check.checked::before,.color-checkbox.purple .lb-check.checked::before,.color-checkbox.bur-red .lb-check.checked::before,
+.color-checkbox.coral-blue .lb-check.checked::before,.color-checkbox.c-silver .lb-check.checked::before,.color-checkbox.gold .lb-check.checked::before,.color-checkbox.p-black .lb-check.checked::before,
+.color-checkbox.p-green .lb-check.checked::before,.color-checkbox.pm-white .lb-check.checked::before,.color-checkbox.spacegrey .lb-check.checked::before,.color-checkbox.silver .lb-check.checked::before,
+.color-checkbox.mtl-copper .lb-check.checked::before,.color-checkbox.ld-purple .lb-check.checked::before { display: inline-block; width: 57px; height: 57px; background-image: url(https://www.sk7mobile.com/html/images/event/200608_barun/barun_img.png);
+background-repeat: no-repeat;	background-position: 0 -100px; background-size: 120px 200px;}
+.ui-m .color-area {width: auto; line-height: 30px; margin-top: 0;}/*200611 수정 */
+.ui-m .color-area span {margin: 0 !important;}/*200609 수정 */
+.ui-m .color-checkbox label {font-size:0;min-height: 24px;}
+.ui-m .color-checkbox .lb-check:before {content: ""; width: 24px; height: 24px; border-radius: 24px; z-index: 0; }
+.ui-m .color-checkbox .lb-check.checked::before,.ui-m .color-checkbox.m-black .lb-check.checked::before,.ui-m .color-checkbox.purple .lb-check.checked::before,.ui-m .color-checkbox.bur-red .lb-check.checked::before,
+.ui-m .color-checkbox.coral-blue .lb-check.checked::before,.ui-m .color-checkbox.c-silver .lb-check.checked::before,.ui-m .color-checkbox.gold .lb-check.checked::before,.ui-m .color-checkbox.p-black .lb-check.checked::before,
+.ui-m .color-checkbox.p-green .lb-check.checked::before,.ui-m .color-checkbox.pm-white .lb-check.checked::before,.ui-m .color-checkbox.spacegrey .lb-check.checked::before,.ui-m .color-checkbox.silver .lb-check.checked::before,
+.ui-m .color-checkbox.mtl-copper .lb-check.checked::before,.ui-m .color-checkbox.ld-purple .lb-check.checked::before { display: inline-block; width: 28px; height: 28px; background-image: url(https://www.sk7mobile.com/html/images/event/200608_barun/barun_img.png);
+background-repeat: no-repeat;	background-position: 0 -50px; background-size: 60px 100px;}
+
+.event-form .table dl dd .color-txt {position: absolute; right:0; top: 0; font-size: 24px; color: #4c34a5;}
+.ui-m .event-form .table dl dd .color-txt {position: relative; display: block; font-size: 13px; padding: 10px 0;} /*200609 수정 */
+
+/*  modal popup_다른팝업과 중복되면로  ui-modal-cont.type으로 변경 */
+.dim { position: fixed; width:100%; height: 100%; background-color:rgba(0,0,0,0.7); left:0; top:0; box-sizing: border-box; z-index:998;}
+
+.modal_popup {position: fixed; width:800px; height:auto; background-color: #fff; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index:999;}/*200610 추가 */
+.ui-modal-top {position: relative;}
+.ui-modal-top > h1 {font-size:34px; text-align: center;margin: 55px 0 30px; line-height: 1.4;}
+.ui-modal-top > h1 strong {font-weight:600;}
+.ui-modal-top > h1 em {color: #4c34a5;}
+.btn-close-b {position: absolute; width: 28px; height: 28px; background: url(https://www.sk7mobile.com/html/images/event/200608_barun/barun_img.png) no-repeat; background-size: 120px 200px; background-position: -60px -100px; right:20px; top: 20px; text-indent: -9999px;}
+.ui-modal-cont.type {width:auto; margin:0 60px 50px; padding: 0;}
+.ui-modal-cont.type .table {padding:30px 40px; background-color: #f4f4f4; font-size: 22px; color: #555}
+.ui-modal-cont.type .table dl {display: table; letter-spacing: -1px;}
+.ui-modal-cont.type .table dt {display: table-cell; width :150px; font-size: 22px; color: #333; height: 50px; }
+.ui-modal-cont.type .table dd {display:table-cell; line-height: 1.4; word-break: break-all;}
+.ui-modal-cont.type .table dd strong {font-weight: 600; color: #111;}
+.ui-modal-cont.type .table .price {font-size: 34px; color: #111;}
+.txt-info {position: relative; font-size: 20px; line-height: 1.4; margin: 20px 0; padding-left: 34px;}
+.txt-info:before {content:""; position: absolute; width: 26px; height: 26px; background: url(https://www.sk7mobile.com/html/images/event/200608_barun/barun_img.png) no-repeat; background-size: 120px 200px; background-position: -60px -66px; top:2px; left:0;}
+.txt-info strong {font-weight: 600;}
+
+.ui-m .modal_popup {position: fixed; width:calc(100% - 20px); height:auto;}/*200610 추가 */
+.ui-m .ui-modal-top > h1 {font-size:17px; text-align: center; margin: 25px 0 15px; line-height: 1.4;}
+.ui-m .btn-close-b {width: 14px; height: 14px; background: url(https://www.sk7mobile.com/html/images/event/200608_barun/barun_img.png) no-repeat; background-size: 60px 100px; background-position: -30px -50px; right:10px; top: 10px;}
+.ui-m .ui-modal-cont.type {width:auto; margin:0 30px 25px; padding: 0;}
+.ui-m .ui-modal-cont.type .table {padding:15px 20px; font-size: 14px;}
+.ui-m .ui-modal-cont.type .table dl {height:30px;}
+.ui-m .ui-modal-cont.type .table dt {display: table-cell;; width :150px; font-size: 14px; line-height: 25px; }
+.ui-m .ui-modal-cont.type .table dd {display: table-cell; line-height: 1.4; word-break: break-all;}
+.ui-m .ui-modal-cont.type .table .price {font-size: 17px; color: #111;}
+.ui-m .txt-info {position: relative; font-size: 12px; line-height: 1.4; margin: 20px 0; padding-left: 17px;}
+.ui-m .txt-info:before {content:""; position: absolute; width: 13px; height: 13px; background: url(https://www.sk7mobile.com/html/images/event/200608_barun/barun_img.png) no-repeat; background-size: 60px 100px; background-position: -30px -33px; top:2px; left:0;}

@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.freeEventWrap {max-width:640px;min-width:320px;margin:0 auto;line-height:1.2;font-family:Tahoma, sans-serif;}
+.freeEventWrap .feHeader {position:relative;min-height:230px;padding:50px 20px 26px;background:url(https://www.sk7mobile.com/html/images/pps00355/bg_header.png) no-repeat #e0f0f7 0 0;background-size:100% auto;}
+.freeEventWrap .feHeader .bgMo {position:absolute;bottom:0;right:0;width:50%;max-width:260px;}
+.freeEventWrap .feHeader .bgMo img {display:block;width:100%;max-width:100%;margin:0 auto;}
+.freeEventWrap .feHeader .fhT {position:relative;z-index:1;}
+.freeEventWrap .feHeader h1 {width:58%;margin:0 auto 16px;}
+.freeEventWrap .feHeader h1 img {display:block;width:100%;max-width:250px;margin:0 auto;}
+.freeEventWrap .feHeader h2 {font-size:32px;line-height:1;color:#000;text-align:center;letter-spacing:-0.07em;margin-bottom:34px;}
+.freeEventWrap .feHeader h2 strong {font-size:46px;color:#EA002C;}
+.freeEventWrap .feHeader p {font-size:13px;letter-spacing:-0.01em;text-shadow: 0 0 2px #e0f0f7;}
+.freeEventWrap .feHeader p strong {font-weight:normal;color:#EA002C;}
+
+.freeEventWrap .feCont {padding:22px 20px;}
+.freeEventWrap .feCont.f01 {background-color:#ffffff;}
+.freeEventWrap .feCont.f02 {background-color:#f5f4f4;}
+.freeEventWrap .feCont.f03 {background-color:#dcdedd;}
+.freeEventWrap .feCont h2 {font-size:23px;color:#000;text-align:center;margin-bottom:16px;}
+.freeEventWrap .feCont .contTxt {font-size:16.6px;color:#000;text-align:center;margin-bottom:16px;}
+.freeEventWrap .feCont .contImg {width:40%;margin:0 auto;margin-bottom:16px;}
+.freeEventWrap .feCont .contImg img {display:block;width:100%;max-width:100%;margin:0 auto;}
+.freeEventWrap .feCont .contList {}
+.freeEventWrap .feCont .contList li {position:relative;font-size:12px;margin-bottom:6px;color:#333;padding-left:10px;}
+.freeEventWrap .feCont .contList li:before {position:absolute;left:0px;top:0;display:block;content:'*';width:10px;}
+.freeEventWrap .feCont .tbl {}
+.freeEventWrap .feCont .tbl .ti {text-align:right;font-size:10px;margin-bottom:6px;}
+.freeEventWrap .feCont .tbl table {width:100%;border:1px solid #000;border-radius:6px;overflow:hidden;border-collapse:separate;background:#fff;box-shadow:2px 2px rgba(0,0,0,0.1);v}
+.freeEventWrap .feCont .tbl table thead {}
+.freeEventWrap .feCont .tbl table thead tr {}
+.freeEventWrap .feCont .tbl table thead tr th {font-size:14.6px;color:#fff;letter-spacing:-0.05em;padding:8px 0;}
+.freeEventWrap .feCont .tbl table thead tr th.tb1 {background:url(https://www.sk7mobile.com/html/images/pps00355/bg_tbl_01.png) repeat #dc1734 0 0;background-size:4px 4px;}
+.freeEventWrap .feCont .tbl table thead tr th.tb2 {background:url(https://www.sk7mobile.com/html/images/pps00355/bg_tbl_02.png) repeat #ee7315 0 0;background-size:4px 4px;}
+.freeEventWrap .feCont .tbl table tbody {}
+.freeEventWrap .feCont .tbl table tbody tr {}
+.freeEventWrap .feCont .tbl table tbody tr th,
+.freeEventWrap .feCont .tbl table tbody tr td {padding:6px 0;border-bottom:1px solid #e0e0e0;text-align:center;color:#000;}
+.freeEventWrap .feCont .tbl table tbody tr th {font-size:12px;font-weight:bold;background:#fbfbfb;}
+.freeEventWrap .feCont .tbl table tbody tr td {font-size:14px;}
+
+
+.freeEventWrap .feFooter {padding:10px 20px;background:#3f3f3f;}
+.freeEventWrap .feFooter h2 {line-height:20px;font-size:12px;color:#fff;padding-left:30px;margin-bottom:6px;background:url(https://www.sk7mobile.com/html/images/pps00355/icon_footer.png) no-repeat 0 center;background-size:auto 100%;}
+.freeEventWrap .feFooter ul {padding:0 20px 0 30px;}
+.freeEventWrap .feFooter ul li {position:relative;font-size:8px;margin-bottom:4px;color:#fff;}
+.freeEventWrap .feFooter ul li:before {position:absolute;left:-10px;top:0;display:block;content:'·';width:10px;}

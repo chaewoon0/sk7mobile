@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/vendor/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/common/base.css">
+</head>
+
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+<!-- top banner -->
+<div class="top-banner" style="background: #273749">
+	<a href="">
+		<img src="../asset/img/1.jpg" class="d-lg-none" alt="음성 데이터 무제한 월 33,000원">
+		<img src="../asset/img/1_pc.jpg" class="d-none d-lg-block" alt="음성 데이터 무제한 월 33,000원">
+	</a>
+	<span class="form-checkbox todayChk d-none d-lg-block">
+		<input type="checkbox" id="todayBnr">
+		<label for="todayBnr">오늘하루보지않기</label>
+	</span>
+	<button type="button" class="icon-close">배너 닫기</button>
+</div>
+<!-- //top banner -->
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- Header -->
+	<header id="hd">
+		<div class="container">
+			<h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+
+<section class="sect">
+	<div class="container">
+
+		<div class="heading-depth1">
+			<h2 class="title">요금 즉시납부</h2>
+		</div>
+
+        <div class="heading-depth2">
+            <h3 class="title">납부하실 금액을 입력하거나 선택해주세요.</h3>
+        </div>
+        <!-- s: 240703 수정 -->
+
+        <style>
+            @media (max-width: 1080px) {
+                table thead .form-checkbox {
+                    display: inline-block;
+                    padding: 0;
+                    height: 1.3rem;
+                    min-height: auto;
+                }
+
+                table thead .form-checkbox label {
+                    min-width: 1.3rem;
+                    min-height: 1.3rem;
+                }
+
+                table thead .form-checkbox label:before {
+                    top: 0;
+                }
+            }
+            
+        </style>
+
+        <table class="tb bl">
+            <caption>납부내역(청구월, 청구금액, 납부금액, 납부일자, 납부방법)</caption>
+            <colgroup>
+                <col style="width:12%">
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
+            </colgroup>
+            
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <span class="form-checkbox no-txt pad-3">
+                            <input type="checkbox" name="allPayHist" id="allPayHist" title="청구월전체선택" checked="">
+                            <label for="allPayHist"><span class="sr-only"></span></label>
+                        </span>
+                    </th>
+                    <th scope="col">청구월</th>
+                    <th scope="col">미납금액</th>
+                    <th scope="col">납부일자</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyRecentPaymentDetails">
+                <tr class="show">
+                    <td>
+                        <span class="form-checkbox no-txt pad-3">
+                            <input type="checkbox" name="chkPayHist" id="chkPayHist0" title="(2024-05)청구월선택" value="HtabeLX9Da/+pVaaG1lU+XQ20TXzcs1CRUYU3Pv666CctIdP+2g7BkFSPrlegbT+OOzKtMWZ6beyZ1grIp/lMA==" checked="">
+                            <label for="chkPayHist0"><span class="sr-only"></span></label>
+                        </span>
+                    </td>
+                    <td>2024-05</td>
+                    <td>16,900원</td>
+                    <td class="text-nowrap">
+                        <input class="form-control text-right" type="text" title="납부금액" value="0원">
+                    </td>
+                </tr>
+                <tr class="show">
+                    <td>
+                        <span class="form-checkbox no-txt pad-3">
+                            <input type="checkbox" name="chkPayHist" id="chkPayHist1" title="(2024-05)청구월선택" value="HtabeLX9Da/+pVaaG1lU+XQ20TXzcs1CRUYU3Pv666CctIdP+2g7BkFSPrlegbT+OOzKtMWZ6beyZ1grIp/lMA==" checked="">
+                            <label for="chkPayHist1"><span class="sr-only"></span></label>
+                        </span>
+                    </td>
+                    <td>2024-05</td>
+                    <td>16,900원</td>
+                    <td class="text-nowrap">
+                        <input class="form-control text-right" type="text" title="납부금액" value="0원">
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+        <!-- e: 240703 수정 -->
+        <div class="heading-depth2">
+            <h3 class="title">납부정보 입력 후 요금 납부를 진행해주세요.</h3>
+        </div>
+        <div class="form-wrap">
+            <div class="inp-form-wp">
+                <div class="inp-tit"><p>납부하실 금액</p></div>
+                <div class="inp-cont">
+                    <div class="inp-wp">
+                        <input class="form-control text-right" type="text" title="납부하실 금액" maxlength="50" value="6,380원" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="inp-form-wp">
+                <div class="inp-tit"><p>본인카드여부</p></div>
+                <div class="inp-cont">
+                    <span class="form-radio inline">
+                        <input type="radio" name="card" checked="checked" id="card-0">
+                        <label for="card-0" class="checked">본인 카드</label>
+                    </span>
+                    <span class="form-radio inline">
+                        <input type="radio" name="card" id="card-1">
+                        <label for="card-1">타인명의 카드</label>
+                    </span>
+                    <span class="form-radio inline">
+                        <input type="radio" name="card" id="card-2">
+                        <label for="card-2">자주 쓰는 카드</label>
+                        <button class="card-del-btn">
+                            (<span class="text-under">카드 삭제</span>)
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="inp-form-wp">
+                <div class="inp-tit"><p>보안문자</p></div>
+                <div class="inp-cont">
+                    <div class="secure-wp secure-wp-captcha">
+                        <span class="secure-area smsCaptcha form-control disabled">
+                            <span><img src="../asset/img/captcha.png"></span>
+                        </span>
+                        <div class="btn-wp">
+                            <button type="button" class="btn btn-shadow btn-default btn-new">
+                                <span class="sr-only">보안문자 새로고침</span>
+                            </button>
+                            <button type="button" class="btn btn-shadow btn-default btn-audio">
+                                <span class="sr-only">보안문자 음성듣기</span>
+                            </button>
+                        </div>
+                        <input type="number" class="form-control secure-input-captcha" id="captchaText" name="captchaText" maxlength="6" oninput="maxLengthCheck(this)" placeholder="보안문자 입력" title="보안문자">
+                    </div>
+                </div>
+            </div>
+            <div class="inp-form-wp">
+                <div class="inp-tit"><p>카드주</p></div>
+                <div class="inp-cont">
+                    <p>김세븐</p>
+                </div>
+            </div>
+            <div class="inp-form-wp">
+                <div class="inp-tit"><p>카드번호</p></div>
+                <div class="inp-cont">
+                    <div class="inp-wp">
+                        <input type="password" class="form-control" name="m2CardNum" id="m2CardNum" maxlength="16" oninput="onlyNumberInputEvent(this, event);" onkeydown="return onlyNumber(event);" placeholder="‘-’를 제외하고 입력하세요." title="카드번호 입력" data-gtm-form-interact-field-id="0">
+                    </div>
+                </div>
+            </div>
+            <div class="inp-form-wp">
+                <div class="inp-tit"><p>유효기간</p></div>
+                <div class="inp-cont">
+                    <div class="form-flex period-wp">
+                        <div class="sel-wp form-flexible">
+                            <select class="form-control" id="m2CardEffYm2" name="m2CardEffYm2" title="월 선택"><option value="">선택</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>
+                        </div>
+                        <div class="desc">월</div>
+                        <div class="sel-wp form-flexible">
+                            <select class="form-control" id="m2CardEffYm1" name="m2CardEffYm1" title="연도 선택"><option value="">선택</option><option value="2024">24</option><option value="2025">25</option><option value="2026">26</option><option value="2027">27</option><option value="2028">28</option><option value="2029">29</option><option value="2030">30</option><option value="2031">31</option><option value="2032">32</option><option value="2033">33</option><option value="2034">34</option></select>
+                        </div>
+                        <div class="desc desc1">년</div>
+                    </div>
+                </div>
+            </div>
+            <div class="inp-form-wp">
+                <div class="inp-tit"><p>비밀번호 앞 2자리</p></div>
+                <div class="inp-cont">
+                    <div class="form-flex">
+                        <div class="inp-wp form-flexible">
+                            <input class="form-control form-s" type="number" pattern="[0-9]*" inputmode="numeric" oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);" id="m2CardPwd" name="m2CardPwd" maxlength="2" style="-webkit-text-security:disc" title="비밀번호 앞 2자리 입력">
+                        </div>
+                        <div class="desc">**</div>
+                        <div class="btn-wp">
+                            <button type="button" class="btn btn-sm btn-primary" id="authCardBtn" onclick="authCard();">카드 인증</button>
+                            <span id="authCardDoneTxt" style="display:none;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="acc-group acc-type1 agree-chkList mt-4">
+            <dl class="acc-item">
+                <dt class="acc-head">
+                    <p>
+                        <span class="form-checkbox">
+                            <input type="checkbox" id="check">
+                            <label for="check">입력한 카드번호와 유효기간을 저장합니다. (비밀번호는 결제시마다 입력)</label>
+                        </span>
+                    </p>
+                </dt>
+            </dl>
+        </div>
+        <div class="acc-group acc-type1 agree-chkList mt-4" data-accordion="true">
+            <dl class="acc-item active">
+                <dt class="acc-head">
+                    <p>
+                        <span class="form-checkbox">
+                            <input type="checkbox" id="payCheckAgree">
+                            <label for="payCheckAgree">[필수] 개인정보 수집 및 이용 동의</label>
+                        </span>
+                    </p>
+                    <button class="btn btn-toggle btn-right" type="button" role="button" title="닫기"><span class="sr-only">더보기</span></button>
+                </dt>
+                <dd class="acc-body" role="region" aria-hidden="false" aria-expanded="true">
+                    <div class="acc-content term-text">
+                        1. 수집/이용 목적 : 요금 즉시납부 카드정보<br>
+                        2. 수집/이용 항목 : 이동전화번호, 카드번호, 유효기간,<br>
+                        보유/이용 기간 : <strong style="font-size:1.2em">이동전화번호 탈퇴 또는 직접 삭제 시까지</strong><br>
+                        ※ 개인정보 수집/이용에 동의하지 않을 수 있으나, 동의하지 않을 경우 해당 서비스를 이용할 수 없습니다.
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <div class="btn-wrap item2">
+            <span>
+                <button type="button" class="btn btn-lg btn-secondary" onclick="initArea();">이전</button>
+            </span>
+            <span>
+                <button type="button" class="btn btn-lg btn-danger" onclick="procMethodChange(); ">확인</button>
+            </span>
+        </div>
+        <div class="acc-group acc-type1" data-accordion="true">
+            <dl class="acc-item active">
+                <dt class="acc-head">
+                    <button class="btn btn-toggle" type="button">유의사항</button>
+                </dt>
+                <dd class="acc-body">
+                    <div class="acc-content">
+                        <ul class="lst-bullet">
+                            <li class="text-danger">자동납부로 납부하시는 경우 영업일 기준 3-4일 이후 확인되므로 요금 납부 시 참고하시기 바랍니다.</li>
+                            <li class="text-danger">홈페이지 또는 App을 통해 요금을 납부하신 경우 환불 불가합니다.</li>
+                            <li class="text-danger">신용/체크카드 요금납부는 10원부터 결제 가능합니다.</li>
+                            <li>본인명의의 신용/체크카드로 결제하시는 경우 카드 정보를 저장하여 다음 납부 시에는 비밀번호만 입력 후 빠르게 결제 가능합니다.</li>
+                            <li>미납내역은 최근 5개월 발생한 금액만 조회되며, 납기일자에 도래하지 않은 당월 청구 금액은 미납 내역에 조회되지 않습니다.</li>
+                            <li>다회선 통합 청구를 신청하신 경우에도 홈페이지에서는 회선별 청구 금액만 조회되므로, 총 청구금액은 고객센터로 확인 바랍니다.</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+
+	</div>
+
+
+
+</section>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+
+	<!-- Footer -->
+	<footer id="ft">
+		<div class="container">
+			<div class="ft-top">
+				<p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+				<dl class="font-weight-normal">
+					<dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+					<dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+					<dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+					<dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+				</dl>
+			</div>
+			<hr>
+			<ul class="fnb">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+				<li><a href="">개인정보이용내역조회</a></li>
+				<li><a href="">통신자료제공사실 열람신청</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">분쟁처리절차</a></li>
+				<li><a href="">책임의 한계와 법적고지</a></li>
+				<li><a href="">불법스팸대응센터</a></li>
+				<li><a href="">명의도용방지서비스</a></li>
+				<li><a href="">해지미환급금 조회/환불</a></li>
+				<li><a href="">법인회선개통문의</a></li>
+			</ul>
+			<div class="ft-bottom">
+				<div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장  최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신 판매번호:2010-서울중구-0518</div>
+				<p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+
+<!-- js -->
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+
+<!-- s: 240624 체크박스 수정 -->
+
+<script>
+
+    $(document).ready(function() {
+        
+        $("#allPayHist").click(function() {
+            try {
+                if($(this).prop("checked")) {
+                    $("input:checkbox[name='chkPayHist']").prop("checked", true);
+                } else {
+                    $("input:checkbox[name='chkPayHist']").prop("checked", false);
+                }
+            } catch(exception) {
+                console.log("전체 체크 클릭 exception : "+exception);
+            }
+        });
+        $("input:checkbox[name='chkPayHist']").change(function() {
+            try {
+                var allCheckLength = $("input:checkbox[name='chkPayHist']").length;
+                var checkedLength = $("input:checkbox[name='chkPayHist']:checked").length;
+                if(allCheckLength == checkedLength) {
+                    $("#allPayHist").prop("checked", true);
+                } else {
+                    $("#allPayHist").prop("checked", false);
+                }
+            } catch(exception) {
+                console.log("개별 체크 클릭 exception : "+exception);
+            }
+        });
+        
+        
+    });
+    
+</script>
+
+<!-- e: 240624 체크박스 수정 -->
+</body>
+</html>

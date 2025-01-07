@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/common/base.css">
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+</head>
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- Header -->
+	<header id="hd">
+		<div class="container">
+			<h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+
+<section class="sect">
+	<div class="container">
+		<div class="heading-depth1">
+			<h2 class="title">해지접수 수정</h2>
+		</div>
+
+		<div class="heading-depth2">
+            <h3 class="title">6p</h3>
+        </div>
+        <div class="form-wrap">
+            <!-- 6p - 2번 -->
+            <div class="inp-form-wp">
+                <div class="inp-tit"><p>신청인 생년월일</p></div>
+                <div class="inp-cont">
+                    <div class="inp-wp">
+                        <input class="form-control" type="number" placeholder="YYYYMMDD">
+                    </div>
+                    <p class="text-info text-grey">* 생년월일 6자리 입력 (예시 19800101)</p>
+                </div>
+            </div>
+
+            <!-- 6p - 4번 -->
+            <div class="inp-form-wp">
+				<div class="inp-tit"><p>이메일 주소</p></div>
+				<div class="inp-cont">
+					<input type="text" class="form-control" name="joinEmail" id="joinEmail" placeholder="sk7mobile@gmail.com 형태로 넣어주세요" title="이메일 주소 입력">
+				</div>
+			</div>
+
+            <!-- 6p - 5번 -->
+            <div class="inp-form-wp">
+				<div class="inp-tit"><p>해지정지 여부</p></div>
+				<div class="inp-cont">
+                    <span class="form-radio inline">
+                        <input type="radio" name="radio1" id="radio1-1" checked="">
+                        <label for="radio1-1" class="checked">신청 안함</label>
+                    </span>
+                    <span class="form-radio inline">
+                        <input type="radio" name="radio1" id="radio1-2">
+                        <label for="radio1-2" class="">걸기/받기 모두 정지</label>
+                    </span>
+                    <div class="text-info text-grey">* 해지정지 신청 시 해지접수 완료 후부터 바로 일시정지됩니다. (일시정지 비용은 면제)<br>* 해지접수 후 상담을 위해 걸기/받기 정지는 해지신청 휴대폰번호와 연락처가 다른 경우에만 선택 가능합니다.</div>
+				</div>
+			</div>
+            
+        </div>
+
+        <div class="heading-depth2">
+            <h3 class="title">8p,9p</h3>
+        </div>
+
+        <div class="form-wrap">
+
+            <!-- 8p - 2번 -->
+            <div class="inp-form-wp">
+				<div class="inp-tit"><p>해지요금 납부방법</p></div>
+				<div class="inp-cont">
+                    <!-- <div class="inp-row">
+                        <span class="form-radio inline">
+                            <input type="radio" name="radio2" id="radio2-1">
+                            <label for="radio2-1" class="checked">입금 전용계좌</label>
+                        </span>
+                        <span class="form-radio inline">
+                            <input type="radio" name="radio2" id="radio2-2" checked="">
+                            <label for="radio2-2" class="">신용/체크카드</label>
+                        </span>
+                        <div class="text-info text-grey">* 해지 시 당월 사용 요금 및 미납 요금 납부할 결제수단을 선택해주세요.</div>
+                    </div> -->
+					<div class="inp-row form-btn-toggle v1" style="flex-wrap: wrap;" data-toggle="buttons">
+						<span>
+							<label for="itllmtPymMthdTp-01" class="btn btn-sm btn-radius-md btn-effect">입금 전용계좌
+								<input type="radio" name="itllmtPymMthdTp" id="itllmtPymMthdTp-01" value="01" checked="">
+							</label>
+						</span>
+						<span>
+							<label for="itllmtPymMthdTp-02" class="btn btn-sm btn-radius-md btn-effect checked active">신용/체크카드
+								<input type="radio" name="itllmtPymMthdTp" id="itllmtPymMthdTp-02" value="02">
+							</label>
+						</span>
+						<div class="text-info text-grey" style="min-width: 100%;">* 해지 시 당월 사용 요금 및 미납 요금 납부할 결제수단을 선택해주세요.</div>
+					</div>
+                    <div class="inp-row card-type2">
+                        <p class="table-label">카드주</p>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="inp-row card-type2">
+                        <p class="table-label">카드주 생년월일</p>
+                        <input type="text" class="form-control" placeholder="YYYYMMDD">
+                        <p class="text-info text-grey">* 생년월일 6자리 입력 (예시 19800101)</p>
+                    </div>
+
+                    <div class="inp-row card-type2">
+                        <p class="table-label">카드번호(12자리만)</p>
+                        <input type="text" class="form-control" placeholder="‘-’ 없이 숫자만 입력해주세요." title="카드번호 입력">
+                        <p class="text-info text-grey">* 카드번호 앞자리부터 12자리만 입력해주세요.<br>* 나머지 카드번호와 비밀번호는 접수 후 상담 시 확인합니다.</p>
+                    </div>
+
+                    <div class="inp-row card-type2">
+                        <p class="table-label">유효기간</p>
+                        <div class="form-flex period-wp">
+                            <div class="sel-wp form-flexible">
+                                <select class="form-control" title="월 선택">
+                                    <option value="">선택</option>
+                                </select>
+                            </div>
+                            <div class="desc desc1">월</div>
+                            <div class="sel-wp form-flexible">
+                                <select class="form-control" title="연도 선택">
+                                    <option value="">선택</option>
+                                </select>
+                            </div>
+                            <div class="desc">년</div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+            
+        </div>
+
+
+        <div class="heading-depth2">
+			<h3 class="title">10p</h3>
+		</div>
+		<div class="acc-group acc-type1 agree agree-termination">
+			<dl class="acc-item">
+				<dt class="acc-head">
+					<p>
+						고객 개인정보 조회제한 신청동의
+					</p>
+				</dt>
+				<dd class="acc-body">
+					<div class="acc-content term-text mh-100 v1">
+						<ul class="list-termination">
+							<li>1. SK텔링크주식회사는이동전화 이용약관 제 25조(요금 등의 이의신청), 제 26조(통화내역의 열람 및 교부)등과 관련하여 신청고객의 개인정보를 해지 후 6개월간 조회제한 후 파기합니다.단, 조회제한 기간 중 과납이나 미납,체납 등이 발생할 경우 요금정산 완료시점까지 조회 제한이 해제됩니다.</li>
+							<li>2. 상기의 6개월 조회제한 기간이 완료된 경우에 해지자의 이름, 주민등록번호,(해지)이동전화번호, 요금안내서 배달주소, 요금 등 거래내역 관련 정보와 같이 국세기본법 등에 의하여 보존할 필요가 있는 개인정보들은 해지 후 5년간 고객 데이터베이스와 별도로 보관 및 관리합니다.</li>
+						</ul>
+						<p class="line text-left">고객님 본인은 정보통신망 이용촉진및 정보보호 등에 관한 법류과 이동통신사 해지고객 개인정보 보호지침(정보통신부 2003. 12. 30)에 의거하여 위의 내용에 동의하며, <span class="text-danger">개인정보 조회 제한할 것을 신청합니다.</span></p>
+					</div>
+				</dd>
+			</dl>
+		</div>
+
+        <div class="acc-group acc-type1 agree-chkList mt-4">
+            <dl class="acc-item">
+                <dt class="acc-head">
+                    <p>
+                        <span class="form-checkbox">
+                            <input type="checkbox" id="check">
+                            <label for="check">고객 개인정보조회제한 신청동의를 읽고 이해하였으며, 신청에 동의합니다.</label>
+                        </span>
+                    </p>
+                </dt>
+            </dl>
+        </div>
+
+
+        <div class="heading-depth2">
+			<h3 class="title">11p</h3>
+		</div>
+
+        <div class="apply-result">
+			<i class="icon-msgChk1"></i>
+			<strong class="title">해지접수가 완료되었습니다.</strong>
+			<strong class="text text-danger">접수번호 : 0000511748</strong>
+			<p>1. SK 7 mobile 홈페이지를 통하여 해지 신청 접수 시 고객센터 상담사가 2일 이내(영업일 기준) 고객님께 직접 전화하여 본인여부 확인하고, <br class="d-none d-lg-block"><span class="text-danger">해지위약금/할부금 등 총 납부하실 요금안내 및 수납후</span> 해지 처리됩니다.</p>
+            <p>2. 해지 신청 취소는 상담사 및 홈페이지 해지신청 메뉴를 통해 접수상태 확인 및 취소 가능합니다.</p>
+            <p>3. 해지에 대한 <span class="text-danger">원복</span>은 당사 전산에서 해지처리 완료된 <span class="text-danger">당일 18시까지만</span> 고객센터 상담사를 통해 원복 가능합니다.</p>
+			<div class="btn-wrap mt-3">
+				<button type="button" class="btn btn-sm btn-outline-primary">확인</button>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+	<!-- Footer -->
+	<footer id="ft">
+		<div class="container">
+			<div class="ft-top">
+				<p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+				<dl class="font-weight-normal">
+					<dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+					<dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+					<dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+					<dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+				</dl>
+			</div>
+			<hr>
+			<ul class="fnb">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+				<li><a href="">개인정보이용내역조회</a></li>
+				<li><a href="">통신자료제공사실 열람신청</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">분쟁처리절차</a></li>
+				<li><a href="">책임의 한계와 법적고지</a></li>
+				<li><a href="">불법스팸대응센터</a></li>
+				<li><a href="">명의도용방지서비스</a></li>
+				<li><a href="">해지미환급금 조회/환불</a></li>
+				<li><a href="">법인회선개통문의</a></li>
+			</ul>
+			<div class="ft-bottom">
+				<div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장  최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신 판매번호:2010-서울중구-0518</div>
+				<p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+
+<script>
+	$(document).ready(function(){
+		
+		$('input[name="radio2"]').on('change reChange', function(){
+			if ($('#radio2-1').is(':checked')) {
+				$('.card-type1').show();
+				$('.card-type2').hide();
+			}
+			else {
+				$('.card-type1').hide();
+				$('.card-type2').show();
+			}
+		}).trigger('reChange');
+
+	})
+</script>
+</body>
+</html>

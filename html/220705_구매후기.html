@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../asset/css/vendor/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../asset/css/common/base.css">
+</head>
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+<!-- top banner -->
+<div class="top-banner" style="background: #273749">
+	<a href="">
+		<img src="../asset/img/1.jpg" class="d-lg-none" alt="음성 데이터 무제한 월 33,000원">
+		<img src="../asset/img/1_pc.jpg" class="d-none d-lg-block" alt="음성 데이터 무제한 월 33,000원">
+	</a>
+	<span class="form-checkbox todayChk d-none d-lg-block">
+		<input type="checkbox" id="todayBnr">
+		<label for="todayBnr">오늘하루보지않기</label>
+	</span>
+	<button type="button" class="icon-close">배너 닫기</button>
+</div>
+<!-- //top banner -->
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- Header -->
+	<header id="hd">
+		<div class="container">
+			<h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+
+<section class="sect">
+	<div class="container">
+		<div class="heading-depth1">
+			<h2 class="title">진행이벤트</h2>
+		</div>
+		<div class="bbs-view" style="border-bottom:0px none;">
+			<div class="view-head">
+				<strong class="title">타이틀</strong>
+				<p class="date">기간 2020-04-07 ~ 2020-07-31</p>
+				<ul class="sns">
+					<li><a href="/"><i class="icon-ka"><span class="sr-only">카카오톡 공유</span></i></a></li>
+					<li><a href="/"><i class="icon-fb"><span class="sr-only">페이스북 공유</span></i></a></li>
+					<li><a href="/"><i class="icon-tw"><span class="sr-only">트위터 공유</span></i></a></li>
+					<li><a href="/"><i class="icon-url"><span class="sr-only">URL 공유</span></i></a></li>
+				</ul>
+			</div>
+
+			<!-- 구매후기 -->
+			<div class="view-body">
+
+				<!-- 후기 등록 : 220705 -->
+				<div class="review-write">
+					<div class="subTitle">
+						<h3 class="title">구매후기 남기고 이벤트 응모하기</h3> <!--220706 -->
+					</div>
+
+					<div class="heading-depth2">
+						<h3 class="title">가입자 정보</h3>
+					</div>
+					<div class="form-wrap mb-3 mt-4">
+						<div class="inp-form-wp">
+							<div class="inp-tit"><p>추천여부 선택</p></div>
+							<div class="inp-cont">
+								<span class="form-radio inline">
+									<input type="radio" name="custRating" id="custRating1" value="1" checked="checked">
+									<label for="authOn1-1" class="checked">추천</label>
+								</span>
+								<span class="form-radio inline">
+									<input type="radio" name="custRating" id="custRating0" value="0">
+									<label for="authOn1-3" class="">비추천</label>
+								</span>
+							</div>
+						</div>
+						<div class="inp-form-wp">
+							<div class="inp-tit"><p>후기 작성</p></div>
+							<div class="inp-cont">
+								<div class="txtarea-wp txtarea-count">
+									<textarea id="comment" name="comment" rows="" cols="" title="후기 입력" placeholder="댓글은 실제 구매하신 고객님만 작성하실 수 있습니다. 후기 내용과 관계없이 욕설 및 비방 등의 부적절한 내용은 예고없이 삭제됩니다."></textarea>
+									<p class="txtarea-paragraph">
+										<span id="byteInfo">0</span> byte / 600 byte
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="inp-form-wp">
+							<div class="inp-tit"><p>이미지 첨부 (선택)</p></div>
+							<div class="inp-cont">
+								<div class="upload-file">
+									<input class="upload-name form-control" value="이미지를 등록해주세요." readonly="">
+									<label for="file1" class="btn btn-secondary btn-sm">파일선택</label>
+									<input type="file" id="file1" class="upload-hidden" name="file1" title="댓글 관련 이미지 등록 첫번째">
+								</div>
+								<div class="upload-file">
+									<input class="upload-name form-control" value="이미지를 등록해주세요." readonly="">
+									<label for="file2" class="btn btn-secondary btn-sm">파일선택</label>
+									<input type="file" id="file2" class="upload-hidden" name="file2" title="댓글 관련 이미지 등록 두번째">
+								</div>
+								<div class="upload-file">
+									<input class="upload-name form-control" value="이미지를 등록해주세요." readonly="">
+									<label for="file3" class="btn btn-secondary btn-sm">파일선택</label>
+									<input type="file" id="file3" class="upload-hidden" name="file3" title="댓글 관련 이미지 등록 세번째">
+								</div>
+								<p class="text-info">
+									※ 이미지는 1장당 1MB 이내의 jpg, jpeg, gif, png 형식으로만 최대 3장까지 등록 가능합니다.
+								</p>
+							</div>
+						</div>
+						<div class="inp-form-wp">
+							<div class="inp-tit"><p>SNS 공유 URL (선택)</p></div>
+							<div class="inp-cont">
+								<div class="inp-wp">
+									<input class="form-control" type="text" title="SNS 공유 URL 입력" name="sharedUrl" id="sharedUrl" placeholder="구매후기를 남긴 게시글 URL을 넣어주세요.">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="heading-depth2">
+						<h3 class="title">이벤트 응모 연락처</h3>
+					</div>
+					<div class="form-wrap mb-3 mt-4">
+						<div class="inp-form-wp">
+							<div class="inp-tit"><p>이름</p></div>
+							<div class="inp-cont">
+								<div class="inp-wp">
+									<input class="form-control" type="text" title="이름 입력" name="" id="" placeholder="이름을 넣어주세요.">
+								</div>
+								<div class="text-info text-grey">
+									* 개통하신 SK 세븐모바일 명의자 이름을 넣어주세요.
+								</div>
+							</div>
+						</div>
+						<div class="inp-form-wp">
+							<div class="inp-tit"><p>보안문자</p></div>
+							<div class="inp-cont">
+								<div class="secure-wp vertical">
+									<span class="secure-area form-control disabled">
+										<span><img id="listCaptchaImage" alt="보안문자" q="0.39132293937625495" src="https://www.sk7mobile.com/captcha.do?q=0.39132293937625495&r=0.09050289401428624"></span>
+									</span>
+									<div class="btn-wp">
+										<button type="button" class="btn btn-shadow btn-default btn-new" onclick="fnCaptchaRefresh($('#listCaptchaImage'));">
+											<span class="sr-only">보안문자 새로고침</span>
+										</button>
+										<button type="button" class="btn btn-shadow btn-default btn-audio" onclick="fnCaptchaAudio($('#listCaptchaImage'));">
+											<span class="sr-only">보안문자 음성듣기</span>
+										</button>
+									</div>
+									<input type="text" class="form-control" id="listCaptchaText" name="listCaptchaText" placeholder="보안문자" maxlength="6" onkeydown="return onlyNumber(event);" title="보안문자 입력">
+								</div>
+							</div>
+						</div>
+						<div class="inp-form-wp">
+							<div class="inp-tit"><p>휴대폰번호</p></div>
+							<div class="inp-cont">
+								<div class="form-flex">
+									<div class="inp-wp form-flexible">
+										<input type="text" class="form-control form-md" placeholder="‘-’를 제외하고 입력하세요." title="휴대폰 번호 입력">
+									</div>
+								</div>
+								<p class="text-info text-grey">
+									* 개통하신 SK 세븐모바일 휴대폰번호를 넣어주세요.
+								</p>
+							</div>
+						</div>
+						<div class="inp-form-wp">
+							<div class="inp-tit"><p>인증번호</p></div>
+							<div class="inp-cont">
+								<div class="inp-wp">
+									<input class="form-control" type="text" title="인증번호 입력" name="" id="" placeholder="인증번호를 입력하세요.">
+								</div>
+							</div>
+						</div>
+						<div class="inp-form-wp">
+							<div class="inp-tit"><p>배송지 주소</p></div>
+							<div class="inp-cont">
+								<div class="address-wp">
+									<div class="address-code">
+										<input type="text" class="form-control" name="payCustZipCd" id="payCustZipCd" title="우편번호 입력" readonly="readonly">
+										<button type="button" class="btn btn-sm btn-primary" id="payCustPostpop" onclick="fnPostOpen('payCustZipCd', 'payCustBssaddr', 'payCustPostpop');">우편번호 찾기</button>
+									</div>
+									<div class="address-inner">
+										<div class="inp-wp">
+											<input type="text" class="form-control" name="payCustBssaddr" id="payCustBssaddr" title="기본주소 입력" readonly="readonly">
+										</div>
+										<div class="inp-wp">
+											<input type="text" class="form-control" name="payCustDtladdr" id="payCustDtladdr" title="상세주소 입력" placeholder="상세주소를 입력해주세요.">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="acc-group acc-type1 mt-5"><!-- mt-5 추가 -->
+					<dl class="acc-item">
+						<dt class="acc-head">
+							<p>
+								<span class="form-checkbox">
+									<input type="checkbox" name="privacyAgree" id="privacyAgree">
+									<label for="privacyAgree">[필수] 개인 정보 수집, 이용 동의</label>
+								</span>
+							</p>
+						</dt>
+						<dd class="acc-body">
+							<div class="acc-content term-text">
+								1. 수집/이용 목적 : 휴대폰등록<br>
+								2. 수집/이용 항목 : 이름, 휴대폰번호, 신용카드 번호<br>
+								3. 보유/이용기간 : <strong style="font-size: 1.2em;">조회 후 3개월까지</strong><br>
+								※ 개인정보 수집/이용에 동의하지 않으실 수 있으며, 동의하지 않으실 경우 해당 서비스를 이용하실 수 없습니다.
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="btn-wrap item2">
+					<span><a href="javascript:void(0);" class="btn btn-secondary btn-lg">취소</a></span>
+					<span><a href="javascript:void(0);" class="btn btn-danger btn-lg">등록</a></span>
+				</div>
+				<!-- //후기 등록 : 220705 -->
+
+				<!-- BEST 구매후기 -->
+				<div class="review-view best">
+					<div class="subTitle">
+						<h3 class="title">이 달의 BEST 구매후기</h3>
+						<div class="sel-group form-flex">
+							<select class="form-control form-flexible" id="winnerInfoListReqOtmYm" title="BEST 구매후기 연월 선택">
+								<option value="202205" selected="">2022년 05월</option>
+								<option value="202204">2022년 04월</option>
+								<option value="202203">2022년 03월</option>
+								<option value="202202">2022년 02월</option>
+								<option value="202201">2022년 01월</option>
+								<option value="202112">2021년 12월</option>
+								<option value="202111">2021년 11월</option>
+								<option value="202110">2021년 10월</option>
+								<option value="202109">2021년 09월</option>
+								<option value="202108">2021년 08월</option>
+								<option value="202107">2021년 07월</option>
+								<option value="202106">2021년 06월</option>
+								<option value="202105">2021년 05월</option>
+								<option value="202104">2021년 04월</option>
+								<option value="202103">2021년 03월</option>
+								<option value="202102">2021년 02월</option>
+								<option value="202101">2021년 01월</option>
+								<option value="202012">2020년 12월</option>
+								<option value="202011">2020년 11월</option>
+								<option value="202010">2020년 10월</option>
+								<option value="202009">2020년 09월</option>
+								<option value="202008">2020년 08월</option>
+								<option value="202007">2020년 07월</option>
+								<option value="202006">2020년 06월</option>
+								<option value="202005">2020년 05월</option>
+								<option value="202003">2020년 03월</option>
+								<option value="202002">2020년 02월</option>
+								<option value="202001">2020년 01월</option>
+								<option value="201912">2019년 12월</option>
+								<option value="201911">2019년 11월</option>
+								<option value="201910">2019년 10월</option>
+								<option value="201909">2019년 09월</option>
+								<option value="201908">2019년 08월</option>
+								<option value="201907">2019년 07월</option>
+								<option value="201906">2019년 06월</option>
+								<option value="201905">2019년 05월</option>
+								<option value="201904">2019년 04월</option>
+								<option value="201903">2019년 03월</option>
+								<option value="201902">2019년 02월</option>
+							</select>
+							<button class="btn btn-secondary" type="button" onclick="changeWinnerInfoListReqOtmYm();">조회</button>
+						</div>
+					</div>
+					<div id="winnerInfoList">
+						<div class="ps-review-wp">
+							<div class="ps-review">
+								<div class="review-item" id="winnerInfoList1">
+									<div class="review-head">
+										<div class="review-title">
+											<strong class="title">유심(LTE 유심 (11GB+/통화맘껏))</strong>
+											<p class="info">
+												<span class="name">신**</span><span class="date">2022-05-11 12:44</span>
+												<button type="button" class="icon-delete" onclick="goToAuthModalForDel('81e001c8b1bedf5c72536b9ddf20cc38')" style="">삭제</button>
+											</p>
+										</div>
+										<div class="review-icon-wp">
+											<i class="ic-best">1등</i><i class="ic-good">추천</i>
+										</div>
+									</div>
+									<div class="review-body">
+										<div class="cont">
+											 아이폰 13 Pro Max를 자급제로 구입한 이후, 오랜 고민 끝에 KT를 떠나 알뜰폰(MVNO)으로 갈아타기로 결심했다. 대도시에서는 5G가 꽤 잘 터지긴 하지만 여전히 불안정하고, 그렇다고 KT의 LTE 품질이 좋은 것도 아니어서 부가적인 멤버십 혜택 몇 개를 제외하면 굳이 KT에 남아있을 이유가 없어졌기 때문이다. 가족결합을 포기해야 하는 점이 마음에 조금 걸렸지만, 이것도 막상 계산기를 두드려보니 가족 전부 알뜰폰으로 갈아타면 결합 할인액을 능가하는 수준으로 통신비를 절감할 수 있을 것 같았다.....(후략, SNS 공유 URL에서 계속)
+											<div class="add">
+												 *후기 공유 <a class="link" href="javascript:void(0);" onclick="openBrowser('https://blog.naver.com/whatismore/222572378723');" title="새창">https://blog.naver.com/whatismore/222572378723</a>
+											</div>
+										</div>
+										<div class="btn-more-wp">
+											<button type="button" class="btn-more" id="winnerInfoListMore1" onclick="fnReviewMore('winnerInfoList','1')">
+											<i></i>
+											<span class="sr-only">더보기</span>
+											</button>
+										</div>
+										<div class="img">
+											<span data-toggle="modal" data-target=".modal-imgSlider">
+											<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001228400/2205111244537497186.jpg" alt="등록이미지2973" title="레이어팝업"></a>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="review-item" id="winnerInfoList2">
+									<div class="review-head">
+										<div class="review-title">
+											<strong class="title">유심(10% 포인트 (3GB+/200분))</strong>
+											<p class="info">
+												<span class="name">김**</span><span class="date">2022-05-29 14:53</span>
+												<button type="button" class="icon-delete" onclick="goToAuthModalForDel('107c89134ec33066eb5e397880f941cb')" style="">삭제</button>
+											</p>
+										</div>
+										<div class="review-icon-wp">
+											<i class="ic-best">2등</i><i class="ic-good">추천</i>
+										</div>
+									</div>
+									<div class="review-body">
+										<div class="cont">
+											 오랜기간동안 대형통신사 요금제를 사용하다가 이번에 처음으로 알뜰요금제에 가입하기로 마음먹고 알아보는데 회사가 많더라구요. 꼼꼼히 찾아보니 sk 통신망을 쓰는 sk7모바일의 요금과 품질이 가장 합리적이라는 결론을 내리고 바로 집앞 홈플러스에 가서 유심을 구입했습니다. <br>
+											<br>
+											셀프개통 절차가 매우 간단했는데 제가 몇 년 전에 엠세이퍼에 휴대폰개통 차단한 것을 잊고 있어서 다음날 다시 셀프개통을 해야했어요ㅎㅎ 이 과정에서 카톡 상담을 이용했는데 무척 빠르고 친절한 응대에 감탄했습니다. <br>
+											<br>
+											지금 개통하고 일주일정도 사용중인데 왜 진작 sk7모바일로 바꾸지 않았을까 생각될 정도로 대만족입니다.
+										</div>
+										<div class="btn-more-wp">
+											<button type="button" class="btn-more" id="winnerInfoListMore2" onclick="fnReviewMore('winnerInfoList','2')">
+											<i></i>
+											<span class="sr-only">더보기</span>
+											</button>
+										</div>
+										<div class="img">
+											<span data-toggle="modal" data-target=".modal-imgSlider">
+											<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001237739/2205291453158654467.jpg" alt="등록이미지2996" title="레이어팝업"></a>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="review-item" id="winnerInfoList3">
+									<div class="review-head">
+										<div class="review-title">
+											<strong class="title">유심(LTE 유심 (4GB/2000분))</strong>
+											<p class="info">
+												<span class="name">송**</span><span class="date">2022-05-28 09:09</span>
+												<button type="button" class="icon-delete" onclick="goToAuthModalForDel('b0257de0789472095043258e77f2ae67')" style="">삭제</button>
+											</p>
+										</div>
+										<div class="review-icon-wp">
+											<i class="ic-best">2등</i><i class="ic-good">추천</i>
+										</div>
+									</div>
+									<div class="review-body">
+										<div class="cont">
+											 기존 통신사보다 확실하게 저렴한 가격~ 통신품질 또한 아주 좋네요. sk7모바일 쓰다가 다른데로 절대 가지 못할듯 합니다. 그리고 온라인을 이용한 셀프신청은 정말 괜찮은것 같네요. 이전 통신사 가입할때는 대리점 가야하고 뭐 적는것도 서류도 엄청나게 많았고 사인하는 서류가 뭔지도 모르고 한것도 많은것 같은데..여기는 유심 주문하면 다음날 바로 오고 유심 받으면 인터넷만 되면 바로 셀프로 가입 신청 및 기존 통신사 자동해지...개통까지 정말 간편하더군요.. 유심 개봉하고 약 20~30분정도면 모든게 완료되는 시스템이었습니다.. 이제는 가격도 싸고 데이터도 음성도 넉넉한 요금제를 즐길 일만 남았네요.잘쓸게요..감사합니
+										</div>
+										<div class="btn-more-wp">
+											<button type="button" class="btn-more" id="winnerInfoListMore3" onclick="fnReviewMore('winnerInfoList','3')">
+											<i></i>
+											<span class="sr-only">더보기</span>
+											</button>
+										</div>
+										<div class="img">
+											<span data-toggle="modal" data-target=".modal-imgSlider">
+											<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001237256/2205280909348119696.jpg" alt="등록이미지2993" title="레이어팝업"></a>
+											</span><span data-toggle="modal" data-target=".modal-imgSlider">
+											<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001237256/2205280909348112968.jpg" alt="등록이미지2994" title="레이어팝업"></a>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="page-nav" id="winnerInfoListPaging">
+							<strong>1<span class="sr-only">(현재 페이지)</span></strong><a href="javascript:void(0);" onclick="goPage('winnerInfoList', 2); checkPagingClick('winnerInfoList', 2); return false;">2</a><a href="javascript:void(0);" onclick="goPage('winnerInfoList', 3); checkPagingClick('winnerInfoList', 3); return false;">3</a><a href="javascript:void(0);" onclick="goPage('winnerInfoList', 4); checkPagingClick('winnerInfoList', 4); return false;">4</a><a href="javascript:void(0);" onclick="goPage('winnerInfoList', 5); checkPagingClick('winnerInfoList', 5); return false;">5</a><a href="javascript:void(0);" onclick="goPage('winnerInfoList', 6); checkPagingClick('winnerInfoList', 6); return false;">6</a><a href="javascript:void(0);" onclick="goPage('winnerInfoList', 7); checkPagingClick('winnerInfoList', 7); return false;">7</a><a href="javascript:void(0);" onclick="goPage('winnerInfoList', 8); checkPagingClick('winnerInfoList', 8); return false;">8</a><a href="javascript:void(0);" onclick="goPage('winnerInfoList', 9); checkPagingClick('winnerInfoList', 9); return false;">9</a><a href="javascript:void(0);" onclick="goPage('winnerInfoList', 10); checkPagingClick('winnerInfoList', 10); return false;">10</a>
+						</div>
+					</div>
+				</div>
+				<!-- //BEST 구매후기 -->
+
+				<!-- 전체보기 -->
+				<div class="review-view" id="commentInfoList">
+					<div class="review-head">
+						<h3 class="title">구매후기 전체보기</h3>
+					</div>
+					<div class="donut-wp mt-4">
+						<div class="pie-wp">
+							<span class="label">
+							<span class="ic-good">추천</span>
+							</span>
+							<div class="pie" style="clip: rect(auto, auto, auto, auto);">
+								<div class="left-side half-circle" style="transform: rotate(346deg);">
+								</div>
+								<div class="right-side half-circle" style="transform: rotate(180deg);">
+								</div>
+							</div>
+							<div class="pie-bg">
+							</div>
+						</div>
+						<div class="pie-desc">
+							<span class="text-mint"><strong class="pie-percent">96.41</strong>%</span> 의 <br class="d-lg-none">
+							고객님이 <strong>추천</strong>합니다.
+						</div>
+					</div>
+					<div class="ps-review-wp">
+						<p class="total">
+							리뷰 2,923건
+						</p>
+						<div class="ps-review pr-list">
+							<div class="review-item" id="commentInfoList1">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(LTE 유심 (5GB/100분))</strong>
+										<p class="info">
+											<span class="name">김***</span><span class="date">2022-07-05 22:18</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('886b1a80568e87817daa84fcf434b21d')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										 회사에서 핸드폰요금이 실비로 지원되다가 정액지원 되면서 핸드폰비를 아끼면 좋겠더라구요~요새 물가도 넘나 비싼데 핸드폰비 아끼면 제 용돈 되잖아요~ㅋㅋ 거기다가 전엔 1.5기가 LTE 요금제가 5만원대였는데 이젠 1만1천원으로 5기가를 쓸수있으니 <br>
+										대에박!! 넘나 감사합니다요~~강추♥♥
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore1" onclick="fnReviewMore('commentInfoList','1')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+										<span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001260883/2207052218328210834.jpg" alt="등록이미지3056" title="레이어팝업"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-item" id="commentInfoList2">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(LTE 유심 (10GB/2000분))</strong>
+										<p class="info">
+											<span class="name">김*</span><span class="date">2022-07-05 19:53</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('a4039b513e3432c65bb7c333d19c65e6')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										 너무 좋아요ㅎㅎㅎㅎㅎ
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore2" onclick="fnReviewMore('commentInfoList','2')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+									</div>
+								</div>
+							</div>
+							<div class="review-item" id="commentInfoList3">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(10% 포인트 (11GB+/통화맘껏))</strong>
+										<p class="info">
+											<span class="name">김**</span><span class="date">2022-07-05 19:34</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('0377e14871fb6f18db78325aceef3fa4')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										 SKT회선을 사용하는 세븐모바일을 찾아올 수 밖에 없는 개인적인 사정이 있었지만, 유심배송부터 개통까지 너무 쉽게 설명되어있는 홈페이지와 시스템에 많은 노력을 쏟으셨다는걸 느꼈습니다. <br>
+										사진에서 보시다시피 온갖 설명서 다 빼시고 지구환경까지 생각하는 모습은 진심인 듯 싶습니다. <br>
+										이제서야 막 가입했지만 앞으로도 계속해서 세븐모바일과 함께하고싶네요. <br>
+										<br>
+										네이버포인트 이벤트도 기획 너무 잘하신 것 같아요! 세븐모바일 임직원 여러분 올 여름 시원하게 보내세요~~~
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore3" onclick="fnReviewMore('commentInfoList','3')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+										<span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001260734/2207051934519596985.jpeg" alt="등록이미지3055" title="레이어팝업"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-item" id="commentInfoList4">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(LTE 유심 (10GB/100분))</strong>
+										<p class="info">
+											<span class="name">우**</span><span class="date">2022-07-05 16:49</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('9c63150be8b35da311d41d994fb6cfc9')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										 좀 더 싸고 품질도 좋은 요금제는 없을까 찾아보다가 같은 skt망을 쓰는 sk7모바일을 알게 되었습니다. 이벤트도 자주 해서 이벤트 기간에 맞추면 이 가격에서 더 싼 가격에 요금제를 이용할 수도 있습니다. <br>
+										<br>
+										통신사를 바꾸기 전에 모든 후기와 단점을 다 찾아보았는데 사용해보니 단점이랄 것도 없습니다. 고객센터 연결도 잘되고, 집에서 30분 정도면 쉽게 셀프로 개통할 수 있습니다. 통화 품질이나 메시지가 오는 속도도 skt 쓸 때랑 똑같고, 무엇보다 매달 요금을 4만원 가량 아낄 수 있어서 저를 첫타로 가족 모두 여기로 옮길 예정입니다. <br>
+										<br>
+										알뜰 요금제를 고민하고 계시다면 빨리 바꾸세요. 정말 강추!! 약정 노예에서 벗어났습니다!
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore4" onclick="fnReviewMore('commentInfoList','4')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+										<span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001260558/2207051649020495911.jpeg" alt="등록이미지3053" title="레이어팝업"></a>
+										</span><span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001260558/2207051649020498425.jpeg" alt="등록이미지3054" title="레이어팝업"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-item" id="commentInfoList5">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(LTE 유심 (11GB+/통화맘껏))</strong>
+										<p class="info">
+											<span class="name">김**</span><span class="date">2022-07-04 12:20</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('046e83a00ba5b604143642984e06b09e')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										 무제한 요금제로 셀프개통하자마자 게시글 남깁니다. 저는 두개 기기 사용 중으로 sk7모바일에서만 2개 개통했습니다. <br>
+										skt에서 100g무제한 요금제로 1500일 넘게 함께 했었고 서비스도 좋았으나, 선택약정제를 해야 감당되는 요금제에 꾸역꾸역 사용하고 있었던 것 같아요, 우연치 않게 sk7알뜰요금제를 알고나서 무제한 인대도 굉장히 저렴하게 사용할 수 있고, skt보다 느리다는 생각도 안들 더군요 뿐만아니라 혼자서 간편하게 개통할 수있는 점도 좋았고 고객센터가 연락이 잘 안된다고 했는데 저는 1번만에 연락해서 개통해달라고 요청했어요 더 써봐야 알겠지만 전혀 불편함 없이 2개 기기를 계속 사용할 것 같아요 꼭 추천드려요
+										<div class="add">
+											 *후기 공유 <a class="link" href="javascript:void(0);" onclick="openBrowser('https://www.sk7mobile.com/bnef/event/eventIngView.do?cntId=b0a5ffa8438f0fa0506a9994350063db');" title="새창">https://www.sk7mobile.com/bnef/event/eventIngView.do?cntId=b0a5ffa8438f0fa0506a9994350063db</a>
+										</div>
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore5" onclick="fnReviewMore('commentInfoList','5')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+										<span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001259410/2207041220238903037.jpg" alt="등록이미지3052" title="레이어팝업"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-item" id="commentInfoList6">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(10% 포인트 (11GB+/통화맘껏))</strong>
+										<p class="info">
+											<span class="name">석**</span><span class="date">2022-07-03 19:33</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('175bc57900f75b5db7a58519af848f6f')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										 Sk 를 오래 사용하다가 이번에 휴대폰 시장에 빙하기가 찾아와 새 제품을 구매하지못한상태로 고요금제를 사용하고있었습니다 <br>
+										쓰는 양에 비하여 너무 과소비가 아닐까 생각이 들즈음 알뜰폰이라는 걸 알게되었고 그중에 많은 사람들이 이용하며 안전하게 사용할수있는 sk 세븐모바일을 알게되었습니다. 정말 고민하고 고민끝에 개통하게되었는데 솔직히 예전에 쓰던거랑 차이가없습니다 <br>
+										이걸 왜 이제야 알게되었는지 너무 아쉽네요 오랜기간동안 사용했으면 치킨 10마리가 훌쩍넘었을텐데.... <br>
+										고민하지마시고 세븐모바일로 가입하셔서 저의길을 걸으시길 바라겠습니다~
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore6" onclick="fnReviewMore('commentInfoList','6')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+										<span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001259044/2207031933597052724.jpg" alt="등록이미지3051" title="레이어팝업"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-item" id="commentInfoList7">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(LTE 유심 (10GB/2000분))</strong>
+										<p class="info">
+											<span class="name">김**</span><span class="date">2022-07-01 18:20</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('f786eb45bba5b51278ae520bf413ddee')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										 SKT로 6년정도 사용하다가 이번기회에 알뜰요금제로 바꿔볼까 싶어서 알아보던 차에 SKT와 같은 통신망을 사용하는 SK7 모바일을 알게 되었어요. <br>
+										먼저 유심을 구매했고 유심셀프개통을 진행했는데 유의사항 및 설명이 자세해서 쉽고 빠르게 개통완료 할 수 있었습니다. <br>
+										요금제는 운이 좋게도 7월에 새로 생긴 10기가에 통화 2천분 문자 2천개 요금제로 사용하기로 했어요. 한달 요금제는 더 저렴한데 데이터는 더 많이 사용할 수 있어서 좋았고 몇시간동안 사용해보니 기존에 사용하던 SKT 데이터속도와 비슷합니다. 그리고 통화품질도 좋은편이여서 불만이 없네요. 앞으로 더 기대가 되고 주변사람들에게도 많이 추천해야겠습니다.
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore7" onclick="fnReviewMore('commentInfoList','7')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+										<span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001257948/2207011820235950055.jpg" alt="등록이미지3050" title="레이어팝업"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-item" id="commentInfoList8">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(LTE 유심 (7GB+/통화맘껏))</strong>
+										<p class="info">
+											<span class="name">한**</span><span class="date">2022-06-30 20:22</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('1235f6c3646b4d9717030a1e8f68ed90')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										 저는 이미 타 알뜰통신사를 이용하고 있었지만 통화품질이나 데이터속도 등에 불만이 있어서 국내최고 통신사인 sk에서 만든 알뜰통신사가 있는지 검색하였더니 sk 7모바일이 있어서 아묻따 번호이동 하기로 하고, 고맙게도 홈페이지에서 할인된 가격에 유심판매중이라 주문했어요. 분명 오후 느즈막히 주문했음에도 다음 날 우체국택배로 바로 도착해서 빠르게 개통할 수 있었어요. <br>
+										 셀프개통이 오랜만이라 떨렸지만 동봉된 카드대로 따라했더니 5분 만에 개통완료까지 되었습니다. 요즘은 버는대로 다 쓰는게 유행이라지만 노후를 생각해서 아껴야 잘산다는 문구 다들 새겨들었으면 좋겠어요 ^^
+										<div class="add">
+											 *후기 공유 <a class="link" href="javascript:void(0);" onclick="openBrowser('https://blog.naver.com/june7916/222795339240');" title="새창">https://blog.naver.com/june7916/222795339240</a>
+										</div>
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore8" onclick="fnReviewMore('commentInfoList','8')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+										<span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001257120/2206302022361115028.jpg" alt="등록이미지3049" title="레이어팝업"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-item" id="commentInfoList9">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(LTE 유심 (2GB/2000분))</strong>
+										<p class="info">
+											<span class="name">곽**</span><span class="date">2022-06-30 19:31</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('5e0bd3956d562e27b2e065b896738b62')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										 갤럭시 S시리즈의 휴대폰을 오랜기간 사용하고 싶은 와중에 지인의 추천으로 알뜰요금제를 알아보았습니다. 대형통신사에 비해 확실히 알뜰하더군요. 곧바로 유심을 주문했는데, 유심이 주문한 다음 날에 왔습니다. 쿠*의 로*배송처럼 매우 빨랐어요. 택배, 정말 빠르네요^^ <br>
+										<br>
+										 유심을 받자마자 가입신청서를 작성하였는데, 가입절차가 매우 간소화되어 간편했습니다. 이제는 네이버인증서 하나로 가입이 가능하더군요. 저는 3분만에 가입했습니다. 셀프개통도 매우 간단하고 간편했고요. <br>
+										<br>
+										 유심구성품의 경우, 정말 필요한 것들로만 구성되어져 있어서 환경을 생각하는 마음을 느낄 수 있어서 좋았습니다. :)
+										<div class="add">
+											 *후기 공유 <a class="link" href="javascript:void(0);" onclick="openBrowser('https://m.blog.naver.com/jihui262/222795161083?afterWebWrite=true');" title="새창">https://m.blog.naver.com/jihui262/222795161083?afterWebWrite=true</a>
+										</div>
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore9" onclick="fnReviewMore('commentInfoList','9')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+										<span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001257066/2206301931251259395.jpg" alt="등록이미지3048" title="레이어팝업"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="review-item" id="commentInfoList10">
+								<div class="review-head">
+									<div class="review-title">
+										<strong class="title">유심(LTE 유심 (6GB/2000분))</strong>
+										<p class="info">
+											<span class="name">박**</span><span class="date">2022-06-30 18:50</span>
+											<button type="button" class="icon-delete" onclick="goToAuthModalForDel('375d1d9125b99a561c3d48ae45deec58')" style="">삭제</button>
+										</p>
+									</div>
+									<div class="review-icon-wp">
+										<i class="ic-good">추천</i>
+									</div>
+								</div>
+								<div class="review-body">
+									<div class="cont">
+										<br>
+										이제까지 SK통신사 요금제를 사용하다가 아들 권유로 알뜰요금제에 가입하게 되었습니다 <br>
+										아들이 꼼꼼히 찾아보니 sk 통신망을 쓰는 sk 7 모바일의 아빠한테 요금이 합리적이라 우체국 통해 유심을 구입함 <br>
+										셀프개통 절차가 간단 했는데 제가 처음에 생각한 것 다르게 가입이 되어 있어 금일 114로 통화후 정상 <br>
+										참고 : 처음 LET 유심 (6GB/2000분)요금제 가입 했는데 오늘 조회 결과 LET 유심 (5GB/200분)요금제 되어(본인 실수) 있어 <br>
+										친절한 114 상담사와 통화하여 정상
+									</div>
+									<div class="btn-more-wp">
+										<button type="button" class="btn-more" id="commentInfoListMore10" onclick="fnReviewMore('commentInfoList','10')">
+										<i></i>
+										<span class="sr-only">더보기</span>
+										</button>
+									</div>
+									<div class="img">
+										<span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001257025/2206301850327005839.jpg" alt="등록이미지3046" title="레이어팝업"></a>
+										</span><span data-toggle="modal" data-target=".modal-imgSlider">
+										<a href="javascript:void(0);"><img src="https://www.sk7mobile.com/telink/upload/eventComment/1000151/0001257025/2206301850327004749.jpg" alt="등록이미지3047" title="레이어팝업"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="page-nav" id="commentInfoListPaging">
+						<strong>1<span class="sr-only">(현재 페이지)</span></strong><a href="javascript:void(0);" onclick="goPage('commentInfoList', 2); checkPagingClick('commentInfoList', 2); return false;">2</a><a href="javascript:void(0);" onclick="goPage('commentInfoList', 3); checkPagingClick('commentInfoList', 3); return false;">3</a><a href="javascript:void(0);" onclick="goPage('commentInfoList', 4); checkPagingClick('commentInfoList', 4); return false;">4</a><a href="javascript:void(0);" onclick="goPage('commentInfoList', 5); checkPagingClick('commentInfoList', 5); return false;">5</a><a href="javascript:void(0);" onclick="goPage('commentInfoList', 6); checkPagingClick('commentInfoList', 6); return false;">6</a><a href="javascript:void(0);" onclick="goPage('commentInfoList', 7); checkPagingClick('commentInfoList', 7); return false;">7</a><a href="javascript:void(0);" onclick="goPage('commentInfoList', 8); checkPagingClick('commentInfoList', 8); return false;">8</a><a href="javascript:void(0);" onclick="goPage('commentInfoList', 9); checkPagingClick('commentInfoList', 9); return false;">9</a><a href="javascript:void(0);" onclick="goPage('commentInfoList', 10); checkPagingClick('commentInfoList', 10); return false;">10</a><a class="page-next" href="javascript:void(0);" onclick="goPage('commentInfoList', 11);"><span class="sr-only">다음 페이지</span></a>
+					</div>
+					<script type="text/javascript" defer="defer">
+					//<![CDATA[
+					$(document).ready(function(){
+						try {
+							var el = $("input[name='OLD']");
+							if(el.size() == 0) {
+								$(".icon-delete").show();
+							}
+						} catch(e) {
+							console.log("e : "+e);
+						}
+						var listAreaId = "commentInfoList";
+						var intPageSize = parseInt(10, 10);
+						var intCurrentPageNo = parseInt(1, 10);
+						var intFirstPageNo = parseInt(1, 10);
+						var intFirstPageNoOnPageList = parseInt(1, 10);
+						var intLastPageNoOnPageList = parseInt(10, 10);
+						var intLastPageNo = parseInt(293, 10);
+						var json = '{"pageSize": '+intPageSize+', "currentPageNo": '+intCurrentPageNo+', "firstPageNo": '+intFirstPageNo+', "firstPageNoOnPageList": '+intFirstPageNoOnPageList+', "lastPageNoOnPageList": '+intLastPageNoOnPageList+', "lastPageNo": '+intLastPageNo+'}';
+						callbackCommentHtmlInfoList(listAreaId, json);
+						updateDonutChart('.donut-wp', 96.41, true);
+					});
+					function fnReviewMore(obj,idx){
+						if($("#"+obj+idx).hasClass('active')) {
+							$("#"+obj+idx).removeClass('active');
+							$("#"+obj+"More"+idx).find('span').text('더보기')
+						} else {
+							$("#"+obj+idx).addClass('active');
+							$("#"+obj+"More"+idx).find('span').text('접기')
+						}
+					}
+					var $reviewImg = $('.modalImgSlider');
+					var reviewImgSwiper = new Swiper($reviewImg, {
+						autoHeight : true,
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						},
+						scrollbar: {
+							hide: true
+						},
+						observer: true,
+						observeParents: true,
+					});
+					$(".img > span").on("click", function() {
+						var parents = $(this).parent();
+						var imgs = parents.find("span > a > img");
+						var length = imgs.length;
+						var html = '';
+						for(var i = 0; i < length; i++) {
+							html += '<li class="swiper-slide">\n';
+							html += '	<img src="'+imgs[i].src+'" alt="'+imgs[i].alt+'" title="'+imgs[i].title+'">\n';
+							html += '</li>\n';
+						}
+						var img_index = $(this).index();
+						$(".modalImgSlider > ul").html(html);
+						reviewImgSwiper.slideTo(img_index);
+					});
+					//]]>
+					</script>
+				</div>
+				<!-- //전체보기 -->
+
+			</div>
+			<!-- //구매후기 -->
+
+		</div>
+
+	</div>
+</section>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+	<!-- Quick -->
+	<aside id="quick">
+		<ul class="quick-banner">
+			<li><a href=""><img src="../asset/img/banner/quick1.png" alt="선불 서비스 PREPAID SERVICE"></a></li>
+			<li><a href=""><img src="../asset/img/banner/quick2.png" alt="번개유심 무제한 요금제 데이터통화 무제한 번개포인트 추가 제공 33,000원"></a></li>
+			<li><a href=""><img src="../asset/img/banner/quick3.png" alt="갤럭시 Z플립을 신청하시면 혜택이!! Z Flip"></a></li>
+			<li><a href=""><img src="../asset/img/banner/quick4.png" alt="세븐 모바일 한눈에 보기"></a></li>
+		</ul>
+	</aside>
+	<!-- //Quick -->
+
+	<!-- Footer -->
+	<footer id="ft">
+		<div class="container">
+			<div class="ft-top">
+				<p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+				<dl class="font-weight-normal">
+					<dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+					<dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+					<dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+					<dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+				</dl>
+			</div>
+			<hr>
+			<ul class="fnb">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+				<li><a href="">개인정보이용내역조회</a></li>
+				<li><a href="">통신자료제공사실 열람신청</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">분쟁처리절차</a></li>
+				<li><a href="">책임의 한계와 법적고지</a></li>
+				<li><a href="">불법스팸대응센터</a></li>
+				<li><a href="">명의도용방지서비스</a></li>
+				<li><a href="">해지미환급금 조회/환불</a></li>
+				<li><a href="">법인회선개통문의</a></li>
+			</ul>
+			<div class="ft-bottom">
+				<div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장  최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신 판매번호:2010-서울중구-0518</div>
+				<p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+</body>
+</html>

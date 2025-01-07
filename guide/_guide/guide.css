@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* common */
+img{max-width:100%}
+.ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis}
+
+.syntaxhighlighter{padding: 1px 0}
+
+/* layout */
+body{position:relative;padding:0 !important}
+#wrap{min-width:320px;padding:48px 0 0 0;background:#f4f4f4;transition:padding .5s,transform .5s}
+#snb{overflow:auto;-webkit-overflow-scrolling:touch;position:fixed;top:0;z-index:30;width:260px;left:-260px;height:100%;box-shadow:0 0 8px rgba(0,0,0,.3);background:#FFF}
+#hd,#ft{box-shadow:0 0 8px rgba(0,0,0,.3);background:#FFF;height:48px;padding:0 80px;line-height:48px}
+#hd{position:fixed;top:0;left:0;right:0;z-index:20}
+#ft address{margin:0;font:11px/48px Verdana, sans-serif;color:#888}
+#snb,#hd{transition:left .5s}
+#container{transition:padding .5s}
+.open #container{padding-left:260px}
+.open #hd{left:260px}
+.open #snb{left:0}
+.bg-primary {background-color: #35baaa!important;}
+
+/* header */
+#hd h1{position: static;margin:0;font-weight:700; font-size:16px;line-height:42px;transform: none}
+#hd>button{position:absolute;top:0;left:0;width:50px;height:50px;border:0;background:url(icon_mn.png) no-repeat center; background-size:30px auto;font-size:24px;color:rgb(68, 51, 85)}
+#hd>.pull-right{position:absolute;top:0;right:8px;font-size:10px;color:#888}
+#hd .fa-info-circle{position:relative;top:4px;font-size:20px;opacity:.9}
+.gnb-bg,
+.gnb-bg:before {display: none !important;}
+/* snb */
+#snb h1{position:relative;height:48px;margin:0;padding:0 12px 0 20px;background:rgb(68, 51, 85);font:700 16px/48px Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;text-transform:uppercase;color:#FFF}
+#snb h1 button{display:none;margin-top:10px;font-size:24px;color:#FFF;text-shadow:none;opacity:.9}
+#snb>.chapter_lst{overflow:auto;position:absolute;top:48px;bottom:0;width:100%}
+#snb ol{padding:12px 0}
+#snb a{background:none !important;font-size:16px;color:#888}
+#snb a:hover,#snb a:focus{font-weight:700;color:rgb(68, 51, 85)}
+#snb ol>li>a{padding:8px 20px 8px 48px;text-align:left}
+#snb a>span{display: inline-block;width:38px; margin:0 0 0 -28px;letter-spacing:-1px}
+#snb ul{display:none;list-style:none;margin:0 0 4px;padding:0}
+#snb ul a{display:block;padding:8px 0 8px 68px;font-size:14px;text-align:left;}
+#snb ul a>span{margin-left:-40px;letter-spacing:0}
+#snb .active{border-right:3px solid;font-weight:700;color:#000}
+#snb .active+ul{display:block}
+#snb ::-webkit-scrollbar{width:8px;background:#F6F6F6}
+#snb ::-webkit-scrollbar-thumb{margin:0;background:#DDD}
+
+/* doc */
+.sb_doc{max-width:1120px}
+.sb_doc .section{position:relative;padding:4% 8% 100px;margin:80px auto;box-shadow:0 4px 8px rgba(0,0,0,.1);background:#FFF}
+.sb_doc>h2{margin:0;padding-top:60px;font-weight:700;font-size: 24px}
+.sb_doc>h2 span,.sb_doc>h3 span{display:inline-block;width:56px;white-space:nowrap}
+.sb_doc .num_mark{position:absolute;left:0;bottom:40px;width:100%;font:16px Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;text-align:center;color:#666}
+.sb_doc .section>div{padding:80px 0 0}
+.sb_doc .section>div>h3{margin:0 0 20px;font-weight:700;font-size:18px}
+.sb_doc .options{margin:20px 0 0;border-top:2px solid rgb(68, 51, 85)}
+.sb_doc .options>thead>tr>th{padding-top:10px;padding-bottom:10px;border-bottom-width:1px;background:#FAFAFA}
+.sb_doc .options th,.sb_doc .options td{font-size:14px}
+.sb_doc .options th{padding-right:12px;padding-left:12px}
+.sb_doc .options td{word-break:break-all}
+.sb_doc .options thead th:last-child{text-align:center}
+.sb_doc .options td.col-xs-6{width:50%}
+.sb_doc .section_cover{padding:20% 4%}
+.section_cover .header{padding:0 0 30%}
+.section_cover h1{font-weight:700;font-size:40px;line-height:1.5}
+.section_cover h1 small{font-weight:700;font-size:.75em;text-transform:none}
+.section_cover .footer{padding:10% 0 0;font-size:16px;line-height:2;text-align:center}
+/*.sb_doc dl>*{margin-bottom:6px;font-size:13px;color:#666}*/
+.content li{margin-bottom:8px}
+.sb_doc .bx{margin:20px 0;padding:20px;border:1px solid #eee;border-left-width:5px;border-radius:3px;border-left-color:rgb(183, 148, 183)}
+.sb_doc .bx h4{margin:0 0 12px;font-weight:700;font-size:16px;color:rgb(183, 148, 183)}
+.sb_doc .code_wrp{ margin-top: 15px; font-size:13px}
+/* special */
+.sb_doc .color_table{margin:20px 0;font-size:11px;white-space:normal;vertical-align:middle}
+.sb_doc .color_table th{width:10%;background:#FAFAFA;font-weight:400;vertical-align:middle;text-align:center}
+.sb_doc .color_table td{height:32px;color:#FFF;vertical-align:middle;text-align:center}
+#chapter2-2 img{display:block;max-height:320px;margin:0 auto}
+
+/* markup */
+.markup-tit{position: relative;margin:30px 0;font-weight:500; font-size: 17px;color: #b61b33}
+.markup-tit:before{content:''; display: inline-block; height:1em; margin:2px 10px 0 0; border-left:5px solid #b61b33;border-radius:3px; vertical-align:top}
+/*
+.markup-ex{margin: 20px 0; padding: 20px; border:2px dashed #b61b33}
+*/
+
+/* Mobile */
+@media screen and (max-width:1023px){
+body,input,textarea,select,button,table{font-family:sans-serif}
+.open #container{padding-left:0;transform:none}
+.open #hd{left:0}
+
+#snb h1 button{display:block}
+
+.sb_doc .section{margin:20px 10px;padding:8% 4% 80px}
+.sb_doc .num_mark{bottom:20px}
+.sb_doc h2{padding-top:20px;font-size:22px}
+.sb_doc h2 span{width:40px}
+.sb_doc h3 span{width:48px}
+.sb_doc .section>div{padding-top:32px}
+.sb_doc .section>div>h3{font-size:16px}
+.sb_doc .options th,.sb_doc .options td{font-size:12px}
+.sb_doc .options th{max-width:96px;padding:8px;font-weight:500;color:#000}
+.sb_doc ul,.sb_doc ol{padding-left:20px}
+
+.sb_doc .section_cover{padding:60px 5%}
+.section_cover h1{font-size:20px}
+.section_cover .footer{font-size:11px}
+}

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../asset/css/vendor/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/common/base.css">
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+<script src="../asset/js/common/index.js"></script>
+</head>
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+<!-- top banner -->
+<div class="top-banner" style="background: #273749">
+	<a href="">
+		<img src="../asset/img/1.jpg" class="d-lg-none" alt="음성 데이터 무제한 월 33,000원">
+		<img src="../asset/img/1_pc.jpg" class="d-none d-lg-block" alt="음성 데이터 무제한 월 33,000원">
+	</a>
+	<span class="form-checkbox todayChk d-none d-lg-block">
+		<input type="checkbox" id="todayBnr">
+		<label for="todayBnr">오늘하루보지않기</label>
+	</span>
+	<button type="button" class="icon-close">배너 닫기</button>
+</div>
+<!-- //top banner -->
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- Header -->
+	<header id="hd">
+		<div class="container">
+			<h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+
+<section class="sect">
+	<div class="container">
+
+		<!-- s: 230731 --------------------------------------->
+		<div class="heading-depth1">
+			<h2 class="title">최근 사용량</h2>
+		</div>
+
+		<div class="box box-sel"><!-- 230731 수정 :  box-sel 추가 (공통 영역 - 전체 반영요망)-->
+			<div class="box-sel-row">
+				<div class="sel-wp">
+					<div class="title">
+						<p class="ico-phone">
+							<span class="hide">휴대폰번호</span>
+							<em class="cnt font-mont">3</em>
+							<span class="hide">개</span>
+						</p>
+					</div>
+					<select class="form-control form-primary" title="휴대폰번호 선택">
+						<option value="">010-59**-1***</option>
+						<option value="">010-12**-1***</option>
+						<option value="">010-34**-1***</option>
+					</select>
+				</div>
+				<div class="btn-rt">
+					<button type="button" class="btn btn-sm btn-primary">*없이 전체보기</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="box-my-usage">
+			<!-- 타이틀1 -->
+			<div class="top-ttl">
+				<p><em>LTE 유심 (15GB+/100분)</em> 요금제를 이용중이에요</p>
+			</div>
+			<!-- 나의 사용패턴 -->
+			<div class="box-line">
+				<div class="heading-depth2">
+					<h3 class="title">주혜선님의 3개월 사용 패턴이에요</h3>
+				</div>
+				<div class="tab-menu" data-tab="true">
+					<ul>
+						<li class="tab-link active">
+							<button type="button" class="tab-btn" data-target=".tab-applyList1">데이터</button>
+						</li>
+						<li class="tab-link">
+							<button type="button" class="tab-btn" data-target=".tab-applyList2">통화</button>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-group">
+					<!-- 사용패턴 : 데이터 -->
+					<div class="tab-panel tab-applyList1 active" id="bannFix">
+						<div class="graphWrap">
+							<ul class="graph-area pattern-area">
+								<li>
+									<span class="g-bar" id="d01"> <!-- style="height:45%" -->
+										<em class="use">9.0GB</em>
+									</span>
+									<div class="mon">3월</div>
+								</li>
+								<li>
+									<span class="g-bar" id="d02"> <!-- style="height:100%" -->
+										<em class="use">20.0GB</em>
+									</span>
+									<div class="mon">4월</div>
+								</li>
+								<li>
+									<span class="g-bar" id="d03"> <!-- style="height:52.5%" -->
+										<em class="use">10.5GB</em>
+									</span>
+									<div class="mon">5월</div>
+								</li>
+							</ul>
+							<div class="legend"><em>사용량</em></div>
+						</div>
+					</div>
+					<!-- 사용패턴 : 통화 -->
+					<div class="tab-panel tab-applyList2">
+						<div class="graphWrap">
+							<ul class="graph-area pattern-area">
+								<li>
+									<span class="g-bar" style="height:4.85%">
+										<em class="use">500분</em>
+									</span>
+									<div class="mon">3월</div>
+								</li>
+								<li>
+									<span class="g-bar" style="height:100%">
+										<em class="use">10,306분</em>
+									</span>
+									<div class="mon">4월</div>
+								</li>
+								<li>
+									<span class="g-bar" style="height:2.46%">
+										<em class="use">254분</em>
+									</span>
+									<div class="mon">5월</div>
+								</li>
+							</ul>
+							<div class="legend"><em>사용량</em></div>
+						</div>
+					</div>
+				</div>
+				<div class="use-noti" id="useAverage">
+					<p>
+						<span class="fix-hide">최근 3개월 동안</span>
+						데이터는 평균 <em class="text-mint">10.0GB</em>,
+						통화는 평균 <em class="text-mint">123분</em> 사용
+						<span class="fix-hide">했어요</span>
+					</p>
+				</div>
+			</div>
+			<ul class="lst-dot">
+				<li>실제 사용량 정보와 다소 차이가 있을 수 있습니다.</li>
+				<li>기본 제공량은 현재 이용 중인 요금제 기준입니다.</li>
+			</ul>
+			<!-- 내요금제와 실제사용량 비교 -->
+			<div class="box-line mt-5">
+				<div class="heading-depth2">
+					<h3 class="title">내 요금제와 실제 사용량을 비교해볼까요?</h3>
+				</div>
+				<div class="graphWrap mt-5">
+					<ul class="g-ttl">
+						<li>데이터</li>
+						<li>통화</li>
+					</ul>
+					<ul class="graph-area basic-area">
+						<li>
+							<span class="g-bar g-gray" style="height:90%">
+								<em class="use">18.0GB</em>
+							</span>
+							<div class="mon">기본제공량</div>
+							<div class="wave" style="bottom:50%"><img src="../asset/img/mypage/bg_graph_wave.png"></div>
+						</li>
+						<li>
+							<span class="g-bar" style="height:100%">
+								<em class="use">20.0GB</em>
+							</span>
+							<div class="mon">3개월 평균 사용량</div>
+							<div class="wave" style="bottom:50%"><img src="../asset/img/mypage/bg_graph_wave.png"></div>
+						</li>
+						<li class="g-gab"></li>
+						<li>
+							<span class="g-bar g-gray" style="height:81.3%">
+								<em class="use">100분</em>
+							</span>
+							<div class="mon">기본제공량</div>
+						</li>
+						<li>
+							<span class="g-bar" style="height:100%">
+								<em class="use">123분</em>
+							</span>
+							<div class="mon">3개월 평균 사용량</div>
+						</li>
+					</ul>
+				</div>
+				<!-- case1 -->
+				<div class="use-noti">
+					<p>LTE 유심 (15GB+/100분)을 <span>넘치지 않게 잘 사용하셨어요</span></p>
+				</div>
+				<!-- case2 -->
+				<!--
+				<div class="use-noti">
+					<p>LTE 유심 (15GB+/100분)의 <span>기본제공량이 <em class="text-mint">부족하시네요.</em></span></p>
+				</div>
+				-->
+			</div>
+			<ul class="lst-dot">
+				<li>일 제공 데이터가 있는 요금제(예.11GB+일2GB)의 경우 최대 제공량 기준으로 표기됩니다.</li>
+			</ul>
+			<!-- 최적요금제 조회중 -->
+			<div class="srch-plan-ani">
+				<img src="../asset/img/mypage/bg_srch_rate.gif">
+			</div>
+			<!-- 타이틀2 -->
+			<div class="top-ttl srchTtl">
+				<p><em>주혜선님</em>의 실제 사용량 기준 딱 맞는 요금제에요. 제공량이 넉넉하진 않지만, 통신요금을 아낄 수 있어요.</p>
+			</div>
+			<!-- 최적요금제 -->
+			<div class="srch-plan-wrap">
+				<!-- 요금제1 -->
+				<div class="box-line active">
+					<div class="basic-rate-area">
+						<ul class="basic-rate">
+							<li class="down">데이터 5GB</li><!-- 위화살표 : up / 아래화살표 : down / 무제한 : unlmt -->
+							<li class="up">통화 1900분</li>
+						</ul>
+						<div class="mon-rate">월<em>13,750</em>원</div>
+					</div>
+					<dl class="rate-name">
+						<dt>LTE 유심 (10GB/2000분)</dt>
+						<dd>데이터 <em>10GB</em></dd>
+						<dd>통화 <em>2000분</em></dd>
+					</dl>
+					<button type="button" class="btn-rate-slt">요금제 선택</button>
+					<a href="#" class="btn btn-sm btn-outline-primary rate-link">요금제 상세보기</a>
+				</div>
+				<!-- 요금제2 -->
+				<div class="box-line">
+					<div class="basic-rate-area">
+						<ul class="basic-rate">
+							<li class="down">데이터 5GB</li>
+							<li class="up">통화 1900분</li>
+						</ul>
+						<div class="mon-rate">월<em>19,800</em>원</div>
+					</div>
+					<dl class="rate-name">
+						<dt>LTE 유심 (10GB/2000분)</dt>
+						<dd>데이터 <em>10GB</em>
+							<span class="badge-wp">
+								<span class="badge5-bg">400Kbps</span>
+							</span>
+						</dd>
+						<dd>통화 <em>2000분</em></dd>
+					</dl>
+					<button type="button" class="btn-rate-slt">요금제 선택</button>
+					<a href="#" class="btn btn-sm btn-outline-primary rate-link">요금제 상세보기</a>
+				</div>
+				<!-- 요금제3 -->
+				<div class="box-line">
+					<div class="basic-rate-area">
+						<ul class="basic-rate">
+							<li class="down">데이터 5GB</li>
+							<li class="unlmt">통화 무제한</li>
+						</ul>
+						<div class="mon-rate">월<em>19,800</em>원</div>
+					</div>
+					<dl class="rate-name">
+						<dt>LTE 유심 (10GB/2000분)</dt>
+						<dd>데이터 <em>10GB</em>
+							<span class="badge-wp">
+								<span class="badge5-bg">1Mbps</span>
+							</span>
+						</dd>
+						<dd>통화 <em>기본제공</em></dd>
+					</dl>
+					<button type="button" class="btn-rate-slt">요금제 선택</button>
+					<a href="#" class="btn btn-sm btn-outline-primary rate-link">요금제 상세보기</a>
+				</div>
+			</div>
+			<!-- 체크사항 -->
+			<div class="form-checkbox d-block">
+				<input type="checkbox" id="ch1-1">
+				<label for="ch1-1">(필수) 요금제 변경에 대한 안내사항을 확인하였으며, 변경 진행에 동의합니다.</label>
+			</div>
+			<div class="form-checkbox d-block mt-2">
+				<input type="checkbox" id="ch1-2">
+				<label for="ch1-2">(선택) 딱 맞는 요금제가 있을 때마다 소식을 받아보세요.</label>
+			</div>
+			<!-- 변경 안내 및 가이드 -->
+			<div class="bann-sm-wrap">
+				<!-- 변경 안내 -->
+				<div class="bann chg-notice">
+					<span>요금제 변경은 한 달에 한 번만 가능해요.</span>
+				</div>
+				<!-- 변경 가이드 -->
+				<a href="#" class="bann chg-guide" data-toggle="modal" data-target=".modal-guide">
+					<span>5G 휴대폰 고객님을 위한 LTE 요금제 변경 가이드</span>
+				</a>
+			</div>
+			<!-- 배너 -->
+			<div class="banner-area mt-5">
+				<!-- 요금제 변경하기 -->
+				<div class="box-line">
+					<div class="bannWrap chgLate">
+						<div class="prim-txt">통신요금 한 번 더 절약</div>
+						<div class="main-txt">
+							<span class="text-nowrap">추천 받은 요금제로 변경하시겠어요?</span>
+						</div>
+						<div class="btn-wrap">
+							<a href="#" class="btn btn-primary"><span class="arr">요금제 변경하기</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- 제휴카드 보러가기 -->
+				<div class="box-line">
+					<div class="bannWrap affCard">
+						<div class="prim-txt">
+							<span class="text-nowrap">요금제는 유지하고 요금만 반으로</span>
+						</div>
+						<div class="main-txt">
+							<span class="text-nowrap">SK 7mobile 고객님들은</span>
+							<span class="text-nowrap">평균 2.2만원을 할인받아요</span>
+						</div>
+						<div class="btn-wrap">
+							<a href="#" class="btn btn-primary"><span class="arr">제휴카드 보러가기</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- 알림 받기 -->
+				<div class="box-line">
+					<div class="bannWrap alarm">
+						<div class="prim-txt">
+							<span class="text-nowrap">요금제는 다음에 바꾸고 싶다면?</span>
+						</div>
+						<div class="main-txt">
+							<span class="text-nowrap">딱 맞는 요금제가 있을 때마다</span>
+							<span class="text-nowrap">소식을 받아보세요</span>
+						</div>
+						<div class="btn-wrap">
+							<a href="#" class="btn btn-primary" data-toggle="modal" data-target=".modal-news-alarm"><span class="arr">알림 받기</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- 앱 다운받기 -->
+				<div class="box-line">
+					<div class="bannWrap app-down">
+						<div class="prim-txt">
+							<span class="text-nowrap">App에서 새로운 정보와 혜택을 더 빠르게!</span>
+						</div>
+						<div class="main-txt">
+							<span class="text-nowrap">SK 7mobile 앱에서 쉽고 편리하게</span>
+							<span class="text-nowrap">더 많은 기능을 이용해보세요</span>
+						</div>
+						<div class="btn-wrap">
+							<a href="#" class="btn btn-primary" data-toggle="modal" data-target=".modal-app-down"><span class="arr">앱 다운받기</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				//추천한 요금제 선택
+				$(".btn-rate-slt").click(function(){
+					let boxLine = $(this).parent(".box-line");
+					if( !boxLine.hasClass("active") ) {
+						$(".srch-plan-wrap .box-line").removeClass("active");
+						boxLine.addClass("active");
+					}
+				});
+
+				function fnFixUseBann(){
+					let useNotiTop = $("#bannFix").offset().top;
+					$(window).on('scroll', function(){
+						let wT = $(this).scrollTop();
+						//그래프 모션
+						if (wT > useNotiTop - 400) {
+							$("#d01").css("height","45%"); //가장 큰값 기준의 백분율
+							$("#d02").css("height","100%"); //가장 큰값
+							$("#d03").css("height","52.5%"); //가장 큰값 기준의 백분율
+						}
+						//평균사용량 배너 고정(모바일에서만)
+						if ( !$("#useAverage").hasClass("fix") && ($(window).width() < 1024) ) {
+							if (wT > useNotiTop) {
+								$("#useAverage").addClass("fix");
+							}
+						} else {
+							if (wT < useNotiTop) {
+								$("#useAverage").removeClass("fix");
+							}
+						}
+					});
+				}; fnFixUseBann();
+
+				$(window).resize(function(){
+					if ($(window).width() > 1023 ) {
+						$("#useAverage").removeClass("fix");
+					}
+					fnFixUseBann();
+				}).resize();
+			});
+		</script>
+
+		<!-- acc-group -->
+		<div class="acc-group acc-type1 mt-7" data-accordion="true">
+			<dl class="acc-item active">
+				<dt class="acc-head">
+					<button class="btn btn-toggle" type="button">요금제 변경 유의사항</button>
+				</dt>
+				<dd class="acc-body">
+					<div class="acc-content">
+						<ul class="lst-bullet">
+							<li><span class="text-danger">데이터플러스 프로모션 안내</span><br/>
+							- 5/1~7/31 기간 내 아래 대상 요금제로 변경한 고객님 대상으로 24개월간 추가 데이터가 지급됩니다.<br/>
+							- 대상 요금제 : LTE 유심 (100GB+/통화맘껏), LTE 유심 (11GB+/통화맘껏), LTE 유심 (15GB+/300분), LTE 유심 (15GB+/100분) 요금제 및 동일 계열 제휴 요금제<br/>
+							- <a class="text-link" href="/bnef/event/eventIngView.do?cntId=3873624b4ddfa7a74c8668ace60b05ab">데이터플러스 프로모션 확인하러가기 ></a></li>
+							<li>요금제 변경 시 변경 전/후 요금제 이용기간만큼 기본료와 제공량이 사용한 날만큼 계산되어, 제공량 초과 부분에 대해 추가 요금청구가 발생할 수 있습니다.</li>
+							<li>요금제 변경은 마지막 요금제 변경일자로부터 한달 이후 가능합니다.</li>
+							<li>요금제 변경 후 당일 취소는 고객센터<1599-0999(유료)/휴대폰114(무료)>로 문의해주시기 바랍니다.</li><li>이용중인 부가서비스로 인해(무선인터넷차단, 안심옵션 등)요금제 변경이 제한될 수 있으며, 실패시 부가서비스 해지 후 재시도 또는 다른 요금제로 변경해주세요.</li>
+							<li>현재 사용하고 있는 휴대폰이 통신사에서 판매된 5G 휴대폰이라면 LTE 요금제로 바로 변경이 불가합니다. (자급제 5G 휴대폰은 변경이 가능합니다) LTE 요금제 변경을 위해 LTE 휴대폰에 유심을 꽂은 후 요금제를 변경해주시길 바랍니다.</li>
+							<li>온라인요금제는 온라인전용 상품으로 일반고객이 변경이 불가하며, 온라인요금제 이용고객이 일반요금제로 변경 할 경우 원복이 불가합니다.</li>
+							<li>현재 약정이 종료되지 않은 경우 요금제 변경 시 위약금이 청구될 수 있습니다. 잔여 약정기간 및 위약금 확인은 고객센터를 통해 문의하시기 바랍니다.</li>
+							<li>이용 중인 휴대폰 요금제의 약정이 종료 되었으나 유심 요금제가 조회되지 않을 경우 고객센터를 통해 변경해주세요.</li>
+							<li>폰드림실속23,음성알뜰18 등 판매종료된 요금제에서 다른 요금제를 변경할 경우 이전 요금제는 재이용이 불가합니다.</li>
+							<li>요금제 변경으로 발생하는 위약금은 익월 요금안내서에 합산되어 청구됩니다.</li>
+							<li>선택약정 또는 요금약정 가입 시, 요금약정할인 가능하므로 요금제 변경 후 약정 미가입 고객은 약정가입을 해야 할인 받을 수 있습니다. 약정가입은 고객센터 통해 가능하며, 별도의 구비서류가 필요합니다.<br>예)'표준요금제'로 개통 고객이 '폰드림알뜰19'로 변경할 경우 약정할인을 받으려면 요금약정 가입을 해야 합니다.</li>
+						</ul>
+					</div>
+				</dd>
+			</dl>
+		</div>
+
+		<!-- //e: 230731 -------------------------------------------->
+
+	</div>
+</section>
+
+
+<!-- s: 230731 -------------------------------------------->
+
+<!-- 레이어 팝업 : 요금제 변경 가이드 -->
+<div class="modal fade modal-sm modal-guide">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content" tabindex="0">
+			<div class="modal-head">
+				<h1 class="title">안내</h1>
+			</div>
+			<div class="modal-body">
+				<div class="alert-wp">
+					<strong>
+						통신사에서 구매한 5G 휴대폰이라면,<br>
+						LTE 휴대폰에 유심을 꽂아야 LTE 요금제로 변경할 수 있어요.
+					</strong>
+					<p class="mt-2">* 자급제 5G 휴대폰은 바로 변경이 가능합니다</p>
+					<div class="bg-modal-guide">
+						<img src="../asset/img/mypage/bg_chg_rate.gif" style="width:80%;"/>
+					</div>
+				</div>
+			</div>
+			<div class="modal-foot">
+				<span><button type="button" class="btn btn-primary" data-dismiss="modal">확인</button></span>
+			</div>
+			<button type="button" class="btn-close" data-dismiss="modal">닫기</button>
+		</div>
+	</div>
+</div>
+
+<!-- 레이어 팝업 : 알림 받기 -->
+<div class="modal fade modal-sm modal-news-alarm">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content" tabindex="0">
+			<div class="modal-head">
+				<h1 class="title">중요한 정보, 놓치지 마세요!</h1>
+			</div>
+			<div class="modal-body">
+				<div class="alert-wp">
+					<p class="text-left">신규 요금제 출시 안내 등<br> 고객 혜택 정보 및 광고 수신에 동의합니다.</p>
+					<div class="detail-view"><a href="#">자세히 보기</a></div>
+				</div>
+			</div>
+			<div class="modal-foot">
+				<span><button type="button" class="btn btn-primary" data-dismiss="modal">확인</button></span>
+			</div>
+			<button type="button" class="btn-close" data-dismiss="modal">닫기</button>
+		</div>
+	</div>
+</div>
+
+<!-- 하단 고정 레이어 : 변경할 요금제 선택시 -->
+<section class="sect-psview-layer fixLayer-chg-rate">
+	<div class="container">
+		<ul class="total-price">
+			<li class="name">LTE 유심 (10GB/2000분)</li>
+			<li class="price">
+				<strong>13,750원</strong>
+				<span>(부가세포함)</span>
+			</li>
+		</ul>
+		<div class="btn-area">
+			<a href="230725_요금제변경_완료.html" class="btn btn-primary">요금제 변경하기</a>
+		</div>
+	</div>
+</section>
+
+<!-- 레이어 팝업 : 알림예약 -->
+<div class="modal fade modal-sm modal-reminder">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content" tabindex="0">
+			<div class="modal-head">
+				<h1 class="title">
+					<span class="text-nowrap">다음달 1일이 되면 요금제 변경 알림을</span>
+					<span class="text-nowrap">드려요</span>
+				</h1>
+			</div>
+			<div class="modal-body">
+				<div class="alert-wp">
+					<p class="mt-2">지금 당장 바꾸기 부담스럽다면, 알림 받고<br>
+						요금제 조회/변경화면에서 직접 선택/변경해보세요. </p>
+					<div class="mt-4">
+						<img src="../asset/img/mypage/bg_modal_get_alarm.png" style="width:90%;"/>
+					</div>
+				</div>
+			</div>
+			<div class="modal-foot">
+				<span><a href="230725_알림신청_완료.html" class="btn btn-primary">알림받기</a></span><!-- 시연을 위해 버튼 태그를 a태그로 수정 -->
+			</div>
+			<button type="button" class="btn-close" data-dismiss="modal">닫기</button>
+		</div>
+	</div>
+</div>
+
+<!-- //e : 230731 ----------------------------------------->
+
+
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+	<!-- Quick -->
+	<aside id="quick">
+		<ul class="quick-banner">
+			<li><a href=""><img src="../asset/img/banner/quick1.png" alt="선불 서비스 PREPAID SERVICE"></a></li>
+			<li><a href=""><img src="../asset/img/banner/quick2.png" alt="번개유심 무제한 요금제 데이터통화 무제한 번개포인트 추가 제공 33,000원"></a></li>
+			<li><a href=""><img src="../asset/img/banner/quick3.png" alt="갤럭시 Z플립을 신청하시면 혜택이!! Z Flip"></a></li>
+			<li><a href=""><img src="../asset/img/banner/quick4.png" alt="세븐 모바일 한눈에 보기"></a></li>
+		</ul>
+	</aside>
+	<!-- //Quick -->
+
+	<!-- Footer -->
+	<footer id="ft">
+		<div class="container">
+			<div class="ft-top">
+				<p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+				<dl class="font-weight-normal">
+					<dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+					<dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+					<dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+					<dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+				</dl>
+			</div>
+			<hr>
+			<ul class="fnb">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+				<li><a href="">개인정보이용내역조회</a></li>
+				<li><a href="">통신자료제공사실 열람신청</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">분쟁처리절차</a></li>
+				<li><a href="">책임의 한계와 법적고지</a></li>
+				<li><a href="">불법스팸대응센터</a></li>
+				<li><a href="">명의도용방지서비스</a></li>
+				<li><a href="">해지미환급금 조회/환불</a></li>
+				<li><a href="">법인회선개통문의</a></li>
+			</ul>
+			<div class="ft-bottom">
+				<div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장  최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신 판매번호:2010-서울중구-0518</div>
+				<p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+</body>
+</html>
