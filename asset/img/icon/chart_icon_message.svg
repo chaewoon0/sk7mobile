@@ -1,0 +1,5 @@
+<svg data-name="구성 요소 65 – 1" xmlns="http://www.w3.org/2000/svg" width="42" height="30.44" viewBox="0 0 42 30.44">
+    <path d="M718.425 363.2h-8.45a1 1 0 0 1-.975-1.025v-6.15a1 1 0 0 1 .975-1.025h8.45a1 1 0 0 1 .975 1.025v6.15a1 1 0 0 1-.975 1.025zm-.237-6.6a.472.472 0 0 0-.69 0l-3.38 2.941-3.38-2.941a.472.472 0 0 0-.69 0 .531.531 0 0 0 0 .725l3.772 3.282a.428.428 0 0 0 .594 0l3.772-3.282a.531.531 0 0 0 .002-.725z" transform="translate(-693 -338.786)" style="fill:#35baaa;fill-rule:evenodd"/>
+    <path data-name="사각형 7" style="fill:transparent" d="M0 0h10.4v10.4H0z" transform="translate(16 15.014)"/>
+    <path data-name="사각형 56" style="fill:transparent" d="M0 0h42v30.44H0z"/>
+</svg>
