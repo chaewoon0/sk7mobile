@@ -1246,25 +1246,33 @@ span.month-name,span.cost-name2 {display: inline-block;font-size: 1rem;font-weig
 .auth-input{float: left; margin-right: 10px;}
 
 
-/*20210322 구매후기 이미지 레이어팝업 CSS*/
+/* s: 250116 구매후기 */
+
 .modal-imgSlider{padding-right:0 !important;}
 .modal-imgSlider .modal-content{background:transparent;}
-.modal-imgSlider .swiper-slide{text-align:center;}
-.modal-imgSlider .modalImgSlider img{width:auto; max-width:calc(100% - 80px);}
-.modal-imgSlider .modal-body{padding-top:3rem;} /* 220517 */
-.modal-imgSlider.modal .btn-close{background:url(/html/images/icon/icon-cls.png) no-repeat center; width:3rem; height:3rem; top: 0px;right: 70px; background-size:1.25rem 1.25rem; z-index:200} /* 220517 */
-.modal-imgSlider .swiper-button-prev{left:0;}
-.modal-imgSlider .swiper-button-next{right:0;}
+.modal-imgSlider .swiper-slide {text-align:center;}
+.modal-imgSlider .modalImgSlider img{width:auto; max-width:calc(100% - 80px); border-radius: 16px;}
+.modal-imgSlider .modal-body{padding-top:3rem;}
+.modal-imgSlider.modal .btn-close{background:url(https://www.sk7mobile.com/html/images/icon/icon-cls.png) no-repeat center; width:3rem; height:3rem; top: 0px;right: 70px; background-size:1.25rem 1.25rem; z-index:200}
+.modal-imgSlider .swiper-button-prev{left:1.6rem;}
+.modal-imgSlider .swiper-button-next{right:1.6rem;}
+
 @media(min-width: 1080px){
-  .modal-imgSlider .modalImgSlider img{max-width:calc(100% - 100px);}
-  .modal-imgSlider .modal-body{padding-top:60px;}
+  .modal-imgSlider .swiper-slide{width: 720px !important; height: 80vh !important; overflow-y: auto; border-radius: 16px;}
+  .modal-imgSlider .modalImgSlider img{width:auto; max-width:100%; border-radius: 0px;}
+  .modal-imgSlider .modal-body{padding-top:60px; overflow-y: hidden;}
   .modal-imgSlider.modal .btn-close{width: 1.75rem;height: 1.75rem;}
-  .modal-imgSlider.modal .btn-close{right:91px;}
+  .modal-imgSlider.modal .btn-close{right:50px;}
+  .swiper-container-autoheight.type {width:720px}
+  .modal-imgSlider .swiper-button-prev{left:38px;}
+.modal-imgSlider .swiper-button-next{right:38px;}
 }
+
 @media(max-width: 576px){
   .modal-imgSlider.modal .btn-close{right:58px;}
 }
-/*20210322 구매후기 이미지 레이어팝업// */
+
+/* e: 250116 구매후기 */
 
 .tab-info .tb .tb-link {float: right;border-bottom: 1px solid #000;}
 
@@ -5241,7 +5249,7 @@ body:has(.app_download_popup:not(.active)) {
 /* e: 241008 7쿠폰 소진케이스 */
 
 
-/* s: 250106 룰렛 이벤트 */
+/* s: 250220 룰렛 수정 */
 
 .roulette {
     text-align: center;
@@ -5305,14 +5313,7 @@ body:has(.app_download_popup:not(.active)) {
 	margin: 0 auto;
 	width: 76.7%;
 	max-width: 836px;
-	-webkit-animation-timing-function: cubic-bezier(0.15, 1, 0.5, 1.04);
-    animation-timing-function: cubic-bezier(0.15, 1, 0.5, 1.04);
-    -webkit-animation-duration: 7.8s;
-    animation-duration: 7.8s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
+	transition: transform 3s ease-out;
 }
 
 .roulette .roulette-start-btn-wrap {
@@ -5330,314 +5331,25 @@ body:has(.app_download_popup:not(.active)) {
 	overflow: hidden;
 }
 
+.roulette .roulette-start-btn .btn-start-img {
+	display: block;
+}
+
+.roulette .roulette-start-btn .btn-stop-img {
+	display: none;
+}
+
+.roulette .roulette-start-btn.stop .btn-start-img {
+	display: none;
+}
+
+.roulette .roulette-start-btn.stop .btn-stop-img {
+	display: block;
+}
+
 .roulette .roulette-start-btn:hover {
 	transform: scale(1.1, 1.1);
 }
-
-
-.roulette[data-roulette="2"][data-roulette-num="1"] .roulette-circle {
-    animation-name: 'roulette-2-1';
-	-webkit-animation-name: 'roulette-2-1';
-}
-
-.roulette[data-roulette="2"][data-roulette-num="2"] .roulette-circle {
-    animation-name: 'roulette-2-2';
-    -webkit-animation-name: 'roulette-2-2';
-}
-
-@keyframes roulette-2-1 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 180deg * 0));
-	}
-}
-
-@keyframes roulette-2-2 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 180deg * 1));
-	}
-}
-
-
-.roulette[data-roulette="4"][data-roulette-num="1"] .roulette-circle {
-    animation-name: 'roulette-4-1';
-	-webkit-animation-name: 'roulette-4-1';
-}
-
-.roulette[data-roulette="4"][data-roulette-num="2"] .roulette-circle {
-    animation-name: 'roulette-4-2';
-    -webkit-animation-name: 'roulette-4-2';
-}
-
-.roulette[data-roulette="4"][data-roulette-num="3"] .roulette-circle {
-    animation-name: 'roulette-4-3';
-	-webkit-animation-name: 'roulette-4-3';
-}
-
-.roulette[data-roulette="4"][data-roulette-num="4"] .roulette-circle {
-    animation-name: 'roulette-4-4';
-    -webkit-animation-name: 'roulette-4-4';
-}
-
-@keyframes roulette-4-1 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 90deg * 0));
-	}
-}
-
-@keyframes roulette-4-2 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 90deg * 3));
-	}
-}
-
-@keyframes roulette-4-3 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 90deg * 2));
-	}
-}
-
-@keyframes roulette-4-4 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 90deg * 1));
-	}
-}
-
-
-.roulette[data-roulette="6"][data-roulette-num="1"] .roulette-circle {
-    animation-name: 'roulette-6-1';
-	-webkit-animation-name: 'roulette-6-1';
-}
-
-.roulette[data-roulette="6"][data-roulette-num="2"] .roulette-circle {
-    animation-name: 'roulette-6-2';
-	-webkit-animation-name: 'roulette-6-2';
-}
-
-.roulette[data-roulette="6"][data-roulette-num="3"] .roulette-circle {
-    animation-name: 'roulette-6-3';
-	-webkit-animation-name: 'roulette-6-3';
-}
-
-.roulette[data-roulette="6"][data-roulette-num="4"] .roulette-circle {
-    animation-name: 'roulette-6-4';
-	-webkit-animation-name: 'roulette-6-4';
-}
-
-.roulette[data-roulette="6"][data-roulette-num="5"] .roulette-circle {
-    animation-name: 'roulette-6-5';
-	-webkit-animation-name: 'roulette-6-5';
-}
-
-.roulette[data-roulette="6"][data-roulette-num="6"] .roulette-circle {
-    animation-name: 'roulette-6-6';
-	-webkit-animation-name: 'roulette-6-6';
-}
-
-@keyframes roulette-6-1 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 60deg * 0));
-	}
-}
-
-@keyframes roulette-6-2 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 60deg * 5));
-	}
-}
-
-@keyframes roulette-6-3 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 60deg * 4));
-	}
-}
-
-@keyframes roulette-6-4 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 60deg * 3));
-	}
-}
-
-@keyframes roulette-6-5 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 60deg * 2));
-	}
-}
-
-@keyframes roulette-6-6 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 60deg * 1));
-	}
-}
-
-
-.roulette[data-roulette="8"][data-roulette-num="1"] .roulette-circle {
-    animation-name: 'roulette-8-1';
-	-webkit-animation-name: 'roulette-8-1';
-}
-
-.roulette[data-roulette="8"][data-roulette-num="2"] .roulette-circle {
-    animation-name: 'roulette-8-2';
-	-webkit-animation-name: 'roulette-8-2';
-}
-
-.roulette[data-roulette="8"][data-roulette-num="3"] .roulette-circle {
-    animation-name: 'roulette-8-3';
-	-webkit-animation-name: 'roulette-8-3';
-}
-
-.roulette[data-roulette="8"][data-roulette-num="4"] .roulette-circle {
-    animation-name: 'roulette-8-4';
-	-webkit-animation-name: 'roulette-8-4';
-}
-
-.roulette[data-roulette="8"][data-roulette-num="5"] .roulette-circle {
-    animation-name: 'roulette-8-5';
-	-webkit-animation-name: 'roulette-8-5';
-}
-
-.roulette[data-roulette="8"][data-roulette-num="6"] .roulette-circle {
-    animation-name: 'roulette-8-6';
-	-webkit-animation-name: 'roulette-8-6';
-}
-
-.roulette[data-roulette="8"][data-roulette-num="7"] .roulette-circle {
-    animation-name: 'roulette-8-7';
-	-webkit-animation-name: 'roulette-8-7';
-}
-
-.roulette[data-roulette="8"][data-roulette-num="8"] .roulette-circle {
-    animation-name: 'roulette-8-8';
-	-webkit-animation-name: 'roulette-8-8';
-}
-
-@keyframes roulette-8-1 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 45deg * 0));
-	}
-}
-
-@keyframes roulette-8-2 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 45deg * 7));
-	}
-}
-
-@keyframes roulette-8-3 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 45deg * 6));
-	}
-}
-
-@keyframes roulette-8-4 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 45deg * 5));
-	}
-}
-
-@keyframes roulette-8-5 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 45deg * 4));
-	}
-}
-
-@keyframes roulette-8-6 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 45deg * 3));
-	}
-}
-
-@keyframes roulette-8-7 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 45deg * 2));
-	}
-}
-
-@keyframes roulette-8-8 {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(calc(360deg * 10 + 45deg * 1));
-	}
-}
-
 
 .modal-roulette-wp {
 	display: flex;
@@ -5713,4 +5425,4 @@ body:has(.app_download_popup:not(.active)) {
 
 }
 
-/* e: 250106 룰렛 이벤트 */
+/* e: 250220 룰렛 수정 */
