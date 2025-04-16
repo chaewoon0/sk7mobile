@@ -527,7 +527,7 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 
 	/* s: 250416 top버튼 */
 	#chatbot {
-		bottom: 146px;
+		bottom: 116px;
 		right: 100px;
 		--psview-layer-height: 0px;
 	}
@@ -840,7 +840,7 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
   	width: 60px;
 	height: 60px;
 	right: 100px;
-	bottom: 70px;
+	bottom: 40px;
   	cursor: pointer;
   	display: block;
   	border-radius: 100%;
