@@ -49,20 +49,195 @@
         </div>
     </div>
 
+	<!-- s: 250416 top버튼 -->
+
     <div id="topBtn">
-        <svg class="topBtn-icon" width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path fill="#1f2029" d="M11.293 6.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414L13 9.414V17a1 1 0 1 1-2 0V9.414l-2.293 2.293a1 1 0 0 1-1.414-1.414l4-4Z"/>
-        </svg>
+		<svg class="topBtn-icon" width="20" height="24" fill="none" viewBox="0 0 20 24">
+			<path stroke="#000" stroke-width="2" d="m19 11-9-9m0 0-9 9m9-9v22"/>
+		</svg>
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
 
+	<!-- e: 250416 top버튼 -->
+
 	<!-- Container -->
 	<div id="ct">
 
 <!-- 페이지 시작 -->
+<script type="text/javascript" defer="defer">
+	//<![CDATA[
+	function gnbFocus() {
+		gnbOpen();
+	}
+	function setChatbotBtnLocation() {
+		var psviewLayerHeight = $('.sect-psview-layer').outerHeight();
+        $('#chatbot').addClass('has-psview-layer');
+        $('#chatbot').get(0).style.setProperty('--psview-layer-height', psviewLayerHeight + 'px');
+	}
+	
+	$(document).ready(function() {
+		$("#srchKeyword").on("keypress", function(event) {
+			if(event.keyCode == 13) {
+				fnSrchForm();
+				return false;
+			}
+		});
+		
+		
+	    if ($('#chatbot').length) {
+	        if ($('.sect-psview-layer').length) {
+	        	
+	        	setChatbotBtnLocation();
+	        	
+	            $(window).on({
+	                'load': setChatbotBtnLocation,
+	                'resize': setChatbotBtnLocation
+	            });
 
+	            var targetNode = document.querySelector('.sect-psview-layer');
+
+	            var observer = new MutationObserver(function(mutationsList, observer) {
+	                for(var mutation of mutationsList) {
+	                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+	                    	setChatbotBtnLocation();
+	                    }
+	                }
+	            });
+
+	            observer.observe(targetNode, { attributes: true, attributeFilter: ['class'] });
+	        }
+	    }
+	});
+	
+	function fnSrchForm() {
+		var $srchKeyword = $("#srchKeyword");
+		if($.trim($srchKeyword.val()) == "") {
+			customAlert("검색어를 입력해주세요.", "", function() { elFocusId("srchKeyword"); });
+		} else if ($.trim($srchKeyword.val()).length < 2) {
+			customAlert('검색어는 최소 두 자 이상 입력하셔야 합니다.', '', function() { elFocusId("srchKeyword"); });
+		} else {
+			$("#srchFrm").submit();
+		}
+	}
+	
+	function fnchatbotStartEvent(){
+		(function() {
+			$(".icon_chatbot").css("background", "#3717CE url(https://www.sk7mobile.com/html/images/icon/icon_chat.png) ");			
+			$("#chatbot_text").css("animation-name", "slide-left");
+			setTimeout(chatbotButtonSettiong, 4000);
+		})();    
+	}
+
+	function chatbotButtonSettiong(){
+	}
+	
+	function fn_chatbotCotentEvent(user){
+			
+		if($("#chatbot_content").css("display") == "none"){
+			$("#chatbot_content").css("display", "block");
+			$("#chatbot .chat-open").css("display", "block");
+		}		
+		if($("#chatbot_text").css("animation-name") != "slide-open"){
+			//메인박스 오픈
+			$("#chatbot_text").css("visibility", "visible");
+			if($("#chatbot_text").css("animation-name") == "none"){
+				$("#chatbot_text").css("animation-name", "slide-open");
+			}
+			$("#chatbot_text").css("width", "290px");
+			$("#chatbot_text").css("animation-name", "slide-open");
+			$("#chatbot_text").css("display", "block");
+			$(".chat-bt2").css("display", "block");
+			$(".modal-background").css("display", "block");
+			$(".icon_chatbot").css("background", "#3717CE url(https://www.sk7mobile.com/html/images/icon/icon_chat_close.png) ");
+		}else {
+			$("#chatbot_text").css("width", "60px");
+			$("#chatbot_text").css("animation-name", "slide-close");
+			$("#chatbot_text").css("visibility", "hidden");
+			$(".chat-bt2").css("display", "none");
+			$(".modal-background").css("display", "none");
+			$(".icon_chatbot").css("background", "#3717CE url(https://www.sk7mobile.com/html/images/icon/icon_chat.png) ");
+		}
+		
+		$('#alertBtn').click(function(){
+			$('.modal-alert').css("display", "block");			
+		})
+		$('.btn-close, .btn').click(function(){
+			$('#chatbot_content, #areaModalAlert').css("display", "none");			
+		})
+	}
+	
+	function fn_chatbotCloseEvent(){
+		var confirmMessage = "챗봇 상담이 필요한 경우, <br> [고객센터 > 고객센터 챗봇] 메뉴를 통해 <br> 다시 이용 가능합니다."
+		customAlert(confirmMessage, "", function() {
+			$("#chatbot").css("display", "none");
+			$(".modal-background").css("display", "none");
+		});
+	}
+	
+	function fn_chatOpen(){
+		var index = "0";
+		if(index != 2){
+			fn_chatbotConn();
+		}else{
+			var confirmMessage ="대표번호로 챗봇이 실행됩니다.<br> 다른 번호로 상담을 원하시는 경우 <br> 본 화면 우측하단에서 번호를 선택해주세요.";
+			customAlert(confirmMessage, "", function() {
+				var data = "";
+				fn_chatbotConnList(data);
+			});			
+		}
+	};
+	
+	// 일반적 통신
+	function fn_chatbotConn(){
+		var data = {
+				"muid" : "",
+				"num" : "",
+				"rpCtrtId" : "",
+				"size" : "0"
+		}
+		var url="/chat/init/create/token.do";
+		var type = "post";
+		var dataType = "json";
+		fnAjaxSubmit(url, type, data, dataType, fn_chatbotConnPopup);
+	}
+	
+	//다회선 통신
+	function fn_chatbotConnList(data){
+		//챗봇 연동
+		var data = {
+				"memberInfo" : "",
+				"rpCtrtId" : data,
+				"size" : "0"
+		}
+		var url="/chat/init/create/token.do";
+		var type = "post";
+		var dataType = "json";
+		fnAjaxSubmit(url, type, data, dataType, fn_chatbotConnPopup);
+	}
+	
+	function fn_chatbotConnPopup(res){
+		if(res.error == "error"){
+			customAlert("통신중 문제가 발생하였습니다. 관리자에게 문의 바랍니다.");
+		}else{
+			var p_width = 700;
+			var p_height = 1000;
+			var width = (window.screen.width/2) - (p_width /2);
+			var height = (window.screen.height/2) - (p_height/2) ;
+			
+			var token = res.initToken.initToken;
+			var botId = res.botId;
+			var svcProfile = res.serviceProfile;
+			var channel = res.channel;
+			var url="https://chat.rbdialog.co.kr?initToken="+ token + "&botId=" + botId + "&serviceProfile=" + svcProfile+"&channel=" + channel;
+			window.open(url,"_blank","toolbar=yes,scrollbars=yes,resizable=yes,top="+height+",left="+width+",width="+p_width+",height="+p_height);
+			
+		}
+	}
+	
+	//]]>
+</script>
 <section class="sect">
 	<div class="container">
 		<div class="heading-depth1">

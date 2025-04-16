@@ -217,9 +217,6 @@ body {display: flex;flex-wrap: wrap;}
 }
 
 
-
-/* s: 240812 CM */
-
 .partner-main {
 	position: relative;
 }
@@ -236,13 +233,6 @@ body {display: flex;flex-wrap: wrap;}
 	position: absolute;
 }
 
-/* e: 240812 CM */
-
-
-
-
-
-/* e: 240726 CM */
 
 /* aside */
 #aside {display: none;position: absolute;}
@@ -456,7 +446,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 	.gnb .gnb-item .gnb-link:hover,.gnb .gnb-item.active .gnb-link,.gnb .gnb-item.current .gnb-link {color: #3616CD;font-weight: 700;}
 	.gnb .gnb-bar {display: block;position: absolute;bottom: 4px;left: 21%;width: 1px;height: 5px;background: #3616CD;transition: all .2s;opacity: 0;}
 
-	/* s: 240726 CM */
 	.gnb .gnb-item.bar.current .gnb-link::after {
 		content: "";
 		display: block;
@@ -466,7 +455,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
         height: 5px;
         background: #3616CD;
 	}
-	/* e: 240726 CM */
 	
 
 	/* gnb-sub  */
@@ -537,19 +525,18 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 	.quick-banner > li {margin-bottom: 17px;}
 	.quick-banner > li img {border-radius:10px;}
 
-	/* s: 240723 UIUX수정 */
-
+	/* s: 250416 top버튼 */
 	#chatbot {
-		bottom: 70px;
+		bottom: 146px;
 		right: 100px;
 		--psview-layer-height: 0px;
 	}
+	/* e: 250416 top버튼 */
 
 	#chatbot.has-psview-layer {
 		bottom: calc(var(--psview-layer-height) + 50px);
 	}
 
-	/* e: 240723 UIUX수정 */
 
 	/* Footer */
 	#ft {padding: 35px 0 50px 0;}
@@ -581,7 +568,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 
 }
 
-/* s: 240723 UIUX수정 */
 
 @media (min-width:1520px) {
 
@@ -591,7 +577,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 
 }
 
-/* e: 240723 UIUX수정 */
 
 @media (min-width:1081px) and (max-width:1120px) {
 	.gnb .gnb-item + .gnb-item {margin-left: 35px;}
@@ -605,15 +590,15 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 	.container {padding-right: 1.6rem;padding-left: 1.6rem;}
 	.container.type2{padding:0px;}
 
-	#chatbot {bottom: 20px; right: 15px;}
 
-	/* s: 240723 UIUX수정 */
+	/* s: 250416 top버튼 */
+	#chatbot {bottom: 96px; right: 15px;}
+	/* e: 250416 top버튼 */
+
 
 	#chatbot.has-psview-layer {
 		bottom: calc(var(--psview-layer-height) + 20px);
 	}
-
-	/* e: 240723 UIUX수정 */
 
 	#chatbot .chat-open span {height: 60px; font-size: .9rem;}
 	.chat-bt2 {bottom: 60px; right: 0;}
@@ -741,8 +726,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 	.mpc-gnb.v2 .header-side{top: 16px;right: 20px;left: auto;transform: none;width: auto;height: 1.5rem}
 	.mpc-gnb.v2 .hd-logo>a{top: 15px;left: 20px;transform: none}
 
-	/* s: 240726 CM */
-
 	.header-side-v2 {
 		top: 16px;
         right: 20px;
@@ -779,13 +762,11 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 		font-size: 1.08rem;
 	}
 
-	/* e: 240726 CM */
+	.ft-bottom [class^='banner-'] {margin-right:0.5rem}
+	.ft-bottom [class^='icon-sns'] {margin-left:0.5rem }
 
-	.ft-bottom [class^='banner-'] {margin-right:0.5rem} /* 210913 */
-	.ft-bottom [class^='icon-sns'] {margin-left:0.5rem } /* 210913 */
-
-	.skfamily #ft .ft-top dt {display: inline; padding-right: 0.2rem;} /* 220328 */
-	.skfamily #ft .ft-top dd {display: inline; padding-right: 2rem;} /* 220328 */
+	.skfamily #ft .ft-top dt {display: inline; padding-right: 0.2rem;}
+	.skfamily #ft .ft-top dd {display: inline; padding-right: 2rem;}
 
 
 
@@ -810,8 +791,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 	.ft-bottom [class^='banner-'] {margin-right:0.4rem; height:2.6rem;}
 	.ft-bottom [class^='icon-sns'] {margin-left:0; margin-right:0.4rem; width:2.6rem; height:2.6rem;} /*230616 수정 */
 
-	/* s: 231106 footer 수정 */
-
 	.ft-bottom .nav {
 		gap: 0.6rem 0;
 	}
@@ -820,8 +799,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 		flex-direction: row;
 		margin-left: 0;
 	}
-
-	/* e: 231106 footer 수정 */
 }
 
 @media (max-width:575.98px) {
@@ -835,8 +812,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 		font-size: 1.3rem;
 	}
 
-	/* s: 240723 UIUX수정 */
-
 	.ft-middle .app_download_box > img {
 		width: 8rem;
 		display: none;
@@ -846,8 +821,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 		row-gap: 1rem;
 	}
 
-
-	/* e: 240723 UIUX수정 */
 
 }
 
@@ -860,18 +833,20 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 .term-area table{word-break:break-all !important;}
 
 
+/* s: 250416 top버튼 */
+
 #topBtn {
   	position: fixed;
   	width: 60px;
 	height: 60px;
 	right: 100px;
-	bottom: 140px;
+	bottom: 70px;
   	cursor: pointer;
   	display: block;
   	border-radius: 100%;
-  	box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2) , .28rem .28rem .4rem 0 rgba(88, 88, 88, .15);
+  	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2) , .28rem .28rem .4rem 0 rgba(88, 88, 88, .15);
 	background-color: #fff;
-  	z-index: 1038;
+  	z-index: 1039;
   	opacity: 0;
   	visibility: hidden;
   	transform: translateY(15px);
@@ -890,20 +865,17 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
   	left: 50%;
   	top: 50%;
 	transform: translate(-50%, -50%);
-  	height: 36px;
-  	width: 36px;
-  	cursor: pointer;
   	display: block;
   	z-index: 1;
 }
 
 #topBtn .topBtn-icon path {
-  	-webkit-transition: fill 200ms linear;
-  	transition: fill 200ms linear;
+  	-webkit-transition: stroke 200ms linear;
+  	transition: stroke 200ms linear;
 }
 
 #topBtn:hover .topBtn-icon path {
-  	fill: #3717CE;
+	stroke: #3717CE;
 }
 
 #topBtn svg.progress-circle path {
@@ -920,7 +892,9 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 
 @media (max-width:1079.98px) {
 	#topBtn {
-        bottom: 90px;
+        bottom: 20px;
         right: 15px;
     }
 }
+
+/* e: 250416 top버튼 */

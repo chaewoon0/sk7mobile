@@ -1,4 +1,4 @@
-// Top button
+// s: 250416 top버튼
 $(document).ready(function(){
 	"use strict";
 	var progressPath = document.querySelector('#topBtn .progress-circle path');
@@ -31,6 +31,8 @@ $(document).ready(function(){
 		return false;
 	})
 });
+
+// e: 250416 top버튼
 	
 
 
