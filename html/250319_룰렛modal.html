@@ -74,35 +74,23 @@
                 </div>
 
 				<!-- modal -->
-				<div class="modal fade modal-md modal-roulette">
+				<!-- s: 250319 룰렛 수정 -->
+				<div class="modal fade modal-md modal-roulette-blank">
 					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 						<div class="modal-content">
-							<div class="modal-head">
-								<h1 class="title">안내</h1>
-							</div>
 							<div class="modal-body">
 								<div class="modal-roulette-wp">
 									<div class="modal-roulette-img-wrap">
-										<img class="modal-roulette-img" src="images/roulette/shinsegae.png" alt="">
-										<img class="modal-roulette-img-bg" src="images/roulette/party_popper_bg.png" alt="">
+										<img class="modal-roulette-blank-img" src="images/roulette/blank.png" alt="">
 									</div>
 									<div class="modal-roulette-text-wrap">
 										<div class="text-top">
 											<p>
-												<span>축하합니다!</span>
-												<img src="images/roulette/party_popper.png" alt="">
+												<span>아쉬워요!</span>
 											</p>
 											<p>
-												<span class="text-primary" id="rouletteItem">신세계상품권 10만원</span> 에 당첨되었습니다.
+                                                <span>다음에는 꼭 당첨될거예요.</span>
 											</p>
-										</div>
-										<div class="text-bottom mt-4">
-											당첨된 경품은 선착순 지급으로<br>
-											<span class="text-primary">~12/10(화)</span> 까지 개통까지 완료 시<br>
-											<span class="text-primary">2/20(목)</span> 에 모바일상품권으로 지급됩니다.
-										</div>
-										<div class="text-bottom mt-4">
-											자세한 내용은 이벤트 하단 유의사항을 확인하세요.
 										</div>
 									</div>
 								</div>
@@ -114,6 +102,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- e: 250319 룰렛 수정 -->
 				<!-- //modal -->
 
 
@@ -184,6 +173,8 @@
 <script src="../asset/js/common/public.js"></script>
 
 <script>
+    $('.modal-roulette-blank').modal('show');
+
     let spinning = false;
     let animating = false;
     let spinInterval;

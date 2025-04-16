@@ -5249,8 +5249,6 @@ body:has(.app_download_popup:not(.active)) {
 /* e: 241008 7쿠폰 소진케이스 */
 
 
-/* s: 250220 룰렛 수정 */
-
 .roulette {
     text-align: center;
     background-color: #001333;
@@ -5384,6 +5382,15 @@ body:has(.app_download_popup:not(.active)) {
 	max-width: 75%;
 }
 
+/* s: 250319 룰렛 수정 */
+
+.modal-roulette-wp .modal-roulette-blank-img {
+	margin-top: 0rem;
+	margin-bottom: -2rem;
+}
+
+/* e: 250319 룰렛 수정 */
+
 .modal-roulette-wp .modal-roulette-text-wrap {
 	text-align: center;
 	line-height: 1.4;
@@ -5415,6 +5422,14 @@ body:has(.app_download_popup:not(.active)) {
 		width: 60%;
 	}
 
+	/* s: 250319 룰렛 수정 */
+
+	.modal-roulette-wp .modal-roulette-blank-img {
+		width: 90%;
+	}
+
+	/* e: 250319 룰렛 수정 */
+
 	.modal-roulette-wp .modal-roulette-text-wrap .text-top {
 		font-size: 1.3rem;
 	}
@@ -5424,5 +5439,3 @@ body:has(.app_download_popup:not(.active)) {
 	}
 
 }
-
-/* e: 250220 룰렛 수정 */
