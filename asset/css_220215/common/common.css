@@ -847,18 +847,18 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
   	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2) , .28rem .28rem .4rem 0 rgba(88, 88, 88, .15);
 	background-color: #fff;
   	z-index: 1039;
-  	opacity: 1;
-  	visibility: visible;
-  	transform: translateY(0);
+  	opacity: 0;
+  	visibility: hidden;
+  	transform: translateY(10px);
   	-webkit-transition: transform 200ms linear, opacity 200ms linear, visibility 200ms linear;
   	transition: transform 200ms linear, opacity 200ms linear, visibility 200ms linear;
 }
 
-/* #topBtn.active-progress {
+#topBtn.active-progress {
   	opacity: 1;
   	visibility: visible;
   	transform: translateY(0);
-} */
+}
 
 #topBtn .topBtn-icon {
   	position: absolute;

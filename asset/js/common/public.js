@@ -16,7 +16,7 @@ $(document).ready(function(){
 	}
 	updateProgress();
 	$(window).scroll(updateProgress);
-	var offset = 50;
+	var offset = 500;
 	var duration = 550;
 	jQuery(window).on('scroll', function() {
 		if (jQuery(this).scrollTop() > offset) {
