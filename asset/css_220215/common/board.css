@@ -290,6 +290,30 @@
 	.bbs-myQna .info-sm:last-child {margin-right: 0;}
 	.bbs-myQna .info-sm + .info-sm:before {content: '';display: inline-block;vertical-align: middle;width: 1px;height: .83rem;margin-right: .83rem;background: #e0e0e0;}
 
+	/* s: 250418 상담내역 */
+	.bbs-myQna > li {
+		position: relative;
+	}
+	
+	.bbs-myQna > li .btn-wrap {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0;
+	}
+	
+	.bbs-myQna > li .btn-wrap .btn {
+		min-width: 5rem;
+		padding: .55rem 1.2rem;
+		font-size: 1.1rem;
+	}
+
+	.bbs-myQna .num + div {
+		max-width: calc(100% - 5.5rem);
+	}
+	/* e: 250418 상담내역 */
+
 	.review-write .recom-btn-wp {display: flex;}
 	.review-write .recom-btn-wp > span {flex: 1;width: 100%;-webkit-box-flex: 1;-ms-flex: 1;}
 	.review-write .recom-btn-wp > span + span {margin-left: 1rem;}
