@@ -428,6 +428,9 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
 .text-info.text-grey{color:#666!important;}
 .inp-form-wp{display:table;width:100%;}
 .form-flex{display:-webkit-box;display:-ms-flexbox;display:flex;align-items:center;-webkit-box-align:center;-ms-flex-align:center;}
+.form-flex > * + * {
+    margin: 0 0 0 .83rem !important;
+}
 .form-flexible{flex:1;width:100%;-webkit-box-flex:1;-ms-flex:1;}
 .secure-wp{position:relative;padding:0 9.166rem;}
 .secure-wp .secure-area{display:flex;position:absolute;top:0;left:0;justify-content:center;flex-direction:column;width:8.75rem;padding:0;text-align:center;}
@@ -453,6 +456,7 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
 .form-wrap:not(.vertical) .inp-tit{width:21%;min-width:150px;background:#f7f6fb;}
 .form-wrap:not(.vertical) .inp-tit p{font-size:18px;font-weight:400;line-height:1.3;}
 .form-wrap:not(.vertical) .inp-cont{width:79%;margin-top:0;}
+.form-wrap:not(.vertical) .form-fix-width{width:270px;padding:9px 10px 10px;}
 .text-info{margin-top:10px;font-size:15px;}
 .form-wrap .btn-sm{min-width:157px;}
 .secure-wp{width:375px;padding:0 106px 0 122px;}
@@ -643,6 +647,23 @@ td.text-left{padding-left:1.25rem!important;}
 @keyframes aniLoad{0%{box-shadow:0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;}5%,95%{box-shadow:0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;}10%,59%{box-shadow:0 -.83em 0 -.4em, -.087em -.825em 0 -.42em, -.173em -.812em 0 -.44em, -.256em -.789em 0 -.46em, -.297em -.775em 0 -.477em;}20%{box-shadow:0 -.83em 0 -.4em, -.338em -.758em 0 -.42em, -.555em -.617em 0 -.44em, -.671em -.488em 0 -.46em, -.749em -.34em 0 -.477em;}38%{box-shadow:0 -.83em 0 -.4em, -.377em -.74em 0 -.42em, -.645em -.522em 0 -.44em, -.775em -.297em 0 -.46em, -.82em -.09em 0 -.477em;}100%{box-shadow:0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;}}
 @-webkit-keyframes round{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}
 @keyframes round{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}
+
+.mt-2, .my-2 {
+    margin-top: 0.5rem !important;
+}
+
+.w375 img {
+    width: 375px;
+}
+
+@media (max-width: 1080px){
+.w375 img {
+    width: 100%;
+}
+}
+
+
+
 </style>
 
 </head>
@@ -674,8 +695,12 @@ td.text-left{padding-left:1.25rem!important;}
     <section class="sect">
         <div class="container">
             <div class="heading-depth1">
-                <h2 class="title">유심이용 휴대폰 등록</h2>
-                <p class="sub">신청서 작성 시 입력하신 가입고객정보(이름, 휴대폰번호, 접수번호) 로 주문하신 상품내역 및 상태를 조회하실 수 있습니다.</p>
+                <h2 class="title">유심 셀프변경</h2>
+                <p class="sub">
+                    현재 사용중인 유심을 새로운 유심으로 변경합니다.<br>
+                    유심 셀프변경 시 사용중인 유심이 해지되면서 휴대폰 사용이 불가합니다.<br>
+                    변경 완료 후 새 유심을 휴대폰에 꽂아 1~3회 전원을 껐다 켜주세요.
+                </p>
             </div>
     
             <div class="heading-depth2">
@@ -745,14 +770,97 @@ td.text-left{padding-left:1.25rem!important;}
                         </div>
                     </div>
                     <div class="inp-form-wp">
-                        <div class="inp-tit"><p>유심이용 휴대폰 번호</p></div>
+                        <div class="inp-tit"><p>새 유심 정보 등록</p></div>
                         <div class="inp-cont">
-                            <div class="form-flex">
-                                <div class="inp-wp form-flexible">
-                                    <input type="number" class="form-control form-md" name="phoneNo" id="phoneNo" maxlength="11" oninput="onlyNumberInputEvent(this, event);" onkeydown="return onlyNumber(event);" placeholder="'-' 없이 숫자만 입력해주세요." title="휴대폰 번호 입력">
+                            <p id="tx_usim_use" class="text-info text-grey" style="display: none;">
+                                온라인 신청 시 유심비는 개통한 다음 달 요금명세서에 포함되어 청구됩니다. (일반유심 6,600원, NFC유심 8,800원) <br>
+                            </p>
+                            <div id="usimYnNoti2" style="">
+                                <div class="mt-2 w375">
+                                    <img src="https://www.sk7mobile.com/html/images/phone/thumb_usim_back_240522_v2.png"
+                                        alt="유심카드 이미지">
+                                </div>
+                                <div class="form-flex mt-2">
+                                    <div class="inp-wp form-flexible">
+                                        <input class="form-control form-fix-width" type="text" name="usimNo" id="usimNo"
+                                            title="띄어쓰기 없이 대문자로 입력해주세요." maxlength="14"
+                                            placeholder="띄어쓰기 없이 대문자로 입력해주세요.">
+                                    </div>
+                                    <div class="btn-wp">
+                                        <button type="button" onclick="usimNoChk()" class="btn btn-sm btn-primary"
+                                            style="min-width: auto;width: 90px;">확인</button>
+                                    </div>
                                 </div>
                             </div>
-                            <p class="text-info text-grey" style="text-align:left;">* 본인 인증한 명의의 SK 세븐모바일 휴대폰번호를 입력해주세요.</p>
+                            <!-- <p id="usimYnNoti3" class="text-info text-grey" style="display:none;">
+                                eSIM이란? 실물 유심을 구매하지 않고 휴대폰에 내장된 칩에 가입자 정보를 다운로드하여 이용하는 디지털 SIM 입니다.
+                                <a href="javascript:void(0);" onclick="$('#dv_esim_use_phone').modal('show');" class="text-link ml-2" >eSIM지원 휴대폰보기</a><br>
+                                // 통신사에서 구매한 5G 휴대폰에서 eSIM을 사용하는 경우, 5G 요금제로만 개통 가능합니다.  (LTE 요금제 가입 불가) //
+                            </p> -->
+
+                            <!-- 라디오버튼 분기 -->
+                            <!-- 이미지 업로드 이벤트(OCR) 및  OCR콜백 연결 -->
+                            <!-- EID, IMEI1, IMEI2 확인/다시입력 버튼 분기 및 유효성 체크 -->
+                            <div id="usimYnNoti3" class="text-info text-grey" style="display: none;">
+                                <p>eSIM이란? 실물 유심을 구매하지 않고 휴대폰에 내장된 칩에 가입자 정보를 다운로드하여 이용하는 디지털 SIM 입니다.
+                                    <a href="javascript:void(0);" onclick="$('#dv_esim_use_phone').modal('show');"
+                                        class="text-link ml-2">eSIM지원 휴대폰보기</a><br>
+                                </p>
+                                <div class="mt-3">
+                                    <p>eSIM 이용가능여부 확인을 위해 휴대폰 정보를 입력해주세요.</p>
+                                    <div class="mt-2" data-tab="true">
+                                        <span class="form-radio">
+                                            <input type="radio" name="eSimRdo" id="rdo1" value="1" checked="checked">
+                                            <label for="rdo1" class="form-txt-sm text-grey checked"
+                                                onclick="setGtag('eSIM','이미지등록','유심상세');">이미지 업로드하여 입력</label>
+                                        </span>
+                                        <span class="form-radio ml-4">
+                                            <input type="radio" name="eSimRdo" id="rdo2" value="2">
+                                            <label for="rdo2" class="form-txt-sm text-grey"
+                                                onclick="setGtag('eSIM','직접입력','유심상세');">직접 입력</label>
+                                        </span>
+                                    </div>
+                                    <div id="rdoChkGroup01" style="display: block;">
+                                        <div class="upload-file form-md mt-2">
+                                            <input id="ocrImageFileName" class="upload-name form-control"
+                                                value="파일을 선택해주세요." disabled="" title="등록파일" placeholder="파일을 선택해주세요.">
+                                            <label for="ocrImage" class="btn btn-primary btn-sm"
+                                                onclick="setGtag('eSIM','이미지선택','유심상세');">이미지 선택</label>
+                                            <input id="ocrImage" type="file" class="upload-hidden">
+                                        </div>
+                                        <p class="mt-2">가입하실 휴대폰에서 [전화 &gt; 키패드 &gt; *#06#] 누른 화면을 확인하고 입력해주세요. (T전화 등
+                                            별도 전화어플 사용 시, 기본 '전화' 앱에서 시도)</p>
+                                        <div class="mt-2" id="div_ocr_terminal_data" style="display: none;">
+                                            <input id="ocr_eid" class="form-control" type="text" title="EID 입력" value=""
+                                                readonly="" maxlength="32">
+                                            <input id="ocr_imei1" class="form-control mt-2" type="text" title="IMEI1 입력"
+                                                value="" readonly="" maxlength="15">
+                                            <input id="ocr_imei2" class="form-control mt-2" type="text" title="IMEI2 입력"
+                                                value="" readonly="" maxlength="15">
+                                        </div>
+                                    </div>
+                                    <div id="rdoChkGroup02" style="display: none;">
+                                        <p class="mt-2">가입하실 휴대폰에서 [전화 &gt; 키패드 &gt; *#06#] 누른 화면을 확인하고 입력해주세요.</p>
+                                        <div class="mt-2" id="div_dir_terminal_data">
+                                            <input id="dir_eid" class="form-control" type="text" title="EID 입력"
+                                                placeholder="EID를 입력해주세요." maxlength="32"
+                                                oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);">
+                                            <input id="dir_imei1" class="form-control mt-2" type="text" title="IMEI1 입력"
+                                                placeholder="IMEI1를 입력해주세요." maxlength="15"
+                                                oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);">
+                                            <input id="dir_imei2" class="form-control mt-2" type="text" title="IMEI2 입력"
+                                                placeholder="IMEI2를 입력해주세요." maxlength="15"
+                                                oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);">
+                                        </div>
+                                        <div class="mt-2">
+                                            <!--
+                                            <button type="button" class="btn btn-sm btn-primary form-control" data-toggle="modal" data-target=".modal-alert">확인</button>
+                                            <button type="button" class="btn btn-sm btn-primary form-control" data-toggle="modal" data-target=".modal-alert2">다시 입력</button>
+                                            -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -769,7 +877,7 @@ td.text-left{padding-left:1.25rem!important;}
                     </dt>
                     <dd class="acc-body">
                         <div class="acc-content term-text">
-                            1. 수집/이용 목적 : 휴대폰등록<br>
+                            1. 수집/이용 목적 : 유심 변경<br>
                             2. 수집/이용 항목 : 이름, 휴대폰번호, 신용카드 번호<br>
                             3. 보유/이용 기간 : <strong style="font-size: 1.2em;">조회 후 3개월까지</strong><br>
                             ※ 개인정보 수집/이용에 동의하지 않을 수 있으나, 동의하지 않을 경우 해당 서비스를 이용할 수 없습니다.<br>
@@ -782,19 +890,18 @@ td.text-left{padding-left:1.25rem!important;}
                 <span><button type="button" class="btn btn-secondary btn-lg" onclick="history.back();">취소</button></span>
                 <span><button id="submitBtn" type="button" class="btn btn-primary btn-lg" onclick="goSubmit();">다음</button></span>
             </div>
-            <div class="acc-group acc-type1 mt-5" data-accordion="true">
+            <div class="acc-group acc-type1 mt-5">
                 <dl class="acc-item active">
                     <dt class="acc-head">
-                        <button class="btn btn-toggle" type="button" role="button" title="닫기">유의사항</button>
+                        <p>유의사항</p>
                     </dt>
                     <dd class="acc-body" role="region" aria-hidden="false" aria-expanded="true">
                         <div class="acc-content" style="display: block;">
                             <ul class="lst-bullet">
-                              <li>사용하실 휴대폰에 유심을 꽂으신 후 본인확인을 진행해주세요.</li>
-                                  <li>휴대폰 인증 또는 신용카드 인증을 통해 현재 사용중인 휴대폰으로 휴대폰 등록이 완료됩니다.</li>
-                               <li>본인인증 시 입력하는 정보는 해당 인증기관에서 직접 수집하므로 인증 이외의 용도로 이용 또는 저장되지 않습니다.</li>
-                               <li>신용카드 인증은 본인 명의의 신용카드로만 인증이 가능합니다.(미성년자의 경우 휴대폰 본인인증 이용)</li>
-                                <li>유심이용 휴대폰 등록 시, 등록하신 휴대폰은 중고 단말로 분류되어 약정/할부 가입이 불가합니다.</li>
+                                <li>유심 셀프변경 시 사용중인 유심이 해지되면서 휴대폰 사용이 불가합니다.<br>변경 완료 후 새 유심을 휴대폰에 꽂아 1~3회 전원을 껐다 켜주세요.</li>
+                                <li>홈페이지 또는 편의점 등에서 SK 세븐모바일 유심을 구매하신 고객님에 한해 이용 가능하며, 유심변경 취소는 불가능합니다.</li>
+                                <li>개통이력이 있는 유심은 변경 불가합니다.</li>
+                                <li>유심변경 시<br>1) 기존 유심에 저장된 개인정보(연락처, 사진 등)는 자동으로 전송되지 않습니다. 미리 휴대폰으로 저장하셔야 합니다.<br>2) 티머니 잔액이 남은 경우 교체 전에 환불 신청 후에 진행해주세요.</li>
                             </ul>
                         </div>
                     </dd>
