@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+
+<!-- css -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+
+<style>
+    /*! CSS Used from: https://www.sk7mobile.com/html/css/common/reset.css?1680274789000 */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+aside,footer,header,nav,section{display:block;}
+body{margin:0;font-size:1rem;font-weight:400;line-height:1.5;text-align:left;}
+hr{box-sizing:content-box;height:0;overflow:visible;}
+p{margin-top:0;margin-bottom:1rem;}
+ul,dl{margin-top:0;margin-bottom:1rem;}
+ul ul{margin-bottom:0;}
+dt{font-weight:700;}
+dd{margin-bottom:.5rem;margin-left:0;}
+b,strong{font-weight:bolder;}
+img{vertical-align:middle;border-style:none;}
+table{border-collapse:collapse;}
+caption{padding-top:0.75rem;padding-bottom:0.75rem;color:#6c757d;text-align:left;caption-side:bottom;}
+th{text-align:inherit;}
+label{display:inline-block;margin-bottom:0.5rem;}
+button{border-radius:0;}
+button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color;}
+input,button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+button,input{overflow:visible;}
+button{text-transform:none;}
+[role="button"]{cursor:pointer;}
+button,[type="button"]{-webkit-appearance:button;}
+button:not(:disabled),[type="button"]:not(:disabled){cursor:pointer;}
+input[type="radio"],input[type="checkbox"]{box-sizing:border-box;padding:0;}
+hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:1px solid rgba(0, 0, 0, 0.1);}
+.form-control{display:block;width:100%;height:calc(1.5em + 0.75rem + 2px);padding:0.375rem 0.75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:0.25rem;transition:border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+@media (prefers-reduced-motion: reduce){
+.form-control{transition:none;}
+}
+.form-control:focus{color:#495057;background-color:#fff;border-color:#5857d8;outline:0;box-shadow:0 0 0 0.13rem rgba(88, 87, 216, 0.15);}
+.form-control::placeholder{color:#6c757d;opacity:1;}
+.form-control:disabled{background-color:#e9ecef;opacity:1;}
+.fade{transition:opacity 0.15s linear;}
+@media (prefers-reduced-motion: reduce){
+.fade{transition:none;}
+}
+.fade:not(.show){opacity:0;}
+.nav{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;}
+.modal{position:fixed;top:0;left:0;z-index:1050;display:none;width:100%;height:100%;overflow:hidden;outline:0;}
+.modal-dialog{position:relative;width:auto;margin:0.5rem;pointer-events:none;}
+.modal.fade .modal-dialog{transition:-webkit-transform 0.3s ease-out;transition:transform 0.3s ease-out;transition:transform 0.3s ease-out, -webkit-transform 0.3s ease-out;-webkit-transform:translate(0, -50px);transform:translate(0, -50px);}
+@media (prefers-reduced-motion: reduce){
+.modal.fade .modal-dialog{transition:none;}
+}
+.modal-dialog-scrollable{display:-ms-flexbox;display:flex;max-height:calc(100% - 1rem);}
+.modal-dialog-scrollable .modal-content{max-height:calc(100vh - 1rem);overflow:hidden;}
+.modal-dialog-scrollable .modal-body{overflow-y:auto;}
+.modal-dialog-centered{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;min-height:calc(100% - 1rem);}
+.modal-dialog-centered::before{display:block;height:calc(100vh - 1rem);height:-webkit-min-content;height:-moz-min-content;height:min-content;content:"";}
+.modal-dialog-centered.modal-dialog-scrollable{-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;height:100%;}
+.modal-dialog-centered.modal-dialog-scrollable .modal-content{max-height:none;}
+.modal-dialog-centered.modal-dialog-scrollable::before{content:none;}
+.modal-content{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0, 0, 0, 0.2);border-radius:0.3rem;outline:0;}
+.modal-body{position:relative;-ms-flex:1 1 auto;flex:1 1 auto;padding:1rem;}
+@media (min-width: 576px){
+.modal-dialog{max-width:500px;margin:1.75rem auto;}
+.modal-dialog-scrollable{max-height:calc(100% - 3.5rem);}
+.modal-dialog-scrollable .modal-content{max-height:calc(100vh - 3.5rem);}
+.modal-dialog-centered{min-height:calc(100% - 3.5rem);}
+.modal-dialog-centered::before{height:calc(100vh - 3.5rem);height:-webkit-min-content;height:-moz-min-content;height:min-content;}
+.modal-sm{max-width:300px;}
+}
+@media (min-width: 992px){
+.modal-lg{max-width:800px;}
+}
+.d-none{display:none!important;}
+@media (min-width: 1080px){
+.d-lg-none{display:none!important;}
+.d-lg-block{display:block!important;}
+}
+.justify-content-start{-ms-flex-pack:start!important;justify-content:flex-start!important;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0;}
+.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;}
+.my-0{margin-top:0!important;}
+.my-0{margin-bottom:0!important;}
+.ml-2{margin-left:0.5rem!important;}
+.mt-3{margin-top:1rem!important;}
+.mt-5{margin-top:3rem!important;}
+.mb-5{margin-bottom:3rem!important;}
+.mt-10{margin-top:10px;}
+.text-left{text-align:left!important;}
+.font-weight-normal{font-weight:400!important;}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/vendor/swiper.min.css?1667897278000 */
+.swiper-container{margin:0 auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1;}
+.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;-o-transition-property:transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-box-sizing:content-box;box-sizing:content-box;}
+.swiper-wrapper{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);}
+.swiper-slide{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:100%;height:100%;position:relative;-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;-o-transition-property:transform;transition-property:transform;transition-property:transform,-webkit-transform;}
+.swiper-container-autoheight{height:auto;}
+.swiper-container-autoheight .swiper-wrapper{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;-webkit-transition-property:height,-webkit-transform;transition-property:height,-webkit-transform;-o-transition-property:transform,height;transition-property:transform,height;transition-property:transform,height,-webkit-transform;}
+.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;background-size:27px 44px;background-position:center;background-repeat:no-repeat;}
+.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none;}
+.swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");left:10px;right:auto;}
+.swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");right:10px;left:auto;}
+.swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");}
+.swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");}
+.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000;}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/common/common.css?1743035876000 */
+html{font-size:18px;}
+body,p,h1,h2,h3,span,ul,li,dl,dt,dd,table,th,td,form,input,button{margin:0;padding:0;}
+body,input,button,table{font-family:'Noto Sans KR','Apple SD Gothic Neo',sans-serif;}
+body{color:#333;font-size:1rem;word-wrap:break-word;word-break:keep-all;letter-spacing:-.05rem;-ms-word-break:break-all;}
+a,a:hover,a:focus,a:active{color:inherit;text-decoration:none;}
+a:focus,button:focus{outline:1px dotted #000;}
+li{list-style:none;}
+em{font-style:normal;}
+label{cursor:pointer;}
+table{width:100%;}
+strong,b{font-weight:700;}
+img{vertical-align:top;max-width:100%;}
+br{font-family:arial;}
+h1,h2,h3{margin:0;}
+button{border:0;background:none;}
+i{font-style:normal;}
+.skip{z-index:200;color:#fff;text-align:center;background:#000;}
+.skip:active,.skip:focus{position:absolute;padding:.5rem;color:#fff;}
+[class^=icon-]{display:inline-block;overflow:hidden;vertical-align:top;margin:0;padding:0;border:0;font-size:0;text-decoration:none;text-indent:-1000em;line-height:0;background-color:transparent;background-repeat:no-repeat;background-position:50% 50%;}
+.swiper-button-prev.swiper-button-disabled{opacity:0;}
+.text-primary{color:#3717CE!important;}
+.text-grey{color:#666!important;}
+.text-danger{color:#EA002C!important;}
+.swiper-slide{overflow:hidden;}
+.swiper-slide img{width:100%;}
+.swiper-button-next,.swiper-button-prev{width:2.04rem;height:1.6rem;margin-top:-.8rem;border:0;background:none;background:url(https://www.sk7mobile.com/html/images/main/swiper_arr_blk.png) no-repeat 50% 50%/auto 100%;}
+.swiper-button-white{background-image:url(https://www.sk7mobile.com/html/images/main/swiper_arr_wh.png)!important;}
+.swiper-button-prev{left:0;transform:scaleX(-1);}
+.swiper-button-next{right:0;}
+.swiper-button-next:focus,.swiper-button-prev:focus{outline:1px dotted #000;}
+body{display:flex;flex-wrap:wrap;}
+#wrap{display:flex;overflow:hidden;position:relative;flex-direction:column;width:100%;min-height:100vh;}
+#ct{overflow:hidden;flex:1 0 auto;background:#fff;}
+.container{position:relative;max-width:1120px;margin-right:auto;margin-left:auto;padding-right:15px;padding-left:15px;}
+.top-banner{overflow:hidden;position:relative;width:100%;}
+.top-banner a{display:block;}
+.top-banner img{display:block;max-width:100%;margin:0 auto;}
+.icon-close{position:absolute;top:50%;right:.48rem;width:4.6rem;height:4.6rem;background-image:url(https://www.sk7mobile.com/html/images/icon/icon_close.png);background-size:auto 1.12rem;transform:translateY(-50%);}
+#hd{position:relative;top:0;right:0;left:0;z-index:100;height:5rem;border-bottom:1px solid #ebebeb;background:#fff;transition:background-color .2s, border .2s;}
+.hd-logo{display:block;padding-top:1.6rem;text-align:center;}
+.hd-logo a{display:inline-block;}
+.hd-logo img{height:1.84rem;}
+.icon-mn{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_mn2.png);}
+.gnb{display:none;}
+#ft{width:100%;padding:3rem 0;font-size:.92rem;font-weight:300;line-height:1.565;background:#f4f4f4;}
+.ft-text{margin-bottom:2rem;color:#2c2b92;font-size:1.2rem;font-weight:700;text-align:left;line-height:1;}
+.ft-text img{margin-left:1rem;vertical-align:bottom;height:1.6rem;}
+#ft hr{margin:2rem 0;border-top-color:#e3e3e3;}
+.fnb{display:table;width:100%;margin-left:-8px;}
+.fnb li{display:inline-table;padding:0 .5rem;position:relative;}
+.fnb li::after{content:"";width:1px;height:52%;background:#cdcdcd;right:-2px;bottom:20%;position:absolute;}
+.fnb li:last-child::after{display:none;}
+.ft-bottom .addr a{text-decoration:underline;}
+.ft-bottom [class^='icon-sns']{width:2.68rem;height:2.68rem;margin:0 0 0 .6rem;background-image:url(https://www.sk7mobile.com/html/images/icon/icon_sns_v2.png);background-size:auto 100%;}
+.icon-sns-kakao{background-position:0 0;}
+.icon-sns-blog{background-position:25% 0;}
+.icon-sns-ytb{background-position:50% 0;}
+.icon-sns-insta{background-position:75% 0;}
+.icon-sns-fb{background-position:100% 0;}
+.ft-bottom [class^='banner-']{width:auto;height:2.68rem;margin-right:.4rem;}
+.ft-bottom .nav .ft-banner{display:flex;flex-direction:column;gap:3px 0;}
+.banner-wu{display:inline-block;}
+.banner-wu img{height:100%;}
+.ft-middle{display:flex;justify-content:space-between;padding-top:34px;font-size:1rem;gap:48px;}
+.ft-middle .ft_info_wrap:last-child{flex:none;}
+.ft-middle h1{margin-bottom:14px;color:#000;}
+.ft-middle .app_download_box{display:flex;gap:20px;}
+.ft-middle .app_download_box > img{flex:none;max-width:115px;}
+.ft-middle .app_download_box .app_download{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;}
+.ft-middle .app_download_box .app_download_btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background-color:#fff;box-shadow:0.28rem 0.28rem 0.4rem 0 rgba(190, 190, 190, .22);color:#111;font-weight:400;font-size:1.2rem;padding:0.666rem 1.4rem;}
+.ft-bottom .nav .ft-banner .ft-banner-wrap{display:flex;}
+.ft-bottom .nav .ft-sns{display:flex;flex-direction:column;gap:3px 0;margin-left:2rem;}
+.ft-bottom .nav .ft-sns .ft-sns-wrap{display:flex;justify-content:flex-start;}
+.sect .container{padding-top:2.083rem;padding-bottom:5rem;}
+.sect:before{content:'';display:block;width:100%;height:4px;border-bottom:1px solid #ebebeb;background:#f4f4f4;}
+#chatbot{position:fixed;height:190px;z-index:1039;}
+#chatbot .chat-open{position:absolute;right:0;bottom:0;width:auto;height:60px;z-index:1039;}
+#chatbot .chat-open .chat-bt1{position:absolute;right:0;bottom:0;width:60px;height:60px;font-size:0;background-size:60px 60px!important;}
+#chatbot .chat-open>span{display:block;width:60px;height:60px;padding-right:20px;background:#3717CE;border-radius:60px;box-shadow:.28rem .28rem .4rem 0 rgba(88, 87, 216, .30);visibility:visible;overflow:hidden;animation-duration:4s;}
+#chatbot .chat-open>span span{display:flex;width:240px;text-align:right;font-size:14px;color:#fff;padding:8px 8px 8px 21px;}
+.modal-background{display:none;position:fixed;z-index:-1;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0, 0, 0, 0.5);}
+.chat-bt2{display:none;position:absolute;bottom:60px;right:0;animation-name:slide-top;animation-duration:.7s;z-index:0;}
+.chat-bt2 li{display:block;width:114px;height:36px;background-color:#fff;border-radius:36px;border:1px solid #000;box-shadow:.28rem .28rem .4rem 0 rgba(93, 93, 93, 0.3);font-size:15px;line-height:36px;text-align:center;margin-bottom:10px;cursor:pointer;}
+.chat-bt2 li button{display:block;width:114px;height:36px;}
+.icon_chatbot{background:#3717CE url('https://www.sk7mobile.com/html/images/icon/icon_chat.png') no-repeat center;border-radius:100%;box-shadow:.28rem .28rem .4rem 0 rgba(88, 87, 216, .30);}
+.chat-bt{color:black;}
+@media (min-width:1080px){
+.swiper-button-next,.swiper-button-prev{width:28px;height:52px;margin-top:-26px;}
+.swiper-button-prev{left:40px;}
+.swiper-button-next{right:40px;}
+.icon-close{right:12px;width:30px;height:30px;background-position:center center;background-size:13px auto;}
+#hd{position:relative;height:110px;}
+.gnb-wrap{position:relative;padding-top:52px;}
+.hd-logo{position:absolute;top:47px;left:15px;z-index:50;padding-top:0;}
+.hd-logo img{height:32px;}
+.hd-top{position:absolute;top:10px;right:0;}
+.hd-top:after{content:'';display:block;clear:both;}
+.hd-util{display:inline-block;vertical-align:top;}
+.hd-util:after{content:'';display:block;clear:both;}
+.hd-util > li{float:left;}
+.hd-util > li a{color:#888;font-size:15px;}
+.hd-util > li + li{margin-left:3px;}
+.hd-util > li + li:before{content:'';display:inline-block;height:11px;margin:0 7px;border-left:1px solid #c9c9c9;}
+.icon-mn{width:25px;height:25px;margin-left:23px;background-size:20px 18px;}
+.hd-logo{margin-right:6%;}
+.icon-x{display:none;}
+.gnb{display:block;position:relative;padding:0 180px 0 21%;}
+.gnb .gnb-list:after{content:'';display:block;clear:both;}
+.gnb .gnb-item{float:left;}
+.gnb .gnb-item + .gnb-item{margin-left:32px;}
+.gnb .gnb-item .gnb-link{display:block;position:relative;vertical-align:top;padding-bottom:35px;color:#666;font-size:20px;font-weight:400;letter-spacing:-.05em;line-height:1.304;transition:color .3s;}
+.gnb .gnb-item .gnb-link:hover{color:#3616CD;font-weight:700;}
+.gnb .gnb-bar{display:block;position:absolute;bottom:4px;left:21%;width:1px;height:5px;background:#3616CD;transition:all .2s;opacity:0;}
+.gnb-sub{display:none;position:absolute;top:58px;left:0;z-index:500;width:100%;padding-left:200px;line-height:1.2;background:#f5f5f5;}
+.gnb-row{display:flex;width:100%;min-height:270px;}
+.gnb-row a{display:inline-block;}
+.gnb-row:after{content:'';display:block;clear:both;}
+.gnb-col{vertical-align:top;width:25%;padding:50px 10px 50px 25px;border-right:1px solid #e8e8e8;}
+.gnb-title{position:absolute;top:0;left:0;width:200px;height:100%;padding:45px 20px;border-right:1px solid #e8e8e8;border-left:1px solid #e8e8e8;background:#fff;}
+.gnb-title .title{position:relative;color:#000;font-family:'S-CoreDream-8Heavy','Noto Sans KR';font-size:27px;font-weight:700;letter-spacing:-1px;}
+.gnb-title .title-sub{margin-top:12px;color:#999;font-size:15px;line-height:20px;}
+.gnb-depth2 + .gnb-depth2{margin-top:35px;}
+.gnb-depth2 > a{color:#000;font-size:18px;font-weight:500;word-break:keep-all;line-height:21px;transition:color .3s;}
+.gnb-depth3{margin-top:16px;}
+.gnb-depth3 > li > a{position:relative;color:#666;font-size:16px;letter-spacing:-1.5px;}
+.gnb-depth3 > li > a:after{content:'';display:block;width:0;height:1px;background:#EA002C;transition:all .3s;opacity:0;}
+.gnb-depth3 > li > a:focus,.gnb-depth3 > li > a:hover{color:#EA002C;}
+.gnb-depth3 > li > a:focus:after,.gnb-depth3 > li > a:hover:after{width:100%;opacity:1;}
+.gnb-depth3 > li + li{margin-top:8px;}
+.gnb-col.gnb-banner{padding:0;width:auto;border-right:0;}
+.gnb-bg{display:none;position:absolute;top:110px;left:0;z-index:300;width:100%;border-bottom:1px solid #e8e8e8;background:#f5f5f5;box-shadow:0px 30px 30px rgba(0,0,0,.2);}
+.gnb-bg:before{content:'';display:block;position:absolute;top:0;left:0;width:50%;height:100%;background:#fff;}
+.gnb-bg > span{display:block;position:relative;width:1090px;height:100%;margin:0 auto;background:#f5f5f5;}
+.gnb-bg > span:before{content:'';display:block;position:absolute;top:0;left:0;width:200px;height:100%;border-right:1px solid #e8e8e8;border-left:1px solid #e8e8e8;background:#fff;}
+.gnb-sub1 .gnb-col.gnb-banner{width:25%;}
+.gnb-sub2 .gnb-col.gnb-banner{width:50%;}
+.gnb-sub4 .gnb-col.gnb-banner{width:25%;}
+.gnb-sub6 .gnb-col .gnb-depth2:first-child{min-height:150px;}
+.header-side{position:absolute;top:48px;right:0;}
+.hd-search{display:inline-block;position:relative;width:160px;height:37px;padding-right:40px;border-radius:15px;background:#f7f7f7;}
+.hd-search input{width:100%;height:37px;padding:0 5px 0 15px;border:0;color:#888;font-size:16px;background:none;}
+.hd-search input:focus{outline:1px dotted #000;}
+.hd-search .btn-search{position:absolute;top:0;right:0;width:40px;height:37px;border:0;background:url(https://www.sk7mobile.com/html/images/icon/icon_search.png) no-repeat center;}
+.aside-top{display:none;}
+#quick{position:absolute;top:130px;right:50%;z-index:50;width:169px;margin-right:-735px;padding-top:20px;}
+#chatbot{bottom:70px;right:100px;--psview-layer-height:0px;}
+#ft{padding:35px 0 50px 0;}
+.ft-text{margin:0;}
+.ft-top{display:flex;align-items:center;justify-content:space-between;padding-top:20px;}
+.ft-top dt,.ft-top dd{display:inline;}
+.ft-top dd:after{content:'';display:block;}
+.fnb{height:114px;line-height:27px;}
+.ft-bottom{position:relative;padding-right:200px;font-size:15px;line-height:1.8;}
+[class^='icon-sns']{width:50px;height:50px;margin:0 0 0 7px;}
+.ft-bottom .nav{position:absolute;top:0;right:0;align-items:flex-start;}
+.ft-middle dt,.ft-middle dd{display:inline;}
+.ft-middle dd:after{content:'';display:block;}
+.ft-middle h1{font-size:21px;}
+.ft-middle .app_download_box .app_download_btn{padding:6px 24px;font-size:17px;}
+.sect .container{padding-top:40px;padding-bottom:150px;}
+}
+@media (min-width:1081px) and (max-width:1120px){
+.gnb .gnb-item + .gnb-item{margin-left:35px;}
+}
+@media (max-width:1079.98px){
+a:focus,button:focus{outline:0;}
+.container{padding-right:1.6rem;padding-left:1.6rem;}
+#chatbot{bottom:20px;right:15px;}
+#chatbot .chat-open span{height:60px;font-size:.9rem;}
+.chat-bt2{bottom:60px;right:0;}
+#hd > .container{padding:0;}
+.icon-my,.icon-mn{position:absolute;top:0;width:4.92rem;height:4.92rem;}
+.icon-my{right:0;background-image:url(https://www.sk7mobile.com/html/images/icon/icon_my_renewal.png);background-size:auto 1.92rem;}
+.icon-mn{left:0;background-size:auto 1.86rem;}
+#quick,.hd-top .icon-mn{display:none;}
+#quick{display:none;}
+.gnb-wrap{display:none;overflow-y:auto;position:fixed;top:0;bottom:0;left:0;z-index:110;width:30.16rem;max-width:100%;padding-top:12.63rem;color:#222;background:#fff;}
+.icon-x{position:absolute;top:0.83rem;right:1rem;z-index:50;width:3rem;height:3rem;background-image:url(https://www.sk7mobile.com/html/images/icon/icon_close.png);background-size:1.25rem auto;}
+.hd-top{position:absolute;top:0;left:0;z-index:10;width:100%;height:12.63rem;padding-top:1.5rem;background:#5857d8;}
+.header-side{position:absolute;top:5.08rem;left:50%;z-index:50;width:75%;transform:translateX(-50%);}
+.hd-search{display:block;width:100%;height:2.9rem;padding-right:4.5rem;border-radius:3rem;background:url(https://www.sk7mobile.com/html/images/common/bg_search.png) no-repeat;background-size:100% 100%;}
+.hd-search input{width:100%;height:2.9rem;padding-left:2.08rem;border:0;color:#fff;font-size:1.25rem;background:none;}
+.hd-search input::placeholder{color:#fff;}
+.hd-search input:focus{outline:1px dotted #000;}
+.hd-search .btn-search{position:absolute;top:0;right:.5rem;width:2.9rem;height:2.9rem;border:0;background:url(https://www.sk7mobile.com/html/images/icon/icon_search2.png) no-repeat center;background-size:1.6rem auto;}
+.hd-util{display:none;}
+.gnb{display:block;position:relative;height:100%;min-height:46rem;}
+.gnb .gnb-list{height:100%;background:#f5f5f5;}
+.gnb .gnb-item{width:12rem;height:5.5rem;}
+.gnb .gnb-sub{display:none;overflow-y:auto;position:absolute;top:-1px;right:0;width:18.2rem;height:100%!important;border-left:1px solid #dfdfdf;background:#ffffff;}
+.gnb .gnb-link{display:block;padding-left:1.5rem;color:#888;font-size:1.5rem;line-height:5.5rem;}
+.gnb .gnb-title{display:none;}
+.gnb .gnb-col .gnb-depth2{padding:1.9rem 1rem 1.86rem 1.66rem;border-bottom:1px solid #dfdfdf;}
+.gnb .gnb-depth2 > a{color:#000;font-size:1.4rem;font-weight:500;line-height:1.1;}
+.gnb .gnb-depth3{margin-top:1rem;}
+.gnb .gnb-depth3 > li > a{color:#666;font-size:1.16rem;font-weight:400;}
+.gnb .gnb-depth3 > li + li{margin-top:.83rem;}
+.gnb .gnb-col.gnb-banner{position:absolute;width:100%;bottom:0;padding:0 1.3rem;}
+.aside-top{padding:0 1.5rem;}
+.aside-user{display:flex;align-items:center;justify-content:space-between;}
+.aside-user .title{font-size:1.33rem;font-weight:700;color:#fff;}
+.aside-user ul{margin-right:3rem;}
+.aside-user li{display:inline-block;}
+.aside-user li + li{padding-left:0.6rem;margin-left:0.6rem;position:relative;}
+.aside-user li + li:before{position:absolute;top:50%;left:0;display:inline-block;content:'';width:1px;height:0.83rem;background:#8686e1;transform:translateY(-50%);}
+.aside-user li a{font-size:1.08rem;color:#fff;}
+.aside-util{border-top:1px solid #8686e1;padding-top:1.5rem;margin-top:1.5rem;}
+.aside-util ul{display:flex;align-items:center;}
+.aside-util li{width:25%;text-align:center;position:relative;}
+.aside-util li + li:before{position:absolute;top:50%;left:0;display:inline-block;content:'';width:1px;height:4.25rem;background:#8686e1;transform:translateY(-50%);}
+.aside-util li a{display:block;padding-top:3.33rem;font-size:1rem;color:#fff;position:relative;}
+.aside-util li a:before{display:block;content:'';width:2.41rem;height:2.7rem;background-size:100% auto;background-repeat:no-repeat;position:absolute;top:0;left:50%;transform:translateX(-50%);}
+.aside-util li a.item1:before{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_aside_menu1.png);}
+.aside-util li a.item2:before{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_aside_menu2.png);}
+.aside-util li a.item3:before{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_aside_menu3.png);}
+.aside-util li a.item4:before{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_aside_menu4.png);}
+.ft-bottom .addr{margin-top:1.5rem;}
+.ft-bottom .nav{gap:0.3rem 0;}
+.copy{margin-bottom:1.5rem;}
+.ft-bottom [class^='banner-']{margin-right:0.5rem;}
+.ft-bottom [class^='icon-sns']{margin-left:0.5rem;}
+.ft-middle{flex-direction:column;gap:2rem 0;padding-top:0px;}
+.ft-middle h1{font-size:1.1rem;}
+.ft-middle .app_download_box > img{width:7rem;}
+}
+@media (max-width:620px){
+.ft-bottom [class^='banner-']{margin-right:0.4rem;height:2.6rem;}
+.ft-bottom [class^='icon-sns']{margin-left:0;margin-right:0.4rem;width:2.6rem;height:2.6rem;}
+.ft-bottom .nav{gap:0.6rem 0;}
+.ft-bottom .nav .ft-sns{flex-direction:row;margin-left:0;}
+}
+@media (max-width:575.98px){
+html{font-size:3vw;}
+.ft-middle{font-size:1.25rem;}
+.ft-middle h1{font-size:1.3rem;}
+.ft-middle .app_download_box > img{width:8rem;}
+.ft-middle .app_download_box > img{width:8rem;display:none;}
+.ft-middle .app_download_box .app_download{row-gap:1rem;}
+}
+@media (max-width:359.98px){
+html{font-size:11px;}
+.gnb .gnb-item{width:11rem;}
+.fnb{display:inline-block;height:auto;margin-left:-4px;}
+}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/component/typography.css?1701151833000 */
+.text-link{border-width:0 0 1px 0;border-style:solid;border-color:#000;color:#000!important;font-weight:500;}
+[class^=heading-]:before,[class^=heading-]:after{content:'';display:table;}
+[class^=heading-]:after{clear:both;}
+[class^=heading-]{position:relative;}
+[class^=heading-] .title{display:inline-block;position:relative;vertical-align:middle;color:#000;font-family:'Noto Sans KR';font-weight:600;word-break:keep-all;line-height:1.2;}
+[class^=heading-] + [class^=heading-]{margin-top:0;}
+.heading-depth1{margin:0 0 1.5rem;text-align:center;}
+.heading-depth1 .title{font-size:1.8rem!important;}
+.heading-depth1 .sub{margin:1rem 0 0;color:#666;font-size:1.083rem;font-weight:300;}
+.heading-depth2{margin:2.5rem 0 1rem;}
+.heading-depth2 .title{font-size:1.5rem!important;font-weight:700;}
+.lst-bullet > li{position:relative;padding-left:.7rem;color:#333;font-size:1.166rem;font-weight:400;line-height:1.3;}
+.lst-bullet > li:before{content:'';display:block;position:absolute;top:.5rem;left:0;width:4px;height:4px;background:#000;}
+.lst-bullet > li + li{margin-top:1.25rem;}
+.lst-dot > li{position:relative;padding-left:.7rem;color:#666;font-size:1.2rem;font-weight:400;line-height:1.3;}
+.lst-dot > li:before{content:'\b7\a0';display:inline-block;margin-right:.2rem;margin-left:-.7rem;}
+.lst-dot > li + li{margin-top:.25rem;}
+.lst-star > li{position:relative;padding-left:.7rem;color:rgba(0,0,0,.6);font-size:1.16rem;line-height:1.44;}
+.lst-star > li:before{content:'*';display:block;position:absolute;top:0;left:0;}
+@media (min-width:1080px){
+.text-link{border-width:0 0 2px 0;}
+.text-link:hover,.text-link:focus{border-color:#3717CE;color:#3717CE!important;text-decoration:none!important;}
+.heading-depth1{margin:0 0 29px;text-align:left;}
+.heading-depth1 .title{font-size:35px!important;}
+.heading-depth1 .sub{margin-top:8px;font-size:18px;}
+.heading-depth2{margin:60px 0 18px;}
+.heading-depth2 .title{font-size:22px!important;}
+.lst-bullet > li{font-size:18px;line-height:1.5;}
+.lst-bullet > li:before{top:11px;}
+.lst-bullet > li + li{margin-top:15px;}
+.lst-dot > li{font-size:16px;line-height:24px;}
+.lst-dot > li + li{margin-top:0;}
+}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/component/form.css?1732093227000 */
+label{margin-bottom:0;}
+.form-control{height:3.3rem;padding:.8rem 1.333rem;border-color:#ccc;border-radius:.333rem;font-size: clamp(16px, 1.166rem, 1.166rem);}
+.form-control:disabled,.form-control.disabled{color:rgba(0, 0, 0, .4);background:#f1f1f1;}
+.inline{display:inline-block;margin-right:15px;}
+[class*=form-].inline{padding-top:.3rem!important;padding-bottom:.3rem!important;}
+.form-radio{display:inline-block;overflow:hidden;position:relative;vertical-align:middle;min-height:1.5rem;padding:1px;margin-right:0.5rem;}
+.form-radio input[type='radio']{position:absolute;top:-10px;left:-999rem;width:100%;height:100%;}
+html.is_pc .form-radio input[type='radio']:focus + label{outline:1px dotted #000;}
+.form-radio label{position:relative;min-width:4.5rem;min-height:1.5rem;padding-left:1.666rem;color:#000;font-size:1.166rem;line-height:1.5rem;cursor:pointer;}
+.form-radio label:before{content:'';display:block;display:inline-block;position:absolute;top:.1rem;left:0;width:1.3rem;height:1.3rem;background-image:url(https://www.sk7mobile.com/html/images/icon/icon_radio_off.png);background-repeat:no-repeat;background-size:100% 100%;}
+.form-radio input[type='radio']:checked + label:before{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_radio_on.png);}
+.form-radio input[type='radio']:disabled + label:before{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_radio_disabled_uncheck.png)!important;}
+.form-radio input[type='radio']:checked:disabled + label:before{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_radio_disabled_check.png)!important;}
+.form-radio input[type='radio']:disabled + label{color:#808080;}
+.form-checkbox{display:inline-block;overflow:hidden;position:relative;vertical-align:middle;min-height:1.5rem;padding:1px;}
+.form-checkbox input[type='checkbox']{position:absolute;top:-10px;left:-999rem;width:100%;height:100%;}
+html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotted #000;}
+.form-checkbox label{position:relative;min-width:1.5rem;min-height:1.5rem;padding-left:1.666rem;color:#000;font-size:1.166rem;line-height:1.2;cursor:pointer;}
+.form-checkbox label:before{content:'';display:block;display:inline-block;position:absolute;top:.1rem;left:0;width:1.3rem;height:1.3rem;background-image:url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_off.png);background-repeat:no-repeat;background-size:100% 100%;}
+.form-checkbox input[type='checkbox']:checked + label:before{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_on.png);}
+.form-wrap{position:relative;}
+.inp-form-wp + .inp-form-wp{margin-top:1.66rem;}
+.inp-tit p{color:#000;font-size:1.25rem;font-weight:500;letter-spacing:-.3px;line-height:1;}
+.inp-cont{margin-top:.83rem;}
+.form-wrap .btn-sm{min-width:9.16rem;}
+.form-wp-bottom{padding-bottom:35px;}
+.text-info{margin-top:.8rem;color:#000!important;font-size:1.1rem;}
+.text-info.text-grey{color:#666!important;}
+.inp-form-wp{display:table;width:100%;}
+.form-flex{display:-webkit-box;display:-ms-flexbox;display:flex;align-items:center;-webkit-box-align:center;-ms-flex-align:center;}
+.form-flexible{flex:1;width:100%;-webkit-box-flex:1;-ms-flex:1;}
+.secure-wp{position:relative;padding:0 9.166rem;}
+.secure-wp .secure-area{display:flex;position:absolute;top:0;left:0;justify-content:center;flex-direction:column;width:8.75rem;padding:0;text-align:center;}
+.secure-wp .btn-wp{position:absolute;top:0;right:0;}
+.secure-wp .btn{overflow:hidden;width:3.4rem;min-width:auto!important;height:3.4rem;}
+.secure-wp .btn:before{content:'';display:block;position:absolute;top:50%;left:50%;width:2.66rem;height:2.66rem;transform:translate(-50%,-50%);}
+.secure-wp .btn + .btn{margin-left:.4rem;}
+.secure-wp .btn.btn-new:before{background:url(https://www.sk7mobile.com/html/images/icon/icon_new.png) no-repeat center;background-size:1.33rem auto;}
+.secure-wp .btn.btn-audio:before{background:url(https://www.sk7mobile.com/html/images/icon/icon_audio.png) no-repeat center;background-size:1.33rem auto;}
+@media (min-width:1080px){
+.form-control{height:45px;padding:9px 20px 10px;border-radius:4px;font-size:16px;}
+.inline{margin-right:24px;}
+.form-radio label{min-height:20px;padding-left:28px;font-size:17px;line-height:20px;}
+.form-radio label:before{top:0;width:20px;height:20px;}
+.form-checkbox label{padding-top:3px;padding-left:38px;font-size:17px;line-height:22px;}
+.form-checkbox label:before{top:0;width:28px;height:28px;}
+.form-wrap:not(.vertical){border-top:2px solid #5857d8;border-bottom:2px solid #5857d8;}
+.form-wrap:not(.vertical):after{display:none;}
+.form-wrap:not(.vertical) .form-control{max-width:375px;}
+.form-wrap:not(.vertical) .inp-form-wp{display:table;width:100%;}
+.form-wrap:not(.vertical) .inp-form-wp + .inp-form-wp{margin-top:0;margin-bottom:0;}
+.form-wrap:not(.vertical) .inp-tit,.form-wrap:not(.vertical) .inp-cont{display:table-cell;vertical-align:middle;height:70px;padding:12px 15px 12px 30px;border-bottom:1px solid #ededed;}
+.form-wrap:not(.vertical) .inp-tit{width:21%;min-width:150px;background:#f7f6fb;}
+.form-wrap:not(.vertical) .inp-tit p{font-size:18px;font-weight:400;line-height:1.3;}
+.form-wrap:not(.vertical) .inp-cont{width:79%;margin-top:0;}
+.text-info{margin-top:10px;font-size:15px;}
+.form-wrap .btn-sm{min-width:157px;}
+.secure-wp{width:375px;padding:0 106px 0 122px;}
+.secure-wp .secure-area{width:112px;}
+.secure-wp input.form-control{width:144px;}
+.secure-wp .btn-wp{right:-5px;width:100px;}
+.secure-wp .btn{width:42px;height:42px;}
+.secure-wp .btn.btn-new:before{background-size:17px auto;}
+.secure-wp .btn.btn-audio:before{background-size:16px auto;}
+.secure-wp.vertical{width:auto;padding:54px 0 0 0;}
+.secure-wp.vertical .btn-wp{left:127px;width:100px;}
+.secure-wp.vertical input.form-control{width:375px;}
+.form-flexible{flex:0 1 auto;width:auto;}
+.form-md{width:375px!important;}
+}
+@media (max-width:1079.98px){
+.form-wp-bottom{padding-bottom:1.66rem;}
+.acc-group .acc-head .form-checkbox label{padding-left:2.33rem;font-size:1.25rem;line-height:1.83rem;}
+.acc-group .acc-head .form-checkbox label:before{top:0;width:1.83rem;height:1.83rem;background-image:url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_lg_off.png);}
+.acc-group .acc-head .form-checkbox input[type='checkbox']:checked + label:before{background-image:url(https://www.sk7mobile.com/html/images/icon/icon_checkbox_lg_on.png);}
+}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/component/button.css?1669280507000 */
+.btn{display:inline-block;position:relative;padding:.666rem .833rem;border:1px solid transparent;border-width:1px;border-radius:2rem;font-size:1.2rem;font-weight:400;text-align:center;letter-spacing:-.5px;line-height:1.5;background-color:transparent;cursor:pointer;}
+.btn + .btn{margin-left:.4rem;}
+.btn:focus{outline:1px dotted #000;}
+.btn:not(.btn-shadow){box-shadow:none!important;}
+.btn-shadow,.btn-shadow:hover,.btn-shadow:focus{background:#fff;box-shadow:.28rem .28rem .4rem 0 rgba(190, 190, 190, .22);}
+.btn-default{border-color:#ccc!important;color:#000!important;background:#fff!important;}
+.btn-primary{border-color:#5857d8!important;color:#fff!important;background:#5857d8!important;}
+.btn-secondary{border-color:#a2a2a2!important;color:#fff!important;background:#a2a2a2!important;}
+.btn:disabled{border-color:#a2a2a2!important;color:#fff!important;background:#a2a2a2!important;box-shadow:none!important;opacity:1;}
+.btn-sm{min-width:6rem;padding:.65rem 1.43rem .65rem;font-size:1.166rem;}
+.btn-lg{padding:.666rem 1.666rem;font-size:1.5rem;font-weight:500;}
+.btn-wrap{margin:1.916rem -.5rem 0;}
+.btn-wrap:after{content:'';display:block;clear:both;}
+.btn-wrap > span{display:inline-block;float:left;width:100%;padding:0 .5rem;}
+.btn-wrap > span > .btn{display:block;width:100%;padding-right:0;padding-left:0;}
+.btn-wrap.item2 > span{width:50%;}
+@media (min-width:1080px){
+.btn-wrap{margin-right:-5px;margin-left:-5px;text-align:center;}
+.btn-wrap > span{float:none;width:auto!important;min-width:360px;padding:0 5px;}
+.btn-wrap > span .btn{letter-spacing:-.1rem;}
+.btn-wrap.item2 > span{min-width:290px;}
+.btn-w-block{display:block;width:45.5%;}
+.btn-sm{min-width:120px;padding-top:8px;padding-bottom:7px;font-size:18px;}
+.btn-lg{padding-top:15px;padding-bottom:14px;font-size:22px;}
+}
+@media (max-width: 1079.98px){
+.btn-sm{letter-spacing:-.09rem;}
+.btn-m-block{display:block;width:100%;padding-right:0!important;padding-left:0!important;}
+}
+@media (max-width:359.98px){
+.btn-lg{font-size:1.33rem;}
+}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/component/table.css?1667897278000 */
+caption{overflow:hidden;position:absolute;width:1px;height:1px;border:none;clip:rect(1px, 1px, 1px, 1px);}
+caption{position:static;padding:0;color:transparent;caption-side:top;}
+table{width:100%;border-spacing:0;border-collapse:collapse;position:relative;}
+table::after{content:'';position:absolute;left:0;bottom:0;width:100%;border-bottom:1px solid #5857d8;}
+.tb{table-layout:fixed;border-top:1px solid #5857d8;background:#fff;}
+.tb th,.tb td{vertical-align:middle;height:2.25rem;padding:.85rem .6rem;border-bottom:1px solid #d0d0d0;color:#000;font-size:1.083rem;font-weight:400;text-align:center;word-break:break-all;line-height:1.2;}
+.tb th{background:#f7f6fb;}
+td.text-left{padding-left:1.25rem!important;}
+.tb thead th{color:#5857d8;}
+.tb.bl th,.tb.bl td{border-left:1px solid #d0d0d0;}
+.tb.bl tr th:first-child,.tb.bl tr td:first-child{border-left:0;}
+@media (min-width:1080px){
+.tb{border-top:2px solid #5857d8;}
+.tb th,.tb td{padding:19px 10px 18px;font-size:1rem;}
+}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/component/accordion.css?1669280507000 */
+.acc-group{overflow:hidden;margin:0 -1.6rem 0;border-top:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4;}
+.acc-group .acc-head{position:relative;padding:1px 0;background:#f8f8f8;}
+.acc-group .acc-head > p{width:100%;padding:.83rem 2.6rem .83rem 1.6rem;color:#000;font-size:1.25rem;font-weight:400;text-align:left;}
+.acc-group .acc-head .form-checkbox{vertical-align:top;}
+.acc-group .btn-toggle{position:relative;width:100%;padding:.83rem 2.6rem .83rem 1.6rem;color:#000;font-size:1.25rem;font-weight:400;text-align:left;}
+.acc-group .btn-toggle:after{content:'';display:block;position:absolute;top:50%;right:1.6rem;width:1.16rem;height:.5rem;background:url(https://www.sk7mobile.com/html/images/icon/icon_collapse.png) no-repeat;background-size:auto 100%;transition:transform .3s;transform:translateY(-50%);}
+.acc-group .active .btn-toggle:after{transform:translateY(-50%) rotate(-180deg);}
+.acc-group .acc-content{height:auto;padding:1.66rem 1.6rem;border-top:1px solid #d4d4d4;font-size:1.08rem;background:#fff;}
+.acc-group .acc-content strong{font-size:1.08rem;}
+.acc-group.acc-type1{margin:4.16rem -1.6rem 0;}
+.acc-group.acc-type1 .acc-head{background:#fff;}
+.acc-group.acc-type1 .acc-content{background:#f8f8f8;}
+.acc-group.agree{margin-top:0!important;margin-right:0!important;margin-left:0!important;border:1px solid #d4d4d4;border-radius:.333rem;}
+.acc-group.agree .acc-content{overflow-y:auto;max-height:14.166rem;line-height:1.5;}
+@media (min-width:1080px){
+.acc-group{margin:0;border:1px solid #dfdfdf;border-radius:10px;}
+.acc-group .acc-head > p{padding-right:80px;padding-left:50px;font-size:21px;}
+.acc-group .acc-head label{vertical-align:top;}
+.acc-group .btn-toggle{padding-right:80px;padding-left:50px;font-size:21px;}
+.acc-group .btn-toggle:after{right:50px;width:17px;height:7px;}
+.acc-group .acc-content{padding:50px;font-size:16px;}
+.acc-group.acc-type1{margin:90px 0 0;}
+.acc-group.acc-type1 .acc-content{padding:30px 50px;}
+.acc-group.agree .acc-content,.acc-group.agree .acc-content strong{max-height:230px;font-size:16px;}
+}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/component/modal.css?1667897278000 */
+.modal{display:none;overflow-x:hidden;overflow-y:auto;position:fixed;top:0;left:0;width:100%;height:100%;border:0;}
+.modal-dialog{max-width:550px;}
+.modal-content{overflow:hidden;border:0;border-radius:.83rem;background:#fff;}
+.modal-content.bg-none{color:#fff;background:none;}
+.modal .btn-close{overflow:hidden;position:absolute;top:0;right:0;width:3.75rem;height:3.75rem;border:0;color:transparent;text-indent:100%;white-space:nowrap;background:url(https://www.sk7mobile.com/html/images/icon/icon_close1.png) no-repeat center center;background-size:1.33rem auto;cursor:pointer;}
+.modal-head{padding:1.5rem 4.58rem 1.25rem 1.5rem;}
+.modal-head .title{display:inline-block;color:#000;font-size:1.5rem;font-weight:700;word-break:break-all;}
+.modal-body{overflow-x:hidden;padding:0 1.6rem;font-size:1rem;}
+.modal-body:after{content:'';display:block;width:100%;height:2.08rem;}
+.modal-foot{display:-ms-flexbox;display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;-ms-flex-wrap:wrap;-ms-flex-align:center;-ms-flex-pack:end;}
+.modal-dialog-scrollable .modal-foot,.modal-dialog-scrollable .modal-head{flex-shrink:0;-ms-flex-negative:0;}
+.modal-foot > span{display:block;flex:1;}
+.modal-foot .btn{display:block;width:100%;padding:1.5rem 0;border:0!important;border-radius:0!important;font-size:1.41rem;font-weight:400;line-height:1;}
+.modal-sm,.modal-lg{max-width:none;}
+.modal-lg .modal-dialog{max-width:800px;}
+.dim{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;background-color:#000;opacity:.6;}
+.modal .alert-wp{color:#000;font-size:1.33rem;text-align:center;}
+@media (min-width: 576px){
+.modal-lg .modal-dialog{max-width:560px;}
+}
+@media (min-width: 760px){
+.modal-lg .modal-dialog{max-width:750px;}
+}
+@media (min-width:1080px){
+.modal-dialog{width:550px;}
+.modal-content{width:100%!important;border-radius:16px;}
+.modal .btn-close{width:60px;height:60px;background-size:22px auto;}
+.modal-head{padding:30px 38px 20px;}
+.modal-head .title{font-size:24px;}
+.modal-body{padding:0 38px;}
+.modal-body:after{height:40px;}
+.modal-foot .btn{font-size:24px;}
+.modal-sm .modal-dialog{width:450px;}
+.modal-md .modal-dialog{width:600px;max-width:600px;}
+.modal-lg .modal-dialog{width:1000px;max-width:1000px;}
+.modal .alert-wp{font-size:20px;}
+}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/common/content.css?1743582414000 */
+.message{margin:2.5rem 0;text-align:center;}
+.message .title{display:block;color:#000;font-size:1.5rem;font-weight:700;line-height:1.3;}
+.message p{margin-top:.66rem;color:#666;font-size:1.16rem;font-weight:300;line-height:1.5rem;}
+.line{margin-top:1.66rem;padding-top:1.66rem;border-top:1px solid #ddd;text-align:center;}
+.term-text *{color:#000;font-size:1rem;font-weight:300;line-height:1.4;}
+.term-text strong{font-weight:500;}
+.modal-imgSlider{padding-right:0!important;}
+.modal-imgSlider .modal-content{background:transparent;}
+.modal-imgSlider .modal-body{padding-top:3rem;}
+.modal-imgSlider.modal .btn-close{background:url(https://www.sk7mobile.com/html/images/icon/icon-cls.png) no-repeat center;width:3rem;height:3rem;top:0px;right:70px;background-size:1.25rem 1.25rem;z-index:200;}
+.modal-imgSlider .swiper-button-prev{left:0;}
+.modal-imgSlider .swiper-button-next{right:0;}
+@media (min-width: 1080px){
+.modal-imgSlider .modal-body{padding-top:60px;overflow-y:hidden;}
+.modal-imgSlider.modal .btn-close{width:1.75rem;height:1.75rem;}
+.modal-imgSlider.modal .btn-close{right:50px;}
+.swiper-container-autoheight.type{width:720px;}
+}
+@media (max-width: 576px){
+.modal-imgSlider.modal .btn-close{right:58px;}
+}
+.loading{display:block;position:relative;margin:0 auto;}
+.loading-text{position:absolute;top:50%;left:50%;color:#bbadff;font-family:'Noto Sans KR';font-size:1.16rem;letter-spacing:.1rem;transform:translate(-50%,-50%);}
+.loading-dot{overflow:hidden;position:relative;width:1em;height:1em;margin:3rem auto;border-radius:50%;color:#bbadff;font-size:5.3rem;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation:aniLoad 1.7s infinite ease, round 1.7s infinite ease;animation:aniLoad 1.7s infinite ease, round 1.7s infinite ease;}
+.loading-alert{color:#fff;font-size:1.41rem;font-weight:300;text-align:center;}
+.modal-loadingSelf .modal-body{padding:0 1.06rem;}
+.modal-loadingSelf .guide-box{margin-top:2.5rem;padding:1.25rem 1.5rem;border-radius:.5rem;color:#fff;background:rgba(0,0,0,.75);}
+.modal-loadingSelf .guide-box .title{display:block;position:relative;margin-bottom:.83rem;padding-left:1.83rem;font-size:1.25rem;font-weight:500;}
+.modal-loadingSelf .guide-box .title:before{content:'';display:block;position:absolute;top:.2rem;left:0;width:1.41rem;height:1.41rem;background:url(https://www.sk7mobile.com/html/images/icon/icon_danger2.png) no-repeat;background-size:100% 100%;}
+.modal-loadingSelf .guide-box .lst-dot li{color:#afafaf;}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/common/responsive.css?1727256171000 */
+@media (min-width: 1080px){
+.message{margin:50px 0 40px;}
+.message .title{font-size:35px;}
+.message p{font-size:18px;}
+.line{margin-top:38px;padding-top:35px;}
+.term-text *{font-family:'Noto Sans KR'!important;font-size:14px;}
+.loading-alert{font-size:31px;}
+}
+/*! CSS Used from: https://www.sk7mobile.com/html/css/common/main.css?1732582575000 */
+.icon-close{width:2.3rem;height:2.3rem;background-image:url(https://www.sk7mobile.com/html/images/icon/icon_close_02.png);background-size:auto 1.12rem;transform:translateY(-50%);z-index:100;}
+.top-swiper{overflow:hidden;}
+@media (min-width: 1080px){
+.icon-close{width:28px;height:28px;background-size:13px auto;transform:translateY(-50%);}
+.top-swiper{width:100%;}
+.top-swiper img{width:1120px;}
+.icon-close{z-index:100;}
+}
+/*! CSS Used keyframes */
+@keyframes slide-top{0%{bottom:0;opacity:.5;}100%{bottom:60px;opacity:1;}}
+@keyframes slide-top{0%{bottom:0;opacity:0;}100%{bottom:60px;opacity:1;}}
+@-webkit-keyframes aniLoad{0%{box-shadow:0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;}5%,95%{box-shadow:0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;}10%,59%{box-shadow:0 -.83em 0 -.4em, -.087em -.825em 0 -.42em, -.173em -.812em 0 -.44em, -.256em -.789em 0 -.46em, -.297em -.775em 0 -.477em;}20%{box-shadow:0 -.83em 0 -.4em, -.338em -.758em 0 -.42em, -.555em -.617em 0 -.44em, -.671em -.488em 0 -.46em, -.749em -.34em 0 -.477em;}38%{box-shadow:0 -.83em 0 -.4em, -.377em -.74em 0 -.42em, -.645em -.522em 0 -.44em, -.775em -.297em 0 -.46em, -.82em -.09em 0 -.477em;}100%{box-shadow:0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;}}
+@keyframes aniLoad{0%{box-shadow:0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;}5%,95%{box-shadow:0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;}10%,59%{box-shadow:0 -.83em 0 -.4em, -.087em -.825em 0 -.42em, -.173em -.812em 0 -.44em, -.256em -.789em 0 -.46em, -.297em -.775em 0 -.477em;}20%{box-shadow:0 -.83em 0 -.4em, -.338em -.758em 0 -.42em, -.555em -.617em 0 -.44em, -.671em -.488em 0 -.46em, -.749em -.34em 0 -.477em;}38%{box-shadow:0 -.83em 0 -.4em, -.377em -.74em 0 -.42em, -.645em -.522em 0 -.44em, -.775em -.297em 0 -.46em, -.82em -.09em 0 -.477em;}100%{box-shadow:0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;}}
+@-webkit-keyframes round{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}
+@keyframes round{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}
+</style>
+
+</head>
+
+
+<body>
+
+
+    <nav>
+        <a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+    </nav>
+    
+    
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- Header -->
+        <header id="hd">
+            <div class="container">
+                <h1 class="hd-logo"><a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAAuCAYAAAABQwQEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDExNi4xNjQ3NjYsIDIwMjEvMDIvMTktMjM6MTA6MDcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjIwQzRERUZFNDJBQTExRUQ5NDVFQjNCM0VEMzgxQzY5IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjIwQzRERUZENDJBQTExRUQ5NDVFQjNCM0VEMzgxQzY5IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4xIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjc3QkQ5QTc2OUU2MDExRUFCRkM1QjgzNTNGOTc3N0UxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjc3QkQ5QTc3OUU2MDExRUFCRkM1QjgzNTNGOTc3N0UxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+YzeIbAAADXBJREFUeNrsXQmY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" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+            </div>
+        </header>
+        <!-- //Header -->
+    
+        <!-- Container -->
+        <div id="ct">
+    
+    
+    
+    <section class="sect">
+        <div class="container">
+            <div class="heading-depth1">
+                <h2 class="title">유심이용 휴대폰 등록</h2>
+                <p class="sub">신청서 작성 시 입력하신 가입고객정보(이름, 휴대폰번호, 접수번호) 로 주문하신 상품내역 및 상태를 조회하실 수 있습니다.</p>
+            </div>
+    
+            <div class="heading-depth2">
+                <h3 class="title">가입자 정보</h3>
+            </div>
+            <div class="form-wrap mb-5" id="line-top">
+                <div class="inp-form-wp" id="certBox">
+                    <div class="inp-tit">
+                        <p>본인인증 방법</p>								
+                    </div>
+                    <div class="inp-cont">
+                        <span class="form-radio inline">
+                            <input type="radio" name="authOn1" id="authOn1-1" checked="" onclick="fnSelAuthTp('P');" value="p">
+                            <label for="authOn1-1" class="checked">
+                                휴대폰 인증
+                            </label>
+                        </span>
+                        <span class="form-radio inline">
+                            <input type="radio" name="authOn1" id="authOn1-3" onclick="fnSelAuthTp('C');" value="c">
+                            <label for="authOn1-3" class="">
+                                신용카드 인증
+                            </label>
+                        </span>
+                        <p class="text-info text-grey">
+                        * 본인 명의의 인증수단으로 본인인증을 진행해주세요.<br>
+                        * 신용카드 인증은 본인인증기관(KCB)에서 제공하는 카드에 한해 가능합니다.<br>
+                        * 등록할 휴대폰에 유심을 꽂으신 후 인증해주세요.
+                        </p>
+                        
+                        <div id="dv_auth_P" class="text-info text-grey">
+                            <div class="btn-wp mt-10">
+                                <button type="button" class="btn btn-sm btn-primary popAuthBtn btn-w-block btn-m-block" onclick="kcbPhoneAuthPopUp()">휴대폰 인증</button>
+                            </div>
+                        </div>
+                        <div id="dv_auth_C" class="text-info text-grey" style="display: none;">
+                            <div class="btn-wp mt-10">
+                                <button type="button" class="btn btn-sm btn-primary popAuthBtn btn-w-block btn-m-block" onclick="kcbCardAuthPopUp()">신용카드 인증</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line my-0 message form-wp-bottom" id="opt2" style="display: none; font-size:35px; border-bottom: 1px solid #ededed; border-top: 2px solid #5857d8; margin:none;">
+                    <strong class="title">휴대폰 인증이 <span class="text-danger">완료</span>되었습니다.</strong>
+                    <p>아래 나머지 항목들을 작성하여 주시기 바랍니다.</p>
+                </div>
+                <div class="line my-0 message form-wp-bottom" id="opt3" style="display: none; font-size:35px; border-bottom: 1px solid #ededed; border-top: 2px solid #5857d8; margin:none;">
+                    <strong class="title">신용카드 인증이 <span class="text-danger">완료</span>되었습니다.</strong>
+                    <p>아래 나머지 항목들을 작성하여 주시기 바랍니다.</p>
+                </div>
+                    <div class="inp-form-wp">
+                        <div class="inp-tit" style="margin-top: 15px;"><p>보안문자</p></div>
+                        <div class="inp-cont">
+                            <div class="secure-wp vertical">
+                                <span class="secure-area form-control disabled">
+                                    <span><img id="listCaptchaImage" alt="보안문자" q="0.39132293937625495" src="https://www.sk7mobile.com/captcha.do?q=0.39132293937625495&r=0.09050289401428624"></span>
+                                </span>
+                                <div class="btn-wp">
+                                    <button type="button" class="btn btn-shadow btn-default btn-new" onclick="fnCaptchaRefresh($('#listCaptchaImage'));">
+                                        <span class="sr-only">보안문자 새로고침</span>
+                                    </button>
+                                    <button type="button" class="btn btn-shadow btn-default btn-audio" onclick="fnCaptchaAudio($('#listCaptchaImage'));">
+                                        <span class="sr-only">보안문자 음성듣기</span>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control" id="listCaptchaText" name="listCaptchaText" placeholder="보안문자를 입력하세요" maxlength="6" oninput="onlyNumberInputEvent(this, event);" onkeydown="return onlyNumber(event);" title="보안문자 입력">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inp-form-wp">
+                        <div class="inp-tit"><p>유심이용 휴대폰 번호</p></div>
+                        <div class="inp-cont">
+                            <div class="form-flex">
+                                <div class="inp-wp form-flexible">
+                                    <input type="number" class="form-control form-md" name="phoneNo" id="phoneNo" maxlength="11" oninput="onlyNumberInputEvent(this, event);" onkeydown="return onlyNumber(event);" placeholder="'-' 없이 숫자만 입력해주세요." title="휴대폰 번호 입력">
+                                </div>
+                            </div>
+                            <p class="text-info text-grey" style="text-align:left;">* 본인 인증한 명의의 SK 세븐모바일 휴대폰번호를 입력해주세요.</p>
+                        </div>
+                    </div>
+            </div>
+    
+            <div class="acc-group acc-type1 agree">
+                <dl class="acc-item">
+                    <dt class="acc-head">
+                        <p>
+                            <span class="form-checkbox">
+                                <input type="checkbox" name="privacyAgree" id="privacyAgree">
+                                <label for="privacyAgree">[필수] 개인정보 수집 및 이용 동의</label>
+                            </span>
+                        </p>
+                    </dt>
+                    <dd class="acc-body">
+                        <div class="acc-content term-text">
+                            1. 수집/이용 목적 : 휴대폰등록<br>
+                            2. 수집/이용 항목 : 이름, 휴대폰번호, 신용카드 번호<br>
+                            3. 보유/이용 기간 : <strong style="font-size: 1.2em;">조회 후 3개월까지</strong><br>
+                            ※ 개인정보 수집/이용에 동의하지 않을 수 있으나, 동의하지 않을 경우 해당 서비스를 이용할 수 없습니다.<br>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+    
+            <div class="btn-wrap item2">
+                <span><button type="button" class="btn btn-secondary btn-lg" onclick="history.back();">취소</button></span>
+                <span><button id="submitBtn" type="button" class="btn btn-primary btn-lg" onclick="goSubmit();">다음</button></span>
+            </div>
+            <div class="acc-group acc-type1 mt-5" data-accordion="true">
+                <dl class="acc-item active">
+                    <dt class="acc-head">
+                        <button class="btn btn-toggle" type="button" role="button" title="닫기">유의사항</button>
+                    </dt>
+                    <dd class="acc-body" role="region" aria-hidden="false" aria-expanded="true">
+                        <div class="acc-content" style="display: block;">
+                            <ul class="lst-bullet">
+                              <li>사용하실 휴대폰에 유심을 꽂으신 후 본인확인을 진행해주세요.</li>
+                                  <li>휴대폰 인증 또는 신용카드 인증을 통해 현재 사용중인 휴대폰으로 휴대폰 등록이 완료됩니다.</li>
+                               <li>본인인증 시 입력하는 정보는 해당 인증기관에서 직접 수집하므로 인증 이외의 용도로 이용 또는 저장되지 않습니다.</li>
+                               <li>신용카드 인증은 본인 명의의 신용카드로만 인증이 가능합니다.(미성년자의 경우 휴대폰 본인인증 이용)</li>
+                                <li>유심이용 휴대폰 등록 시, 등록하신 휴대폰은 중고 단말로 분류되어 약정/할부 가입이 불가합니다.</li>
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+    
+    
+        </div>
+        <!-- //Container -->
+    
+    
+    
+        <!-- Footer -->
+        <footer id="ft">
+            <div class="container">
+                <div class="ft-top">
+                    <p class="ft-text">나를 아끼는 모바일 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAAuCAYAAAABQwQEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDExNi4xNjQ3NjYsIDIwMjEvMDIvMTktMjM6MTA6MDcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjIwQzRERUZFNDJBQTExRUQ5NDVFQjNCM0VEMzgxQzY5IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjIwQzRERUZENDJBQTExRUQ5NDVFQjNCM0VEMzgxQzY5IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4xIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjc3QkQ5QTc2OUU2MDExRUFCRkM1QjgzNTNGOTc3N0UxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjc3QkQ5QTc3OUU2MDExRUFCRkM1QjgzNTNGOTc3N0UxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+YzeIbAAADXBJREFUeNrsXQmY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" alt="sk7mobile"></p><dl class="font-weight-normal">
+                        <dt class="font-weight-normal">가입/개통문의 :</dt>
+                        <dd>1599-3508(유료), 평일 10:00 ~ 18:00 (점심시간 12:30 ~ 13:30) </dd>
+                        <dt class="font-weight-normal">고객센터 :</dt>
+                        <dd>114(무료)/1599-0999(유료), 평일 09:00 ~ 18:00(점심시간 12:00 ~ 13:00)</dd>
+                        <dd>* 업무시간 외, 토/일 및 공휴일은 분실, 습득, 통화품질, 로밍, 선불 충전에 한해 24시간 365일 상담 가능</dd>
+                    </dl></div>
+                <hr>
+                <div class="ft-bottom">
+                    <div>(04212) 서울시 마포구 마포대로 144 마포T타운 대표이사 사장 최영찬 <br class="d-lg-none">사업자번호 : 104-81-43391 <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048143391" target="_blank" alt="새창열림" title="새청열림">통신 판매번호:2010-서울마포-3953</a></div>
+                    <p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- //Footer -->
+    </div>
+    <!-- //wrap -->
+
+
+</body>
+</html>
