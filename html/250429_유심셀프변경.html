@@ -813,7 +813,7 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
 /*! CSS Used fontfaces */
 
 
-
+.hide {display: none;}
 
 
 /*! CSS Used from: https://www.sk7mobile.com/html/css/component/form.css?1732093227000 */
@@ -844,6 +844,18 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
     border-radius: .5rem !important;
 }
 
+.btn-secondary-type2 {
+    border-color: #5857d8 !important;
+    color: #5857d8 !important;
+    background: #fff !important;
+}
+.inp-timer{position:relative;}
+.inp-timer input{padding-right:3.5rem;}
+.inp-timer .time{position:absolute;top:50%;right:1rem;color:#5857d8;font-family:'Lato','NotoSans';font-size:1.16rem;transform:translateY(-50%);}
+.inp-timer input:disabled + .time{display: none;}
+@media (min-width:1080px){
+.inp-timer .time{font-size:16px;}
+}
 
 </style>
 
@@ -916,46 +928,7 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
                     </div>
                 </div>
                 <div class="inp-form-wp">
-                    <div class="inp-tit"><p>휴대폰번호</p></div>
-                    <div class="inp-cont">
-                        <div class="inp-wp">
-                            <input type="text" class="form-control" placeholder="‘-’없이 숫자만 입력해주세요.">
-                        </div>
-                    </div>
-                </div>
-                <div class="inp-form-wp">
-                    <div class="inp-tit"><p>생년월일</p></div>
-                    <div class="inp-cont">
-                        <div class="inp-wp">
-                            <input type="text" class="form-control" placeholder="YYYYMMDD">
-                        </div>
-                    </div>
-                </div>
-                <div class="inp-form-wp">
-                    <div class="inp-tit"><p>본인인증 방법</p></div>
-                    <div class="inp-cont">
-                        <div class="form-btn-toggle v1" id="subsTpList" data-toggle="buttons">
-                            <span>
-                                <button type="button" value="2" title="선택됨" onclick="changeSubsTp(2);" id="subsTpIdx2" class="btn btn-sm btn-radius-md btn-effect active">휴대폰 인증</button>
-                            </span>
-                            <span>
-                                <button type="button" value="1" title="" onclick="changeSubsTp(1);" id="subsTpIdx1" class="btn btn-sm btn-radius-md btn-effect">신용카드 인증</button>
-                            </span>
-                        </div>
-                        <div class="text-info text-grey">
-                            * 본인 명의의 인증수단으로 본인인증을 진행해주세요.<br/>
-                            * 신용카드 인증은 본인인증기관(KCB)에서 제공하는 카드에 한해 가능합니다.<br/>
-                            * 등록할 휴대폰에 유심을 꽂으신 후 인증해주세요.
-                        </div>
-                        <div id="dv_auth_P" class="text-info text-grey">
-                            <div class="btn-wp mt-10">
-                                <button type="button" class="btn btn-sm btn-primary popAuthBtn btn-w-block btn-m-block" onclick="kcbPhoneAuthPopUp()">휴대폰 인증</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="inp-form-wp">
-                    <div class="inp-tit" style="margin-top: 15px;"><p>보안문자</p></div>
+                    <div class="inp-tit"><p>보안문자</p></div>
                     <div class="inp-cont">
                         <div class="secure-wp vertical">
                             <span class="secure-area form-control disabled">
@@ -970,6 +943,39 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
                                 </button>
                             </div>
                             <input type="text" class="form-control" id="listCaptchaText" name="listCaptchaText" placeholder="보안문자를 입력하세요" maxlength="6" oninput="onlyNumberInputEvent(this, event);" onkeydown="return onlyNumber(event);" title="보안문자 입력">
+                        </div>
+                    </div>
+                </div>
+                <div class="inp-form-wp">
+                    <div class="inp-tit"><p>유심 변경할 휴대폰번호</p></div>
+                    <div class="inp-cont">
+                        <div class="inp-wp">
+                            <input type="text" class="form-control" placeholder="‘-’없이 숫자만 입력해주세요.">
+                        </div>
+                        <div class="btn-wp mt-3">
+                            <button type="button" onclick="AuthenticationNumber(0)" class="btn btn-sm btn-primary">인증번호 발송</button>
+                            <button type="button" data-auth="0" class="btn btn-sm btn-secondary-type2 hide">재발송</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="inp-form-wp">
+                    <div class="inp-tit"><p>인증번호</p></div>
+                    <div class="inp-cont">
+                        <div class="inp-wp form-flexible inp-timer">
+                            <input type="text" class="form-control" data-auth="0" title="인증번호 입력" placeholder="인증번호 6자리를 입력해주세요" disabled>
+                            <span class="time" data-auth="0"></span>
+                        </div>
+                        <div class="btn-wp mt-3">
+                            <button type="button" data-auth="0" class="btn btn-sm btn-secondary-type2 hide">시간연장</button>
+                            <button type="button" data-auth="0" class="btn btn-sm btn-primary hide">인증번호 확인</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="inp-form-wp">
+                    <div class="inp-tit"><p>생년월일</p></div>
+                    <div class="inp-cont">
+                        <div class="inp-wp">
+                            <input type="text" class="form-control" placeholder="YYYYMMDD">
                         </div>
                     </div>
                 </div>
@@ -1092,7 +1098,7 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
     
             <div class="btn-wrap item1">
                 <span>
-                    <button type="button" class="btn btn-lg btn-primary" style="background-color: #3617cd !important;">지금 가입하기</button>
+                    <button type="button" class="btn btn-lg btn-primary" style="background-color: #3617cd !important;">지금 변경하기</button>
                 </span>
             </div>
             <div class="acc-group acc-type1 mt-5">
@@ -1142,7 +1148,47 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
         <!-- //Footer -->
     </div>
     <!-- //wrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <script>
+        function AuthenticationNumber(authIndex) {
+			var elements = $('[data-auth="' + authIndex + '"]');
+
+            var buttons = elements.filter('button');
+            var textInputs = elements.filter('input[type="text"]');
+            var timer = elements.filter('.time');
+
+            function startCountdown($element, totalSeconds) {
+                function updateDisplay() {
+                    var minutes = Math.floor(totalSeconds / 60);
+                    var seconds = totalSeconds % 60;
+                    $element.text(
+                    minutes.toString().padStart(2, '0') + ':' +
+                    seconds.toString().padStart(2, '0')
+                    );
+                }
+
+                updateDisplay();
+
+                var timer = setInterval(function () {
+                    totalSeconds--;
+                    if (totalSeconds < 0) {
+                    clearInterval(timer);
+                    $element.text('00:00');
+                    } else {
+                    updateDisplay();
+                    }
+                }, 1000);
+            }
+
+            buttons.removeClass('hide');
+            textInputs.prop('disabled', false);
+
+            timer.each(function () {
+                startCountdown($(this), 300);
+            });
+		}
+    </script>
 
 </body>
 </html>
