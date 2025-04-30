@@ -812,6 +812,39 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
 .mt-10{margin-top:10px;}
 /*! CSS Used fontfaces */
 
+
+
+
+
+/*! CSS Used from: https://www.sk7mobile.com/html/css/component/form.css?1732093227000 */
+.form-btn-toggle .btn{border-width:1px;border-color:#c9c9c9;color:#b1b1b1;background:#eaeaea;}
+.form-btn-toggle .btn.active{position:relative;z-index:10;border:1px solid #5857d8;color:#5857d8;background:#fff;}
+.form-btn-toggle .btn.btn-effect.active:after{content:'';display:block;position:absolute;bottom:-1.66rem;left:50%;width:90%;max-width:180px;height:1.66rem;background:url(https://www.sk7mobile.com/html/images/common/bg_toggle_shadow.png) no-repeat;background-size:100% 100%;transform:translateX(-50%);}
+.form-btn-toggle:not(.btn-wrap) > span{display:inline-block;}
+.form-btn-toggle:not(.btn-wrap) > span + span{margin-left:.8rem;}
+.form-wrap .btn-sm{min-width:9.16rem;}
+@media (min-width:1080px){
+.form-wrap .btn-sm{min-width:157px;}
+.form-btn-toggle:not(.btn-wrap) > span + span{margin-left:8px;}
+.form-btn-toggle.v1 .btn{min-width:182px;padding-right:10px;padding-left:10px;font-weight:500;}
+.form-btn-toggle .btn.btn-effect.active:after{bottom:-13px;height:12px;}
+
+
+.usim-btn {
+    width: calc(9.166rem - 0.83rem) !important;
+}
+}
+@media (max-width:1079.98px){
+.form-btn-toggle.v1{display:flex;}
+.form-btn-toggle.v1 > *{flex:1;width:100%;-webkit-box-flex:1;-ms-flex:1;}
+.form-btn-toggle.v1 .btn{width:100%;min-width:auto;}
+}
+
+.btn-radius-md {
+    border-radius: .5rem !important;
+}
+
+
 </style>
 
 </head>
@@ -870,210 +903,170 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label{outline:1px dotte
             <div class="heading-depth2">
                 <h3 class="title text-primary">신청 정보</h3>
             </div>
+            <div class="form-wrap">
+                
+            </div>
             <div class="form-wrap mb-5" id="line-top">
-                <div class="inp-form-wp" id="certBox">
-                    <div class="inp-tit">
-                        <p>본인인증 방법</p>								
-                    </div>
+                <div class="inp-form-wp">
+                    <div class="inp-tit"><p>이름</p></div>
                     <div class="inp-cont">
-                        <span class="form-radio inline">
-                            <input type="radio" name="authOn2" checked="checked" id="authOn2-0" onclick="fn_choiceAuth('N');">
-                            <label for="authOn2-0" class="checked">네이버 인증</label>
-                        </span>
-                        <span class="form-radio inline">
-                            <input type="radio" name="authOn2" id="authOn2-1" onclick="fn_choiceAuth('C');">
-                            <label for="authOn2-1" class="">신용카드 인증</label>
-                        </span>
-                        <span class="form-radio inline">
-                            <input type="radio" name="authOn2" id="authOn2-2" onclick="fn_choiceAuth('X');">
-                            <label for="authOn2-2" class="">범용 공동인증서</label>
-                        </span>
-                        <div id="dv_auth_N" class="text-info text-grey" style="display: block;">
-                            * 본인 명의의 인증수단으로 본인인증을 진행해주세요.<br>
-                            * 신용카드 인증은 본인인증기관(KCB)에서 제공하는 카드에 한해 가능합니다.<br>
-                            * 범용(유료)공동인증서는 PC버전에서만 가능합니다.
-                            <div class="inp-row2">
-                                <span class="form-checkbox">
-                                    <input type="checkbox" id="authAgreNaver">
-                                    <label for="authAgreNaver"> [필수] 본인은 진정한 가입 의사에 따라 가입신청서를 작성하며, 허위정보가 아님을 확인합니다.<br>본인여부 확인을 위해 이용약관 14조 1항 및 전기통신사업법 제 32조 4항에 따라 당사의 전화 확인 절차 진행에 동의하며 미응답시 부정가입의도가 있음으로 간주하여 이용정지 될 수 있음에 동의 합니다.</label>
-                                </span>
-                            </div>
-                            <div class="btn-wp mt-10">
-                                <button type="button" class="btn btn-sm btn-primary btn-375" onclick="authRealNameCheck('N');">네이버 인증</button>
-                            </div>
+                        <div class="inp-wp">
+                            <input type="text" class="form-control">
                         </div>
-                        <div id="dv_auth_P" class="text-info text-grey" style="display:none;">
-                            <p class="table-label">PASS 인증 휴대폰번호</p>
-                            <div class="sel-wp">
-                                <input type="number" pattern="[0-9]*" inputmode="numeric" oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);" class="form-control" name="custTelnoPass" id="custTelnoPass" placeholder="'-'를 제외하고 입력하세요." maxlength="11">
-                            </div>
-                            <p class="text-info text-grey">
-                            * 본인 명의의 인증수단으로 본인인증을 진행해주세요.<br>
-                            * 신용카드 인증은 본인인증기관(KCB)에서 제공하는 카드에 한해 가능합니다.<br>
-                            * 범용(유료)공동인증서는 PC버전에서만 가능합니다.
-                            </p>
-                            <div class="inp-row2">
-                                <span class="form-checkbox">
-                                    <input type="checkbox" id="authAgrePass">
-                                    <label for="authAgrePass"> [필수] 본인은 진정한 가입 의사에 따라 가입신청서를 작성하며, 허위정보가 아님을 확인합니다.<br>본인여부 확인을 위해 이용약관 14조 1항 및 전기통신사업법 제 32조 4항에 따라 당사의 전화 확인 절차 진행에 동의하며 미응답시 부정가입의도가 있음으로 간주하여 이용정지 될 수 있음에 동의 합니다.</label>
-                                </span>
-                            </div>
-                            <div class="btn-wp mt-10">
-                                <button type="button" id="btn_passReq" class="btn btn-sm btn-primary btn-375" onclick="authRealNameCheck('P');" style="display: inline-block;">PASS 인증요청</button>
-                                <button type="button" id="btn_passResult" class="btn btn-sm btn-primary btn-375" style="display:none;" onclick="fn_kcbPassLoginResult();">PASS 인증확인</button>
-                            </div>
-                        </div>
-                        <div id="dv_auth_C" class="text-info text-grey" style="display: none;">
-                            * 본인 명의의 인증수단으로 본인인증을 진행해주세요.<br>
-                            * 신용카드 인증은 본인인증기관(KCB)에서 제공하는 카드에 한해 가능합니다.<br>
-                            * 범용(유료)공동인증서는 PC버전에서만 가능합니다.
-                            <div class="inp-row2">
-                                <span class="form-checkbox">
-                                    <input type="checkbox" id="authAgreCard">
-                                    <label for="authAgreCard"> [필수] 본인은 진정한 가입 의사에 따라 가입신청서를 작성하며, 허위정보가 아님을 확인합니다.<br>본인여부 확인을 위해 이용약관 14조 1항 및 전기통신사업법 제 32조 4항에 따라 당사의 전화 확인 절차 진행에 동의하며 미응답시 부정가입의도가 있음으로 간주하여 이용정지 될 수 있음에 동의 합니다.</label>
-                                </span>
-                            </div>
-                            <div class="btn-wp mt-10">
-                                <button type="button" class="btn btn-sm btn-primary btn-375" onclick="authRealNameCheck('C');">신용카드 인증</button>
-                            </div>
-                        </div>						
-                        <div id="dv_auth_X" class="text-info text-grey" style="display: none;">
-                            * 본인 명의의 인증수단으로 본인인증을 진행해주세요.<br>
-                            * 신용카드 인증은 본인인증기관(KCB)에서 제공하는 카드에 한해 가능합니다.<br>
-                            * 범용(유료)공동인증서는 PC버전에서만 가능합니다.
-                            <div class="inp-row2">
-                                <span class="form-checkbox">
-                                    <input type="checkbox" id="authAgreCert">
-                                    <label for="authAgreCert"> [필수] 본인은 진정한 가입 의사에 따라 가입신청서를 작성하며, 허위정보가 아님을 확인합니다.<br>본인여부 확인을 위해 이용약관 14조 1항 및 전기통신사업법 제 32조 4항에 따라 당사의 전화 확인 절차 진행에 동의하며 미응답시 부정가입의도가 있음으로 간주하여 이용정지 될 수 있음에 동의 합니다.</label>
-                                </span>
-                            </div>
-                            <div class="btn-wp mt-10">
-                                <button type="button" class="btn btn-sm btn-primary btn-375" onclick="authNiceCheckPlus('X');">범용 공동인증서 인증</button>
-                            </div>
-                        </div>
-                        </div>
+                    </div>
                 </div>
-                <div class="line my-0 message form-wp-bottom" id="opt2" style="display: none; font-size:35px; border-bottom: 1px solid #ededed; border-top: 2px solid #5857d8; margin:none;">
-                    <strong class="title">휴대폰 인증이 <span class="text-danger">완료</span>되었습니다.</strong>
-                    <p>아래 나머지 항목들을 작성하여 주시기 바랍니다.</p>
+                <div class="inp-form-wp">
+                    <div class="inp-tit"><p>휴대폰번호</p></div>
+                    <div class="inp-cont">
+                        <div class="inp-wp">
+                            <input type="text" class="form-control" placeholder="‘-’없이 숫자만 입력해주세요.">
+                        </div>
+                    </div>
                 </div>
-                <div class="line my-0 message form-wp-bottom" id="opt3" style="display: none; font-size:35px; border-bottom: 1px solid #ededed; border-top: 2px solid #5857d8; margin:none;">
-                    <strong class="title">신용카드 인증이 <span class="text-danger">완료</span>되었습니다.</strong>
-                    <p>아래 나머지 항목들을 작성하여 주시기 바랍니다.</p>
+                <div class="inp-form-wp">
+                    <div class="inp-tit"><p>생년월일</p></div>
+                    <div class="inp-cont">
+                        <div class="inp-wp">
+                            <input type="text" class="form-control" placeholder="YYYYMMDD">
+                        </div>
+                    </div>
                 </div>
-                    <div class="inp-form-wp" style="margin-top: 1.66rem;">
-                        <div class="inp-tit" style="margin-top: 15px;"><p>보안문자</p></div>
-                        <div class="inp-cont">
-                            <div class="secure-wp vertical">
-                                <span class="secure-area form-control disabled">
-                                    <span><img id="listCaptchaImage" alt="보안문자" q="0.39132293937625495" src="https://www.sk7mobile.com/captcha.do?q=0.39132293937625495&r=0.09050289401428624"></span>
-                                </span>
+                <div class="inp-form-wp">
+                    <div class="inp-tit"><p>본인인증 방법</p></div>
+                    <div class="inp-cont">
+                        <div class="form-btn-toggle v1" id="subsTpList" data-toggle="buttons">
+                            <span>
+                                <button type="button" value="2" title="선택됨" onclick="changeSubsTp(2);" id="subsTpIdx2" class="btn btn-sm btn-radius-md btn-effect active">휴대폰 인증</button>
+                            </span>
+                            <span>
+                                <button type="button" value="1" title="" onclick="changeSubsTp(1);" id="subsTpIdx1" class="btn btn-sm btn-radius-md btn-effect">신용카드 인증</button>
+                            </span>
+                        </div>
+                        <div class="text-info text-grey">
+                            * 본인 명의의 인증수단으로 본인인증을 진행해주세요.<br/>
+                            * 신용카드 인증은 본인인증기관(KCB)에서 제공하는 카드에 한해 가능합니다.<br/>
+                            * 등록할 휴대폰에 유심을 꽂으신 후 인증해주세요.
+                        </div>
+                        <div id="dv_auth_P" class="text-info text-grey">
+                            <div class="btn-wp mt-10">
+                                <button type="button" class="btn btn-sm btn-primary popAuthBtn btn-w-block btn-m-block" onclick="kcbPhoneAuthPopUp()">휴대폰 인증</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inp-form-wp">
+                    <div class="inp-tit" style="margin-top: 15px;"><p>보안문자</p></div>
+                    <div class="inp-cont">
+                        <div class="secure-wp vertical">
+                            <span class="secure-area form-control disabled">
+                                <span><img id="listCaptchaImage" alt="보안문자" q="0.39132293937625495" src="https://www.sk7mobile.com/captcha.do?q=0.39132293937625495&r=0.09050289401428624"></span>
+                            </span>
+                            <div class="btn-wp">
+                                <button type="button" class="btn btn-shadow btn-default btn-new" onclick="fnCaptchaRefresh($('#listCaptchaImage'));">
+                                    <span class="sr-only">보안문자 새로고침</span>
+                                </button>
+                                <button type="button" class="btn btn-shadow btn-default btn-audio" onclick="fnCaptchaAudio($('#listCaptchaImage'));">
+                                    <span class="sr-only">보안문자 음성듣기</span>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control" id="listCaptchaText" name="listCaptchaText" placeholder="보안문자를 입력하세요" maxlength="6" oninput="onlyNumberInputEvent(this, event);" onkeydown="return onlyNumber(event);" title="보안문자 입력">
+                        </div>
+                    </div>
+                </div>
+                <div class="inp-form-wp">
+                    <div class="inp-tit" style="margin-top: 15px;"><p>새 유심 정보 등록</p></div>
+                    <div class="inp-cont">
+                        <p id="tx_usim_use" class="text-info text-grey" style="display: none;">
+                            온라인 신청 시 유심비는 개통한 다음 달 요금명세서에 포함되어 청구됩니다. (일반유심 6,600원, NFC유심 8,800원) <br>
+                        </p>
+                        <div id="usimYnNoti2" style="">
+                            <div class="mt-2 w375">
+                                <img src="https://www.sk7mobile.com/html/images/phone/thumb_usim_back_240522_v2.png"
+                                    alt="유심카드 이미지">
+                            </div>
+                            <div class="form-flex mt-2">
+                                <div class="inp-wp form-flexible">
+                                    <input class="form-control form-fix-width" type="text" name="usimNo" id="usimNo"
+                                        title="띄어쓰기 없이 대문자로 입력해주세요." maxlength="14"
+                                        placeholder="띄어쓰기 없이 대문자로 입력해주세요.">
+                                </div>
                                 <div class="btn-wp">
-                                    <button type="button" class="btn btn-shadow btn-default btn-new" onclick="fnCaptchaRefresh($('#listCaptchaImage'));">
-                                        <span class="sr-only">보안문자 새로고침</span>
-                                    </button>
-                                    <button type="button" class="btn btn-shadow btn-default btn-audio" onclick="fnCaptchaAudio($('#listCaptchaImage'));">
-                                        <span class="sr-only">보안문자 음성듣기</span>
-                                    </button>
+                                    <button type="button" onclick="usimNoChk()" class="btn btn-sm btn-primary usim-btn"
+                                        style="min-width: auto;width: 90px;">확인</button>
                                 </div>
-                                <input type="text" class="form-control" id="listCaptchaText" name="listCaptchaText" placeholder="보안문자를 입력하세요" maxlength="6" oninput="onlyNumberInputEvent(this, event);" onkeydown="return onlyNumber(event);" title="보안문자 입력">
                             </div>
                         </div>
-                    </div>
-                    <div class="inp-form-wp">
-                        <div class="inp-tit" style="margin-top: 15px;"><p>새 유심 정보 등록</p></div>
-                        <div class="inp-cont">
-                            <p id="tx_usim_use" class="text-info text-grey" style="display: none;">
-                                온라인 신청 시 유심비는 개통한 다음 달 요금명세서에 포함되어 청구됩니다. (일반유심 6,600원, NFC유심 8,800원) <br>
-                            </p>
-                            <div id="usimYnNoti2" style="">
-                                <div class="mt-2 w375">
-                                    <img src="https://www.sk7mobile.com/html/images/phone/thumb_usim_back_240522_v2.png"
-                                        alt="유심카드 이미지">
-                                </div>
-                                <div class="form-flex mt-2">
-                                    <div class="inp-wp form-flexible">
-                                        <input class="form-control form-fix-width" type="text" name="usimNo" id="usimNo"
-                                            title="띄어쓰기 없이 대문자로 입력해주세요." maxlength="14"
-                                            placeholder="띄어쓰기 없이 대문자로 입력해주세요.">
-                                    </div>
-                                    <div class="btn-wp">
-                                        <button type="button" onclick="usimNoChk()" class="btn btn-sm btn-primary"
-                                            style="min-width: auto;width: 90px;">확인</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <p id="usimYnNoti3" class="text-info text-grey" style="display:none;">
-                                eSIM이란? 실물 유심을 구매하지 않고 휴대폰에 내장된 칩에 가입자 정보를 다운로드하여 이용하는 디지털 SIM 입니다.
-                                <a href="javascript:void(0);" onclick="$('#dv_esim_use_phone').modal('show');" class="text-link ml-2" >eSIM지원 휴대폰보기</a><br>
-                                // 통신사에서 구매한 5G 휴대폰에서 eSIM을 사용하는 경우, 5G 요금제로만 개통 가능합니다.  (LTE 요금제 가입 불가) //
-                            </p> -->
+                        <!-- <p id="usimYnNoti3" class="text-info text-grey" style="display:none;">
+                            eSIM이란? 실물 유심을 구매하지 않고 휴대폰에 내장된 칩에 가입자 정보를 다운로드하여 이용하는 디지털 SIM 입니다.
+                            <a href="javascript:void(0);" onclick="$('#dv_esim_use_phone').modal('show');" class="text-link ml-2" >eSIM지원 휴대폰보기</a><br>
+                            // 통신사에서 구매한 5G 휴대폰에서 eSIM을 사용하는 경우, 5G 요금제로만 개통 가능합니다.  (LTE 요금제 가입 불가) //
+                        </p> -->
 
-                            <!-- 라디오버튼 분기 -->
-                            <!-- 이미지 업로드 이벤트(OCR) 및  OCR콜백 연결 -->
-                            <!-- EID, IMEI1, IMEI2 확인/다시입력 버튼 분기 및 유효성 체크 -->
-                            <div id="usimYnNoti3" class="text-info text-grey" style="display: none;">
-                                <p>eSIM이란? 실물 유심을 구매하지 않고 휴대폰에 내장된 칩에 가입자 정보를 다운로드하여 이용하는 디지털 SIM 입니다.
-                                    <a href="javascript:void(0);" onclick="$('#dv_esim_use_phone').modal('show');"
-                                        class="text-link ml-2">eSIM지원 휴대폰보기</a><br>
-                                </p>
-                                <div class="mt-3">
-                                    <p>eSIM 이용가능여부 확인을 위해 휴대폰 정보를 입력해주세요.</p>
-                                    <div class="mt-2" data-tab="true">
-                                        <span class="form-radio">
-                                            <input type="radio" name="eSimRdo" id="rdo1" value="1" checked="checked">
-                                            <label for="rdo1" class="form-txt-sm text-grey checked"
-                                                onclick="setGtag('eSIM','이미지등록','유심상세');">이미지 업로드하여 입력</label>
-                                        </span>
-                                        <span class="form-radio ml-4">
-                                            <input type="radio" name="eSimRdo" id="rdo2" value="2">
-                                            <label for="rdo2" class="form-txt-sm text-grey"
-                                                onclick="setGtag('eSIM','직접입력','유심상세');">직접 입력</label>
-                                        </span>
+                        <!-- 라디오버튼 분기 -->
+                        <!-- 이미지 업로드 이벤트(OCR) 및  OCR콜백 연결 -->
+                        <!-- EID, IMEI1, IMEI2 확인/다시입력 버튼 분기 및 유효성 체크 -->
+                        <div id="usimYnNoti3" class="text-info text-grey" style="display: none;">
+                            <p>eSIM이란? 실물 유심을 구매하지 않고 휴대폰에 내장된 칩에 가입자 정보를 다운로드하여 이용하는 디지털 SIM 입니다.
+                                <a href="javascript:void(0);" onclick="$('#dv_esim_use_phone').modal('show');"
+                                    class="text-link ml-2">eSIM지원 휴대폰보기</a><br>
+                            </p>
+                            <div class="mt-3">
+                                <p>eSIM 이용가능여부 확인을 위해 휴대폰 정보를 입력해주세요.</p>
+                                <div class="mt-2" data-tab="true">
+                                    <span class="form-radio">
+                                        <input type="radio" name="eSimRdo" id="rdo1" value="1" checked="checked">
+                                        <label for="rdo1" class="form-txt-sm text-grey checked"
+                                            onclick="setGtag('eSIM','이미지등록','유심상세');">이미지 업로드하여 입력</label>
+                                    </span>
+                                    <span class="form-radio ml-4">
+                                        <input type="radio" name="eSimRdo" id="rdo2" value="2">
+                                        <label for="rdo2" class="form-txt-sm text-grey"
+                                            onclick="setGtag('eSIM','직접입력','유심상세');">직접 입력</label>
+                                    </span>
+                                </div>
+                                <div id="rdoChkGroup01" style="display: block;">
+                                    <div class="upload-file form-md mt-2">
+                                        <input id="ocrImageFileName" class="upload-name form-control"
+                                            value="파일을 선택해주세요." disabled="" title="등록파일" placeholder="파일을 선택해주세요.">
+                                        <label for="ocrImage" class="btn btn-primary btn-sm"
+                                            onclick="setGtag('eSIM','이미지선택','유심상세');">이미지 선택</label>
+                                        <input id="ocrImage" type="file" class="upload-hidden">
                                     </div>
-                                    <div id="rdoChkGroup01" style="display: block;">
-                                        <div class="upload-file form-md mt-2">
-                                            <input id="ocrImageFileName" class="upload-name form-control"
-                                                value="파일을 선택해주세요." disabled="" title="등록파일" placeholder="파일을 선택해주세요.">
-                                            <label for="ocrImage" class="btn btn-primary btn-sm"
-                                                onclick="setGtag('eSIM','이미지선택','유심상세');">이미지 선택</label>
-                                            <input id="ocrImage" type="file" class="upload-hidden">
-                                        </div>
-                                        <p class="mt-2">가입하실 휴대폰에서 [전화 &gt; 키패드 &gt; *#06#] 누른 화면을 확인하고 입력해주세요. (T전화 등
-                                            별도 전화어플 사용 시, 기본 '전화' 앱에서 시도)</p>
-                                        <div class="mt-2" id="div_ocr_terminal_data" style="display: none;">
-                                            <input id="ocr_eid" class="form-control" type="text" title="EID 입력" value=""
-                                                readonly="" maxlength="32">
-                                            <input id="ocr_imei1" class="form-control mt-2" type="text" title="IMEI1 입력"
-                                                value="" readonly="" maxlength="15">
-                                            <input id="ocr_imei2" class="form-control mt-2" type="text" title="IMEI2 입력"
-                                                value="" readonly="" maxlength="15">
-                                        </div>
+                                    <p class="mt-2">가입하실 휴대폰에서 [전화 &gt; 키패드 &gt; *#06#] 누른 화면을 확인하고 입력해주세요. (T전화 등
+                                        별도 전화어플 사용 시, 기본 '전화' 앱에서 시도)</p>
+                                    <div class="mt-2" id="div_ocr_terminal_data" style="display: none;">
+                                        <input id="ocr_eid" class="form-control" type="text" title="EID 입력" value=""
+                                            readonly="" maxlength="32">
+                                        <input id="ocr_imei1" class="form-control mt-2" type="text" title="IMEI1 입력"
+                                            value="" readonly="" maxlength="15">
+                                        <input id="ocr_imei2" class="form-control mt-2" type="text" title="IMEI2 입력"
+                                            value="" readonly="" maxlength="15">
                                     </div>
-                                    <div id="rdoChkGroup02" style="display: none;">
-                                        <p class="mt-2">가입하실 휴대폰에서 [전화 &gt; 키패드 &gt; *#06#] 누른 화면을 확인하고 입력해주세요.</p>
-                                        <div class="mt-2" id="div_dir_terminal_data">
-                                            <input id="dir_eid" class="form-control" type="text" title="EID 입력"
-                                                placeholder="EID를 입력해주세요." maxlength="32"
-                                                oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);">
-                                            <input id="dir_imei1" class="form-control mt-2" type="text" title="IMEI1 입력"
-                                                placeholder="IMEI1를 입력해주세요." maxlength="15"
-                                                oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);">
-                                            <input id="dir_imei2" class="form-control mt-2" type="text" title="IMEI2 입력"
-                                                placeholder="IMEI2를 입력해주세요." maxlength="15"
-                                                oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);">
-                                        </div>
-                                        <div class="mt-2">
-                                            <!--
-                                            <button type="button" class="btn btn-sm btn-primary form-control" data-toggle="modal" data-target=".modal-alert">확인</button>
-                                            <button type="button" class="btn btn-sm btn-primary form-control" data-toggle="modal" data-target=".modal-alert2">다시 입력</button>
-                                            -->
-                                        </div>
+                                </div>
+                                <div id="rdoChkGroup02" style="display: none;">
+                                    <p class="mt-2">가입하실 휴대폰에서 [전화 &gt; 키패드 &gt; *#06#] 누른 화면을 확인하고 입력해주세요.</p>
+                                    <div class="mt-2" id="div_dir_terminal_data">
+                                        <input id="dir_eid" class="form-control" type="text" title="EID 입력"
+                                            placeholder="EID를 입력해주세요." maxlength="32"
+                                            oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);">
+                                        <input id="dir_imei1" class="form-control mt-2" type="text" title="IMEI1 입력"
+                                            placeholder="IMEI1를 입력해주세요." maxlength="15"
+                                            oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);">
+                                        <input id="dir_imei2" class="form-control mt-2" type="text" title="IMEI2 입력"
+                                            placeholder="IMEI2를 입력해주세요." maxlength="15"
+                                            oninput="onlyNumberInputEvent(this, event); maxLengthCheck(this);">
+                                    </div>
+                                    <div class="mt-2">
+                                        <!--
+                                        <button type="button" class="btn btn-sm btn-primary form-control" data-toggle="modal" data-target=".modal-alert">확인</button>
+                                        <button type="button" class="btn btn-sm btn-primary form-control" data-toggle="modal" data-target=".modal-alert2">다시 입력</button>
+                                        -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
     
             <div class="acc-group acc-type1 agree">
