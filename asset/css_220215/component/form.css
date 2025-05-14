@@ -40,6 +40,27 @@ html.is_pc .form-checkbox input[type='checkbox']:focus + label {outline: 1px dot
 .form-checkbox.checkbox-type1 label:before {top: .2rem;left: .1rem;width: 1rem;height: 1.2rem;background-image: url(../../img/icon/icon_checkbox_1_off.png);}
 .form-checkbox.checkbox-type1 input[type='checkbox']:checked + label:before {background-image: url(../../img/icon/icon_checkbox_1_on.png);}
 
+.form-checkbox.checkbox-type-right label {
+	padding-left: 0;
+	padding-right: 1.666rem;
+}
+
+.form-checkbox.checkbox-type-right label:before {
+	left: auto;
+	right: 0;
+}
+
+/* s: 250512 텍스트추가 */
+
+.text-black {
+	color: #000;
+	font-size: 1.166rem;
+	line-height: 1.2;
+	margin-top: .8rem;
+}
+
+/* e: 250512 텍스트추가 */
+
 /* form-btn-group */
 .form-btn-toggle.btn-wrap {margin-top: 0;}
 .form-btn-toggle label {position: relative;margin-bottom: 0;}
@@ -200,9 +221,8 @@ select.ui-datepicker-year,select.ui-datepicker-month {vertical-align: top;margin
 .chk-box li + li {margin-top: 1rem;}
 
 .etc-text {display: none;}
-.form-txt-sm {font-size: 1.1rem !important;}  /* 230315 추가 */
+.form-txt-sm {font-size: 1.1rem !important;}
 
-/* s: 240624 요금 즉시납부 */
 
 .card-del-btn {
 	position: relative;
@@ -214,7 +234,6 @@ select.ui-datepicker-year,select.ui-datepicker-month {vertical-align: top;margin
 	font-weight: 500;
 }
 
-/* e: 240624 요금 즉시납부 */
 
 @media (min-width:1080px) {
 	.form-control {height: 45px;padding: 9px 20px 10px;border-radius: 4px;font-size: 16px;}
@@ -235,6 +254,27 @@ select.ui-datepicker-year,select.ui-datepicker-month {vertical-align: top;margin
 	.form-checkbox.checkbox-type1 label {padding-left: 38px;font-size: 16px;}
 	.form-checkbox.checkbox-type1 label:before {top: 5px;left: 8px;width: 12px;height: 13px;}
 	.form-checkbox.checkbox-type1 input[type='checkbox']:checked + label:before {background-image: url(../../img/icon/icon_checkbox_1_on.png);}
+
+	.form-checkbox.checkbox-type-right label {
+		padding-top: 3px;
+        padding-left: 0;
+        padding-right: 38px;
+	}
+
+	.form-checkbox.checkbox-type-right label:before {
+		left: auto;
+		right: 0;
+	}
+
+	/* s: 250512 텍스트추가 */
+
+	.text-black {
+		font-size: 17px;
+		line-height: 22px;
+		margin-top: 10px;
+	}
+
+	/* e: 250512 텍스트추가 */
 
 	/* search-wp */
 	.search-wp {max-width: 865px;padding-right: 140px;}
@@ -381,9 +421,7 @@ select.ui-datepicker-year,select.ui-datepicker-month {vertical-align: top;margin
 	.chk-box {width: 375px;max-height: 126px;margin-top: 10px;padding: 10px 20px 15px;}
 	.chk-box li + li {margin-top: 8px;}
 
-	.form-txt-sm {font-size: 15px !important;}  /* 230315 추가 */
-
-	/* s: 240624 요금 즉시납부 */
+	.form-txt-sm {font-size: 15px !important;}
 
 	.card-del-btn {
 		min-height: 20px;
@@ -391,7 +429,6 @@ select.ui-datepicker-year,select.ui-datepicker-month {vertical-align: top;margin
         line-height: 20px;
 	}
 
-	/* e: 240624 요금 즉시납부 */
 }
 
 @media (max-width:1079.98px) {

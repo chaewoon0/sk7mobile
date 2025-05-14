@@ -5439,3 +5439,12 @@ body:has(.app_download_popup:not(.active)) {
 	}
 
 }
+
+
+/* @media (max-width: 1080px) {
+	.m-d-flex-space {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+} */
