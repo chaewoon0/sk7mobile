@@ -1816,6 +1816,11 @@ span.month-name,span.cost-name2 {display: inline-block;font-size: 1rem;font-weig
 .icon-PROD_USIM_TYPE_017 {border: 1px solid #E60013;box-shadow: .3rem .3rem .83rem rgba(230,0,19,.22);}
 /* e: 240828 롯데시네마 */
 
+/* s: 250728 폰케어팩 */
+.icon-PROD_USIM_TYPE_019 {background-image: url(/html/images/icon/icon_li_care.png);}
+.icon-PROD_USIM_TYPE_019 {border: 1px solid #34ADAB;box-shadow: .3rem .3rem .83rem rgba(52,173,171,.22);}
+/* e: 250728 폰케어팩 */
+
 .is_pc .icon-PROD_USIM_TYPE_010{background-size:75px 75px;}
 /* 미사용테스트*/
 .icon-PROD_3G_TYPE_010 {background-image: url(/html/images/icon/icon_li_.png);}

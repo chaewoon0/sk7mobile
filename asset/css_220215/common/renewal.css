@@ -1,0 +1,326 @@
+.renewal , .renewal * {
+    font-family: 'Pretendard', Arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.renewal a:focus, .renewal button:focus {
+    outline: none;
+}
+
+.renewal .container {
+    position: relative;
+    max-width: 840px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.renewal .heading-depth1 .title {
+    font-size: 34px !important;
+    font-weight: 700;
+}
+
+.online-application-info-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 30px;
+    background-color: #F3F4F8;
+    border-radius: 12px;
+}
+
+.online-application-info-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    flex: 1;
+}
+
+.online-application-info-list li {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 16px;
+}
+
+.online-application-info-list .label {
+    font-weight: 600;
+    color: #000;
+    flex: none;
+}
+
+.online-application-info-list .value {
+    color: #676767;
+    flex: 1;
+}
+
+.online-application-info-list .value.strong {
+    color: #3717CE;
+    font-weight: 600;
+}
+
+.online-application-info-button {
+    flex: none;
+}
+
+.online-application-info-button button {
+    border: 1px solid #8C8C95;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+
+.online-application-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 43px;
+}
+
+.online-application-progress .progress-step {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 164px;
+    height: 164px;
+    background-color: #F3F4F8;
+    border-radius: 50%;
+    row-gap: 10px;
+}
+
+.online-application-progress .progress-step.active {
+    background-color: #3717CE;
+}
+
+.online-application-progress .progress-step.active .step-icon path {
+    fill: #fff;
+}
+
+.online-application-progress .progress-step.active .step-title {
+    color: #fff;
+}
+
+.online-application-progress .progress-step .step-icon {
+    margin-top: 14px;
+}
+
+.online-application-progress .progress-step .step-title {
+    color: #676767;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.notice-list {
+    margin-top: 26px;
+}
+
+.notice-list > li {
+    color: #676767;
+}
+
+.renewal-btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    margin-top: 60px;
+}
+
+.renewal-btn-wrap button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    width: 220px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.renewal-btn-wrap .btn-color-secondary {
+    background-color: #9FA0A8;
+    color: #fff;
+}
+
+.renewal-btn-wrap .btn-color-primary {
+    background-color: #3717CE;
+    color: #fff;
+}
+
+.title-depth-01 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 29px;
+    color: #000;
+}
+
+.title-depth-02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 63px;
+    margin-bottom: 13px;
+    color: #000;
+}
+
+
+.online-application-product-box {
+    padding: 22px 30px;
+    border-radius: 15px;
+    border: 1px solid #D7D9E3;
+}
+
+.online-application-product-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.online-application-product-list li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+.online-application-product-list .label {
+    font-weight: 500;
+    color: #676767;
+    flex: none;
+}
+
+.online-application-product-list .value {
+    color: #000;
+    font-weight: 600;
+    text-align: right;
+    flex: 1;
+}
+
+.online-application-product-list .value.strong {
+    color: #3717CE;
+}
+
+
+
+
+@media (max-width: 870px) {
+	.renewal .container {
+        padding-right: 1.6rem;
+        padding-left: 1.6rem;
+    }
+
+    .title-depth-01 {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+
+    .online-application-info-box {
+        padding: 1.4rem 1.4rem;
+        border-radius: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .online-application-info-list li {
+        column-gap: 0.8rem;
+    }
+
+    .online-application-info-list {
+        row-gap: 1rem;
+    }
+
+    .online-application-info-button button {
+        border-radius: 0.4rem;
+        padding: 0.9rem 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .online-application-progress {
+        margin-top: 2.6rem;
+        position: relative;
+    }
+
+    .online-application-progress::before {
+        content: "";
+        display: block;
+        width: calc(100% - 2px);
+        height: 1px;
+        background-color: #e4e4e4;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .online-application-progress .progress-step {
+        width: 7.1rem;
+        height: 7.1rem;
+        row-gap: 0.2rem;
+        position: relative;
+    }
+
+    .online-application-progress .progress-step .step-icon {
+        margin-top: 0;
+    }
+
+    .online-application-progress .progress-step .step-icon svg {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .online-application-progress .progress-step .step-title {
+        font-size: 1rem;
+    }
+
+    .notice-list {
+        margin-top: 1.6rem;
+    }
+
+    .notice-list > li {
+        font-size: 1.1rem;
+    }
+
+    .notice-list > li + li {
+        margin-top: 0.5rem;
+    }
+
+    .renewal-btn-wrap {
+        column-gap: 0.5rem;
+        margin-top: 2.6rem;
+    }
+
+    .renewal-btn-wrap button {
+        font-size: 1.2rem;
+        width: calc(50% - 0.25rem);
+        height: 4rem;
+        border-radius: 0.8rem;
+    }
+
+    .title-depth-02 {
+        font-size: 1.5rem;
+        margin-top: 2.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .online-application-product-box {
+        padding: 1.4rem 1.4rem;
+        border-radius: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .online-application-product-list {
+        row-gap: 1rem;
+    }
+
+    .online-application-product-list li {
+        column-gap: 1rem;
+    }
+
+    .online-application-product-list .value {
+        max-width: calc(70% - 1rem);
+    }
+}

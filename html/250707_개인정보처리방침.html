@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+    <link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+    <title>sk7mobile</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../asset/css_220215/vendor/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../asset/css_220215/common/base.css">
+</head>
+
+
+<body>
+
+    <nav>
+        <a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+    </nav>
+
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- Header -->
+        <header id="hd">
+            <div class="container">
+                <h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK
+                            7mobile</span></a></h1>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- Container -->
+        <div id="ct">
+
+            <!-- 페이지 시작 -->
+
+            <section class="sect">
+                <form id="form" method="get">
+                    <input type="hidden" name="cntId" id="cntId" value="">
+                    <div class="container">
+                        <div class="heading-depth1">
+                            <h2 class="title">개인정보처리방침</h2>
+                        </div>
+                        <select class="v_privacy form-control w-auto pr-6" id="v_privacy" onchange="changeContent()">
+                            <option value="671">V4.3 (20250408) </option>
+                            <option value="664">V4.2 (20241219) </option>
+                            <option value="660">V4.1 (20240822) </option>
+                            <option value="659">V4.0 (20240718) </option>
+                            <option value="653">V3.10 (20240321) </option>
+                            <option value="650">V3.9 (20240222) </option>
+                            <option value="641">V3.8 (20231011) </option>
+                            <option value="635">V3.7 (20230425) </option>
+                            <option value="630">V3.6 (20221227) </option>
+                            <option value="625">V3.5 (20221108) </option>
+                            <option value="621">V3.4 (20220831) </option>
+                            <option value="610">V3.3 (20220603) </option>
+                            <option value="595">V3.2 (20211203) </option>
+                            <option value="590">V3.1 (20211001) </option>
+                            <option value="580">V3.0 (20210401) </option>
+                            <option value="577">V2.6 (20210120) </option>
+                            <option value="118">V2.5 (20201109) </option>
+                            <option value="114">V2.4 (20200717) </option>
+                            <option value="113">V2.3 (20200514) </option>
+                            <option value="112">V2.2 (20200320) </option>
+                            <option value="111">V2.1 (20200117) </option>
+                            <option value="110">V2.0 (20191108) </option>
+                            <option value="109">V1.5 (20190824) </option>
+                            <option value="85">V1.4 (20180102) </option>
+                            <option value="77">V1.3 (20171020) </option>
+                            <option value="38">V1.2 (20170101) </option>
+                            <option value="36">V1.1 (20161015) </option>
+                            <option value="18">V1.0 (20160323) </option>
+                        </select>
+                        <div class="term-area">
+                            <style>
+                                .term-area table tbody tr:first-child td {
+                                    text-align: center;
+                                }
+                            </style>
+                            <h4><strong>SK 7mobile&nbsp;</strong><strong>개인정보처리방침</strong></h4>
+
+                            <!-- s: 250707 css -->
+                            <style>
+                                .privacy-policy {
+                                    width: 100%;
+                                    margin-top: 18px;
+                                    padding: 48px 36px;
+                                    background-color: #f9f9f9;
+                                    border-radius: 16px;
+                                }
+
+                                .privacy-policy-title {
+                                    text-align: center;
+                                    margin-bottom: 24px;
+                                }
+
+                                .privacy-policy-title h1 {
+                                    font-size: 30px;
+                                }
+
+                                .privacy-policy-title h2 {
+                                    font-size: 18px;
+                                    color: #666666;
+                                    font-weight: 400;
+                                }
+
+                                .privacy-policy-content-wrap {
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    column-gap: 20px;
+                                    align-items: stretch;
+                                }
+
+                                .privacy-policy-content {
+                                    flex: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+
+                                .privacy-policy-content .privacy-policy-content-title {
+                                    background-color: #5857d8;
+                                    border-radius: 16px 16px 0 0;
+                                    border-color: #ddd;
+                                    border-style: solid;
+                                    border-width: 1px 1px 0 1px;
+                                    color: #ffffff;
+                                    padding: 20px;
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    text-align: center;
+                                }
+
+                                .privacy-policy-content-body {
+                                    background-color: #fff;
+                                    border-radius: 0 0 16px 16px;
+                                    border-color: #ddd;
+                                    border-style: solid;
+                                    border-width: 0 1px 1px 1px;
+                                    flex: 1;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    padding: 32px;
+                                    row-gap: 32px;
+                                }
+
+                                .privacy-policy-content-item {
+                                    display: flex;
+                                    justify-content: center;
+                                    position: relative;
+                                    text-align: center;
+                                    cursor: pointer;
+                                    flex: 0 0 50%;
+                                }
+
+                                .privacy-policy-content-item .item-wrap {
+                                    display: inline-flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    flex: 1;
+                                    row-gap: 4px;
+                                }
+
+                                .privacy-policy-content-item .item-wrap p {
+                                    font-size: 16px;
+                                }
+
+                                .privacy-policy-content-item img {
+                                    flex: none;
+                                    max-width: 80px;
+                                }
+
+                                .privacy-policy-desc {
+                                    text-align: center;
+                                    margin-top: 30px;
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                }
+
+                                .privacy-policy-tooltip {
+                                    display: none;
+                                    cursor: initial;
+                                    position: absolute;
+                                    width: 250px;
+                                    padding: 26px;
+                                    background: #fff;
+                                    border-radius: 26px;
+                                    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.20));
+                                    text-align: left;
+                                    z-index: 1;
+                                    top: 0;
+                                    left: 50%;
+                                    transform: translate(-50%, -100%);
+                                    margin-top: -20px;
+                                }
+
+                                .privacy-policy-tooltip:after {
+                                    content: '';
+                                    position: absolute;
+                                    left: 50%;
+                                    margin-left: -20px;
+                                    bottom: -30px;
+                                    margin-top: -20px;
+                                    border-top: 15px solid transparent;
+                                    border-right: 20px solid transparent;
+                                    border-bottom: 15px solid transparent;
+                                    border-left: 20px solid #fff;
+                                    transform: rotate(90deg);
+                                }
+
+                                .privacy-policy-tooltip h1 {
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                    margin-bottom: 8px;
+                                }
+
+                                .privacy-policy-tooltip p {
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                    line-height: 1.6;
+                                }
+
+                                .privacy-policy-tooltip ul {
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                }
+
+                                .privacy-policy-tooltip ul li {
+                                    text-indent: -8px;
+                                    margin-left: 8px;
+                                }
+
+                                .privacy-policy-tooltip ul li::before {
+                                    content: '·';
+                                    margin-right: 2px;
+                                }
+
+                                .privacy-policy-tooltip small {
+                                    display: block;
+                                    font-size: 14px;
+                                    text-indent: -15.5px;
+                                    margin-left: 13.5px;
+                                    color: #666666;
+                                    font-weight: 300;
+                                    margin-top: 12px;
+                                }
+
+                                .privacy-policy-tooltip small::before {
+                                    content: '※';
+                                    margin-right: 2px;
+                                }
+
+
+
+
+                                @media (max-width: 1080px) {
+                                    .privacy-policy {
+                                        padding: 2.4rem 1.4rem;
+                                    }
+                                    .privacy-policy-title {
+                                        margin-bottom: 0.9rem;
+                                    }
+                                    .privacy-policy-title h1 {
+                                        font-size: 1.66rem;
+                                    }
+
+                                    .privacy-policy-title h2 {
+                                        font-size: 1.2rem;
+                                    }
+
+                                    .privacy-policy-content-wrap {
+                                        flex-direction: column;
+                                        row-gap: 1.4rem;
+                                    }
+
+                                    .privacy-policy-content .privacy-policy-content-title {
+                                        padding: 0.65rem;
+                                        font-size: 1.12rem;
+                                        border-radius: 0.7rem 0.7rem 0 0;
+                                    }
+
+                                    .privacy-policy-content-body {
+                                        padding: 0 1.8rem;
+                                        flex-direction: column;
+                                        row-gap: 0;
+                                        border-radius: 0 0 0.7rem 0.7rem;
+                                    }
+                                    
+                                    .privacy-policy-tooltip {
+                                        display: block !important;
+                                        position: static;
+                                        width: 100%;
+                                        transform: none;
+                                        filter: none;
+                                        padding: 0;
+                                        background: transparent;
+                                        border: none;
+                                        margin-top: 0;
+                                    }
+
+                                    .privacy-policy-tooltip:after {
+                                        display: none;
+                                    }
+
+                                    .privacy-policy-tooltip h1 {
+                                        display: none;
+                                    }
+
+                                    .privacy-policy-content-item {
+                                        padding: 2rem 0;
+                                        align-items: center;
+                                        border-bottom: 1px solid #ddd;
+                                        cursor: initial;
+                                        column-gap: 1.5rem;
+                                    }
+
+                                    .privacy-policy-content-item:last-child {
+                                        border-bottom: none;
+                                    }
+
+                                    .privacy-policy-content-item img {
+                                        width: 4rem;
+                                    }
+
+                                    .privacy-policy-tooltip ul {
+                                        font-size: 1.03rem;
+                                    }
+
+                                    .privacy-policy-tooltip p {
+                                        font-size: 1.03rem;
+                                        line-height: 1.5;
+                                    }
+
+                                    .privacy-policy-tooltip small {
+                                        font-size: 0.9rem;
+                                        text-indent: -1.1rem;
+                                        margin-left: 1rem;
+                                        margin-top: 0.5rem;
+                                    }
+
+                                    .privacy-policy-tooltip ul li {
+                                        text-indent: -0.6rem;
+                                        margin-left: 0.6rem;
+                                    }
+
+                                    .privacy-policy-content-item .item-wrap p {
+                                        font-size: 1.03rem;
+                                    }
+
+                                    .privacy-policy-content-item .item-wrap {
+                                        flex: none;
+                                        width: 5rem;
+                                    }
+
+                                    .privacy-policy-desc {
+                                        margin-top: 1.8rem;
+                                        font-size: 1.03rem;
+                                    }
+                                }
+
+                            </style>
+                            <!-- e: 250707 css -->
+
+
+                            <div class="privacy-policy"> 
+                                <div class="privacy-policy-title">
+                                    <h1>주요 개인정보 처리 표시</h1>
+                                    <h2>(이동전화, WCDMA, LPWA)</h2>
+                                </div>
+                                <div class="privacy-policy-content-wrap">
+                                    <div class="privacy-policy-content">
+                                        <h1 class="privacy-policy-content-title">
+                                            개인정보의 유형
+                                        </h1>
+                                        <div class="privacy-policy-content-body">
+                                            <div class="privacy-policy-content-item">
+                                                <div class="item-wrap">
+                                                    <img src="images/icon/privacy-policy-01.png" alt="">
+                                                    <p>개인정보</p>
+                                                </div>
+                                                <div class="privacy-policy-tooltip">
+                                                    <h1>개인정보</h1>
+                                                    <ul>
+                                                        <li>성명, 생년월일, 성별, 이동전화번호 등</li>
+                                                    </ul>
+                                                    <small>세부 내용은 개인정보 처리방침 본문에서 확인</small>
+                                                </div>
+                                            </div>
+                                            <div class="privacy-policy-content-item">
+                                                <div class="item-wrap">
+                                                    <img src="images/icon/privacy-policy-02.png" alt="">
+                                                    <p>고유식별정보</p>
+                                                </div>
+                                                <div class="privacy-policy-tooltip">
+                                                    <h1>고유식별정보</h1>
+                                                    <ul>
+                                                        <li>주민등록번호, 여권번호, 운전면허번호, 외국인등록번호</li>
+                                                    </ul>
+                                                    <small>세부 내용은 개인정보 처리방침 본문에서 확인</small>
+                                                </div>
+                                            </div>
+                                            <div class="privacy-policy-content-item">
+                                                <div class="item-wrap">
+                                                    <img src="images/icon/privacy-policy-03.png" alt="">
+                                                    <p>결제정보</p>
+                                                </div>
+                                                <div class="privacy-policy-tooltip">
+                                                    <h1>결제정보</h1>
+                                                    <ul>
+                                                        <li>계좌(카드) 정보, 예금주(카드 명의자) 정보 등</li>
+                                                    </ul>
+                                                    <small>세부 내용은 개인정보 처리방침 본문에서 확인</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="privacy-policy-content">
+                                        <h1 class="privacy-policy-content-title">
+                                            개인정보의 처리
+                                        </h1>
+                                        <div class="privacy-policy-content-body">
+                                            <div class="privacy-policy-content-item">
+                                                <div class="item-wrap">
+                                                    <img src="images/icon/privacy-policy-04.png" alt="">
+                                                    <p>처리 목적</p>
+                                                </div>
+                                                <div class="privacy-policy-tooltip">
+                                                    <h1>처리 목적</h1>
+                                                    <ul>
+                                                        <li>이동전화 등 제반 서비스 제공</li>
+                                                        <li>서비스 제공을 위한 본인 식별·인증</li>
+                                                        <li>서비스 품질 확인·개선, 고객 상담·의견 응대 등</li>
+                                                    </ul>
+                                                    <small>세부 내용은 개인정보 처리방침 본문에서 확인</small>
+                                                </div>
+                                            </div>
+                                            <div class="privacy-policy-content-item">
+                                                <div class="item-wrap">
+                                                    <img src="images/icon/privacy-policy-05.png" alt="">
+                                                    <p>제3자 제공</p>
+                                                </div>
+                                                <div class="privacy-policy-tooltip">
+                                                    <h1>제3자 제공</h1>
+                                                    <p>
+                                                        다양한 서비스를 제공하기 위해 고객으로부터 개인정보 제공 동의를 받은 경우 또는 법령에 의해 허용된 경우에 개인정보를 제공하고 있습니다.
+                                                    </p>
+                                                    <small>세부 내용은 개인정보 처리방침 본문에서 확인</small>
+                                                </div>
+                                            </div>
+                                            <div class="privacy-policy-content-item">
+                                                <div class="item-wrap">
+                                                    <img src="images/icon/privacy-policy-06.png" alt="">
+                                                    <p>처리 위탁</p>
+                                                </div>
+                                                <div class="privacy-policy-tooltip">
+                                                    <h1>처리 위탁</h1>
+                                                    <p>
+                                                        더 나은 서비스와 고객 편의 제공 등 원활한 업무 수행을 위해 개인정보 처리 업무 일부를 외부 전문업체에 위탁하여 운영하고 있습니다.
+                                                    </p>
+                                                    <small>세부 내용은 개인정보 처리방침 본문에서 확인</small>
+                                                </div>
+                                            </div>
+                                            <div class="privacy-policy-content-item">
+                                                <div class="item-wrap">
+                                                    <img src="images/icon/privacy-policy-07.png" alt="">
+                                                    <p>고충사항 처리부서</p>
+                                                </div>
+                                                <div class="privacy-policy-tooltip">
+                                                    <h1>고충사항 처리부서</h1>
+                                                    <p>
+                                                        개인정보 관련 문의, 불만 처리, 피해 구제 등에 관한 고객의 요청은 당사 고객센터 [대표: 휴대폰 국번 없이 114(무료) 또는 국번 없이 1599-0011(유료)] 등으로 문의 주시면 신속하고 성실하게 답변해 드리고 있습니다.
+                                                    </p>
+                                                    <small>세부 내용은 개인정보 처리방침 본문에서 확인</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="privacy-policy-desc">
+                                    ※ 클릭하여 세부 내용을 확인하실 수 있습니다.<br>
+                                    ※ 이동전화 서비스의 주요 내용을 알기 쉽게 표기한 것으로,<br>
+                                    개인정보 처리방침 본문을 통해 확인하실 수 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-wrap hide">
+                            <span>
+                                <button type="button" class="btn btn-primary btn-sm" onclick="fnPolicyListPrev();">이전
+                                    개인정보처리방침 보기</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+
+            <!-- //페이지 끝-->
+
+        </div>
+        <!-- //Container -->
+
+
+        <!-- Footer -->
+        <footer id="ft">
+            <div class="container">
+                <div class="ft-top">
+                    <p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+                    <dl class="font-weight-normal">
+                        <dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+                        <dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+                        <dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+                        <dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+                    </dl>
+                </div>
+                <hr>
+                <ul class="fnb">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+                    <li><a href="">개인정보이용내역조회</a></li>
+                    <li><a href="">통신자료제공사실 열람신청</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                    <li><a href="">분쟁처리절차</a></li>
+                    <li><a href="">책임의 한계와 법적고지</a></li>
+                    <li><a href="">불법스팸대응센터</a></li>
+                    <li><a href="">명의도용방지서비스</a></li>
+                    <li><a href="">해지미환급금 조회/환불</a></li>
+                    <li><a href="">법인회선개통문의</a></li>
+                </ul>
+                <div class="ft-bottom">
+                    <div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장 최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신
+                        판매번호:2010-서울중구-0518</div>
+                    <p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a>
+                        </li>
+                        <li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a>
+                        </li>
+                        <li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //Footer -->
+    </div>
+    <!-- //wrap -->
+
+
+    <!-- js -->
+    <script src="../asset/js/vendor/vendor.min.js"></script>
+    <script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+    <script src="../asset/js/common/public.js"></script>
+
+
+    <script>
+        function togglePrivacyPolicyTooltip() {
+            if ($(window).width() < 1080) {
+                return;
+            }
+            
+            $('.privacy-policy-content-item').off('click.tooltip').on('click.tooltip', function(e) {
+                if ($(window).width() < 1080) {
+                    return;
+                }
+                
+                e.preventDefault();
+                e.stopPropagation();
+                
+                var $currentTooltip = $(this).find('.privacy-policy-tooltip');
+                
+                $('.privacy-policy-tooltip').hide();
+                
+                $('.privacy-policy-content-item').removeClass('active');
+                
+                if ($currentTooltip.length) {
+                    $currentTooltip.show();
+                    $(this).addClass('active');
+                }
+            });
+            
+            $(document).off('click.tooltip').on('click.tooltip', function(e) {
+                if ($(window).width() < 1080) {
+                    return;
+                }
+                
+                if (!$(e.target).closest('.privacy-policy-content-item').length) {
+                    $('.privacy-policy-tooltip').hide();
+                    $('.privacy-policy-content-item').removeClass('active');
+                }
+            });
+        }
+        
+        function initPrivacyPolicyEvents() {
+            if ($(window).width() < 1080) {
+                $('.privacy-policy-tooltip').hide();
+                $('.privacy-policy-content-item').removeClass('active');
+                return;
+            }
+            
+            togglePrivacyPolicyTooltip();
+        }
+        
+        $(document).ready(function() {
+            initPrivacyPolicyEvents();
+        });
+        
+        $(window).on('resize', function() {
+            initPrivacyPolicyEvents();
+        });
+    </script>
+
+
+</body>
+
+</html>

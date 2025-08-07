@@ -1384,8 +1384,21 @@
 }
 
 @media (min-width: 1080px) {
+    /* s: 250701 플로팅 배너 사이즈 조정 (추가) */
+
+    .modal-main#bnrFLT .modal-foot .btn {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .modal-main#bnrFLT .modal-foot .btn-lgrey {
+        padding-left: 40px !important;
+    }
+
+    /* e: 250701 플로팅 배너 사이즈 조정 (추가) */
+
     .modal-content.type {
-        width:500px !important;
+        width:620px !important;
         position: static;
         border-radius: 10px;
     }
@@ -1397,11 +1410,11 @@
 
     .flt-swiper {
         display: block;
-        width: 500px;
+        width: 620px;
     }
 
     .flt-swiper .swiper-slide {
-        width: 500px !important;
+        width: 620px !important;
     }
 
     .flt-image {
