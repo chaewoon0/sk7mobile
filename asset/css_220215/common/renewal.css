@@ -79,7 +79,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     margin-top: 43px;
+}
+
+.online-application-progress::before {
+    content: "";
+    display: block;
+    width: calc(100% - 2px);
+    height: 1px;
+    background-color: #e4e4e4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .online-application-progress .progress-step {
@@ -87,6 +100,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     width: 164px;
     height: 164px;
     background-color: #F3F4F8;
@@ -241,26 +255,12 @@
 
     .online-application-progress {
         margin-top: 2.6rem;
-        position: relative;
-    }
-
-    .online-application-progress::before {
-        content: "";
-        display: block;
-        width: calc(100% - 2px);
-        height: 1px;
-        background-color: #e4e4e4;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .online-application-progress .progress-step {
         width: 7.1rem;
         height: 7.1rem;
         row-gap: 0.2rem;
-        position: relative;
     }
 
     .online-application-progress .progress-step .step-icon {
