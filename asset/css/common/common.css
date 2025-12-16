@@ -1,0 +1,448 @@
+﻿@charset 'UTF-8';
+
+@font-face {font-family: 'Montserrat';font-weight: 300;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-Light.woff) format('woff');}
+@font-face {font-family: 'Montserrat';font-weight: 400;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-Regular.woff) format('woff');}
+@font-face {font-family: 'Montserrat';font-weight: 500;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-Medium.woff) format('woff');}
+@font-face {font-family: 'Montserrat';font-weight: 600;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-SemiBold.woff) format('woff');}
+@font-face {font-family: 'Montserrat';font-weight: 700;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/Montserrat-Bold.woff) format('woff');}
+@font-face {font-family: 'NotoSans';font-weight: 300;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/NotoSansCJKkr-Light.woff) format('woff');}
+@font-face {font-family: 'NotoSans';font-weight: 400;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/NotoSansCJKkr-Regular.woff) format('woff');}
+@font-face {font-family: 'NotoSans';font-weight: 500;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/NotoSansCJKkr-Medium.woff) format('woff');}
+@font-face {font-family: 'NotoSans';font-weight: 700;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/NotoSansCJKkr-Bold.woff) format('woff');}
+@font-face {font-family: 'Lato';font-weight: 300;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/Lato-Light.woff) format('woff');}
+@font-face {font-family: 'Lato';font-weight: 400;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/Lato-Regular.woff) format('woff');}
+@font-face {font-family: 'Lato';font-weight: 500;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/Lato-Medium.woff) format('woff');}
+@font-face {font-family: 'Lato';font-weight: 700;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/Lato-Bold.woff) format('woff');}
+@font-face {font-family: 'Gmarket Sans';font-weight: 300;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/GmarketSansLight.woff) format('woff');}
+@font-face {font-family: 'Gmarket Sans';font-weight: 500;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/GmarketSansMedium.woff) format('woff');}
+@font-face {font-family: 'Gmarket Sans';font-weight: 700;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/GmarketSansBold.woff) format('woff');}
+@font-face {font-family: 'S-CoreDream-8Heavy';font-weight: normal;font-style: normal;src: url(https://www.sk7mobile.com/html/cmmn/fonts/S-CoreDream-8Heavy.woff) format('woff');}
+
+/* Reset with bootstrap */
+html {font-size: 18px;}
+body,p,h1,h2,h3,span,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin: 0;padding: 0;}
+body,input,textarea,select,button,table {font-family: 'NotoSans','Apple SD Gothic Neo',sans-serif;}
+body {color: #333;font-size: 1rem;word-wrap: break-word;word-break: keep-all;letter-spacing: -.05rem;-ms-word-break: break-all;}
+a,a:hover,a:focus,a:active {color: inherit;text-decoration: none;}
+a:focus,button:focus {outline: 1px dotted #000;}
+li {list-style: none;}
+address,em {font-style: normal;}
+label {cursor: pointer;}
+table {width: 100%;}
+textarea {resize: none;}
+strong,b {font-weight: 700;}
+img {vertical-align: top;max-width: 100%;}
+br {font-family: arial;}
+h1,h2,h3,h4,h5,h6 {margin: 0;}
+button {border: 0;background: none;}
+i {font-style: normal;}
+
+/* Helper Classes */
+.skip {z-index: 200;color: #fff;text-align: center;background: #000;}
+.skip:active,.skip:focus {position: absolute;padding: .5rem;color: #fff;}
+.no-style {border: 0;background: none;}
+.center-block {display: block !important;margin-right: auto !important;margin-left: auto !important;}
+[class*=text-line] {display: -webkit-box!important;overflow: hidden;max-height: 3em;text-overflow: ellipsis;word-wrap: break-word;word-break: break-all;white-space: normal;line-height: 1.5em !important;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.text-es {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.d-flex-space {display: flex;align-items: center;justify-content: space-between;}
+.show {display: block !important;}
+.hide {display: none !important;}
+/* Grid */
+
+/* Icon */
+[class^=icon-],.swiper-button-auto {display: inline-block;overflow: hidden;vertical-align: top;margin: 0;padding: 0;border: 0;font-size: 0;text-decoration: none;text-indent: -1000em;line-height: 0;background-color: transparent;background-repeat: no-repeat;background-position: 50% 50%;}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {opacity: 0}
+.photo-top .swiper-button-next.swiper-button-disabled, .photo-top .swiper-button-prev.swiper-button-disabled{opacity:.35}
+/* Theme */
+.text-default {color: #000 !important;}
+.text-primary {color: #3717CE !important;}
+.text-mint {color: #5857d8 !important;}
+.text-light {color: #999 !important;}
+.text-grey {color: #666 !important;}
+.text-point {color: #f85c72 !important;}
+.text-point1 {color: #da4257 !important;}
+.text-danger {color: #EA002C !important;}
+.font-noto {font-family: 'NotoSans','Apple SD Gothic Neo',sans-serif !important;}
+.font-lato {font-family: 'Lato','NotoSans','Apple SD Gothic Neo',sans-serif !important;}
+.font-mont {font-family: 'Montserrat','NotoSans','Apple SD Gothic Neo',sans-serif !important;}
+
+/* border */
+.b-0 {border: 0 !important;}
+.bt-0 {border-top: 0 !important;}
+
+/* Nav */
+.nav-link {position: relative;text-align: center;}
+.nav-link.active {color: #000;font-weight: 500;}
+
+/* wrapper */
+.card {overflow: hidden;border: 0;border-radius: 1.6rem;}
+.card .embed-responsive::before {padding-top: 52.14%;}
+.card-body {position: relative;padding: 2rem 1.6rem;letter-spacing: -.05em;}
+.card-title {margin-bottom: 0;font-size: 1.36rem;font-weight: 700;line-height: 1.059;}
+.card-text {margin-top: .6rem;font-size: 1.04rem;line-height: 1.385rem;}
+.meta {color: #888;}
+.collapse-title {display: flex;align-items: center;padding: 1.44rem 1.6rem;font-size: 1.2rem;font-weight: 300;}
+.collapse-title .text {flex: 1;}
+.collapse-title:not(.collapsed) {color: #000;font-weight: 500;}
+.collapse-title:not(.collapsed):after {transform: rotate(-180deg);}
+.collapse-title[data-toggle=collapse]:after {content: '';display: block;min-width: .84rem;height: .4rem;margin-left: .8rem;background: url(https://www.sk7mobile.com/html/images/icon/icon_collapse.png) no-repeat;background-size: auto 100%;}
+.collapse-content {padding: 0 2.44rem 1.44rem;font-weight: 300;line-height: 1.7;}
+
+/* Swiper */
+.swiper-slide {overflow: hidden;}
+.swiper-slide img {width: 100%;}
+.swiper-button-next,.swiper-button-prev {width: 2.04rem;height: 1.6rem;margin-top: -.8rem;border: 0;background: none;background: url(https://www.sk7mobile.com/html/images/main/swiper_arr_blk.png) no-repeat 50% 50%/auto 100%;}
+.swiper-button-white {background-image: url(https://www.sk7mobile.com/html/images/main/swiper_arr_wh.png) !important;}
+.swiper-button-prev {left: 0;transform: scaleX(-1);}
+.swiper-button-next {right: 0;}
+.swiper-control {position: absolute;font-size: 0;}
+.swiper-control button {position: static;vertical-align: top;width: 1.536rem;height: 1.536rem;margin-top: 0;background: url(https://www.sk7mobile.com/html/images/main/swiper_arr.png) no-repeat 50% 50%/auto .88rem;}
+.swiper-control .swiper-button-prev {transform: scale(-1);}
+.swiper-button-auto {width: 1.536rem;height: 1.536rem;}
+.swiper-button-auto.pause {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_pause.png);background-size: auto .84rem;}
+.swiper-button-auto.play {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_play.png);background-size: auto .84rem;}
+.swiper-pagination-bullet {background: rgba(102,102,102,.2);}
+.dark .swiper-pagination-bullet {background: #000;}
+.swiper-button-next:focus,.swiper-button-prev:focus,.swiper-pagination-bullet:focus {outline: 1px dotted #000;}
+
+/*--------------------------------------
+	PAGES
+---------------------------------------*/
+
+/* Layout */
+body {display: flex;flex-wrap: wrap;}
+#wrap {display: flex;overflow: hidden;position: relative;flex-direction: column;width: 100%;min-height: 100vh;}
+#ct {overflow: hidden;flex: 1 0 auto;background: #fff;}
+.is-scroll #ct {padding-top: 4.92rem;}
+.container {position: relative;max-width: 1120px;margin-right: auto;margin-left: auto;padding-right: 15px;padding-left: 15px;}
+.is-scroll #wrap.pop #ct {padding-top: 0 !important;}
+
+/* top-banner */
+.top-banner {overflow: hidden;position: relative;width: 100%;}
+.top-banner a {display: block;}
+.top-banner img {display: block;max-width: 100%;margin: 0 auto;}
+.icon-close {position: absolute;top: 50%;right: .48rem;width: 4.6rem;height: 4.6rem;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_close.png);background-size: auto 1.12rem;transform: translateY(-50%);}
+
+/* Header */
+#hd {position: relative;top: 0;right: 0;left: 0;z-index: 100;height: 5rem;border-bottom: 1px solid #ebebeb;background: #fff;transition: background-color .2s, border .2s;}
+.hd-logo {display: block;padding-top: 1.6rem;text-align: center;}
+.hd-logo a {display: inline-block;}
+.hd-logo img {height: 1.84rem;}
+.is-scroll #hd {position: fixed;}
+.header {position: relative;}
+.icon-mn {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_mn.png);}
+.gnb {display: none;}
+
+/* aside */
+#aside {display: none;position: absolute;}
+
+/* Footer */
+#ft {width: 100%;padding: 3rem 0;font-size: .92rem;font-weight: 300;line-height: 1.565;background: #f4f4f4;}
+.ft-text {margin-bottom: 2rem;color: #2c2b92;font-size: 1.2rem;font-weight: 700;text-align: center;line-height: 1;}
+.ft-text img {margin-left: 1rem;vertical-align: bottom;height: 1.6rem;} /* 210811 수정 */
+#ft hr {margin: 2rem 0;border-top-color: #e3e3e3;}
+
+.fnb {display:table; width: 100%; margin-left: -8px;}  /* 210826 수정 */
+.fnb li { display:inline-table; padding: 0 .5rem; position: relative;} /* 210826 수정 */
+.fnb li::after  { content: ""; width: 1px; height: 52%; background: #cdcdcd; right: -2px; bottom: 20%; position: absolute;} /* 210826 수정 */
+.fnb li:last-child::after { display: none;}
+
+.ft-bottom .addr a {text-decoration: underline;}
+.ft-bottom [class^='icon-sns'] {width: 2.68rem;height: 2.68rem;margin:0 0 0 .6rem;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_sns.png);background-size: auto 100%;}
+.icon-sns-fb {background-position: 0 0;}
+.icon-sns-blog {background-position: 33.333% 0;}
+.icon-sns-insta {background-position: 66.666% 0;}
+.icon-sns-ytb {background-position: 100% 0;}
+.ft-bottom [class^='banner-'] {width:auto; height:2.68rem; margin-right:.4rem }
+.banner-wu {display:inline-block;}
+.banner-wu img {height:100%}
+
+/* sub */
+.sect .container {padding-top: 2.083rem;padding-bottom: 5rem;}
+.sect:before {content: '';display: block;width: 100%;height: 4px;border-bottom: 1px solid #ebebeb;background: #f4f4f4;}
+#wrap.pop .sect:before {display: none;}
+
+.mt-20 {margin-top: 20px !important;}
+
+@media (min-width:1080px) {
+	table .d-lg-block {display: table-cell !important;}
+
+	/* box */
+	.box {margin-bottom: 30px;padding: 35px 110px;}
+
+	/* wrapper */
+	.card-body {padding: 35px;}
+	.card-title {font-size: 23px;}
+	.meta {font-size: 16px;}
+	.card-text {font-size: 18px;}
+
+	/* Swiper */
+	.swiper-pagination-bullet {width: 10px;height: 10px;}
+	.swiper-button-next,.swiper-button-prev {width: 28px;height: 52px;margin-top: -26px;}
+	.swiper-button-prev {left: 40px;}
+	.swiper-button-next {right: 40px;}
+
+	/* Layout */
+	.is-scroll #ct {padding-top: 110px;}
+
+	/* top-banner */
+	.icon-close {right: 12px;width: 30px;height: 30px;background-position: center center;background-size: 13px auto;}
+	.top-banner .form-checkbox {position: absolute;top: 50%;right: 48px;transform: translateY(-50%);}
+	.top-banner .form-checkbox label {min-height: auto;padding-top: 0;padding-left: 34px;color: #fff;font-size: 16px;line-height: 22px;}
+	.top-banner .form-checkbox label:before {width: 22px;height: 22px;}
+	.is-topBnrhide .top-banner {display: none !important;}
+
+	/* Header */
+	#hd {position: relative;height: 110px;}
+	.gnb-wrap {position: relative;padding-top: 52px;}
+	.hd-logo {position: absolute;top: 47px;left: 15px;z-index: 50;padding-top: 0;}
+	.hd-logo img {height: 32px;}
+	.hd-top {position: absolute;top: 10px;right: 0;}
+	.hd-top:after {content: '';display: block;clear: both;}
+	.hd-util {display: inline-block;vertical-align: top;}
+	.hd-util:after {content: '';display: block;clear: both;}
+	.hd-util > li {float: left;}
+	.hd-util > li a {color: #888;font-size: 15px;}
+	.hd-util > li + li {margin-left: 3px;}
+	.hd-util > li + li:before {content: '';display: inline-block;height: 11px;margin: 0 7px;border-left: 1px solid #c9c9c9;}
+	.icon-mn {width: 25px;height: 25px;margin-left: 23px;background-size: 22px auto;}
+	.hd-logo {margin-right: 6%;}
+	.icon-x {display: none;}
+
+	.gnb {display: block;position: relative;padding: 0 180px 0 21%;}
+	.gnb .gnb-list:after {content: '';display: block;clear: both;}
+	.gnb .gnb-item {float: left;}
+	.gnb .gnb-item + .gnb-item {margin-left: 32px;}
+	.gnb .gnb-item .gnb-link {display: block;position: relative;vertical-align: top;padding-bottom: 35px;color: #666;font-size: 20px;font-weight: 400;letter-spacing: -.05em;line-height: 1.304;transition: color .3s;}
+	.gnb .gnb-item .gnb-link:hover,.gnb .gnb-item.active .gnb-link,.gnb .gnb-item.current .gnb-link {color: #EA002C;font-weight: 700;}
+	.gnb .gnb-bar {display: block;position: absolute;bottom: 4px;left: 21%;width: 1px;height: 5px;background: #EA002C;transition: all .2s;opacity: 0;}
+
+	/* gnb-sub  */
+	.gnb-sub {display: none ;position: absolute;top: 58px;left: 0;z-index: 500;width: 100%;padding-left: 200px;line-height: 1.2;background: #f5f5f5;}
+	.gnb-row {display: flex;width: 100%;min-height: 270px;}
+	.gnb-row a {display: inline-block;}
+	.gnb-row:after {content: '';display: block;clear: both;}
+	.gnb-col {vertical-align: top;width: 25%;padding: 50px 10px 50px 25px;border-right: 1px solid #e8e8e8;}
+	.gnb-title {position: absolute;top: 0;left: 0;width: 200px;height: 100%;padding: 45px 20px;border-right: 1px solid #e8e8e8;border-left: 1px solid #e8e8e8;background: #fff;}
+	.gnb-title .title {position: relative;color: #000;font-family: 'S-CoreDream-8Heavy','NotoSans';font-size: 27px;font-weight: 700;letter-spacing: -1px;}
+	.gnb-title .title-sub {margin-top: 12px;color: #999;font-size: 15px;line-height: 20px;}
+
+	.gnb-depth2 + .gnb-depth2 {margin-top: 35px;}
+	.gnb-depth2 > a {color: #000;font-size: 18px;font-weight: 500;word-break: keep-all;line-height: 21px;transition: color .3s;}
+	.gnb-depth3 {margin-top: 16px;}
+	.gnb-depth3 > li > a {position: relative;color: #666;font-size: 16px;letter-spacing: -1.5px;}
+	.gnb-depth3 > li > a:after {content: '';display: block;width: 0;height: 1px;background: #EA002C;transition: all .3s;opacity: 0;}
+	.gnb-depth3 > li > a:focus,.gnb-depth3 > li > a:hover,.gnb-depth3 > li > a.current {color: #EA002C;}
+	.gnb-depth3 > li > a:focus:after,.gnb-depth3 > li > a:hover:after,.gnb-depth3 > li > a.current:after {width: 100%;opacity: 1;}
+	.gnb-depth3 > li + li {margin-top: 8px;}
+
+	.gnb-col.gnb-banner {padding:0; width: auto; border-right: 0;}
+	.gnb-col.gnb-banner .item {display: inline-block;vertical-align: top;width: 182px;}
+	.gnb-col.gnb-banner .item + .item {margin-left: 15px;}
+	.gnb-col.gnb-banner a {display: block;}
+	.gnb-bg {display: none;position: absolute;top: 110px;left: 0;z-index: 300;width: 100%;border-bottom: 1px solid #e8e8e8;background: #f5f5f5;box-shadow: 0px 30px 30px rgba(0,0,0,.2);}
+	.gnb-bg:before {content: '';display: block;position: absolute;top: 0;left: 0;width: 50%;height: 100%;background: #fff;}
+	.gnb-bg > span {display: block;position: relative;width: 1090px;height: 100%;margin: 0 auto;background: #f5f5f5;}
+	.gnb-bg > span:before {content: '';display: block;position: absolute;top: 0;left: 0;width: 200px;height: 100%;border-right: 1px solid #e8e8e8;border-left: 1px solid #e8e8e8;background: #fff;}
+
+	.gnb-col.gnb-banner .item2 {position:absolute; top:50%; right:12px; transform:translateY(-50%); width:420px; height:210px;}
+	.gnb-col.gnb-banner .item2 a {position:relative; height:100%;border-radius:22px;border:1px solid #fff;}
+	.gnb-col.gnb-banner .item2 a .txt{position:absolute; top:45px; left:29px;line-height:1.4;font-size:24px;font-weight:700;text-align:left;letter-spacing:-1.5px;}
+	.gnb-col.gnb-banner .item2 a .floating{position:absolute;top:0;right:-21px;transition:top ease 1.5s;}
+	.gnb-col.gnb-banner .item2 a .bann-btn{padding-top:20px;}
+	.gnb-col.gnb-banner .item2 a .bann-btn span{position:relative;padding:7px 30px 7px 15px;color:#fff;font-size:16px; border-radius:25px;font-weight:normal;letter-spacing:0;}
+	.gnb-col.gnb-banner .item2 a .bann-btn span::after{content:'';position:absolute;top:13px; right:15px;width:9px;height:9px;transform: rotate(45deg); border-top:1px solid #fff;border-right:1px solid #fff;}
+	.gnb-sub[aria-expanded=true] .gnb-col.gnb-banner .item2 a .floating{top:28px;}
+
+	/* 메뉴 */
+	.gnb-sub1 .gnb-col.gnb-banner {width: 25%;}
+	.gnb-sub2 .gnb-col.gnb-banner {width: 50%;}
+	.gnb-sub4 .gnb-col.gnb-banner {width: 25%;}
+	.gnb-sub6 .gnb-col .gnb-depth2:first-child {min-height: 150px;}
+
+	/* header-side */
+	.header-side {position: absolute;top: 48px;right: 0;}
+	.hd-search {display: inline-block;position: relative;width: 160px;height: 37px;padding-right: 40px;border-radius: 15px;background: #f7f7f7;}
+	.hd-search input {width: 100%;height: 37px;padding: 0 5px 0 15px;border: 0;color: #888;font-size: 16px;background: none;}
+	.hd-search input:focus {outline: 1px dotted #000;}
+	.hd-search .btn-search {position: absolute;top: 0;right: 0;width: 40px;height: 37px;border: 0;background: url(https://www.sk7mobile.com/html/images/icon/icon_search.png) no-repeat center;}
+	.hd-lang {position: relative;width: 160px;height: 37px;}
+	.hd-lang .btn-lang {position: relative;width: 160px;height: 37px;padding: 0 40px 0 15px;border: 0;border-radius: 15px;color: #888;font-size: 15px;background: #f7f7f7;}
+	.hd-lang .btn-lang:after {content: '';display: block;position: absolute;top: 50%;right: 15px;width: 30px;height: 30px;background: url(https://www.sk7mobile.com/html/images/icon/icon_arrow3.png) no-repeat center;transition: all .3s;transform: translateY(-50%);}
+	.hd-lang .btn-lang span {display: block;position: relative;vertical-align: top;padding-left: 35px;}
+	.hd-lang .btn-lang span:before {content: '';display: block;position: absolute;top: 50%;left: 10px;width: 23px;height: 23px;background: url(https://www.sk7mobile.com/html/images/icon/icon_lang_grey.png) no-repeat;transform: translateY(-50%);}
+	.hd-lang ul {display: none;width: 100%;padding: 8px 0;border-radius: 15px;background: #f7f7f7;}
+	.hd-lang li {padding: 5px 10px 5px 20px;color: #888;font-size: 15px;}
+	.hd-lang li a:hover {color: #000;}
+	.hd-lang.active ul {display: block;}
+	.hd-lang.active .btn-lang:after {transform: translateY(-50%) rotate(180deg);}
+
+	.aside-top {display:none;}
+
+	/* quick */
+	#quick {position: absolute;top: 130px;right: 50%;z-index: 50;width: 169px;margin-right: -735px;padding-top: 20px;}
+	#quick.is-fixed {position: fixed;top: 107px!important;}
+	.quick-banner > li {margin-bottom: 17px;}
+	.quick-banner > li img {border-radius:10px;}
+
+	/* Footer */
+	#ft {padding: 35px 0;}
+	.ft-text {margin: 0;}
+	.ft-top {display: flex;align-items: center;justify-content: space-between;padding-top: 20px;}
+	.ft-top dt,.ft-top dd {display: inline;}
+	.ft-top dd:after {content: '';display: block;}
+	.fnb {height: 114px;line-height: 27px;}
+	.ft-bottom {position: relative;padding-right: 200px;font-size: 15px;line-height: 1.8;}
+	[class^='icon-sns'] {width: 50px;height: 50px;margin: 0 0 0 7px;}
+	.ft-bottom .nav {position: absolute;top: 0;right: 0;}
+
+	/* sub */
+	.sect .container {padding-top: 40px;padding-bottom: 150px;}
+
+}
+
+@media (min-width:1081px) and (max-width:1120px) {.gnb .gnb-item + .gnb-item {margin-left: 35px;}}
+
+@media (max-width:1079.98px) {
+	a:focus,button:focus {outline: 0;}
+
+	/* Layout */
+	.container {padding-right: 1.6rem;padding-left: 1.6rem;}
+	.container.type2{padding:0px;}
+
+	/* Header */
+	#hd > .container {padding: 0;}
+	.header {align-items: center;justify-content: center;height: 4.92rem;}
+	.icon-my,.icon-mn {position: absolute;top: 0;width: 4.92rem;height: 4.92rem;}
+	.icon-my {right: 0;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_my.png);background-size: auto 1.92rem;}
+	.icon-mn {left: 0;background-size: auto 1.76rem;}
+	#quick,.hd-top .icon-mn {display: none;}
+
+	.gnb-wrap {display: none;overflow-y: auto;position: fixed;top: 0;bottom: 0;left: 0;z-index: 110;width: 30.16rem;max-width: 100%;padding-top: 12.63rem;color: #222;background: #fff;}
+	.gnb-open .gnb-wrap {display: block;box-shadow: 10px 0 20px rgba(0,0,0,.3);}
+	.gnb-open .gnb-bg {display: block !important;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 100;height: 100% !important;background-color: #000;opacity: .6 !important;}
+	.icon-x {position: absolute;top: 0.83rem;right: 1rem;z-index: 50;width: 3rem;height: 3rem;background-image: url(https://www.sk7mobile.com/html/images/icon/icon_close.png);background-size: 1.25rem auto;}
+
+	.hd-top {position: absolute;top: 0;left: 0;z-index: 10;width: 100%;height: 12.63rem;padding-top: 1.5rem;background: #5857d8;}
+	.hd-top .gnb-logo {text-align: center;}
+	.hd-top .gnb-logo a {display: inline-block;}
+	.hd-top .gnb-logo img {height: 2rem;}
+
+	.header-side {position: absolute;top: 5.08rem;left: 50%;z-index: 50;width: 75%;transform: translateX(-50%);}
+	.hd-search {display: block;width: 100%;height: 2.9rem;padding-right: 4.5rem;border-radius: 3rem;background: url(https://www.sk7mobile.com/html/images/common/bg_search.png) no-repeat;background-size: 100% 100%;}
+	.hd-search input {width: 100%;height: 2.9rem;padding-left: 2.08rem;border: 0;color: #fff;font-size: 1.25rem;background: none;}
+	.hd-search input::placeholder {color: #fff;}
+	.hd-search input:focus {outline: 1px dotted #000;}
+	.hd-search .btn-search {position: absolute;top: 0;right: .5rem;width: 2.9rem;height: 2.9rem;border: 0;background: url(https://www.sk7mobile.com/html/images/icon/icon_search2.png) no-repeat center;background-size: 1.6rem auto;}
+	.hd-search [class*=icon] {width: 33px;height: 33px;}
+	.hd-lang {display: block;width: 100%;height: 2.9rem;border-radius: 3rem;background: url(https://www.sk7mobile.com/html/images/common/bg_search.png) no-repeat;background-size: 100% 100%;}
+	.hd-lang .btn-lang {position: relative;width: 100%;height: 2.9rem;padding: 0 3rem 0 2rem;color: #fff;font-size: 1.25rem;text-align: left;}
+	.hd-lang .btn-lang:after {content: '';display: block;position: absolute;top: 50%;right: 1rem;width: 2.9rem;height: 2.9rem;background: url(https://www.sk7mobile.com/html/images/icon/icon_arrow4.png) no-repeat center;background-size: .83rem auto;transition: all .3s;transform: translateY(-50%);}
+	.hd-lang .btn-lang span {display: block;position: relative;vertical-align: top;padding-left: 2.8rem;}
+	.hd-lang .btn-lang span:before {content: '';display: block;position: absolute;top: 50%;left: 0;width: 1.8rem;height: 1.8rem;background: url(https://www.sk7mobile.com/html/images/icon/icon_lang.png) no-repeat;background-size: 100% auto;transform: translateY(-50%);}
+	.hd-lang ul {display: none;width: 100%;padding: .83rem 0;border-radius: 1rem;background: #f7f7f7;}
+	.hd-lang li {padding: .5rem 1.66rem;color: #888;font-size: 1.25rem;}
+	.hd-lang li a {display: block;}
+	.hd-lang.active ul {display: block;}
+	.hd-lang.active .btn-lang:after {transform: translateY(-50%) rotate(180deg);}
+	.partner-ci {text-align: center;}
+	.partner-ci img {max-height: 1.84rem;}
+
+	.hd-util {display:none;}
+
+	.gnb {display: block;position: relative;height: 100%;min-height: 46rem;}
+	.gnb .gnb-list {height: 100%; background:#f5f5f5;}
+	.gnb .gnb-item {width: 12rem;height: 5.5rem;}
+	.gnb .gnb-quick {height: auto;padding: 1.25rem;}
+	.gnb .gnb-quick a {display: block;}
+	.gnb .gnb-sub {display: none;overflow-y: auto;position: absolute;top: -1px;right: 0;width: 18.2rem;height: 100% !important;border-left: 1px solid #dfdfdf;background: #ffffff;}
+	.gnb .gnb-link {display: block;padding-left: 1.5rem;color: #888;font-size: 1.5rem;line-height: 5.5rem;}
+	.gnb .active .gnb-link {color: #EA002C;font-weight: 700; background:#fff;}
+	.gnb .active .gnb-link span {position: relative;padding-bottom: .2rem;}
+	.gnb .active .gnb-link span:before {content: '';position: absolute;bottom: 0px;left: 0;width: 100%;height: 2px;background: #EA002C;}
+
+	.gnb .gnb-title {display: none;}
+	.gnb .gnb-col .gnb-depth2 {padding: 1.9rem 1rem 1.86rem 1.66rem;border-bottom: 1px solid #dfdfdf;}
+
+	.gnb .gnb-depth2 > a {color: #000;font-size: 1.4rem;font-weight: 500;line-height: 1.1;}
+	.gnb .gnb-depth3 {margin-top: 1rem;}
+	.gnb .gnb-depth3 > li > a {color: #666;font-size: 1.16rem;font-weight: 400;}
+	.gnb .gnb-depth3 > li > a.current {border-bottom: 1px solid #EA002C;color: #EA002C;}
+	.gnb .gnb-depth3 > li + li {margin-top: .83rem;}
+	.gnb .gnb-col.gnb-banner {position:absolute; width:100%; bottom:0; padding:0 1.3rem;}
+	.gnb .gnb-col.gnb-banner .item2 {overflow:hidden; position:relative; top:-2rem; width:100%; height:17rem;}
+	.gnb .gnb-col.gnb-banner .item2 a {display:block; position:relative; height:100%;border-radius:11px;border:1px solid #fff;}
+	.gnb .gnb-col.gnb-banner .item2 a .txt{position:relative; padding:2.1rem 0 0 2rem; width:80%; line-height:1.4;font-size:1.7rem;font-weight:700;text-align:left;letter-spacing:-1.5px;}
+	.gnb .gnb-col.gnb-banner .item2 a .txt span{white-space:nowrap;}
+	.gnb .gnb-col.gnb-banner .item2 a .floating{position:absolute;top:2.2rem;left:3.8rem;opacity:0.06;width:97%;height:auto;}
+	.gnb .gnb-col.gnb-banner .item2 a .bann-btn{padding-top:0.8rem;}
+	.gnb .gnb-col.gnb-banner .item2 a .bann-btn span{position:relative;padding:0.42rem 2.5rem 0.42rem 1.2rem;color:#fff;font-size:1.2rem;border-radius:25px;font-weight:300;letter-spacing:0;}
+	.gnb .gnb-col.gnb-banner .item2 a .bann-btn span::after{content:'';position:absolute;top:0.94rem; right:1.5rem;width:0.6rem;height:0.6rem;transform: rotate(45deg); border-top:1px solid #fff;border-right:1px solid #fff;}
+
+	.aside-top {padding: 0 1.5rem}
+	.aside-user {display:flex; align-items:center; justify-content: space-between;}
+	.aside-user .title {font-size: 1.33rem; font-weight:700; color:#fff;}
+	.aside-user ul {margin-right:3rem;}
+	.aside-user li {display:inline-block;}
+	.aside-user li + li {padding-left:0.6rem; margin-left:0.6rem; position:relative;}
+	.aside-user li + li:before {position:absolute; top:50%; left:0; display:inline-block; content:''; width:1px; height: 0.83rem; background:#8686e1; transform:translateY(-50%);}
+	.aside-user li a {font-size:1.08rem; color:#fff;}
+	.aside-util {border-top:1px solid #8686e1; padding-top:1.5rem; margin-top:1.5rem;}
+	.aside-util ul {display:flex; align-items:center;}
+	.aside-util li {width:25%; text-align:center; position:relative;}
+	.aside-util li + li:before {position:absolute; top:50%; left:0; display:inline-block; content:''; width:1px; height: 4.25rem; background:#8686e1; transform:translateY(-50%);}
+	.aside-util li a {display:block; padding-top:3.33rem; font-size:1rem; color:#fff; position: relative;}
+	.aside-util li a:before {display:block; content:''; width:2.41rem; height:2.7rem; background-size:100% auto; background-repeat:no-repeat; position:absolute; top:0; left:50%; transform:translateX(-50%);}
+	.aside-util li a.item1:before {background-image:url(https://www.sk7mobile.com/html/images/icon/icon_aside_menu1.png);}
+	.aside-util li a.item2:before {background-image:url(https://www.sk7mobile.com/html/images/icon/icon_aside_menu2.png);}
+	.aside-util li a.item3:before {background-image:url(https://www.sk7mobile.com/html/images/icon/icon_aside_menu3.png);}
+	.aside-util li a.item4:before {background-image:url(https://www.sk7mobile.com/html/images/icon/icon_aside_menu4.png);}
+	.aside-util li a.item5:before {background-image:url(https://www.sk7mobile.com/html/images/icon/icon_aside_menu5.png);}
+
+	/* Footer */
+	.flex-wrap-point{width: 1000px;}
+	.ft-bottom .addr{margin-top: 1.5rem;}
+	.ft-bottom .nav{gap: 0.3rem 0;}
+	.copy {margin-bottom: 1.5rem;}
+
+	/* 210107 수정 : mpc 모바일 */
+	#hd.mpc-gnb{height:8rem}
+	.mpc-gnb .hd-logo{position:relative;padding-top:1.9rem;text-align:left}
+	.mpc-gnb .hd-logo>a{position:absolute;top:15px;left:50%;transform:translateX(-50%);z-index: 20}
+	.mpc-gnb .hd-logo img{height: 1.84rem;padding-left: 0}
+	/*.hd-logo img{height:1.1rem;padding-left:1.6rem}*/
+	.mpc-gnb .gnb-wrap{display:block;padding-top:0;width:auto;position:static;max-width:inherit;background:transparent}
+	.mpc-gnb .hd-top{display:none}
+	.mpc-gnb .gnb{position:static;height:auto;min-height:inherit}
+	.mpc-gnb .gnb .gnb-item{width:auto;flex: auto}
+	.mpc-gnb .gnb .gnb-list{overflow-x:auto; position:absolute;top:0;left:2%;right: 0;display:flex;height:auto;width:auto;padding-top:41px; padding-right:2rem; background: none} /* 211110 수정 */
+	.mpc-gnb .gnb .gnb-link{padding-left:1.2rem;font-size:1.2rem;line-height:5.1rem;}
+	.mpc-gnb .gnb .gnb-link span{white-space:nowrap;}/* 211110 추가 */
+	.skfamily .mpc-gnb .gnb .gnb-link{padding:0 0.6rem; text-align: center;} /* 220328 */
+	.skfamily .mpc-gnb .gnb .gnb-list{padding-right:0; } /* 220328 */
+
+	/* 210107 수정 : mpc 모바일 */
+	.mpc-gnb.v2 .header-side{top: 16px;right: 20px;left: auto;transform: none;width: auto;height: 1.5rem}
+	.mpc-gnb.v2 .hd-logo>a{top: 15px;left: 20px;transform: none}
+
+	.ft-bottom [class^='banner-'] {margin-right:0.5rem} /* 210913 */
+	.ft-bottom [class^='icon-sns'] {margin-left:0.5rem } /* 210913 */
+
+	.skfamily #ft .ft-top dt {display: inline; padding-right: 0.2rem;} /* 220328 */
+	.skfamily #ft .ft-top dd {display: inline; padding-right: 2rem;} /* 220328 */
+}
+
+@media (max-width:620px) {
+	.ft-bottom [class^='banner-'] {margin-right:0.4rem; height:2.6rem;}
+	.ft-bottom [class^='icon-sns'] {margin-left:0.4rem; width:2.6rem; height:2.6rem;}
+}
+
+@media (max-width:575.98px) {html {font-size: 3vw;}}
+
+@media (max-width:359.98px) {
+	html {font-size: 11px;}
+	.gnb .gnb-item {width: 11rem;}
+	.fnb {display: inline-block;height: auto; margin-left: -4px;}
+}
+
+.term-area table{word-break:break-all !important;}

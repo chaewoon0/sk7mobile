@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+@font-face {font-family: 'NotoSans';font-weight: 300;font-style: normal;src: url(/html/cmmn/fonts/NotoSansCJKkr-Light.woff) format('woff');}
+@font-face {font-family: 'NotoSans';font-weight: 400;font-style: normal;src: url(/html/cmmn/fonts/NotoSansCJKkr-Regular.woff) format('woff');}
+@font-face {font-family: 'NotoSans';font-weight: 500;font-style: normal;src: url(/html/cmmn/fonts/NotoSansCJKkr-Medium.woff) format('woff');}
+@font-face {font-family: 'NotoSans';font-weight: 700;font-style: normal;src: url(/html/cmmn/fonts/NotoSansCJKkr-Bold.woff) format('woff');}
+
+body {margin: 0;padding: 0;}
+* {box-sizing: border-box;vertical-align: baseline;margin: 0;padding: 0;border-radius: 0;font: 12px 'Noto Sans KR','NotoSans','Tahoma';font-size: inherit;-webkit-font-smoothing: antialiased;-webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none;text-size-adjust: none;word-break: break-all;letter-spacing: -.06em;list-style: none;-webkit-tap-highlight-color: transparent;-moz-box-sizing: border-box;}
+.page {width: 21cm;min-height: 29.7cm;/*padding: 2cm;*/margin: 1cm auto;border-radius: 5px;background: white;box-shadow: 0 0 5px rgba(0, 0, 0, .1);}
+@page {margin: 0;size: letter portrait;}
+@media print {
+	.page {width: initial;min-height: initial;margin: 0;border: initial;border-radius: initial;background: initial;box-shadow: initial;page-break-after: always;}
+}
+legend,caption {overflow: hidden;position: absolute;width: 1px;height: 0;border: none;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);}
+caption {position: static;color: transparent;}
+
+/* layout */
+.header {position: relative;height: 139.88px;padding: 48.02px 0 0;text-align: center;background: #5857d8;}
+h1 {position: absolute;top: 40.33px;left: 46.09px;}
+h1 img {height: 24.01px;}
+h2 {color: #fff;font-size: 30.68px;font-weight: 700;line-height: 1;}
+.list-box {display: inline-block;margin: 12.8px auto;padding: 7.36px 18.89px;border-radius: 3px;text-align: center;background: #1e8e80;}
+.list-box:after {content: '';display: block;clear: both;}
+.list-box li {float: left;}
+.list-box li + li {margin-left: 33.29px;}
+.list-box li .tit,.list-box li .cont {float: left;vertical-align: middle;color: #fff;font-size: 13.34px;}
+.list-box li .tit {font-weight: 400;}
+.list-box li .cont {position: relative;margin-left: 6px;padding-left: 6px;font-weight: 700;}
+.list-box li .cont:before {content: '';display: block;position: absolute;top: 50%;left: 0;width: 1px;height: 10.56px;margin-top: -5.28px;background: #fff;}
+.icon-chk {display: inline-block;vertical-align: middle;width: 15.04px;height: 15.04px;margin: -2px 5px 0 0;background: url(/html/images/application/icon_chk.png) no-repeat;background-size: 100% 100%;}
+
+.content {padding: 10px 46.09px 0;}
+.text-right {text-align: right;}
+.float-left {float: left;}
+.float-right {float: right;}
+.b-n {border: 0 !important;}
+.pt-0 {padding-top: 0 !important;}
+strong {font-weight: 700;}
+.red {color: #EA002C !important;}
+
+.tb {overflow: hidden;border: 2px solid #5857d8;border-radius: 5px;}
+table {width: 100%;border-spacing: 0;border-collapse: collapse;line-height: 1.4;}
+table th,table td {border-top: 1px solid #5857d8;font-size: 9.28px;font-weight: 700; text-align: left;word-break: break-all;}
+table tr:first-child th,table tr:first-child td {border-top: 0;}
+table th {vertical-align: top;padding: 2.5px 0 2.5px 10px;color: #5857d8;}
+table td {vertical-align: middle;padding: 2.5px 10px;border-left: 1px solid #5857d8;}
+table .point {padding: 2.5px 10px;color: #043d2f;font-size: 10.67px;background: #ecfffd;}
+table .font-sm {color: #000;font-size: .5em;font-weight: 400;}
+table .bl {border-left: 1px solid #5857d8;}
+
+.area1:after {content: '';display: block;clear: both;}
+.area1 > div {float: left;width: 32.6%;}
+.area1 > div + div {margin-left: 1%;}
+.area1 th {width: 40%;}
+.area1 table {min-height: 260px;}
+
+.chk {position: relative;margin-right: 11.2px;padding-left: 11px;}
+.chk:before {content: '';display: block;position: absolute;top: 3px;left: 0;width: 9.92px;height: 9.92px;background-image: url(/html/images/application/icon_chk1.png);background-repeat: no-repeat;background-position: center center;background-size: auto 100%;}
+.chk.on:before {background-image: url(/html/images/application/icon_chk_on.png);}
+
+.area2 > div {margin-top: 8px;}
+.area2 > div:after {content: '';display: block;clear: both;}
+.area2 h3 {float: left;color: #043d2f;;font-size: 10.67px;font-weight: 700;}
+.area2 .tb {float: right;width: 82%;}
+
+.area3 {margin-top: 8px;padding: 6px 20.17px 3px;background: #f7f7f7;}
+.area3 h3 {position: relative;margin-bottom: 4px;padding-left: 8px;color: #000;font-size: 11px;font-weight: 700;line-height: 1.2;}
+.area3 h3:before {content: '';display: inline-block;position: absolute;top: 4px;left: 0;;width: 6px;height: 6px;background: #000;}
+.area3 h3.red:before {background: #EA002C;}
+.area3 ul {margin-bottom: 8px;}
+.area3 li {position: relative;margin-left: 3px;padding-left: 5px;color: #000;font-size: 10px;line-height: 13.12px;}
+.area3 li:before {content: '';display: inline-block;position: absolute;top: 5px;left: 0;;vertical-align: middle;width: 2px;height: 2px;border-radius: 50%;background: #000;}
+.area3 li .underline {padding-bottom: 1px;border-bottom: 1px solid #000;}
+
+.sign-wp {display: table;table-layout: fixed;overflow: hidden;width: 100%;margin: 6px 0 4px;border: 2px solid #5857d8;border-radius: 5px;background: #fff;}
+.sign-wp > div {display: table-cell;vertical-align: middle;height: 32px;padding: 0 21.13px;}
+.sign1 {font-size: 13.3px;font-weight: 700;line-height: 1;}
+.sign1 .grey {display: inline-block;margin: 0 3px;color: #d6d6d6;font-weight: 700;letter-spacing: 4px;}
+.sign2 {border-left: 1px solid #5857d8;}
+.sign2 span {vertical-align: top;color: #5857d8;font-size: 10.67px;font-weight: 700;line-height: 20px;}
+.sign2 strong {vertical-align: top;color: #000;font-size: 13.3px;line-height: 20px;}
+
+.info-wp {display: table;table-layout: fixed;overflow: hidden;width: 100%;margin: 6px 0 4px;border: 2px solid #5857d8;border-radius: 5px;background: #fff;}
+.info-wp > div {display: table-cell;vertical-align: middle;height: 32px;padding: 0 21.13px;}
+.info1 {font-size: 13.3px;font-weight: 700;line-height: 1;}
+.info1 .grey {display: inline-block;margin: 0 3px;color: #d6d6d6;font-weight: 700;letter-spacing: 4px;}
+.info2,.info3 {border-left: 1px solid #5857d8;}
+.info-wp span {vertical-align: top;color: #5857d8;font-size: 10.67px;font-weight: 700;line-height: 20px;}
+.info-wp strong {vertical-align: top;color: #000;font-size: 13.3px;line-height: 20px;}

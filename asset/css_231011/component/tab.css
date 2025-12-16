@@ -1,0 +1,69 @@
+@charset 'UTF-8';
+
+/* tab */
+.tab-menu {position: relative;height: 2.333rem;margin: 2.5rem -1.6rem 2.5rem;border-bottom: 1px solid #eaeaea;}
+.tab-menu:before,.tab-menu:after {content: '';display: table;}
+.tab-menu:after {clear: both;}
+.tab-menu ul {overflow-x: auto;overflow-y: hidden;margin: 0 1.6rem;white-space: nowrap;}
+.tab-menu .tab-link {display: inline-block;}
+.tab-menu .tab-link + .tab-link {margin-left: 1.875rem;}
+.tab-menu .tab-btn {display: block;position: relative;padding: 0 .416rem 1rem;border: 0;color: #333;font-size: 1.33rem;font-weight: 300;line-height: 1;}
+.tab-menu .tab-btn:after {content: '';display: block;position: absolute;bottom: 0px;left: 0;z-index: 10;width: 0;height: .2rem;background: #5857d8;}
+.tab-menu .tab-link.active .tab-btn {color: #5857d8;font-weight: 500;}
+.tab-menu .tab-link.active .tab-btn:after {content: '';display: block;position: absolute;bottom: -1px;left: 0;width: 100%;height: .2rem;background: #5857d8;}
+
+.tab-menu-type1 {height: auto;margin: 2.333rem 0 1.5rem;border-bottom: 0;}
+.tab-menu-type1 ul {overflow: hidden;margin: 0 ;white-space: normal;}
+.tab-menu-type1 .tab-link {float: left;position: relative;border: 1px solid #e5e5e5;}
+.tab-menu-type1 .tab-link + .tab-link {margin-left: -1px;}
+.tab-menu-type1 .tab-btn {display: block;width: 100%;height: auto;padding: 1.1rem 0 1rem;color: #999;font-size: 1.166rem;font-weight: 300;text-align: center;line-height: 1;background: #f9f9f9;}
+.tab-menu-type1 .tab-link.active {border-bottom: 0 !important;}
+.tab-menu-type1 .tab-link.active .tab-btn {position: absolute;top: -1px;left: 0;border: 2px solid #5857d8;border-bottom: 0;color: #000;font-weight: 500;background: #fff;}
+.tab-menu-type1 .tab-link.active .tab-btn:after {display: none !important;}
+
+.sub-menu {position: relative;z-index: 1;margin: -1.33rem 0 2.5rem;}
+.sub-menu ul:after {content: '';display: block;clear: both;}
+.sub-menu li {float: left;margin-right: 1.91rem;padding: .33rem 0;}
+.sub-menu .sub-btn {color: #999;font-size: 1.08rem;}
+.sub-menu .active .sub-btn {color: #5857d8;}
+
+.tab-menu-type1.item2 .tab-link {width: 50%;}
+.tab-menu-type1.item3 .tab-link {width: 33.33%;}
+.tab-menu-type1.item4 .tab-link {width: 25%;}
+.tab-menu-type1.item5 .tab-link {width: 20%;}
+
+.tab-group .tab-panel {display: none;}
+.tab-group .tab-panel.active {display: block;}
+
+@media (min-width:1080px) {
+	.tab-menu {height: auto;margin: 0 0 40px;border-bottom: 0;}
+	.tab-menu:after {content: '';display: block;position: absolute;bottom: 0px;left: 0;width: 100%;height: 1px;background: #eaeaea;}
+	.tab-menu ul {margin: 0;margin-top: -22px;white-space: normal;}
+	.tab-menu .tab-link {float: left;width: 18.6%;height: 62px;padding: 22px 0 0 10px;border-bottom: 1px solid #eaeaea;}
+	.tab-menu .tab-link + .tab-link {margin-left: 0;}
+	.tab-menu .tab-btn {display: inline-block;min-width: 100px;padding: 0 10px 16px;font-size: 21px;font-weight: 400;text-align: center;transition: color .3s;}
+	.tab-menu .tab-btn:after {bottom: -1px;height: 1px;transition: width .3s;}
+	.tab-menu .tab-btn:hover,.tab-menu .tab-btn:focus {color: #5857d8;}
+	.tab-menu .tab-btn:hover:after,.tab-menu a:focus:after {width: 100%;}
+	.tab-menu .tab-link.active .tab-btn {font-size: 21px;font-weight: 400;}
+	.tab-menu .tab-link.active .tab-btn:after {height: 5px;}
+
+	.tab-menu.item2 .tab-link {width: 50%;}
+	.tab-menu.item3 .tab-link {width: 33.33%;}
+	.tab-menu.item4 .tab-link {width: 25%;}
+	.tab-menu.item5 .tab-link {width: 20%;}
+
+	.tab-menu-type1 {margin: 60px 0 25px;}
+	.tab-menu-type1 .tab-btn {padding: 20px 0 19px;}
+	.tab-menu-type1 .tab-link {padding: 0;}
+	.tab-menu-type1 .tab-link.active .tab-btn {border: 1px solid #5857d8;border-bottom: 0;font-size: 20px;}
+	.tab-menu-type1 .tab-btn:hover,.tab-menu-type1 .tab-btn:focus {color: #000;}
+	.tab-menu-type1 .tab-btn:hover:after,.tab-menu.tab-menu-type1 a:focus:after {display: none !important;}
+
+	[class^=heading-depth] + .tab-menu {margin-top: 50px;}
+
+	.sub-menu {margin-bottom: 28px;padding: 0 8px;}
+	.sub-menu li {margin-right: 45px;}
+	.sub-menu .sub-btn {font-size: 17px;}
+	.sub-menu .sub-btn:hover,.sub-menu .sub-btn:focus {color: #5857d8;}
+}

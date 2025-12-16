@@ -1,0 +1,300 @@
+@charset 'UTF-8';
+
+/* bbs-webzine */
+.bbs-webzine > li > div {display: table-cell;vertical-align: middle;}
+.bbs-webzine .num {width: 3rem;padding: 0;text-align: center;}
+.bbs-webzine .date {display: none;}
+.bbs-webzine .title a {display: block;}
+.webzine-group {display: table;table-layout: fixed;width: 100%;}
+.webzine-group > div {display: table-cell;vertical-align: middle;}
+.webzine-group .img {overflow: hidden;width: 7.33rem;}
+.webzine-group .img span {display: block;overflow: hidden;position: relative;width: 7.33rem;height: 5rem;border: 1px solid #d4d4d4;}
+.webzine-group .img img {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.webzine-group .text-group {padding-left: .83rem;text-align: left;}
+.webzine-group .tb-title {max-height: 2.67rem;font-size: 1.16rem;line-height: 1.33rem !important;}
+.webzine-group .desc {margin-top: .41rem;margin-left: 0;}
+.webzine-group .text-group p.bbs-date {margin-top: .41rem;}
+
+/* bbs-view */
+.bbs-view {border-top: 1px solid #5857d8;border-bottom: 1px solid #5857d8;}
+.bbs-view .view-head {position: relative;padding: 1.25rem 1.083rem;border-bottom: 1px solid #d0d0d0;background: #f7f6fb;}
+.bbs-view .view-head:after {content: '';display: block;clear: both;}
+.bbs-view .view-head .title {display: block;color: #000;font-size: 1.333rem;font-weight: 700;}
+.bbs-view .view-head .date {display: inline-block;float: left;margin-top: .666rem;color: #7a7d7d;font-size: 1.083rem;}
+.bbs-view .sns {float: right;margin: .416rem 0;}
+.bbs-view .sns li {float: left;}
+.bbs-view .sns li + li {margin-left: .333rem;}
+.bbs-view .sns a {display: block;overflow: hidden;border: 1px solid #dae9e9;border-radius: 50%;background-color: #fff;}
+.bbs-view .sns [class^=icon-] {width: 2.333rem;height: 2.333rem;background-repeat: no-repeat;background-size: 100% auto;}
+.bbs-view .sns .icon-ka {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_sns_ka.png);}
+.bbs-view .sns .icon-fb {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_sns_fb.png);}
+.bbs-view .sns .icon-tw {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_sns_tw.png);}
+.bbs-view .sns .icon-url {background-image: url(https://www.sk7mobile.com/html/images/icon/icon_sns_url.png);}
+.bbs-view .view-body {padding: 1.833rem 0 2.5rem;color: #000;font-size: 1.083rem;}
+.bbs-view .view-page > div {overflow: hidden;position: relative;padding: .8rem 1.083rem .7rem 5.166rem;border-top: 1px solid #cbdbd9;text-overflow: ellipsis;white-space: nowrap;}
+.bbs-view .view-page div:before {content: '';display: block;position: absolute;top: 50%;left: 4.416rem;width: 1px;height: .75rem;color: #000;background: #cbdbd9;transform: translateY(-50%);}
+.bbs-view .view-page em {position: absolute;top: 50%;left: 1.083rem;font-size: 1rem;transform: translateY(-50%);}
+.bbs-view .view-page a {color: #000;font-size: 1.166rem;}
+
+/* article-wp */
+.article-wp {margin-top: 1.83rem;}
+.article-wp .article-title {font-size: 1.41rem;}
+.article-wp ul {margin-top: .66rem;}
+.article-wp li + li {margin-top: 1.41rem;}
+.article-wp li a,.article-wp li .img {display: block;}
+.article-wp li img {width: 100%;}
+
+/* bbs-card */
+.bbs-card {overflow: hidden;}
+.bbs-card > ul > li {padding: 1.833rem 0;border-bottom: 1px solid #d0d0d0;}
+.bbs-card > ul > li > a {display: block;}
+.bbs-card .img {width: 100%;height: auto;}
+.bbs-card .img img {width: 100%;height: auto;}
+.bbs-card .text-group {margin-top: 1.33rem;}
+.bbs-card .text-group .title {display: block;font-size: 1.333rem;font-weight: 400;word-break: break-all;line-height: 1.3;}
+.bbs-card .text-group p {display: block;margin-top: .416rem;font-size: 1rem;line-height: 1;}
+
+.icon-filePdf {width: 1.83rem;height: 2rem;background: url(https://www.sk7mobile.com/html/images/icon/icon_pdf.png) no-repeat;background-size: 100% auto;}
+
+/* bbs-myQna */
+.bbs-myQna .tb-title {padding-bottom: 1px;border-bottom: 1px solid #000;}
+.is_pc .bbs-myQna .tb-title:hover,.is_pc .bbs-myQna .tb-title:focus {border-color: #5857d8;}
+.bbs-myQna .detail {display: none;padding: .83rem;border-bottom: 1px solid #cbdbd9;background: #f7f6fb;}
+.bbs-myQna .detail.active {display: block;}
+.bbs-myQna .detail > div {color: #666;font-size: 1.16rem;}
+
+.bbs-myQna .detail .btn-wrap {margin: 1.375rem 0 1rem;text-align: center;}
+.bbs-myQna .answer-card {overflow: hidden;margin-top: 1.375rem;border-radius: .5rem;background: #fff;}
+.bbs-myQna .answer-head {display: flex;align-items: center;justify-content: space-between;padding: 1rem;background: #5857d8;}
+.bbs-myQna .answer-head strong {position: relative;padding-left: 1.5rem;color: #fff;font-size: 1.08rem;font-weight: 500;}
+.bbs-myQna .answer-head strong:before {content: '';display: block;position: absolute;top: 50%;left: 0;width: 1.16rem;height: 1.16rem;background: url(https://www.sk7mobile.com/html/images/icon/icon_bubble.png) no-repeat;background-size: 100% auto;transform: translateY(-50%);}
+.bbs-myQna .answer-head > span {color: #fff;font-size: 1rem;}
+.bbs-myQna .answer-head > span span {margin-left: .4rem;}
+.bbs-myQna .answer-body {padding: 1.66rem 1.25rem;color: #000;font-size: 1.16rem;line-height: 1.66rem;}
+.bbs-myQna .list-th div {color:#5857d8}
+
+/* bbs-card-type1 */
+.bbs-card-type1 {overflow: hidden;}
+.bbs-card-type1 > ul {padding: .66rem 0;}
+.bbs-card-type1 > ul > li {padding: .66rem 0;}
+.bbs-card-type1 > ul > li > a {display: table;table-layout: fixed;overflow: hidden;width: 100%;height: 9.91rem;border: 1px solid #ebebeb;border-radius: .5rem;background: #fff;}
+.bbs-card-type1 .img {display: table-cell;overflow: hidden;position: relative;vertical-align: middle;width: 9.91rem;height: 9.91rem;}
+.bbs-card-type1 .img img {display: block;width: 100%;height: 100%;}
+.bbs-card-type1 .text-group {display: table-cell;vertical-align: middle;padding: 0 1rem 0 1.66rem;line-height: 1.2;}
+.bbs-card-type1 .text-group .title {display: block;color: #010101;font-family: 'Montserrat','NotoSans';font-size: 1.25rem;font-weight: 700;}
+.bbs-card-type1 .text-group .info {overflow: hidden;color: #010101;font-size: 1.25rem;font-weight: 500;text-overflow: ellipsis;white-space: nowrap;}
+.bbs-card-type1 .text-group .address {position: relative;margin-top: 1.25rem;padding-left: 1.25rem;color: #999;font-size: 1rem;}
+.bbs-card-type1 .text-group .address:before {content: '';display: block;position: absolute;top: 50%;left: 0;width: .75rem;height: 1.08rem;background: url(https://www.sk7mobile.com/html/images/icon/icon_map1.png) no-repeat;background-size: 100% auto;transform: translateY(-50%);}
+
+/* review-write */
+/* .review-write {padding: 4.16rem 2rem;background: #e9f4f2;} */ /* 220523 */
+.review-write .write-cont {padding:2.07rem 2rem  4.16rem; background: #eef0fb;} /* 220525 */
+.review-write .form-control {border-color: #d8e6e4;}
+.review-write .subTitle .title, .review-view .review-head .title {color: #1a354a;font-family: 'Gmarket Sans', 'NotoSans';font-size: 1.91rem;font-weight: 700;}  /* 220523 */
+.review-write .recom-btn-wp {margin: .83rem 0 1.5rem;text-align: center;} /* 220526 */
+/* .review-write .recom-btn-wp {margin: 1.83rem 0;} */ /* 220523 삭제 */
+.review-write .recom-btn-wp label {position: relative;margin-bottom: 0;}
+.review-write .recom-btn-wp input[type=radio] {overflow: hidden;position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;border: 0;clip: rect(0,0,0,0);}
+.review-write .recom-btn-wp .btn {height: 3.66rem;padding: 0;text-align: center;background: url(https://www.sk7mobile.com/html/images/common/bg_btn5.png) no-repeat;background-size: 100% 100%;}
+.review-write .recom-btn-wp .btn.active {background: url(https://www.sk7mobile.com/html/images/common/bg_btn4.png) no-repeat;background-size: 100% 100%;}
+.review-write .recom-btn-wp .btn span {display: inline-block;position: relative;vertical-align: top;padding-left: 1.83rem;color: #fff;font-family: 'Gmarket Sans', 'NotoSans';line-height: 3.66rem;}
+.review-write .recom-btn-wp .btn span:before {content: '';display: block;position: absolute;top: 50%;left: 0;width: 1.25rem;height: 1.41rem;background-size: 100% auto;transform: translateY(-50%);}
+.review-write .recom-good span:before {background: url(https://www.sk7mobile.com/html/images/icon/icon_good.png) no-repeat;}
+.review-write .recom-bad span:before {background: url(https://www.sk7mobile.com/html/images/icon/icon_bad.png) no-repeat;}
+.txtarea-count {position: relative;width: 100%;height: 11rem;padding: .3rem .333rem 2.9rem;border: 1px solid #d8e6e4;border-radius: .333rem;font-size: 1.166rem;background: #fff;}
+.txtarea-count textarea {width: 100%;height: 100%;padding: .5rem 1rem;border: 0;}
+.txtarea-count textarea:focus {border-color: #80bdff;outline: 0;color: #495057;background-color: #fff;box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);}
+.txtarea-count .txtarea-paragraph {position: absolute;right: 1.333rem;bottom: .5rem;color: #8d8d8d;font-size: 1rem;}
+.review-write .btn-register {width: 12.33rem;height: 3.66rem;padding: 0;color: #fff;font-family: 'Gmarket Sans', 'NotoSans';text-align: center;line-height: 3.66rem;background: url(https://www.sk7mobile.com/html/images/common/bg_btn3.png) no-repeat;background-size: 100% 100%;}
+.review-write .text-info {color: #666 !important;}
+
+/* review-view */
+.review-view {padding: 4.16rem 0;}
+.review-view .subTitle {margin-bottom: 1.5rem;text-align: center;}
+.review-view .subTitle:after {content: '';display: block;clear: both;}
+.review-view .subTitle .title {display: inline-block;vertical-align: top;color: #1a354a;font-family: 'Gmarket Sans', 'NotoSans';font-size: 1.91rem;font-weight: 700;}
+.review-view .subTitle .num {display: inline-block;vertical-align: top;margin-left: .4rem;padding: .1rem .83rem .1rem;border-radius: 1rem;color: #fff;font-size: .9rem;background: #50c9b0;}
+.review-view .total {margin-bottom: .83rem;font-size: 1rem;}
+.review-write .subTitle {margin-bottom: 1.5rem;} /* 220523 */
+.icon-good {vertical-align: middle;width: 1.08rem;height: 1.08rem;margin: -.2rem .4rem 0 0;background: url(https://www.sk7mobile.com/html/images/icon/icon_good2.png) no-repeat;background-size: 100% auto;}
+.review-list {border-top: 1px solid #5857d8;}
+.review-list .review-item {padding: 1.5rem 0;}
+.review-list .review-item + .review-item {border-top: 1px solid #ddd;}
+.review-list .group {position: relative;}
+.review-list .info:after {content: '';display: block;clear: both;}
+.review-list .info li {float: left;margin-right: .8rem;color: #000;font-size: 1rem;}
+.review-list .info li + li {position: relative;padding-left: .85rem;}
+.review-list .info li + li:before {content: '';display: block;position: absolute;top: 50%;left: 0;width: 1px;height: 1rem;background: #cdcdcd;transform: translateY(-50%);}
+.review-list .cont {display: -webkit-box;overflow: hidden;max-height: 3em;margin-top: .5rem;color: #1a354a;font-size: 1.08rem;text-overflow: ellipsis;word-wrap: break-word;word-break: break-all;white-space: normal;line-height: 1.5em !important;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.review-list .cont .link {padding-bottom: 1px;border-bottom: 1px solid #0f69af;color: #0f69af;}
+.review-list .btn-more-wp {margin-top: .83rem;text-align: center;}
+.review-list .btn-more span {position: relative;padding-right: 1.5rem;color: #666;}
+.review-list .btn-more span:after {content: '';display: block;position: absolute;top: 50%;right: 0;width: 1rem;height: 1rem;background: url(https://www.sk7mobile.com/html/images/icon/icon_accordion1.png) no-repeat center center;background-size: 100% auto;transform: translateY(-50%);}
+.review-list .img {margin-top: 1.66rem;}
+.review-list .img:after {content: '';display: block;clear: both;}
+.review-list .img > span {display: block;float: left;width: 8.33rem;height: 8.33rem;}
+.review-list .img > span + span {margin-left: .4rem;}
+.review-list .img a {display: block;}
+.review-list .img > span img {display: block;width: 8.33rem;height: 8.33rem;}
+.review-list .add {display: none;position: relative;}
+.review-list .btn-wp {display: none;margin-top: .83rem;}
+.review-list .btn-delete {height: 2.33rem;padding: 0 1.25rem;font-size: 1rem;line-height: 2.33rem;}
+.review-list .active .cont {overflow: visible;height: auto;max-height: inherit;-webkit-line-clamp: unset;}
+.review-list .active .btn-more span:after {transform: translateY(-50%) rotate(-180deg);}
+.review-list .active .add,.review-list .active .btn-wp {display: block;}
+
+.review-view.best .subTitle {text-align: left;}
+/* .review-view.best .subTitle .title {font-size: 1.5rem;} */ /* 220523 */
+.review-view.best .subTitle .sel-group {float: right;margin-top: -.4rem;}
+.review-view.best .subTitle .sel-group .form-control {width: 9.5rem;}
+.review-view.best .group {padding-left: 2.83rem;}
+.best-badge {position: absolute;top: 0;left: 0;width: 2rem;height: 2.66rem;padding-top: .4rem;color: #fff;font-family: 'Gmarket Sans', 'NotoSans';font-size: .9rem;font-weight: 700;text-align: center;background: url(https://www.sk7mobile.com/html/images/icon/icon_badge_best.png) no-repeat;background-size: 100% auto;}
+.view-body .subTitle .title, .review-view .review-head .title {font-size: 1.5rem;} /* 220523 */
+
+@media (min-width:1080px) {
+	/* bbs-webzine */
+	.bbs-webzine .num {width: 130px;}
+	.bbs-webzine > li:not(.list-th) .num {font-size: 20px;}
+	.bbs-webzine .date {display: table-cell;width: 175px;}
+	.webzine-group .bbs-date {display: none;}
+	.bbs-webzine > li:not(.list-th) > div {padding: 28px 10px;}
+	.webzine-group .img {width: 180px;}
+	.webzine-group .img span {width: 180px;height: 120px;}
+	.webzine-group .img img {position: relative;top: 0;left: 0;transition: all .3s;transform: translate(0,0);}
+	.bbs-webzine a:hover .img img,.bbs-webzine a:focus .img img {transform: scale(1.1);}
+	.webzine-group .text-group {padding-left: 25px;}
+	.webzine-group .tb-title {max-height: 60px !important;margin-bottom: 5px;font-size: 22px;line-height: 30px !important;}
+	.webzine-group .desc {max-height: 66px !important;line-height: 22px !important;-webkit-line-clamp: 3 !important;}
+
+	/* bbs-view */
+	.bbs-view {border-width: 2px 0;}
+	.bbs-view .view-head {padding: 22px 240px 22px 40px;}
+	.bbs-view .title {font-size: 26px;}
+	.bbs-view .date {margin-top: 0;font-size: 16px;}
+	.bbs-view .sns {float: none;position: absolute;top: 50%;right: 40px;margin: 0;transform: translateY(-50%);}
+	.bbs-view .sns li + li {margin-left: 4px;}
+	.bbs-view .sns [class^=icon-] {width: 36px;height: 36px;}
+
+	.bbs-view .view-body {padding: 45px 0;font-size: 16px;}
+	.bbs-view .view-page > div {padding: 15px 40px 14px 115px;}
+	.bbs-view .view-page div:before {left: 102px;height: 17px;}
+	.bbs-view .view-page em {left: 40px;font-size: 16px;}
+	.bbs-view .view-page a {font-size: 18px;transition: color .3s;}
+	.bbs-view .view-page a:hover,.bbs-view .view-page a:focus {color: #5857d8;}
+
+	/* article-wp */
+	.article-wp {margin-top: 35px;}
+	.article-wp .article-title {font-size: 22px;}
+	.article-wp ul {margin: 15px -25px 0;}
+	.article-wp ul:after {content: '';display: block;clear: both;}
+	.article-wp li {float: left;width: 50%;padding: 0 25px;}
+	.article-wp li + li {margin-top: 0;}
+	.article-wp a .img {display: block;overflow: hidden;height: 141px;}
+	.article-wp a .img img {transition: all .3s;transform: translate(0,0);}
+	.article-wp a:hover .img img {transform: scale(1.1);}
+
+	/* bbs */
+	.bbs .num {width: 105px;padding-right: 0;padding-left: 0;}
+	.bbs .date {width: 250px;padding-right: 0;padding-left: 0;}
+
+	/* bbs-card */
+	.bbs-card > ul {overflow: hidden;margin: 0 -25px -1px;}
+	.bbs-card > ul:after {content: '';display: block;clear: both;}
+	.bbs-card > ul > li {float: left;width: 50%;padding: 30px 25px 35px;}
+	.bbs-card .text-group .title {overflow: hidden;font-size: 21px;text-overflow: ellipsis;white-space: nowrap;}
+	.bbs-card .text-group p {font-size: 16px;}
+	.bbs-card a .img {overflow: hidden;height: 141px;}
+	.bbs-card a .img img {transition: all .3s;transform: translate(0,0);}
+	.bbs-card a:hover .img img,.bbs-card a:focus .img img {transform: scale(1.1);}
+
+	.icon-filePdf {width: 22px;height: 24px;}
+
+	/* bbs-myQna */
+	.bbs-myQna .detail {padding: 25px;}
+	.bbs-myQna .detail > div {display: block;height: auto;color: #000;font-size: 17px;text-align: left;line-height: 28px;}
+	.bbs-myQna .detail .cont {padding: 0;}
+	.bbs-myQna .detail .btn-wrap {margin-top: 20px;}
+	.bbs-myQna .answer-card {margin-top: 20px;}
+	.bbs-myQna .answer-head {padding: 15px;}
+	.bbs-myQna .answer-head strong {padding-left: 28px;font-size: 18px;}
+	.bbs-myQna .answer-head strong:before {width: 21px;height: 21px;}
+	.bbs-myQna .answer-head > span {font-size: 16px;}
+	.bbs-myQna .answer-body {padding: 20px 25px;color: #000;font-size: 17px;line-height: 28px;}
+
+	/* bbs-card-type1 */
+	.bbs-card-type1 > ul {margin: 0 -18px;padding: 30px 0;}
+	.bbs-card-type1 > ul:after {content: '';display: block;clear: both;}
+	.bbs-card-type1 > ul > li {float: left;width: 50%;padding: 10px 18px;}
+	.bbs-card-type1 > ul > li > a {height: 238px;}
+	.bbs-card-type1 .img {width: 238px;height: 238px;}
+	.bbs-card-type1 .img img {width: 100%;height: auto;transition: all .3s;}
+	.bbs-card-type1 a:hover .img img,.bbs-card-type1 a:focus .img img {transform: scale(1.1,1.1);}
+	.bbs-card-type1 .text-group {padding: 0 20px 0 30px;}
+	.bbs-card-type1 .text-group .title {font-size: 22px;}
+	.bbs-card-type1 .text-group .info {font-size: 20px;font-weight: 400;}
+	.bbs-card-type1 .text-group .address {padding-left: 30px;font-size: 16px;line-height: 22px;}
+	.bbs-card-type1 .text-group .address:before {width: 18px;height: 26px;}
+
+	/* review-write */
+/* 	.review-write {padding: 110px 88px;}  *//* 220523 */
+	.review-write .write-cont {margin-top:.8rem; padding:60px 88px;}  /* 220525 */
+	.review-write .review-head {margin-bottom: 40px;text-align: center;}
+	.review-write .review-head .title {font-size: 50px;line-height: 1;}
+	/* .review-write .recom-btn-wp {margin: 40px 0;}  *//* 220523 삭제 */
+	.review-write .recom-btn-wp > span {display: inline-block;}
+	.review-write .recom-btn-wp > span + span {margin-left: 20px;} /* 220525 */
+	.review-write .recom-btn-wp .btn {width: 296px;height:89px;}  /* 220523 */
+	.review-write .recom-btn-wp .btn span {padding-left: 55px;font-size:34px;line-height:89px;} /* 220523 */
+	.review-write .recom-btn-wp .btn span:before {width: 31px;height: 33px;}  /* 220523 */
+	.txtarea-count {height: 250px;padding: 0 0 60px;font-size: 16px;}
+	.txtarea-count textarea {padding: 20px;}
+	.txtarea-count .txtarea-paragraph {position: absolute;right: 20px;bottom: 18px;font-size: 16px;}
+	.review-write .btn-register {width: 303px;height: 90px;font-size: 34px;line-height: 90px;}
+	.review-write .inp-form-wp + .inp-form-wp {margin-top: 60px;}
+	.review-write .text-info {color: #666 !important;}
+
+	/* review-view */
+	.review-view {padding: 110px 0;}
+	.review-view .subTitle {margin-bottom: 10px;text-align: left;} /*  220523 */
+/* 	.review-view .subTitle .title {font-size: 35px;} */ /*  220523 */
+	.review-view .subTitle .num {padding: .1rem 12px .1rem;font-size: 20px;}
+	.review-view .total {margin-bottom: 15px;font-size: 24px;}
+	.review-write .subTitle {margin-bottom: 10px;}/*  220523 */
+	.icon-good {width: 26px;height: 26px;}
+	.review-list .review-item {padding: 55px 0;}
+	.review-list .info li {font-size: 20px;}
+	.icon-good1 {width: 62px;height: 62px;}
+	.icon-bad1 {width: 62px;height: 62px;}
+	.review-list .cont {font-size: 24px;}
+	.review-list .btn-more-wp {margin-top: 12px;}
+	.review-list .btn-more span {padding-right: 28px;font-size: 18px;}
+	.review-list .btn-more span:after {width: 13px;height: 13px;}
+	.review-list .img {margin-top: 35px;}
+
+/* 	.review-view.best .subTitle .title {font-size: 35px;} */ /*  220523 */
+	.review-view.best .group {padding-left: 95px;}
+	.best-badge {width: 69px;height: 87px;padding-top: 15px;font-size: 30px;}
+
+	.view-body .subTitle .title, .review-view .review-head .title {font-size: 35px;} /*  220523 */
+}
+
+
+@media (max-width:1079.98px) {
+	/* bbs-myQna */
+	.bbs-myQna .num {display: none;}
+	.bbs-myQna .info {display: inline-block;margin-right: .83rem;color: #000;font-size: 1.2rem;}
+	.bbs-myQna .info:last-child {margin-right: 0;}
+	.bbs-myQna .info + .info:before {content: '';display: inline-block;vertical-align: middle;width: 1px;height: .83rem;margin-right: .83rem;background: #e0e0e0;}
+	.bbs-myQna .info-sm {display: inline-block;margin-right: .83rem;color: #999;font-size: 1rem;}
+	.bbs-myQna .info-sm:last-child {margin-right: 0;}
+	.bbs-myQna .info-sm + .info-sm:before {content: '';display: inline-block;vertical-align: middle;width: 1px;height: .83rem;margin-right: .83rem;background: #e0e0e0;}
+
+	.review-write .recom-btn-wp {display: flex;}
+	.review-write .recom-btn-wp > span {flex: 1;width: 100%;-webkit-box-flex: 1;-ms-flex: 1;}
+	.review-write .recom-btn-wp > span + span {margin-left: 1rem;}
+	.review-write .recom-btn-wp .btn {width: 100%;}
+
+	.bbs-card > ul > li:last-child {border-bottom:0;}
+}
+
+@media (max-width:760px) {.review-view.best .review-head .sel-group {float: none;margin-top: .6rem;}}
