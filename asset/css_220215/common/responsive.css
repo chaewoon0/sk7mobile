@@ -307,24 +307,141 @@
 	.phonePrice-box .item2 .agree {float: none;font-size: 27px;text-align: center;}
 	.phonePrice-box .item2 .limit {min-height: 90px;padding: 28px 0;font-size: 18px;}
 
+
+
+	/* s: 250924 휴대폰 결제 */
+
 	/* phonePrice-pw */
-	.phonePrice-pw {min-height: auto;padding: 50px 0 50px 345px;}
-	.phonePrice-pw:before {top: 50%;left: 135px;width: 130px;height: 112px;transform: translateY(-50%);}
-	.phonePrice-pw p {font-size: 18px;}
-	.phonePrice-pw .btn-xsm {margin-top: 15px;padding-right: 40px;padding-left: 40px;}
+	.phonePrice-pw {
+		min-height: auto;
+		padding: 50px 0 50px 345px;
+	}
+
+	.phonePrice-pw:before {
+		top: 50%;
+		left: 138px;
+		width: 110px;
+		height: 95px;
+		transform: translateY(-50%);
+	}
+
+	.phonePrice-pw p {
+		font-size: 18px;
+	}
+
+	.phonePrice-pw .btn-xsm {
+		margin-top: 15px;
+		padding-right: 40px;
+		padding-left: 40px;
+	}
 
 	/* autoPay */
-	.autoPay {min-height: auto;padding: 50px 0 50px 345px;}
-	.autoPay:before {top: 50%;left: 160px;width: 73px;height: 110px;transform: translateY(-50%);}
-	.autoPay p {font-size: 18px;}
-	.autoPay .btn-xsm {width: auto;margin-top: 15px;padding-right: 40px;padding-left: 40px;}
-	.autoPay .agree {font-size: 45px;}
+	.autoPay {
+		min-height: auto;
+		padding: 50px 0 50px 345px;
+	}
+
+	.autoPay:before {
+		top: 50%;
+		left: 164px;
+		width: 59px;
+		height: 110px;
+		transform: translateY(-50%);
+	}
+
+	.autoPay p {
+		font-size: 18px;
+	}
+
+	.autoPay .btn-xsm {
+		width: auto;
+		margin-top: 15px;
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
+	.autoPay .agree {
+		font-size: 45px;
+	}
 
 	/* payList */
-	.payList {min-height: auto;padding: 50px 0 50px 345px;}
-	.payList:before {top: 50%;left: 160px;width: 73px;height: 110px;transform: translateY(-50%);}
-	.payList p {font-size: 18px;}
-	.payList .btn-xsm {width: auto;margin-top: 15px;padding-right: 40px;padding-left: 40px;}
+	.payList {
+		min-height: auto;
+		padding: 50px 0 50px 345px;
+	}
+
+	.payList:before {
+		top: 50%;
+		left: 156px;
+		width: 73px;
+		height: 110px;
+		transform: translateY(-50%);
+	}
+
+	.payList p {
+		font-size: 18px;
+	}
+
+	.payList .btn-xsm {
+		width: auto;
+		margin-top: 15px;
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
+	/* payStatus */
+	.payStatus {
+		min-height: auto;
+		padding: 50px 0 50px 345px;
+	}
+
+	.payStatus:before {
+		top: 50%;
+		left: 152px;
+		width: 88px;
+		height: 105px;
+		transform: translateY(-50%);
+	}
+
+	.payStatus p {
+		font-size: 18px;
+	}
+
+	.payStatus .btn-xsm {
+		width: auto;
+		margin-top: 15px;
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
+
+	/* usageLimit */
+	.usageLimit {
+		min-height: auto;
+		padding: 50px 0 50px 345px;
+	}
+
+	.usageLimit:before {
+		top: 50%;
+		left: 164px;
+		width: 59px;
+		height: 110px;
+		transform: translateY(-50%);
+	}
+
+	.usageLimit p {
+		font-size: 18px;
+	}
+
+	.payLusageLimitist .btn-xsm {
+		width: auto;
+		margin-top: 15px;
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
+
+	/* e: 250924 휴대폰 결제 */
 
 	.ic-danger:before {width: 23px;height: 23px;}
 

@@ -528,7 +528,6 @@
 .box-sel .right {margin-top: .83rem;text-align: center;}
 
 /* box-bill */
-
 .box-bill {display: table;table-layout: fixed;width: 100%;margin-bottom: 1.66rem;border-radius: .583rem;color: #000;font-family: 'Montserrat','NotoSans';background: #f7f7f7;}
 .box-bill > div {display: table-cell;vertical-align: middle;text-align: center;}
 .box-bill .line-bill {position: relative;width: 2px;height: 100%;padding: 0 !important;border-left: 1px dotted #ddd;}
@@ -878,6 +877,7 @@ tr.show {display: table-row !important;}
 .term-text th,.term-box th,.term-text td,.term-box td {border: 1px solid #ccc; word-break:break-all;}
 .term-box {overflow-y: auto;max-height: 18rem;padding: 1.66rem 1.66rem 0;border: 1px solid #dadada;border-radius: .5rem;background: #f8f8f8;}
 .term-box:after {content: '';display: block;width: 100%;height: 1.66rem;}
+.term-box .font-style{font-weight: 500; font-size:1.2em;}
 
 /* 회원가입 */
 .join-step {display: table;width: 100%;margin-bottom: 2.5rem;}
@@ -940,45 +940,23 @@ tr.show {display: table-row !important;}
 .list-usimStore .list li .call {color: #5857d8;font-weight: 700;}
 .list-usimStore .map-inner {overflow: hidden;border-radius: .8rem;}
 
-
 /* s: 240509 요금 안내서 샘플보기 */
 
-.modal-billLetter .modal-dialog {
-	max-width: 650px;
-}
+.modal-billLetter .modal-dialog {max-width: 650px;}
+.modal-billLetter .select_wrap .form-control {border-color: #5857d8; color: #000;}
 
-.modal-billLetter .select_wrap .form-control {
-	border-color: #5857d8;
-	color: #000;
-}
+.modal-billLetter .box {background-color: #eef0fb; padding: 1.3rem 1.5rem;}
 
-.modal-billLetter .box {
-	background-color: #eef0fb;
-	padding: 1.3rem 1.5rem;
-}
+.modal-billLetter .box .lst-dash>li {line-height: 1.6 !important;}
 
-.modal-billLetter .box .lst-dash>li {
-	line-height: 1.6 !important;
-}
+.modal-billLetter .content_wrap {display: none;}
 
-.modal-billLetter .content_wrap {
-	display: none;
-}
-
-.modal-billLetter .content_wrap.active {
-	display: block;
-}
+.modal-billLetter .content_wrap.active {display: block;}
 
 @media (min-width: 1080px) {
-	.modal-billLetter .modal-dialog {
-		width: 650px;
-	}
+	.modal-billLetter .modal-dialog {width: 650px;}
 
-	.modal-billLetter .select_wrap .form-control {
-		height: 55px;
-        padding: 0 22px;
-        font-size: 18px;
-	}
+	.modal-billLetter .select_wrap .form-control {height: 55px;padding: 0 22px; font-size: 18px;}
 }
 
 /* e: 240509 요금 안내서 샘플보기 */
@@ -1246,33 +1224,28 @@ span.month-name,span.cost-name2 {display: inline-block;font-size: 1rem;font-weig
 .auth-input{float: left; margin-right: 10px;}
 
 
-/* s: 250116 구매후기 */
-
+/*20210322 구매후기 이미지 레이어팝업 CSS*/
 .modal-imgSlider{padding-right:0 !important;}
 .modal-imgSlider .modal-content{background:transparent;}
-.modal-imgSlider .swiper-slide {text-align:center;}
-.modal-imgSlider .modalImgSlider img{width:auto; max-width:calc(100% - 80px); border-radius: 16px;}
-.modal-imgSlider .modal-body{padding-top:3rem;}
-.modal-imgSlider.modal .btn-close{background:url(https://www.sk7mobile.com/html/images/icon/icon-cls.png) no-repeat center; width:3rem; height:3rem; top: 0px;right: 70px; background-size:1.25rem 1.25rem; z-index:200}
-.modal-imgSlider .swiper-button-prev{left:1.6rem;}
-.modal-imgSlider .swiper-button-next{right:1.6rem;}
-
+.modal-imgSlider .swiper-slide {text-align:center; border-radius: 16px;}/* 250115 */
+.modal-imgSlider .modalImgSlider img{width:auto; max-width:calc(100% - 80px);}
+.modal-imgSlider .modal-body{padding-top:3rem;} /* 220517 */
+.modal-imgSlider.modal .btn-close{background:url(/html/images/icon/icon-cls.png) no-repeat center; width:3rem; height:3rem; top: 0px;right: 70px; background-size:1.25rem 1.25rem; z-index:200} /* 220517 */
+.modal-imgSlider .swiper-button-prev{left:0;}
+.modal-imgSlider .swiper-button-next{right:0;}
 @media(min-width: 1080px){
-  .modal-imgSlider .swiper-slide{width: 720px !important; height: 80vh !important; overflow-y: auto; border-radius: 16px;}
-  .modal-imgSlider .modalImgSlider img{width:auto; max-width:100%; border-radius: 0px;}
-  .modal-imgSlider .modal-body{padding-top:60px; overflow-y: hidden;}
+  .modal-imgSlider .swiper-slide{width: 720px !important; height: 80vh !important; overflow-y: auto; }/* 250115 */
+  .modal-imgSlider .modalImgSlider img{width:auto; max-width:100%;}/* 250115 */
+  .modal-imgSlider .modal-body{padding-top:60px; overflow-y: hidden;}/* 250115 */
   .modal-imgSlider.modal .btn-close{width: 1.75rem;height: 1.75rem;}
-  .modal-imgSlider.modal .btn-close{right:50px;}
-  .swiper-container-autoheight.type {width:720px}
-  .modal-imgSlider .swiper-button-prev{left:38px;}
-.modal-imgSlider .swiper-button-next{right:38px;}
+  .modal-imgSlider.modal .btn-close{right:50px;}/* 250115 */
+  .swiper-container-autoheight.type {width:720px}/* 250115 */
 }
 
 @media(max-width: 576px){
   .modal-imgSlider.modal .btn-close{right:58px;}
 }
-
-/* e: 250116 구매후기 */
+/*20210322 구매후기 이미지 레이어팝업// */
 
 .tab-info .tb .tb-link {float: right;border-bottom: 1px solid #000;}
 
@@ -1774,33 +1747,8 @@ span.month-name,span.cost-name2 {display: inline-block;font-size: 1rem;font-weig
 .icon-planBall {background-image: url(/html/images/icon/icon_li_7mobile.png);}
 /* 청소년＆공부폰, LTE어르신*/
 .icon-PROD_3G_TYPE_003, .icon-PROD_LTE_TYPE_006 {background-image: url(/html/images/icon/icon_li_7mobile.png);}
-/* 음성많이+, 초저가갓성비, 데이터무제한 */  
-.icon-PROD_USIM_TYPE_006, .icon-PROD_USIM_TYPE_007, .icon-PROD_USIM_TYPE_002 {background-image: url(/html/images/icon/20230710_icon_li_lte.png);}
-/* LTE 온라인	*/
-.icon-PROD_LTE_TYPE_003 {background-image: url(/html/images/icon/icon_li_online.png);}
-/* LTE 온라인 데이터, 데이터중심 LTE	 */
-.icon-PROD_LTE_TYPE_001, .icon-PROD_LTE_TYPE_005 {background-image: url(/html/images/icon/icon_li_data.png);}
-
-/*LTE 온라인 음성*/
-.icon-PROD_LTE_TYPE_002 {background-image: url(/html/images/icon/icon_li_voice.png);}
-/* 5G 요금제	*/
-.icon-PROD_USIM_TYPE_005, .icon-PROD_3G_TYPE_006 {background-image: url(/html/images/icon/icon_li_5g.png);}
-/* 3G 인기 요금제	*/
-.icon-PROD_3G_TYPE_001 {background-image: url(/html/images/icon/icon_li_3g.png);}
-/*7mobile x 제휴, SK 7mobile x wavve*/
-.icon-PROD_LTE_TYPE_004, .icon-PROD_USIM_TYPE_001 {background-image: url(/html/images/icon/20230710_icon_li_wavve.png);}
-/*SK 7mobile x 중고나라	*/
-.icon-PROD_USIM_TYPE_008 {background-image: url(/html/images/icon/20230710_icon_li_joongo.png);}
-/* SK 7mobile x 번개장터	*/
-.icon-PROD_USIM_TYPE_003 {background-image: url(/html/images/icon/20230710_icon_li_bungae.png);}
-/*SK 7mobile  x 제주삼다수 */
-.icon-PROD_USIM_TYPE_004 {background-image: url(/html/images/icon/icon_li_samdasu.png);}
-/*취향저격 구독팩 */
-.icon-PROD_USIM_TYPE_009 {background-image: url(/html/images/icon/icon_li_coupon.png);}
-/*SK 7mobile  x 네이버페이 */
-.icon-PROD_USIM_TYPE_010 {background-image: url(/html/images/icon/icon_npay.png);}
-/* 데이터 안심 */
-.icon-PROD_USIM_TYPE_013 {background-image: url(/html/images/icon/20230710_icon_li_lte.png);}
+/* 음성많이+, 초저가갓성비, 데이터무제한, 데이터 안심, 셀프개통 전용 */  
+.icon-PROD_USIM_TYPE_006, .icon-PROD_USIM_TYPE_007, .icon-PROD_USIM_TYPE_002, .icon-PROD_USIM_TYPE_013, .icon-PROD_USIM_TYPE_014, .icon-PROD_USIM_TYPE_020 {background-image: url(/html/images/icon/20230710_icon_li_lte.png);}
 
 /* s: 240702 데이터 든든 */
 .icon-PROD_USIM_TYPE_015 {background-image: url(/html/images/icon/20230710_icon_li_lte.png);}
@@ -1821,6 +1769,40 @@ span.month-name,span.cost-name2 {display: inline-block;font-size: 1rem;font-weig
 .icon-PROD_USIM_TYPE_019 {border: 1px solid #34ADAB;box-shadow: .3rem .3rem .83rem rgba(52,173,171,.22);}
 /* e: 250728 폰케어팩 */
 
+/* s: 2500929 7pick  /2025.11.03/ 슬랙으로 lte이미지로 변경요청 by혜경님
+.icon-PROD_USIM_TYPE_020 {background-image: url(/html/images/icon/icon_li_coupon.png);}
+ e: 2500929 7pick */
+
+/* LTE 온라인	*/
+.icon-PROD_LTE_TYPE_003 {background-image: url(/html/images/icon/icon_li_online.png);}
+/* LTE 온라인 데이터, 데이터중심 LTE	 */
+.icon-PROD_LTE_TYPE_001, .icon-PROD_LTE_TYPE_005 {background-image: url(/html/images/icon/icon_li_data.png);}
+
+/*LTE 온라인 음성*/
+.icon-PROD_LTE_TYPE_002 {background-image: url(/html/images/icon/icon_li_voice.png);}
+/* 5G 요금제	*/
+.icon-PROD_USIM_TYPE_005, .icon-PROD_3G_TYPE_006, .icon-PROD_USIM_TYPE_018 {background-image: url(/html/images/icon/icon_li_5g.png);}
+/* 3G 인기 요금제	*/
+.icon-PROD_3G_TYPE_001 {background-image: url(/html/images/icon/icon_li_3g.png);}
+
+/* s: 250829 flo */
+
+.icon-PROD_LTE_TYPE_004 {background-image: url(/html/images/icon/20230710_icon_li_wavve.png);}
+
+.icon-PROD_USIM_TYPE_001 {background-image: url(/html/images/icon/20250829_icon_li_flo.png);}
+.icon-PROD_USIM_TYPE_001 {border: 1px solid #324bf6;box-shadow: .3rem .3rem .83rem rgba(50,75,246,.22);}
+
+/* e: 250829 flo */
+/*SK 7mobile x 중고나라	*/
+.icon-PROD_USIM_TYPE_008 {background-image: url(/html/images/icon/20230710_icon_li_lte.png);}
+/* SK 7mobile x 번개장터	*/
+.icon-PROD_USIM_TYPE_003 {background-image: url(/html/images/icon/20230710_icon_li_bungae.png);}
+/*SK 7mobile  x 제주삼다수 */
+.icon-PROD_USIM_TYPE_004 {background-image: url(/html/images/icon/20230710_icon_li_lte.png);}
+/*취향저격 구독팩 */
+.icon-PROD_USIM_TYPE_009 {background-image: url(/html/images/icon/icon_li_coupon.png);}
+/*SK 7mobile  x 네이버페이 */
+.icon-PROD_USIM_TYPE_010 {background-image: url(/html/images/icon/icon_npay.png);}
 .is_pc .icon-PROD_USIM_TYPE_010{background-size:75px 75px;}
 /* 미사용테스트*/
 .icon-PROD_3G_TYPE_010 {background-image: url(/html/images/icon/icon_li_.png);}
@@ -1830,10 +1812,8 @@ span.month-name,span.cost-name2 {display: inline-block;font-size: 1rem;font-weig
 .icon-planBall13 {background-image: url(/html/images/icon/icon_li_cu.png);}
 
 /* 아이콘 보더, 그림자 */
-.icon-PROD_LTE_TYPE_004 {border: 1px solid #1351fa;box-shadow: .3rem .3rem .83rem rgba(19,81,250,.22);}
-.icon-PROD_USIM_TYPE_008 {border: 1px solid #0dcc5a; box-shadow: 0.3rem 0.3rem 0.83rem rgba(13,204,90,.22);} /*20230710 중고나라 BI 리뉴얼*/
 .icon-PROD_USIM_TYPE_003 ,.icon-planBall12 {border: 1px solid #b8131d; box-shadow: 0.3rem 0.3rem 0.83rem rgba(247,0,0,.22);} /*20230710 중고나라 BI 리뉴얼*/
-.icon-PROD_USIM_TYPE_004 {border: 1px solid #0c5ba8;box-shadow: .3rem .3rem .83rem rgba(183,221,255,.22);}
+
 .icon-PROD_USIM_TYPE_010 {border: 1px solid #03c75a;box-shadow: .3rem .3rem .83rem rgba(3,199,90,.22);}
 .icon-planBall11 {border: 1px solid #2e7856;box-shadow: .3rem .3rem .83rem rgba(46,120,86,.22);}
 .icon-planBall12 {border: 1px solid #642b8d;box-shadow: .3rem .3rem .83rem rgba(100,43,141,.22);}
@@ -1857,7 +1837,7 @@ span.month-name,span.cost-name2 {display: inline-block;font-size: 1rem;font-weig
 .planList .planItem .service li.type2{text-align:left;padding-right:4rem;}
 .planList .planItem .service li + li {position: relative; padding-left: .45rem;}
 .planList .planItem .service li + li:before {content: '';display: block;position: absolute;top: 50%;left: 0;width: 1px;height: 1rem;background: #666;transform: translateY(-50%);}
-.planList .planItem .price {display:table-cell; position:relative;padding-left:1rem;padding-right:2rem;width:auto;color: #EA002C;font-size: 1.08rem;text-align: right;white-space: nowrap;line-height: 1;vertical-align:middle;}
+.planList .planItem .price {display:table-cell; position:relative;padding-left:0rem;padding-right:1.5rem;width:auto;color: #EA002C;font-size: 1.08rem;text-align: right;white-space: nowrap;line-height: 1;vertical-align:middle;}
 .planList .planItem .price:before {content: '';display: block;position: absolute;top: 50%;right:0;width: 1.17rem;height: .5rem;background: url(/html/images/icon/icon_collapse.png) no-repeat;background-size: auto 100%;transform: translateY(-50%) rotate(-90deg);}
 .planList .planItem .price.type:before { background: none;}
 .planList .planItem .price b {font-size: 1.25rem;}
@@ -1943,14 +1923,12 @@ div.badge-wp {margin-bottom: .5rem;}
 .serviceList a {display: block;position: relative;border: 1px solid #dfdfdf;border-radius: .33rem;}
 .serviceList a:after {content: '';display: block;position: absolute;top: 50%;right: 1.33rem;width: 1.17rem;height: .5rem;background: url(/html/images/icon/icon_collapse.png) no-repeat;background-size: auto 100%;transform: translateY(-50%) rotate(-90deg) ;}
 .serviceList a + a {margin-top: .66rem;}
-
-/* s: 240125 */
+/* s: 240125 이용자피해예방가이드 내용 업데이트 요청*/
 .serviceList a > div {display: flex;align-items: center;justify-content: space-between;padding: 1.83rem 3.75rem 1.83rem 1.83rem;line-height: 1.2; column-gap: 1rem;}
 .serviceList .title {color: #000;font-size: 1.16rem;font-weight: 700;}
 .serviceList .title > strong {margin-right: 0.8rem;}
 .serviceList .title .badge-wp {display: inline-flex; font-weight: 400;}
-/* e: 240125 */
-
+/* e: 240125 이용자피해예방가이드 내용 업데이트 요청*/
 .serviceList .price {color: #EA002C;font-size: 1.08rem;}
 .serviceList .price b {font-family: 'Montserrat','NotoSans';font-size: 1.41rem;}
 .plan-info .icon-call1 {background-image: url(/html/images/icon/icon-call1.png)}
@@ -2670,6 +2648,7 @@ div.badge-wp {margin-bottom: .5rem;}
 /* s : 230907 최근사용량 : 수정  ---- */
 .srchRateWrap {transition:all 0.5s; bottom:initial;}
 .srchRateWrap.off {position:absolute; bottom:-100px; left:0; width:100%; height:0; opacity:0;}
+.srchRateWrap .srchTtl .info{background: url(https://www.sk7mobile.com/html/images/icon/icon_qus.png) no-repeat 0 0; margin: 0 0 0 10px; text-indent:-9999px; width:35px;}
 .pc-block {display:none;}
 .box-my-usage .top-ttl p {margin:1rem 0 1rem; padding:1rem 0 1rem 46px; background:url(/html/images/icon/icon_bill_ttl.png) no-repeat 0 .6rem; background-size:36px auto; color:#000; font-size:1.36rem; font-weight:500; letter-spacing:-1px;}
 .box-my-usage .top-ttl p em {font-weight:700;}
@@ -2750,7 +2729,6 @@ div.badge-wp {margin-bottom: .5rem;}
 .box-my-usage .banner-area .box-line {margin-top:2rem;}
 .box-line {position:relative;}
 .box-line .bannLinkWrap {position:absolute; top:0; left:0; width:100%; height:100%; text-indent:-9999px;}
-/* s: 240304 요금제 추천 */
 .box-line .bannWrap {margin-top:25px; padding-right: 6rem;}
 .box-line .bannWrap > div {width:80%;}
 .box-line .bannWrap.chgLate {background:url(/html/images/mypage/bg_bann_lte.png) no-repeat 100% 46%; background-size:6.5rem auto;}
@@ -2758,7 +2736,6 @@ div.badge-wp {margin-bottom: .5rem;}
 .box-line .bannWrap.alarm {background:url(/html/images/mypage/bg_bann_alarm.png) no-repeat 100% 46%; background-size:6.5rem auto;}
 .box-line .bannWrap.coupon {background:url(/html/images/mypage/bg_bann_coupon.png) no-repeat 100% 46%; background-size:7.5rem auto;}
 .box-line .bannWrap.app-down {background:url(/html/images/mypage/bg_bann_appdown.png) no-repeat 100% 46%; background-size:6rem auto;}
-/* e: 240304 요금제 추천 */
 .box-line .bannWrap .prim-txt {background:url(/html/images/icon/icon_alarm.png) no-repeat 0 50%; background-size:1.5rem auto; font-size:1.2rem; color:#5857d8; letter-spacing:-.5px;}
 .box-line .bannWrap .main-txt {font-size:1.4rem; font-weight:500; line-height:1.3; letter-spacing:-.5px;}
 .box-line .bannWrap .btn-wrap {text-align:left; margin-top:1.3rem;}
@@ -2781,6 +2758,7 @@ div.badge-wp {margin-bottom: .5rem;}
 @media (max-width: 1079px)  { /* 모바일에서만 sticky motion */
     .stickyArea {margin-top:200px; opacity:0; transition:all 0.5s linear;}
     .stickyArea.active {margin-top:0; opacity:1}
+     .srchRateWrap .srchTtl .info{background: url(https://www.sk7mobile.com/html/images/icon/icon_qus.png) no-repeat 0 0; margin: 0 0 0 10px; text-indent:-9999px;width: 30px;height: 30px; background-size: contain;}
 }
 
 @media (min-width: 1080px)  {
@@ -2814,9 +2792,7 @@ div.badge-wp {margin-bottom: .5rem;}
     .srch-plan-wrap .box-line .rate-link {right:32px; bottom:35px;}
     .srch-plan-wrap .box-line .rate-link.btn-outline-primary {font-size:16px; border-width:2px !important;}
     .srch-plan-wrap .box-line.active {background-size:35px auto;}
-	/* s: 240304 요금제 추천  */
     .box-line .bannWrap {margin-top:35px; background-position:97% 52% !important; padding-right: 0;}
-	/* e: 240304 요금제 추천  */
     .box-line .bannWrap .prim-txt {font-size:1rem;}
     .box-line .bannWrap .main-txt {line-height:1.6; font-size:1.3rem;}
     .box-line .bannWrap .btn-wrap {margin-top:10px;}
@@ -2841,8 +2817,6 @@ div.badge-wp {margin-bottom: .5rem;}
     .bg_rate_succ .message {background-size:80% auto;}
 }
 /* e : 230907 최근사용량 : 수정  ---- */
-
-
 
 /* s : 231102 APP 소개 */
 
@@ -2908,7 +2882,7 @@ div.badge-wp {margin-bottom: .5rem;}
 	position: relative;
 	border-radius: 16px;
     padding: 70px;
-	background-image: url(../../img/app_guide/app_guide_bg.jpg);
+	background-image: url(../../images/app_guide/app_guide_bg.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -3075,6 +3049,7 @@ div.badge-wp {margin-bottom: .5rem;}
 	}
 }
 
+
 /* s : 231103 APP 소개 모바일 수정 */
 
 @media (max-width: 600px) {
@@ -3107,37 +3082,28 @@ div.badge-wp {margin-bottom: .5rem;}
 		height: auto;
 		padding: 0.6rem 1.4rem;
 	}
-}
-
-
+	
+	
 /* e : 231103 APP 소개 모바일 수정 */
-
-
+	
+}
 
 /* e : 231102 APP 소개 */
 
-
-
 /* s : 231016 나의 서비스 */
-
-.my-service .box-my-usage {
-	position: relative;
-	z-index: 1;
-}
-.my-service .acc-head .sub-title.icon4 {line-height:3.6rem;}
-.my-service .acc-head .sub-title.icon4:before {background-image: url(/html/images/icon/icon_mys_title04.png);}
-@media (min-width:1080px) {
-	.my-service .acc-head .sub-title.icon4 {line-height:64px}
-}
-
-/* e : 231016 나의 서비스 */
-
-
-
+	.my-service .box-my-usage {
+		position: relative;
+		z-index: 1;
+	}
+	.my-service .acc-head .sub-title.icon4 {line-height:3.6rem;}
+	.my-service .acc-head .sub-title.icon4:before {background-image: url(/html/images/icon/icon_mys_title04.png);}
+	@media (min-width:1080px) {
+		.my-service .acc-head .sub-title.icon4 {line-height:64px}
+	}
+	/* e : 231016 나의 서비스 */
+	
 
 /* s: 231025 APP 다운로드 팝업 */
-
-
 body:has(.app_download_popup.active) {
 	overflow: hidden;
 }
@@ -3190,10 +3156,9 @@ body:has(.app_download_popup:not(.active)) {
 
 .app_download_popup .popup_bg {
 	position: fixed;
-	background-color: rgba(0, 0, 0, 0.7); /* 231025 app 팝업 배경 수정 */
+	background-color: rgba(0, 0, 0, 0.85);
 	inset: 0;
 }
-
 .app_download_popup .app_download_wrap {
 	position: absolute;
 	z-index: 1;
@@ -3268,10 +3233,7 @@ body:has(.app_download_popup:not(.active)) {
 	}
 }
 
-
 /* e: 231025 APP 다운로드 팝업 */
-
-
 
 /* s: 240215 유심 선물하기 */
 
@@ -3308,6 +3270,12 @@ body:has(.app_download_popup:not(.active)) {
 
 /* e: 240723 권한메시지 */
 
+.icon_msg_box .msg_wrap h1 {
+	font-size: 35px;
+	line-height: 48px;
+	font-weight: 700;
+}
+
 .icon_msg_box .icon_wrap img {
 	max-height: 180px;
 }
@@ -3332,7 +3300,7 @@ body:has(.app_download_popup:not(.active)) {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	background-image: url(../../img/icon/gift_stamp.png);
+	background-image: url(/html/images/icon/gift_stamp.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -3354,13 +3322,6 @@ body:has(.app_download_popup:not(.active)) {
 
 
 @media (max-width:1080px) {
-	.btnSampleInfo-wrap {
-		position: absolute;
-		right: 0;
-		top: 2.5rem;
-		z-index: 1;
-	}
-	
 	.icon_msg_box {
 		flex-direction: column-reverse;
 		text-align: center;
@@ -3409,18 +3370,18 @@ body:has(.app_download_popup:not(.active)) {
 		height: 8rem;
 	}
 }
-
-/* 조회 결과가 없을 경우 사용이미지 추가*/
 .self-time-guide.gift strong:before {
 	content: '';display: block;
 	position: absolute;
 	top: 0;left: 50%;
 	width: 5.83rem;
 	height: 5.83rem;
-	background: url(../../img/icon/icon_usim.png) no-repeat;
+	background: url(/html/images/icon/icon_usim.png) no-repeat;
 	background-size: 100% auto;
 	transform: translateX(-50%);
 }
+
+
 /* e: 240215 유심 선물하기 */
 
 
@@ -3441,7 +3402,7 @@ body:has(.app_download_popup:not(.active)) {
 	font-size: 1.166rem;
 	font-weight: 400;
 	line-height: 1.4;
-	background: url(../../../asset/img/icon/icon_coupon.png) no-repeat;
+	background: url(/html/images/icon/icon_coupon.png) no-repeat;
 	background-position: 0 1.4rem;
 	background-size: 2rem auto;
 	text-align: initial;
@@ -3453,6 +3414,11 @@ body:has(.app_download_popup:not(.active)) {
 
 .seven-coupon-head .sc-txt li.sct-1 {
 	color: #111;
+}
+
+.seven-coupon-head .sc-txt li.sct-2 {
+	position:relative;
+	padding-right:1.5rem;
 }
 
 .seven-coupon-head .sc-txt li.sct-2 em {
@@ -3579,7 +3545,8 @@ body:has(.app_download_popup:not(.active)) {
 	gap: 8px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: left;
+	padding-left: 45px;
 	text-align: left;
 	margin-bottom: 6px;
 	min-height: 24px;
@@ -3590,7 +3557,7 @@ body:has(.app_download_popup:not(.active)) {
 }
 
 .seven-coupon-list>li .coupon-info-box .coupon-info-date::before {
-	content: "사용기한";
+	content: "발급기한";
 	display: inline-block;
 	flex: none;
 	color: #111;
@@ -3604,6 +3571,12 @@ body:has(.app_download_popup:not(.active)) {
 .seven-coupon-list.myCoupon>li .coupon-info-box .coupon-info-date::before {
 	content: "사용기한";
 }
+
+.seven-coupon-list>li .coupon-info-box .coupon-info-date.myCoupon::before {
+	content: "사용기한";
+}
+
+/* e: 240325 7쿠폰 수정 */
 
 .seven-coupon-list>li .coupon-info-box .coupon-info-number {
 	font-size: 16px;
@@ -3633,6 +3606,10 @@ body:has(.app_download_popup:not(.active)) {
 
 .seven-coupon-list>li .coupon-info-box>div:last-child {
 	margin-bottom: 0;
+}
+
+.seven-coupon-list>li .coupon-info-box .coupon-info-blank {
+	height: 24px;
 }
 
 .seven-coupon-list>li .coupon-btn-box {
@@ -3790,7 +3767,7 @@ body:has(.app_download_popup:not(.active)) {
 }
 
 .seven-coupon-detail .coupon-detail-box .coupon-detail-date::before {
-	content: "사용기한";
+	content: "발급기한";
 	display: inline-block;
 	flex: none;
 	color: #111;
@@ -3799,6 +3776,14 @@ body:has(.app_download_popup:not(.active)) {
 	padding: 4px 8px;
 	font-size: 14px;
 	font-weight: 400;
+}
+
+.seven-coupon-detail.myCoupon .coupon-detail-box .coupon-detail-date::before {
+	content: "사용기한";
+}
+
+.seven-coupon-detail .coupon-detail-box .coupon-detail-date.myCoupon::before {
+	content: "사용기한";
 }
 
 .seven-coupon-detail .coupon-detail-box .coupon-detail-number {
@@ -3848,6 +3833,7 @@ body:has(.app_download_popup:not(.active)) {
 
 .seven-coupon-detail .coupon-detail-text {
 	color: #000;
+	font-size: 16px;
 }
 
 @media (min-width: 1080px) {
@@ -3865,9 +3851,32 @@ body:has(.app_download_popup:not(.active)) {
 	.seven-coupon-head .sc-txt li.sct-1 {
 		padding-right: 4px;
 	}
+
+	.seven-coupon-head .sc-txt li.sct-2 {
+		padding-right: 1.5rem;
+	}
+
+	.seven-coupon-head .sc-txt li.sct-2 em{
+		padding-right: 10px;
+	}
 }
 
 @media (max-width: 1080px) {
+	.seven-coupon-detail .coupon-detail-text {
+		font-size: 1.05rem;
+	    font-weight: 400;
+	}
+
+	.heading-depth2 .title.coupon-detail-title {
+		font-size: 1.24rem !important;
+	}
+	
+	.seven-coupon-head .sc-txt {
+		background-position: 1rem;
+		background-size: 2rem auto;
+		padding: 1.1rem 0.9rem 1.1rem 3.5rem;
+	}
+	
 	.seven-coupon-list {
 		margin-right: 0px;
 		row-gap: 1.2rem;
@@ -4134,8 +4143,6 @@ body:has(.app_download_popup:not(.active)) {
 
 
 /* e: 240417 7쿠폰 */
-
-
 
 /* s: 240613 편의점찾기 */
 
@@ -4480,7 +4487,6 @@ body:has(.app_download_popup:not(.active)) {
 
 
 /* s: 240624 휴대폰구매 수정 */
-
 
 .phoneListBnr-swiper a {
 	border-radius: 1.5rem;
@@ -5176,8 +5182,6 @@ body:has(.app_download_popup:not(.active)) {
 
 /* e: 240812 CM */
 
-
-
 /* s: 240820 명의변경 */
 .step.chg-name-type2 li + li {padding-left:2rem;}
 .step.chg-name-type2 .icon-step.step1 {background-image: url(/html/images/icon/icon_stepChgNameType2_1.jpg);}
@@ -5202,9 +5206,6 @@ body:has(.app_download_popup:not(.active)) {
 }
 
 /* e: 240820 명의변경 */
-
-
-
 
 /* s: 241008 7쿠폰 소진케이스 */
 
@@ -5238,10 +5239,6 @@ body:has(.app_download_popup:not(.active)) {
 	z-index: 1;
 }
 
-.seven-coupon-list>li.soldout .coupon-btn-box .coupon-btn:disabled {
-    background-color: #666666;
-}
-
 @media (max-width: 1080px) {
 	.seven-coupon-list>li.soldout::before {
 		border-top-left-radius: 1.2rem;
@@ -5253,6 +5250,8 @@ body:has(.app_download_popup:not(.active)) {
 
 /* e: 241008 7쿠폰 소진케이스 */
 
+
+/* s: 250220 룰렛 수정 */
 
 .roulette {
     text-align: center;
@@ -5445,11 +5444,363 @@ body:has(.app_download_popup:not(.active)) {
 
 }
 
+/* e: 250220 룰렛 수정 */
 
-/* @media (max-width: 1080px) {
-	.m-d-flex-space {
+.card_cont > dl { margin: 1.2rem 0; font-size: 1.2rem; }
+
+
+
+/* s: 251113 요금제 목록 UX 개선 */
+
+.planList-filter-nav-wrap {
+	display: flex;
+	justify-content: flex-start; /* 251215 요금제 목록 UX 개선 */
+	margin-top: 60px;
+}
+
+.planList-filter-nav {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	flex-wrap: nowrap;
+}
+
+.planList-filter-nav .nav-btn {
+	border: 1px solid #777777;
+	background: #fff;
+	color: #676767;
+	border-radius: 99px;
+	font-size: 18px;
+	padding: 9px 20px;
+	cursor: pointer;
+	outline: none;
+	min-width: 96px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 4px;
+	flex: none;
+}
+
+.planList-filter-nav .nav-btn > svg {
+	fill: #676767;
+	flex: none;
+}
+
+.planList-filter-nav .nav-btn.selected {
+	color: #5857D8;
+	border-color: #5857D8;
+}
+
+.planList-filter-nav .nav-btn.selected > svg {
+	fill: #5857D8;
+}
+
+
+.planList-wrap {
+	border-top: 1px solid #5857D8;
+	border-bottom: 1px solid #5857D8;
+	margin-top: 15px;
+}
+
+.planList-wrap > .planList > li + li {
+	border-top: 1px solid #D4D4D4;
+}
+
+.modal-planFilter *:focus {
+	outline: none;
+}
+
+.modal-planFilter .modal-dialog {
+	max-width: 650px;
+}
+
+.modal-planFilter .tab-menu ul {
+	display: flex;
+}
+
+.modal-planFilter .tab-menu .tab-link {
+	width: auto;
+	white-space: nowrap;
+}
+
+.modal-planFilter .filter-title {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.modal-planFilter .filter-title .title {
+	font-size: 21px;
+}
+
+.modal-planFilter .form-btn-toggle {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 6px;
+	row-gap: 10px;
+}
+
+.modal-planFilter .form-btn-toggle:not(.btn-wrap) > span + span {
+	margin-left: 0;
+}
+
+.modal-planFilter .form-btn-toggle .btn {
+	padding: 8px 20px;
+	min-width: auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%; /* 251215 요금제 목록 UX 개선 */
+}
+
+.modal-planFilter .form-btn-toggle .btn.active::before {
+	content: "";
+	display: inline-block;
+	background-image: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 7.80895L5.69118 12.7501L12.75 0.750122" stroke="%235857D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 14px;
+	width: 14px;
+	position: relative;
+	margin-right: 5px;
+	flex: none;
+}
+
+.modal-planFilter .modal-foot > span:first-child {
+	flex: none;
+	width: 34%;
+}
+
+.modal-planFilter .form-btn-toggle.type02 {
+	column-gap: 0px;
+	row-gap: 23px;
+	justify-content: space-between;
+}
+
+.modal-planFilter .form-btn-toggle.type02 > span {
+	width: calc(50% - 3px);
+}
+
+.modal-planFilter .form-btn-toggle.type02 .btn {
+	width: 100%;
+	border-radius: 0.5rem;
+}
+
+.modal-planFilter .form-btn-toggle.type01 .btn-effect.active::after {
+	content: none;
+}
+
+.modal-planFilter .keyIn-wrap {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+}
+
+.modal-planFilter .keyIn-wrap .field {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+}
+
+.modal-planFilter .keyIn-wrap span {
+	font-weight: 500;
+}
+
+.modal-planFilter .keyIn-wrap .field input.formatted {
+	color: #495057;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+
+/* s: 251215 요금제 목록 UX 개선 */
+
+.modal-planFilter .filter-content-wrap {
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+	max-height: 380px;
+	overflow-y: auto;
+	padding-right: 12px;
+}
+
+/* e: 251215 요금제 목록 UX 개선 */
+
+
+
+@media (min-width: 1080px) {
+    .planList-wrap > .planList .planItem {
+        min-height: 90px;
+        padding: 10px 30px 10px 30px;
+    }
+
+	.modal-planFilter .modal-dialog {
+        width: 650px;
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .planList-wrap > .planList .planItem .name-area {
 		display: flex;
-		align-items: center;
+		flex-direction: column-reverse;
+		row-gap: .5rem;
+	}
+
+    .planList-wrap > .planList .planItem .name-area .name {
+		float: none;
+	}
+
+    .planList-wrap > .planList .planItem .name-area::after {
+		content: none;
+	}
+
+	.planList-wrap > .planList .planItem .service li {
+		min-width: auto;
+	}
+
+	.planList-filter-nav-wrap {
+		width: 100%;
+		margin-top: 2.4rem;
+		overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+		justify-content: flex-start;
+		mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+		transition: mask-image 0.2s, -webkit-mask-image 0.2s;
+	}
+
+	.planList-filter-nav {
+		margin-left: auto;
+		column-gap: 0.4rem;
+	}
+
+	.planList-filter-nav .nav-btn {
+		font-size: 1.24rem;
+		padding: 0.6rem 1.6rem;
+	}
+
+	.planList-filter-nav .nav-btn > svg {
+		width: 1.24rem;
+		height: 1.24rem;
+	}
+
+	.modal-planFilter .filter-title .title {
+		font-size: 1.4rem;
+	}
+
+	.modal-planFilter .modal-foot {
+		padding: 1.2rem 1.1rem;
+		column-gap: 0.6rem;
+		border-top: 1px solid #D4D4D4;
+	}
+
+	.modal-planFilter .modal-foot .btn {
+		border-radius: 0.5rem !important;
+	}
+
+	.modal-planFilter .modal-foot .btn-primary {
+		background: #3717CE !important;
+		border-color: #3717CE !important;
+	}
+
+	.modal-planFilter .tab-menu {
+		margin-top: 0.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.modal-planFilter .form-btn-toggle {
+		column-gap: 0px;
+		row-gap: 1.1rem !important;
 		justify-content: space-between;
 	}
-} */
+
+	.modal-planFilter .form-btn-toggle > span {
+		width: calc(50% - 0.3rem) !important;
+	}
+
+	.modal-planFilter .form-btn-toggle.type01 .btn-effect.active::after {
+		content: "";
+	}
+
+	.modal-planFilter .form-btn-toggle .btn {
+		border-radius: 0.5rem;
+		width: 100%;
+	}
+
+	.modal-planFilter .form-btn-toggle .btn.active::before {
+		width: 1rem;
+		height: 1rem;
+		margin-right: 0.3rem;
+	}
+
+
+	.modal-planFilter .keyIn-wrap .field input.formatted {
+		font-size: 1.3rem;
+	}
+
+	.modal-planFilter .keyIn-wrap span {
+		font-size: 1.166rem;
+	}
+
+	.modal-planFilter .keyIn-wrap .field {
+		column-gap: 0.4rem;
+	}
+
+	.modal-planFilter .keyIn-wrap {
+		column-gap: 0.6rem;
+	}
+
+	/* s: 251215 요금제 목록 UX 개선 */
+
+	.modal-planFilter .filter-content-wrap {
+		row-gap: 2rem;
+	}
+
+	/* e: 251215 요금제 목록 UX 개선 */
+}
+
+@media (max-width: 860px) {
+	.modal-planFilter {
+		padding: 0 !important;
+	}
+
+	.modal-planFilter .modal-dialog {
+		width: 100%;
+		max-width: 100%;
+		justify-content: flex-end;
+		margin: 0;
+		max-height: none;
+	}
+
+	.modal-planFilter .modal-dialog .modal-content {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.modal-planFilter.modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, 50px);
+		transform: translate(0, 50px);
+	}
+
+	.modal-planFilter.modal.show .modal-dialog {
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	/* s: 251215 요금제 목록 UX 개선 */
+
+	.modal-planFilter .filter-content-wrap {
+		max-height: 30rem;
+		padding-right: 1rem;
+	}
+
+	/* e: 251215 요금제 목록 UX 개선 */
+}
+
+/* e: 251113 요금제 목록 UX 개선 */

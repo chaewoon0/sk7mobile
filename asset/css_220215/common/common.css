@@ -249,7 +249,7 @@ body {display: flex;flex-wrap: wrap;}
 .fnb li:last-child::after { display: none;}
 
 .ft-bottom .addr a {text-decoration: underline;}
-.ft-bottom [class^='icon-sns'] {width: 2.68rem;height: 2.68rem;margin:0 0 0 .6rem;background-image:url(../../img/icon/icon_sns.png); background-size:auto 100%;}
+.ft-bottom [class^='icon-sns'] {width: 2.68rem;height: 2.68rem;margin:0 0 0 .6rem;background-image:url(../../img/icon/icon_sns_v2.png); background-size:auto 100%;}
 .icon-sns-kakao {background-position: 0 0;}
 .icon-sns-blog {background-position: 25% 0;}
 .icon-sns-ytb {background-position: 50% 0;}
@@ -262,6 +262,7 @@ body {display: flex;flex-wrap: wrap;}
 .banner-wu img {height:100%}
 
 
+/* s: 251023 footer 수정 */
 
 .ft-middle {
 	display: flex;
@@ -271,8 +272,8 @@ body {display: flex;flex-wrap: wrap;}
 	gap: 48px;
 }
 
-.ft-middle .ft_info_wrap:last-child {
-	flex: none;
+.ft-middle .ft_info_wrap {
+	flex: 1;
 }
 
 .ft-middle h1 {
@@ -282,6 +283,7 @@ body {display: flex;flex-wrap: wrap;}
 
 .ft-middle .app_download_box {
 	display: flex;
+	flex-direction: column;
 	gap: 20px;
 }
 
@@ -295,6 +297,7 @@ body {display: flex;flex-wrap: wrap;}
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
+	gap: 20px;
 }
 
 .ft-middle .app_download_box .app_download_btn {
@@ -311,7 +314,7 @@ body {display: flex;flex-wrap: wrap;}
 }
 
 
-
+/* e: 251023 footer 수정 */
 
 
 
@@ -532,10 +535,24 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 		--psview-layer-height: 0px;
 	}
 	/* e: 250416 top버튼 */
+	
+
+	/* s: 251106 top버튼 */
 
 	#chatbot.has-psview-layer {
-		bottom: calc(var(--psview-layer-height) + 50px);
+		bottom: calc(var(--psview-layer-height) + 106px);
 	}
+
+	#topBtn.has-psview-layer {
+		bottom: calc(var(--psview-layer-height) + 30px);
+	}
+
+	#wrap:not(:has(#topBtn.active-progress)) #chatbot.has-psview-layer {
+		/* 스크롤 탑 */
+		bottom: calc(var(--psview-layer-height) + 30px);
+	}
+
+	/* e: 251106 top버튼 */
 
 
 	/* Footer */
@@ -549,12 +566,13 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 	[class^='icon-sns'] {width: 50px;height: 50px;margin: 0 0 0 7px;}
 	.ft-bottom .nav {position: absolute;top: 0;right: 0; align-items: flex-start;}
 
-
-	.ft-middle dt,.ft-middle dd {display: inline;}
+	/* s: 251023 footer 수정 */
+	.ft-middle dt,.ft-middle dd {display: block;}
 	.ft-middle dd:after {content: '';display: block;}
 	.ft-middle h1 {
 		font-size: 21px;
 	}
+	/* e: 251023 footer 수정 */
 
 
 	.ft-middle .app_download_box .app_download_btn {
@@ -571,9 +589,22 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 
 @media (min-width:1520px) {
 
+	/* s: 251106 top버튼 */
+
 	#chatbot.has-psview-layer {
-		bottom: 70px;
+		bottom: 116px;
 	}
+
+	#topBtn.has-psview-layer {
+		bottom: 40px;
+	}
+
+	#wrap:not(:has(#topBtn.active-progress)) #chatbot.has-psview-layer {
+		/* 스크롤 탑 */
+		bottom: 40px;
+	}
+
+	/* e: 251106 top버튼 */
 
 }
 
@@ -596,9 +627,40 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 	/* e: 250416 top버튼 */
 
 
+	/* s: 251106 top버튼 */
+
 	#chatbot.has-psview-layer {
+		/* 바텀시트 닫힘 */
+		bottom: calc(var(--psview-layer-height) + 96px);
+	}
+
+	#topBtn.has-psview-layer {
+		/* 바텀시트 닫힘 */
 		bottom: calc(var(--psview-layer-height) + 20px);
 	}
+
+	#wrap:has(.sect-psview-layer.active) #chatbot {
+		/* 바텀시트 열림 */
+		bottom: 6.5rem;
+	}
+
+	#wrap:has(.sect-psview-layer.active) #topBtn {
+		/* 바텀시트 열림 */
+		bottom: calc(6.5rem - 70px);
+	}
+
+	#wrap:not(:has(#topBtn.active-progress)) #chatbot.has-psview-layer {
+		/* 바텀시트 닫힘 , 스크롤 탑 */
+		bottom: calc(var(--psview-layer-height) + 20px);
+	}
+
+	#wrap:has(.sect-psview-layer.active):not(:has(#topBtn.active-progress)) #chatbot {
+		/* 바텀시트 열림 , 스크롤 탑 */
+		bottom: 6.5rem;
+	}
+
+
+	/* e: 251106 top버튼 */
 
 	#chatbot .chat-open span {height: 60px; font-size: .9rem;}
 	.chat-bt2 {bottom: 60px; right: 0;}
@@ -821,7 +883,6 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 		row-gap: 1rem;
 	}
 
-
 }
 
 @media (max-width:359.98px) {
@@ -834,6 +895,7 @@ visibility: visible; overflow: hidden; animation-duration:4s;}
 
 
 /* s: 250416 top버튼 */
+
 
 #topBtn {
   	position: fixed;

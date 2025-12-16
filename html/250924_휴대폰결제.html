@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/vendor/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/common/base.css">
+</head>
+
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- Header -->
+	<header id="hd">
+		<div class="container">
+			<h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+
+<section class="sect">
+	
+    <form id="frm" name="frm" method="post">
+        <input type="hidden" name="consentYn" id="consentYn" value="">
+        <input type="hidden" name="gradeCd" id="gradeCd" value="D">
+        <input type="hidden" id="toGradeCd" name="toGradeCd">
+        <input type="hidden" id="pwUseYn" name="pwUseYn">
+        <input type="hidden" id="successa" name="successa">
+        <input type="hidden" id="successb" name="successb">
+        <div class="container">
+            <div class="heading-depth1">
+                <h2 class="title">휴대폰 결제</h2>
+            </div>
+            <script type="text/javascript" src="/html/cmmn/js/auth/smsAuthReusable.js?1757480130000"></script>
+            <script type="text/javascript" src="/html/cmmn/js/auth/smsAuth.js?1757480130000"></script>
+            <div class="box box-sel">
+                <div class="box-sel-row">
+                    <div class="sel-wp">
+                        <div class="title">
+                            <p class="ico-phone">
+                                <span class="hide">휴대폰번호</span>
+                                <em class="cnt font-mont">1</em>
+                                <span class="hide">개</span>
+                            </p>
+                        </div>
+                        <select class="form-control form-primary" id="srchCtrtId" name="srchCtrtId" title="휴대폰번호 선택">
+                            <option value="113301702">010-21**-1***</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-rt" id="mobileShown">
+                        <a href="javascript:void(0);" class="btn btn-primary btn-sm" id="smsAuthUnMaskPop"
+                            onclick="smsAuthOpenBefo();">*없이 전체보기</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="areaLayer" style="">
+                <div class="heading-depth2 mb-2">
+                    <h3 class="title">휴대폰 결제(소액결제) 서비스란?</h3>
+                </div>
+                <ul class="lst-dash">
+                    <li>온라인 가맹점에서 서비스 및 상품을 구매하실 때 휴대폰으로 편리하게 결제하는 서비스입니다.</li>
+                    <li>결제 시, “휴대폰으로 결제하기” 를 선택하시면 본인확인 과정을 거쳐 바로 결제가 되며, 결제하신 금액은 다음달 휴대폰 요금에 합산되어 부과되는 통신과금서비스입니다.
+                    </li>
+                    <li>휴대폰결제 서비스 이용동의 후 가능합니다.<br>※ 미제공 서비스 : 구글Play스토어, 삼성GalaxyApps</li>
+                </ul>
+
+                <!-- s: 250924 휴대폰 결제 -->
+
+                <div id="div_payStatus" class="text-box payStatus status-consent" style="">
+                    <strong class="title">휴대폰 결제 이용여부</strong>
+                    <div>
+                        <strong class="status-text">이용 동의</strong>
+                    </div>
+                    
+                    <p>
+                        이용동의(미동의) 변경은 홈페이지에서 직접 변경 가능합니다.<br>
+                        완전 차단 시 동의여부와 관계 없이 휴대폰 결제 이용 불가하며, 이후 해제는 고객센터 <1599-0999(유료)/휴대폰114(무료)>를 통해서만 가능합니다.
+                    </p>
+                    <a href="javascript:void(0);" class="btn btn-xsm btn-primary"
+                        style="width: auto;">미동의로 변경</a>
+                    <a href="javascript:void(0);" class="btn btn-xsm btn-outline-primary"
+                        style="width: auto;">완전 차단</a>
+                </div>
+                <div id="div_payStatus" class="text-box payStatus status-pending" style="">
+                    <strong class="title">휴대폰 결제 이용여부</strong>
+                    <div>
+                        <strong class="status-text">이용 미동의</strong>
+                    </div>
+                    
+                    <p>
+                        이용동의(미동의) 변경은 홈페이지에서 직접 변경 가능합니다.<br>
+                        완전 차단 시 동의여부와 관계 없이 휴대폰 결제 이용 불가하며, 이후 해제는 고객센터 <1599-0999(유료)/휴대폰114(무료)>를 통해서만 가능합니다.
+                    </p>
+                    <a href="javascript:void(0);" class="btn btn-xsm btn-primary"
+                        style="width: auto;">동의로 변경</a>
+                    <a href="javascript:void(0);" class="btn btn-xsm btn-outline-primary"
+                        style="width: auto;">완전 차단</a>
+                </div>
+                <div id="div_payStatus" class="text-box payStatus status-blocked" style="">
+                    <strong class="title">휴대폰 결제 이용여부</strong>
+                    <div>
+                        <strong class="status-text">완전 차단</strong>
+                    </div>
+                    
+                    <p>
+                        완전차단 해제는 고객센터<1599-0999(유료)/휴대폰114(무료)>를 통해서만 가능합니다.<br>
+                        해제 후 이용 가능합니다.
+                    </p>
+                </div>
+                <div id="div_usageLimit" class="text-box usageLimit" style="">
+                    <strong class="title">이용한도 : 100,000원</strong>
+                    <div>
+                        <strong class="remainAmt" id="remainAmt">(잔여한도 : 90,020원)</strong>
+                    </div>
+
+                    <p>이용한도는 하향만 가능하며, 상향은 고객센터를 통해 가능합니다.</p>
+                    <a href="javascript:void(0);" class="btn btn-xsm btn-outline-primary" id="btn_useList"
+                        style="width: auto;">이용한도 변경</a>
+                </div>
+
+                <div id="div_payList" class="text-box payList" style="">
+                    <strong class="title">휴대폰결제 내역 상세보기</strong>
+                    <p>1년 내 결제내역을 확인할 수 있습니다.</p>
+                    <a href="javascript:void(0);" class="btn btn-xsm btn-outline-primary" id="btn_useList"
+                        style="width: auto;">결제내역조회</a>
+                </div>
+
+                <div id="pwDiv" class="text-box phonePrice-pw" style="">
+                    <strong class="title">휴대폰결제 비밀번호 서비스</strong>
+                    <p>휴대폰결제 서비스를 안전하게 이용하기 위해 추가 결제확인 비밀번호 서비스입니다.<strong id="pwUseYn"></strong> 고객님께서 직접 비밀번호를 설정하여
+                        이용하실 수 있습니다.</p>
+                    <a href="javascript:void(0);" class="btn btn-xsm btn-outline-primary" id="btn_pwChg">결제 비밀번호 서비스
+                        신청/해지</a>
+                </div>
+                <div id="div_autoCutoff" class="text-box autoPay" style="">
+                    <strong class="title">자동결제 이용여부</strong>
+                    <div>
+                        <strong class="status-text">미사용</strong>
+                    </div>
+
+                    <p>
+                        매월 정기적으로 결제가 필요한 서비스가 있을경우해당서비스를 사용하시면<br>
+                        매월 자동으로 결제가 이루어 집니다.<br>
+                        사용으로 변경은 고객센터<1599-0999(유료)/휴대폰114(무료)>를 통해서만 가능합니다.
+                    </p>
+                </div>
+                <div id="div_autoCutoff" class="text-box autoPay" style="">
+                    <strong class="title">자동결제 이용여부</strong>
+                    <div>
+                        <strong class="status-text">사용</strong>
+                    </div>
+
+                    <p>
+                        매월 정기적으로 결제가 필요한 서비스가 있을경우해당서비스를 사용하시면<br>
+                        매월 자동으로 결제가 이루어 집니다.<br>
+                        사용으로 변경은 고객센터<1599-0999(유료)/휴대폰114(무료)>를 통해서만 가능합니다.
+                    </p>
+                    <a href="javascript:void(0);" class="btn btn-xsm btn-outline-primary" id="btn_useList"
+                        style="width: auto;">미사용으로 변경</a>
+                </div>
+
+                <!-- e: 250924 휴대폰 결제 -->
+
+
+
+                <div class="acc-group acc-type1" data-accordion="true">
+                    <dl class="acc-item active">
+                        <dt class="acc-head">
+                            <button class="btn btn-toggle" type="button" role="button" title="닫기">휴대폰결제 상세안내</button>
+                        </dt>
+                        <dd class="acc-body" role="region" aria-hidden="false" aria-expanded="true">
+                            <div class="acc-content" style="display: block;">
+                                <ul class="lst-bullet">
+                                    <li><strong>휴대폰결제 이용여부</strong>
+                                        <ul class="lst-dot">
+                                            <li>휴대폰결제는 19세 이상의 개인고객만 이용이 가능합니다. (미성년자, 법인고객, 개인사업자, 외국인, 선불, IoT,포켓파이
+                                                이용불가)</li>
+                                            <li><span class="text-danger">1년 이상 휴대폰결제를 사용하지 않은 장기 미사용자 고객은 스미싱 등 휴대폰결제
+                                                    피해 예방을 위해 미동의로 변경된 상태입니다.</span><br>이용을 원하시는 경우 휴대폰 결제 동의여부를 '동의'로
+                                                변경하시면 다시 이용 가능합니다.</li>
+                                            <li>구글 플레이스토어, T store의 콘텐츠 결제는 휴대폰결제가 아닌 콘텐츠이용료로써 서비스가 제공되지 않습니다.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="lst-bullet mt-4">
+                                    <li><strong class="d-block mt-3">휴대폰결제 이용한도 변경</strong>
+                                        <ul class="lst-dot">
+                                            <li>휴대폰 결제 이용한도 변경은 휴대폰 인증 또는 아이핀 (i-PIN) 인증 후 가능합니다.</li>
+                                            <li>이용한도 변경은 한도 하향만 가능하며, 상향은 고객센터를 통해 가능합니다.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="lst-bullet mt-4">
+                                    <li><strong class="d-block mt-3">이용 및 한도 안내</strong></li>
+                                </ul>
+                                <table class="tb bl mt-2">
+                                    <caption>이용 및 한도 안내(이용대상, 이용한도)(이용대상, 이용한도정보제공) </caption>
+                                    <colgroup>
+                                        <col style="width:30%">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">이용대상</th>
+                                            <th scope="col">이용한도</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>만 19세 이상 개인고객</td>
+                                            <td class="text-left">월 최대 30만원(다회선 사용 고객의 경우 고객당 최대 50만원)<br>-
+                                                신규가입/번호이동/명의변경 후 90일간 : 월 10만원<br>- 개통 후 91일~180일간 : 월 20만원<br>- 개통 후
+                                                181일 이후 : 월 30만원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="lst-dot mt-2">
+                                    <li>이용한도는 매월 1일 기준으로 부여되며, 정지일수는 제외됩니다.</li>
+                                    <li>이용한도 변경은 가능금액 이내에서 가능하며, 가능금액을 초과한 한도 증액은 불가합니다.</li>
+                                </ul>
+                                <ul class="lst-bullet mt-4">
+                                    <li><strong>휴대폰결제 이용안내</strong>
+                                        <ul class="lst-dot">
+                                            <li>미납고객의 경우 이용한도 변경 및 휴대폰결제 이용 불가하며 미납금액 수납 후 익일부터 변경 및 이용 가능합니다.</li>
+                                            <li>결제금액 취소는 당월에만 가능하며, 자세한 내용은 결제대행사 또는 콘텐츠 제공업체에 문의하세요.</li>
+                                            <li>이용하지 않으신 휴대폰 결제 금액이 청구되었을 경우, 결제대행사 및 콘텐츠제공업체에 문의하시어 취소 또는 환불을 요청하시기
+                                                바랍니다.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <table class="tb bl mt-3">
+                                    <caption>결제대행사 및 콘텐츠제공업체(휴대폰 결제대행사, 고객센터, 홈페이지)(휴대폰 결제대행사, 고객센터, 홈페이지정보제공)
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width:35%">
+                                        <col style="width:25%">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">휴대폰 결제대행사</th>
+                                            <th scope="col">고객센터</th>
+                                            <th scope="col">홈페이지</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left">다날</td>
+                                            <td>1566-3355</td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="openBrowser('http://www.danal.co.kr');">http://www.danal.co.kr</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">페이레터</td>
+                                            <td>1599-7591</td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="openBrowser('https://www.payletter.com/ko/');">https://www.payletter.com/ko/</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">kg모빌리언스</td>
+                                            <td>1800-0678</td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="openBrowser('http://www.mobilians.co.kr');">http://www.mobilians.co.kr</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">갤럭시아커뮤니케이션즈</td>
+                                            <td>1566-0123</td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="openBrowser('http://billgate.net');">http://billgate.net</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">NHN KCP</td>
+                                            <td>1688-6410</td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="openBrowser('https://www.kcp.co.kr');">https://www.kcp.co.kr</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="lst-bullet mt-4">
+                                    <li><strong>휴대폰결제 비밀번호</strong>
+                                        <ul class="lst-dot">
+                                            <li>휴대폰결제 비밀번호 결제가 가능한 서비스 제공업체는 지속적으로 확대될 예정입니다. 2018년 6월 기준 이용 범위: ARS
+                                                소액결제, 멜론, 게임 관련 상거래 건 (넥슨, 한게임, 엔씨소프트, 넷마블, 아이템베이, 아이템매니아 등)</li>
+                                            <li>휴대폰결제 비밀번호를 설정하신 것만으로 <span class="text-danger">안전하게 결제가 진행되는 것은
+                                                    아니며</span>, 가맹점 <span class="text-danger">휴대폰결제 시 휴대폰결제 비밀번호를 추가
+                                                    입력해야만 안전한 결제가 가능</span>합니다.</li>
+                                            <li>휴대폰 소액결제 이용자보호 담당 : ihjung72@sk.com / 070-7400-1252</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="lst-bullet mt-4">
+                                    <li><strong>자동결제 서비스</strong>
+                                        <ul class="lst-dot">
+                                            <li>매월 정기적으로 결제가 필요한 서비스가 있을 경우 고객센터를 통해 자동결제 서비스를 신청하시면 매월 자동 결제가 이루어집니다.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn btn-sm btn-primary mt-3"
+                                    onclick="fnDownload('1d67829f60c3c13e617a9b4457826192'); return false;">통신과금서비스(소액결제)
+                                    이용약관 다운로드</button>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</section>
+
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+
+	<!-- Footer -->
+	<footer id="ft">
+		<div class="container">
+			<div class="ft-top">
+				<p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+				<dl class="font-weight-normal">
+					<dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+					<dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+					<dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+					<dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+				</dl>
+			</div>
+			<hr>
+			<ul class="fnb">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+				<li><a href="">개인정보이용내역조회</a></li>
+				<li><a href="">통신자료제공사실 열람신청</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">분쟁처리절차</a></li>
+				<li><a href="">책임의 한계와 법적고지</a></li>
+				<li><a href="">불법스팸대응센터</a></li>
+				<li><a href="">명의도용방지서비스</a></li>
+				<li><a href="">해지미환급금 조회/환불</a></li>
+				<li><a href="">법인회선개통문의</a></li>
+			</ul>
+			<div class="ft-bottom">
+				<div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장  최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신 판매번호:2010-서울중구-0518</div>
+				<p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+
+<!-- js -->
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+
+
+</body>
+</html>
