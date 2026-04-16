@@ -2504,6 +2504,20 @@ div.badge-wp {margin-bottom: .5rem;}
 .my-service .service-area {margin:1.2rem 0 1rem; width:auto;}
 .my-service .service-area th {font-weight:normal; font-size:1.08rem;}
 .my-service .service-area td {text-align:right; font-size:1.8rem;}
+
+/* s: 260416 나의서비스 */
+.my-service .service-area .extra:last-child td {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.my-service .service-area .extra:last-child td .btn {
+	margin-left: 0.6rem;
+	z-index: 100;
+}
+/* e: 260416 나의서비스 */
+
 .my-service .service-area table:after {content:none;}
 .my-service .service-area .extra td span {margin-left:0.5rem}
 .my-service .ms-cont03 .cont-area .buttons { justify-content: center; padding-top:0rem; text-align:center; }
@@ -2516,6 +2530,20 @@ div.badge-wp {margin-bottom: .5rem;}
 	.my-service .ms-cont02 .cont-area .buttons .btn {flex:2; margin:0 0.3rem;}
 	.my-service .ms-cont03 .cont-area .buttons .btn {min-width:47%;}
 	.my-service .service-area .extra th {padding-bottom:1rem}
+
+	/* s: 260416 나의서비스 */
+
+	.my-service .service-area .extra:last-child th {
+		padding-top: 0.3rem;
+		padding-bottom: 0;
+	}
+
+	.my-service .service-area .extra:last-child td {
+		padding-top: 0.6rem;
+	}
+
+	/* e: 260416 나의서비스 */
+
 	.my-service .service-area .extra td span {display:block; font-size:1.08rem; text-align:right; line-height:1;}
 	.my-service .chart-area .chart-text .tot {display:block;} /* 220413 */
 	.my-service .chart-area .chart-text-empty .tot {display:block;} /* 220413 */
@@ -2549,6 +2577,17 @@ div.badge-wp {margin-bottom: .5rem;}
 	.my-service .service-area table {margin-right:0; margin-left: auto; width:auto;}
 	.my-service .service-area th {min-width:106px; font-size:22px; text-align:left;}
 	.my-service .service-area td {font-size:35px; padding-left:20px; padding-right: 80px;  text-align:left;}
+
+	/* s: 260416 나의서비스 */
+
+	.my-service .service-area .extra:last-child td {
+		display: flex;
+    	align-items: center;
+		justify-content: flex-start;
+	}
+
+	/* e: 260416 나의서비스 */
+	
 	.my-service .service-area .extra td span {font-size:25px; }
 	.my-service .ms-cont03 .cont-area .buttons {text-align:center;}
 	.my-service .ms-cont03 .cont-area .buttons .btn {min-width:22%;}
@@ -5804,3 +5843,164 @@ body:has(.app_download_popup:not(.active)) {
 }
 
 /* e: 251113 요금제 목록 UX 개선 */
+
+
+
+
+
+/* s: 260219 납부내역조회 */
+.box-mr {margin-right: 48px;}
+
+@media (max-width: 1080px) {
+	.box-mr {margin-right: 0rem;}
+}
+/* e: 260219 납부내역조회 */
+
+
+
+
+
+
+
+.pdf-slider {
+	position: relative;
+}
+
+.pdf-slider .swiper-slide {
+	border-radius: .583rem;
+    border: 1px solid #ccc;
+}
+
+.pdf-viewer-overlay {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+}
+
+.pdf-modal-content {
+  margin: auto;
+  display: block;
+  width: auto;
+  max-width: 95%;
+  max-height: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.pdf-modal-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.pdf-slider .swiper-slide img {
+  cursor: default;
+}
+
+@media (min-width: 768px) {
+  .pdf-slider .swiper-slide img {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 767px) {
+  .pdf-viewer-overlay {
+    display: none !important;
+  }
+}
+
+/* .custom-navigation {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+	z-index: 10;
+} */
+
+.custom-navigation .custom-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-color: #ececec;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s ease;
+	outline: none;
+}
+
+.custom-navigation .btn-prev {
+	left: 20px;
+}
+
+.custom-navigation .btn-next {
+	right: 20px;
+}
+
+.custom-navigation .custom-btn .icon {
+	width: 11px;
+	height: 11px;
+	border-top: 3px solid;
+	border-right: 3px solid;
+	display: inline-block;
+}
+
+.custom-navigation .btn-prev .icon {
+	border-color: #000;
+	transform: rotate(-135deg);
+	margin-left: 3px;
+}
+
+.custom-navigation .btn-next .icon {
+	border-color: #000;
+	transform: rotate(45deg);
+	margin-right: 3px;
+}
+
+.custom-navigation .custom-btn.swiper-button-disabled {
+	opacity: 0.4;
+	cursor: default;
+	pointer-events: none;
+}
+
+
+
+
+@media (max-width: 767px) {
+  .custom-navigation .custom-btn {
+	width: 2.6rem;
+	height: 2.6rem;
+  }
+
+  .custom-navigation .btn-prev {
+	left: 1rem;
+  }
+
+  .custom-navigation .btn-next {
+	right: 1rem;
+  }
+}
