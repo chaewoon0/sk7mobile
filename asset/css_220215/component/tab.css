@@ -35,6 +35,57 @@
 .tab-group .tab-panel {display: none;}
 .tab-group .tab-panel.active {display: block;}
 
+/* tab-menu-type3 : 언더라인 탭 (균등 배치) */
+
+.tab-menu-type3 {
+	height: auto;
+}
+
+.tab-menu-type3 ul {
+	display: flex;
+	margin: 0 1.6rem;
+	padding: 0;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.tab-menu-type3 .tab-link {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+}
+
+.tab-menu-type3 .tab-link+.tab-link {
+	margin-left: 0;
+}
+
+.tab-menu-type3 .tab-btn {
+	display: block;
+	width: 100%;
+	padding: .75rem 1.5rem 1rem;
+	border: 0;
+	color: #333333;
+	font-size: 1.33rem;
+	font-weight: 400;
+	text-align: center;
+	line-height: 1.3;
+	background: none;
+	transition: color .2s;
+}
+
+.tab-menu-type3.tab-menu .tab-link.active .tab-btn {
+	color: #3717CE;
+	box-shadow: inset 0 -3px 0 0 #3717CE;
+}
+
+.tab-menu-type3.tab-menu .tab-btn:after {
+	background: #3717CE;
+}
+
+
 @media (min-width:1080px) {
 	.tab-menu {height: auto;margin: 0 0 40px;border-bottom: 0;}
 	.tab-menu:after {content: '';display: block;position: absolute;bottom: 0px;left: 0;width: 100%;height: 1px;background: #eaeaea;}
@@ -66,4 +117,16 @@
 	.sub-menu li {margin-right: 45px;}
 	.sub-menu .sub-btn {font-size: 17px;}
 	.sub-menu .sub-btn:hover,.sub-menu .sub-btn:focus {color: #5857d8;}
+
+	.tab-menu-type3 .tab-link.active .tab-btn {
+		font-weight: 500;
+	}
+
+	.tab-menu-type3.tab-menu .tab-btn:hover,.tab-menu .tab-btn:focus {
+		color: #3717CE;
+	}
+
+	.tab-menu-type3.tab-menu .tab-btn:after {
+		bottom: 1px;
+	}
 }

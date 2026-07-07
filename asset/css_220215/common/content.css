@@ -4268,6 +4268,60 @@ body:has(.app_download_popup:not(.active)) {
 	color: #fff;
 }
 
+
+
+/* s: 260617 간편유심 배너 */
+
+.aff-usim-head.type03 {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 2rem;
+}
+
+.aff-usim-head.type03::before {
+	background-color: #fce3b3;
+}
+
+.aff-usim-head.type03 .usim-head-box {
+	justify-content: flex-end;
+}
+
+.aff-usim-head.type03 .usim-head-txt {
+	position: absolute;
+	width: 100%;
+}
+
+.aff-usim-head.type03 .usim-head-txt p {
+	color: #000;
+	font-weight: 700;
+}
+
+.aff-usim-head.type03 .usim-head-txt strong {
+	color: #f16414;
+}
+
+.aff-usim-head .usim-head-txt small {
+	color: #555555;
+	font-size: 17px;
+	margin-top: 20px;
+}
+
+@media (max-width: 1080px) {
+	.aff-usim-head .usim-head-txt small {
+		font-size: 0.95rem;
+        margin-top: 1rem;
+	}
+
+	.aff-usim-head.type03 .usim-head-txt small {
+		width: 60%;
+	}
+
+}
+
+/* e: 260617 간편유심 배너 */
+
+
+
 .aff-usim-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -5860,7 +5914,7 @@ body:has(.app_download_popup:not(.active)) {
 
 
 
-
+/* s: 260416 착한가입안내서 */
 
 .pdf-slider {
 	position: relative;
@@ -6028,4 +6082,470 @@ body:has(.app_download_popup:not(.active)) {
 		width: 1rem;
 		height: 1rem;
 	}
+}
+
+
+/* e: 260416 착한가입안내서 */
+
+
+
+
+
+/* s: 260519 요금제 조회/변경 */
+
+
+.box-sel-row .title .ico-phone .cnt.accent {
+	background-color: #3717CE;
+}
+
+
+
+.plan-table th:nth-child(1),
+.plan-table td:nth-child(1) {
+	width: 15%;
+}
+
+.plan-table th:nth-child(2),
+.plan-table td:nth-child(2) {
+	width: 60%;
+}
+
+.plan-table th:nth-child(3),
+.plan-table td:nth-child(3) {
+	width: 25%;
+}
+
+.plan-cell {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+	column-gap: 20px;
+}
+
+.plan-cell .plan-name {
+	font-size: 18px;
+	font-weight: 600;
+	text-align: left;
+}
+
+.plan-cell .plan-price {
+	color: #676767;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: right;
+	flex: none;
+}
+
+.change-pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	width: 142px;
+	height: 50px;
+	padding: 0 16px;
+	border-radius: 6px;
+}
+
+.change-pill.text-up {
+	background-color: #FFECEE;
+	color: #FB415C;
+}
+
+.change-pill.text-down {
+	background-color: #EFEDFB;
+	color: #3717CE;
+}
+
+
+
+.notice-box {
+	background-color: #FFFAE0;
+	border-radius: 16px;
+	padding: 32px 40px;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	column-gap: 16px;
+	margin-top: 60px;
+}
+
+.notice-box .icon-container {
+	flex-shrink: 0;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.notice-box .icon-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.notice-box .content-container {
+	flex-grow: 1;
+}
+
+.notice-box .notice-title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.notice-box .notice-text {
+	font-size: 18px;
+	margin: 0;
+}
+
+.notice-box .notice-text p {
+	margin-bottom: 6px;
+}
+.notice-box .notice-text p:last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 1080px) {
+
+	.plan-table th:nth-child(1),
+	.plan-table td:nth-child(1) {
+		width: 12%;
+	}
+
+	.plan-table th:nth-child(2),
+	.plan-table td:nth-child(2) {
+		width: 60%;
+	}
+
+	.plan-table th:nth-child(3),
+	.plan-table td:nth-child(3) {
+		width: 28%;
+	}
+
+	.plan-cell {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		row-gap: 0.4rem;
+		padding: 0 0.4rem;
+	}
+
+	.plan-cell .plan-name {
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+
+	.plan-cell .plan-price {
+		color: #676767;
+		font-size: 1.15rem;
+		font-weight: 600;
+		text-align: left;
+	}
+
+	.change-pill {
+		font-size: 1.15rem;
+		width: 100%;
+		height: auto;
+		min-height: 100%;
+		padding: 0.6rem 0.4rem;
+		border-radius: 6px;
+	}
+
+
+
+	.notice-box {
+		padding: 2rem 1.25rem;
+		column-gap: 0.6rem;
+		margin-top: 4rem;
+	}
+
+	.notice-box .icon-container {
+		width: 1.83rem;
+		height: 1.83rem;
+	}
+
+	.notice-box .notice-title {
+		font-size: 1.35rem;
+		margin-bottom: 0.4rem;
+	}
+
+	.notice-box .notice-text {
+		font-size: 1.25rem;
+	}
+
+	.notice-box .notice-text p {
+		margin-bottom: 0.4rem;
+	}
+}
+
+
+
+/* e: 260519 요금제 조회/변경 */
+
+
+/* s: 260604 골드번호 이벤트 */
+
+.block-img {
+	width: 100%;
+	display: block;
+	vertical-align: top;
+}
+
+.gold-content-row {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-image: url(/html/images/event/gold/260604_gold_bg.jpg);
+	background-repeat: repeat-y;
+	background-position: top left;
+	background-size: 100% auto;
+}
+
+.gold-content-inner {
+	width: 79%;
+	box-sizing: border-box;
+	background-color: #f1f1f1;
+	border-radius: 12px;
+	padding: 3% 4%;
+}
+
+
+.gold-grid-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px 0px;
+	justify-items: center;
+	align-items: center;
+}
+
+.gold-grid-list button {
+	padding: 4px 20px;
+	font-size: 24px;
+	font-weight: 500;
+	color: #676767;
+	cursor: pointer;
+	outline: none;
+}
+
+.gold-grid-list button:hover {
+	color: #000;
+}
+
+.gold-grid-list button.active {
+	background-color: #3717ce;
+	color: #fff;
+}
+
+.gold-footer-wrap {
+	position: relative;
+}
+
+.gold-result-text {
+	position: absolute;
+	top: 20.7%;
+	left: 37.8%;
+	width: 55%;
+	height: 16%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 36px;
+	font-weight: 600;
+	color: #000;
+	letter-spacing: 1px;
+}
+
+@media (max-width: 1080px) {
+	.gold-content-inner {
+		border-radius: 6px;
+	}
+
+	.gold-result-text {
+		font-size: 4vw;
+	}
+
+	.gold-grid-list {
+		justify-items: stretch;
+	}
+
+	.gold-grid-list button {
+		font-size: 1rem;
+		padding: 4% 0;
+		width: 100%;
+	}
+}
+
+/* e: 260604 골드번호 이벤트 */
+
+
+
+
+
+
+    /* 메인 카드 디테일 박스 */
+    .ev-card-detail {
+		color: #000000;
+      border: 1px solid #d9d9d9;
+      border-radius: 16px;
+	  overflow: hidden;
+    }
+
+    /* 상단 헤더 영역 (회색 배경) */
+    .ev-card-detail .card-header {
+      background-color: #f6f6f6;
+      padding: 30px 60px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    /* 상단 헤더 영역 (회색 배경) */
+    .ev-card-detail .card-header-img {
+      width: 160px;
+	  flex: none;
+    }
+
+    /* 헤더 텍스트 영역 */
+    .ev-card-detail .card-header-info {
+      flex: 1;
+    }
+
+    .ev-card-detail .card-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .ev-card-detail .card-subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      color: #555555;
+    }
+
+    /* 본문 레이아웃 컨테이너 */
+    .ev-card-detail .card-body {
+      padding: 40px 50px;
+      display: flex;
+      gap: 50px;
+    }
+
+    /* 기본 할인 영역 (왼쪽) */
+    .ev-card-detail .benefit-section {
+      flex: 1.1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ev-card-detail .section-title {
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    /* 할인 조건 아이템 리스트 */
+    .ev-card-detail .benefit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ev-card-detail .benefit-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #F6F6F6;
+      padding: 10px 20px;
+      border-radius: 10px;
+	  height: 80px;
+    }
+
+    .ev-card-detail .benefit-cond {
+      font-size: 18px;
+    }
+
+    .ev-card-detail .benefit-val {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* 프로모션 캐시백 영역 (오른쪽) */
+    .ev-card-detail .promo-section {
+      flex: 0.9;
+      display: flex;
+    }
+
+    /* 단독 프로모션 카드 박스 (배경 디테일 구현) */
+    .ev-card-detail .promo-card {
+      width: 100%;
+      border: 4px solid #aaaaaa;
+      border-radius: 16px;
+      padding: 35px 40px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    }
+
+
+    /* 프로모션 배지 */
+    .ev-card-detail .promo-badge {
+      background-color: #EAEAEA;
+      color: #333333;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 5px 15px;
+      border-radius: 30px;
+      margin-bottom: 5px;
+    }
+
+    /* 캐시백 메인 헤드라인 */
+    .ev-card-detail .promo-headline {
+      font-size: 27px;
+      font-weight: 900;
+      color: #3717CE;
+      margin-bottom: 16px;
+      letter-spacing: -0.04em;
+    }
+
+    /* 캐시백 조건 목록 */
+    .ev-card-detail .promo-bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .ev-card-detail .promo-bullet-item {
+      font-size: 16px;
+      color: #555555;
+      line-height: 1.5;
+      padding-left: 12px;
+      position: relative;
+      word-break: keep-all;
+    }
+
+    .ev-card-detail .promo-bullet-item::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: bold;
+    }
+
+.ev-card-detail .card-footer {
+	padding: 30px 15px;
+	background-color: #F6F6F6;
+}
+
+.ev-card-detail .card-footer .btn-wrap {
+	margin-top: 0;
 }

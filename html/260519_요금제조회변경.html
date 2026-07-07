@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<link rel="shortcut icon" href="../asset/img/ico_favicon.ico">
+<title>sk7mobile</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/vendor/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/common/base.css">
+<link rel="stylesheet" type="text/css" href="../asset/css_220215/common/renewal.css">
+</head>
+
+<body>
+
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">본문 내용 바로가기</a>
+</nav>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- Header -->
+	<header id="hd">
+		<div class="container">
+			<h1 class="hd-logo"><a href=""><img src="../asset/img/logo.png" alt=""><span class="sr-only">SK 7mobile</span></a></h1>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div id="ct">
+
+<!-- 페이지 시작 -->
+
+<section class="sect">
+    <div class="container">
+        <div class="heading-depth1">
+            <h2 class="title">요금제 조회/변경</h2>
+        </div>
+        <script type="text/javascript" src="/html/cmmn/js/auth/smsAuthReusable.js?1757480130000"></script>
+        <script type="text/javascript" src="/html/cmmn/js/auth/smsAuth.js?1757480130000"></script>
+        <div class="box box-sel">
+            <div class="box-sel-row">
+                <div class="sel-wp">
+                    <div class="title">
+                        <p class="ico-phone">
+                            <span class="hide">휴대폰번호</span>
+                            <em class="cnt accent font-mont">1</em>
+                            <span class="hide">개</span>
+                        </p>
+                    </div>
+                    <select class="form-control form-accent" id="svcNumHidden" name="svcNum" title="휴대폰번호 선택">
+                        <option value="oHLQRtF2AnWKtXNInXT9fw==" selected="selected">010-21**-1***</option>
+                    </select>
+                </div>
+
+                <div class="btn-rt" id="mobileShown">
+                    <a href="javascript:void(0);" class="btn btn-accent btn-sm" id="smsAuthUnMaskPop"
+                        onclick="smsAuthOpenBefo();">*없이 전체보기</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="defaultArea">
+            <div class="heading-depth2">
+                <h3 class="title">이용중인 요금제</h3>
+            </div>
+
+            <div class="online-application-product-box renewal">
+                <ul class="online-application-product-list">
+                    <li>
+                        <span class="label">요금제</span>
+                        <span class="value"><a class="text-primary text-under" href="/prod/data/callingPlanView.do?prodCd=PD00000421&amp;refer=myservie" target="_blank">LTE 유심 (500MB/60분)</a></span>
+                    </li>
+                    <li>
+                        <span class="label">기본료</span>
+                        <span class="value">3,300원</span>
+                    </li>
+                    <li>
+                        <span class="label">가입일</span>
+                        <span class="value">2025-02-03</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="mt-3 text-md text-black">* 부가세포함 요금입니다.</p>
+
+        <div class="defaultArea">
+            <div class="heading-depth2">
+                <h3 class="title">변경 예약 중인 요금제</h3>
+                <a href="javascript:void(0);" class="btn btn-accent btn-xsm float-right">예약 취소</a>
+            </div>
+
+            <div class="online-application-product-box renewal">
+                <ul class="online-application-product-list">
+                    <li>
+                        <span class="label">요금제</span>
+                        <span class="value"><a class="text-under" href="/prod/data/callingPlanView.do?prodCd=PD00000421&amp;refer=myservie" target="_blank">LTE 유심 (500MB/60분)</a></span>
+                    </li>
+                    <li>
+                        <span class="label">기본료</span>
+                        <span class="value">3,300원</span>
+                    </li>
+                    <li>
+                        <span class="label">가입일</span>
+                        <span class="value">2025-02-03</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="areaChargeList" style="">
+            <div class="heading-depth2">
+                <h3 class="title">변경 가능한 요금제</h3>
+            </div>
+            <form id="form" name="form">
+                <input type="hidden" id="selectedSvcNum" name="selectedSvcNum">
+                <input type="hidden" id="pooqProdCd" name="pooqProdCd" value="">
+                <input type="hidden" id="pooqAgreeYn" name="pooqAgreeYn" value="N">
+                <input type="hidden" id="pooqUserAccKey" name="pooqUserAccKey" value="">
+                <input type="hidden" id="pooqPurchaseAvailableYn" name="pooqPurchaseAvailableYn" value="N">
+                <div class="tb-head mt-5" style="">
+                    <p>요금제 카테고리를 선택해주세요.</p>
+                    <div class="right">
+                        <select id="ctgrList" name="ctgrList" class="form-control w-auto pr-6" onchange="fnChngCtgr();"
+                            title="요금제 카테고리">
+                            <option value="PROD_USIM_TYPE_008">데이터무제한(3~5Mbps)</option>
+                            <option value="PROD_USIM_TYPE_004">데이터무제한(1Mbps)</option>
+                            <option value="PROD_USIM_TYPE_002">데이터무제한</option>
+                            <option value="PROD_USIM_TYPE_006">음성통화 2천분</option>
+                            <option value="PROD_USIM_TYPE_015">데이터 든든</option>
+                            <option value="PROD_USIM_TYPE_013">데이터안심</option>
+                            <option value="PROD_USIM_TYPE_007">초저가갓성비</option>
+                            <option value="PROD_USIM_TYPE_005" prodtp="50">5G 무제한</option>
+                            <option value="PROD_USIM_TYPE_018" prodtp="50">5G 실속</option>
+                            <option value="PROD_LTE_TYPE_001">LTE 온라인 데이터</option>
+                            <option value="PROD_LTE_TYPE_003">LTE 온라인</option>
+                            <option value="PROD_LTE_TYPE_002">LTE 온라인 음성</option>
+                            <option value="PROD_LTE_TYPE_005">데이터중심 LTE</option>
+                            <option value="PROD_3G_TYPE_006" prodtp="50">5G 요금제</option>
+                        </select>
+                    </div>
+                </div>
+                <table class="tb bl plan-table">
+                    <caption>변경 가능한 요금제(선택, 부가서비스명, 이용요금)(선택, 요금제, 기본료정보제공) </caption>
+                    <colgroup>
+                        <col style="width:15%">
+                        <col style="width:60%">
+                        <col style="width:25%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">선택</th>
+                            <th scope="col">요금제</th>
+                            <th scope="col">현재대비 변경</th>
+                        </tr>
+                    </thead>
+                    <tbody id="areaChangePlanList">
+                        <tr>
+                            <td>
+                                <span class="form-radio no-txt pad-3">
+                                    <input type="radio" name="mProdCd" id="mProdCd0" title="LTE 유심 (100GB+/통화맘껏) 선택">
+			                        <label for="mProdCd0"><span class="sr-only">LTE 유심 (100GB+/통화맘껏)</span></label>
+                                </span>
+                            </td>
+                            <td>
+                                <div class="plan-cell">
+                                    <div class="plan-name">LTE유심 (100GB+/통화맘껏)</div>
+                                    <div class="plan-price">월 42,000원</div>
+                                </div>
+                            </td>
+                            <td><span class="change-pill text-up">+38,000원</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="form-radio no-txt pad-3">
+                                    <input type="radio" name="mProdCd" id="mProdCd1" title="LTE 유심 (500MB/100분)">
+			                        <label for="mProdCd1"><span class="sr-only">LTE 유심 (500MB/100분)</span></label>
+                                </span>
+                            </td>
+                            <td>
+                                <div class="plan-cell">
+                                    <div class="plan-name">LTE유심 (500MB/100분)</div>
+                                    <div class="plan-price">월 2,900원</div>
+                                </div>
+                            </td>
+                            <td><span class="change-pill text-down">-500원</span></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <div id="agreementArea">
+                    <div class="label-box existInfoSet" id="commonAgreeTemplate">
+                        <span class="form-checkbox">
+                            <input type="checkbox" id="agreeChangePlan">
+                            <label for="agreeChangePlan">
+
+                                요금제 변경에 대한 안내사항을 확인하였으며,&nbsp;변경 진행에 동의합니다.
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="btn-wrap item2 existInfoSet">
+                <span>
+                    <button type="button" class="btn btn-outline-accent btn-lg">1일 변경 예약</button>
+                </span>
+                <span>
+                    <button type="button" class="btn btn-accent btn-lg">지금 변경</button>
+                </span>
+            </div>
+        </div>
+
+
+        <div class="notice-box">
+            <div class="icon-container">
+                <img src="/html/images/icon/icon_tip.png" alt="팁 아이콘">
+            </div>
+            <div class="content-container">
+                <div class="notice-title">1일에 요금제를 변경하세요!</div>
+                <div class="notice-text">
+                    월 중간에 요금제를 바꾸면 요금제 이용기간만큼 일할 계산되어 요금이 더 청구 될 수 있어요.
+                </div>
+            </div>
+        </div>
+
+        <div class="notice-box">
+            <div class="icon-container">
+                <img src="/html/images/icon/icon_notice_01.png" alt="주의 아이콘">
+            </div>
+            <div class="content-container">
+                <div class="notice-text">
+                    <p>요금제 변경은 <span class="text-danger">예약일 00시부터</span> 순차적으로 진행됩니다. 변경이 완료되면 변경 결과를 문자로 알려드려요.</p>
+                    <p>1일에 요금제를 변경하더라도 00시부터 변경 전까지 사용량이 있는 경우에는 요율에 따라 사용료 과금이 발생하기 때문에 새벽시간에 변경 진행합니다.</p>
+                    <p>예약 변경 시, 이용중인 부가서비스, 미납 등의 사유로 변경에 실패하는 경우가 있습니다. 홈페이지에서 변경을 다시 시도해 보고 안내되는 메세지에 따라 조치 후 변경을 다시 시도해 보세요.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="acc-group acc-type1" data-accordion="true">
+            <dl class="acc-item active">
+                <dt class="acc-head">
+                    <button class="btn btn-toggle" type="button" role="button" title="닫기">유의사항</button>
+                </dt>
+                <dd class="acc-body" role="region" aria-hidden="false" aria-expanded="true">
+                    <div class="acc-content" style="display: block;">
+                        <ul class="lst-bullet">
+                            <li>월 중 요금제 변경 시 변경 날짜에 따라 이용기간만큼 기본료와 제공량이 일할 계산됩니다. 단, 이용기간에 따른 제공량을 초과하여 사용할 시 추가 요금이 발생할
+                                수 있습니다.<br>
+                                예)기본료 5천원, 데이터 제공량 100MB인 요금제를 6월 16일에 기본료 1만원, 데이터 제공량 500MB인 요금제로 변경 시, 6월 1일부터 15일
+                                사이에 50MB 초과 이용할 경우 초과 사용분에 대하여 과금됩니다.
+                            </li>
+                            <table class="tb bl">
+                                <caption>구분 (일할계산), 6월 1일 ~ 15일, 6월16일 ~ 30일 정보제공 </caption>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">구분 (일할계산)</th>
+                                        <th scope="col">6월 1일 ~ 15일</th>
+                                        <th scope="col">6월16일 ~ 30일</th>
+                                    </tr>
+                                    <tr>
+                                        <td>기본료</td>
+                                        <td>(5,000원/30일) X 15일 = 2,500원</td>
+                                        <td>(10,000원/30일) X 15일 = 5,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>제공량</td>
+                                        <td>(100MB/30일) X 15일 = 50MB</td>
+                                        <td>(500MB/30일) X 15일 = 250MB</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                            <li>요금제 변경은 마지막 요금제 변경일자로부터 한달 이후 가능합니다.</li>
+                            <li>요금제 변경 후 당일 재변경은 고객센터&lt;1599-0999(유료)/휴대폰114(무료)&gt;로 문의해주시기 바랍니다.<br>
+                                (재변경 시 프로모션 할인 금액은 재변경일 기준으로 적용됩니다)
+                            </li>
+                            <li>이용중인 부가서비스로 인해(무선인터넷차단, 안심옵션 등)요금제 변경이 제한될 수 있으며, 실패시 부가서비스 해지 후 재시도 또는 다른 요금제로 변경해주세요.
+                            </li>
+                            <li>온라인요금제는 온라인전용 상품으로 일반고객이 변경이 불가하며, 온라인요금제 이용고객이 일반요금제로 변경 할 경우 원복이 불가합니다.</li>
+                            <li>현재 약정이 종료되지 않은 경우 요금제 변경 시 위약금이 청구될 수 있습니다. 잔여 약정기간 및 위약금 확인은 고객센터를 통해 문의하시기 바랍니다.</li>
+                            <li>이용 중인 휴대폰 요금제의 약정이 종료 되었으나 유심 요금제가 조회되지 않을 경우 고객센터를 통해 변경해주세요.</li>
+                            <li>폰드림실속23,음성알뜰18 등 판매종료된 요금제에서 다른 요금제를 변경할 경우 이전 요금제는 재이용이 불가합니다.</li>
+                            <li><span class="text-danger">약정기간 중 요금제 변경 시,
+                                    <br> * 공시지원금 차액이 (-) 인 경우 → 다음 달 납부하실 요금에서 추가되어 청구됩니다.
+                                    <br> * 공시지원금 차액이 (+) 인 경우 → 다음 달 납부하실 요금에서 할인 형태로 환급됩니다.</span></li>
+                            <li>선택약정 또는 요금약정 가입 시, 요금약정할인 가능하므로 요금제 변경 후 약정 미가입 고객은 약정가입을 해야 할인 받을 수 있습니다. 약정가입은 고객센터 통해
+                                가능하며, 별도의 구비서류가 필요합니다.<br>예)'표준요금제'로 개통 고객이 '폰드림알뜰19'로 변경할 경우 약정할인을 받으려면 요금약정 가입을 해야
+                                합니다.</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</section>
+
+<!-- //페이지 끝-->
+
+	</div>
+	<!-- //Container -->
+
+
+	<!-- Footer -->
+	<footer id="ft">
+		<div class="container">
+			<div class="ft-top">
+				<p class="ft-text">모바일 가치소비의 시작 <img src="../asset/img/logo.png" alt="sk7mobile"></p>
+				<dl class="font-weight-normal">
+					<dt class="font-weight-normal">휴대폰 이용상담문의 :</dt>
+					<dd>114(무료)/1599-0999(유료), 평일 09:00~18:00(토/일요일 및 공휴일 제외.) </dd>
+					<dt class="font-weight-normal">휴대폰 구매관련문의 : </dt>
+					<dd>1599-3508(유료), 평일 10:00~18:00 (토/일요일 및 공휴일 제외.) </dd>
+				</dl>
+			</div>
+			<hr>
+			<ul class="fnb">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="" class="text-primary font-weight-normal">개인정보처리방침</a></li>
+				<li><a href="">개인정보이용내역조회</a></li>
+				<li><a href="">통신자료제공사실 열람신청</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">분쟁처리절차</a></li>
+				<li><a href="">책임의 한계와 법적고지</a></li>
+				<li><a href="">불법스팸대응센터</a></li>
+				<li><a href="">명의도용방지서비스</a></li>
+				<li><a href="">해지미환급금 조회/환불</a></li>
+				<li><a href="">법인회선개통문의</a></li>
+			</ul>
+			<div class="ft-bottom">
+				<div>(04637) 서울특별시 중구 퇴계로24 (남대문5가) SK남산빌딩 사장  최영석 <br class="d-lg-none">사업자번호 : 104-81-43391 통신 판매번호:2010-서울중구-0518</div>
+				<p class="copy">COPYRIGHT© SK TELINK CO.LTD. ALL RIGHTS RESERVED.</p>
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a href="" class="icon-sns-fb" target="_blank">sk7mobile facebook 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-blog" target="_blank">sk7mobile blog 바로가기</a></li>
+					<li class="nav-item"><a href="" class="icon-sns-ytb" target="_blank">sk7mobile youtube 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="../asset/js/vendor/vendor.min.js"></script>
+<script src="../asset/js/vendor/swiper.jquery.min.js"></script>
+<script src="../asset/js/common/public.js"></script>
+</body>
+</html>

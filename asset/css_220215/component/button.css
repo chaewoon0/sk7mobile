@@ -25,6 +25,12 @@
 .btn-dark {border-color: #999 !important;color: #fff !important;background: #999 !important;}
 .btn-black {border-color: #000 !important;color: #fff !important;background: #000 !important;}
 
+/* s: 260519 추가 */
+.btn-accent {border-color: #3717CE !important;color: #fff !important;background: #3717CE !important;}
+.btn-outline-accent {border: 1px solid #3717CE!important;color: #3717CE !important;background: #fff !important;}
+/* e: 260519 추가 */
+
+
 /* btn size */
 .btn-base {padding: 0 .83rem;border: 1px solid #dadada;border-radius: .3rem;color: #666;font-size: 1.16rem;line-height: 2.33;background: #fff;}
 .btn-xsm {padding: .2rem 1.43rem .166rem;font-size: 1.166rem;}

@@ -12,6 +12,12 @@ select.form-control::-ms-expand {display: none;}
 .form-primary {border-color: #5857d8;}
 .form-primary::placeholder {color: #5857d8;}
 
+/* s: 260519 추가 */
+.form-accent {border-color: #3717CE;}
+.form-accent::placeholder {color: #3717CE;}
+/* e: 260519 추가 */
+
+
 /* radio */
 .form-radio {display: inline-block;overflow: hidden;position: relative;vertical-align: middle;min-height: 1.5rem;padding: 1px; margin-right:0.5rem;} /* 211208 수정 */
 .form-radio:last-child {margin-right:0;}
