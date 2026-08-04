@@ -1163,7 +1163,13 @@ $(function () {
         // lock(true) 중에는 스크롤/외부클릭 등 일반 로직으로 닫히지 않고, 코치마크가 hide()를 호출할 때만 닫힌다.
         window.planTabTooltip = {
             show: function ($ico) { isLocked = true; showTooltip($ico); },
-            hide: function () { isLocked = false; hideTooltip(true); }
+            hide: function () { isLocked = false; hideTooltip(true); },
+            // 코치마크 스크롤 재배치와 같은 타이밍에 맞추기 위한 동기화
+            sync: function () {
+                if (isLocked && $activeIco && $tooltipBubble.is(':visible')) {
+                    positionTooltip($activeIco);
+                }
+            }
         };
     })();
 
@@ -1367,6 +1373,11 @@ $(function () {
     }
 
     function lockScroll() {
+        // PC(1081px~) : 작은 화면에서 STEP3/4가 잘릴 수 있어 스크롤을 허용한다
+        if (!mqMobile.matches) {
+            unlockScroll();
+            return;
+        }
         if (scrollLocked) return;
         savedScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
         scrollLocked = true;
@@ -1667,11 +1678,39 @@ $(function () {
         }
     });
 
-    var repositionTimer = null;
-    $(window).on('scroll resize', function () {
+    // PC : 코치마크 dim/박스 위에 커서가 있어도 휠로 페이지 스크롤 가능하도록 전달
+    $coachmark.on('wheel', function (e) {
+        if (mqMobile.matches || !isActive) return;
+        var oe = e.originalEvent;
+        if (!oe) return;
+        window.scrollBy(oe.deltaX || 0, oe.deltaY || 0);
+        scheduleReposition();
+    });
+
+    // 스크롤 시 즉시 재배치 (debounce 시 딜레이로 요소가 lagged 되어 화면이 깨져 보임)
+    // rAF로 같은 프레임에 묶어 스크롤과 동기화
+    var rafReposition = null;
+    function scheduleReposition() {
         if (!isActive) return;
-        clearTimeout(repositionTimer);
-        repositionTimer = setTimeout(repositionAll, 30);
+        if (rafReposition != null) return;
+        rafReposition = window.requestAnimationFrame(function () {
+            rafReposition = null;
+            repositionAll();
+            if (window.planTabTooltip && window.planTabTooltip.sync) {
+                window.planTabTooltip.sync();
+            }
+        });
+    }
+
+    $(window).on('scroll', scheduleReposition);
+    $(window).on('resize orientationchange', function () {
+        if (!isActive) return;
+        // resize는 레이아웃이 바뀌므로 바로 1회 재계산
+        if (rafReposition != null) {
+            window.cancelAnimationFrame(rafReposition);
+            rafReposition = null;
+        }
+        repositionAll();
     });
 
     // 모바일 <-> PC 전환 시 노출 방식을 다시 계산
