@@ -7589,8 +7589,8 @@ body:has(.app_download_popup:not(.active)) {
 	width: 100vw;
 	margin-top: 30px;
 	margin-left: -50vw;
-	padding: 40px 0;
-	background: #f4f4f4;
+	padding: 40px 0 60px; /* 260804 추가 */
+	background: #f6f6f6;
 }
 
 .planTab-list-count {
@@ -8174,7 +8174,7 @@ body:has(.app_download_popup:not(.active)) {
 
 	.planTab-list-container {
 		margin-top: 1rem;
-		padding: 2.8rem 0;
+		padding: 2.8rem 0 4rem; /* 260804 추가 */
 	}
 
 	.planTab-list-count {
@@ -8689,3 +8689,8 @@ body.coachmark-lock {
 	}
 }
 /* e: 260804 요금제 코치마크 */
+
+
+.container:has(.planTab) {
+	padding-bottom: 0; /* 260804 추가 */
+}
