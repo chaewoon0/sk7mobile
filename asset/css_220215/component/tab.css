@@ -35,7 +35,9 @@
 .tab-group .tab-panel {display: none;}
 .tab-group .tab-panel.active {display: block;}
 
-/* tab-menu-type3 : 언더라인 탭 (균등 배치) */
+
+
+/* s: 260708 제휴카드 진행중 */
 
 .tab-menu-type3 {
 	height: auto;
@@ -85,6 +87,8 @@
 	background: #3717CE;
 }
 
+/* e: 260708 제휴카드 진행중 */
+
 
 @media (min-width:1080px) {
 	.tab-menu {height: auto;margin: 0 0 40px;border-bottom: 0;}
@@ -118,6 +122,10 @@
 	.sub-menu .sub-btn {font-size: 17px;}
 	.sub-menu .sub-btn:hover,.sub-menu .sub-btn:focus {color: #5857d8;}
 
+
+
+	/* s: 260707 추가 */
+
 	.tab-menu-type3 .tab-link.active .tab-btn {
 		font-weight: 500;
 	}
@@ -129,4 +137,6 @@
 	.tab-menu-type3.tab-menu .tab-btn:after {
 		bottom: 1px;
 	}
+
+	/* e: 260707 추가 */
 }
